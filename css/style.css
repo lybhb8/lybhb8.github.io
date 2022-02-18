@@ -648,10 +648,10 @@ button {
   --pjax-progress-bar-color: linear-gradient(45deg, #ea404a, #ea722f, #e9a71f, #67e559, #18ecec, #1b85f1, #ee1dee);
 }
 :root {
-  --code-foreground: #535360;
-  --code-background: #f2f2f2;
-  --highlight-background: #fafafa;
-  --highlight-foreground: #535360;
+  --code-foreground: #ededef;
+  --code-background: #1a1a1a;
+  --highlight-background: #333;
+  --highlight-foreground: #ededef;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
   --highlight-orange: #f5871f;
@@ -665,10 +665,10 @@ button {
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --code-foreground: #535360;
-    --code-background: #f2f2f2;
-    --highlight-background: #fafafa;
-    --highlight-foreground: #535360;
+    --code-foreground: #ededef;
+    --code-background: #1a1a1a;
+    --highlight-background: #333;
+    --highlight-foreground: #ededef;
     --highlight-comment: #8e908c;
     --highlight-red: #c82829;
     --highlight-orange: #f5871f;
@@ -700,10 +700,10 @@ button {
   }
 }
 .light-mode {
-  --code-foreground: #535360;
-  --code-background: #f2f2f2;
-  --highlight-background: #fafafa;
-  --highlight-foreground: #535360;
+  --code-foreground: #ededef;
+  --code-background: #1a1a1a;
+  --highlight-background: #333;
+  --highlight-foreground: #ededef;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
   --highlight-orange: #f5871f;
@@ -1032,10 +1032,10 @@ pre .javascript .function {
   --pjax-progress-bar-color: linear-gradient(45deg, #ea404a, #ea722f, #e9a71f, #67e559, #18ecec, #1b85f1, #ee1dee);
 }
 :root {
-  --code-foreground: #535360;
-  --code-background: #f2f2f2;
-  --highlight-background: #fafafa;
-  --highlight-foreground: #535360;
+  --code-foreground: #ededef;
+  --code-background: #1a1a1a;
+  --highlight-background: #333;
+  --highlight-foreground: #ededef;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
   --highlight-orange: #f5871f;
@@ -1049,10 +1049,10 @@ pre .javascript .function {
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --code-foreground: #535360;
-    --code-background: #f2f2f2;
-    --highlight-background: #fafafa;
-    --highlight-foreground: #535360;
+    --code-foreground: #ededef;
+    --code-background: #1a1a1a;
+    --highlight-background: #333;
+    --highlight-foreground: #ededef;
     --highlight-comment: #8e908c;
     --highlight-red: #c82829;
     --highlight-orange: #f5871f;
@@ -1084,10 +1084,10 @@ pre .javascript .function {
   }
 }
 .light-mode {
-  --code-foreground: #535360;
-  --code-background: #f2f2f2;
-  --highlight-background: #fafafa;
-  --highlight-foreground: #535360;
+  --code-foreground: #ededef;
+  --code-background: #1a1a1a;
+  --highlight-background: #333;
+  --highlight-foreground: #ededef;
   --highlight-comment: #8e908c;
   --highlight-red: #c82829;
   --highlight-orange: #f5871f;
