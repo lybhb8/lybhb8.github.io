@@ -20,10 +20,13 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.5/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"};
+    KEEP.hexo_config = {"hostname":"lybhb8.github.io","root":"/","language":"zh-CN","path":"search.xml"};
     KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/favicon.png","favicon":"/images/favicon.png","article_img_align":"left","left_side_width":"260px","content_max_width":"860px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"分享知识的快乐和力量，欢迎光临！"},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
+
+    <script src="http://echarts.baidu.com/dist/echarts.common.min.js"></script>
+
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="波波林" type="application/atom+xml">
 </head>
 
@@ -198,7 +201,7 @@
                     <div class="author">
                         <span class="name">波波林</span>
                         
-                            <span class="author-label">Lv2</span>
+                            <span class="author-label">Githubeer</span>
                         
                     </div>
                     <div class="meta-info">
@@ -250,53 +253,70 @@
 
         <div class="article-content markdown-body">
             <p><a target="_blank" rel="noopener" href="https://xpoet.cn"><img align="center" alt="Keep" src="/2022/01/05/hello-hexo-keep/keep-logo-slogan.svg"></a></p>
-<h1 id="hexo-theme-keep"><a href="#hexo-theme-keep" class="headerlink" title="hexo-theme-keep"></a>hexo-theme-keep</h1><p>«Keep» 是一款简约优雅的 <a class="link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo<i class="fas fa-external-link-alt"></i></a> 主题。它能让你更专注于写作。</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-ils/blob/master/LICENSE"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg" alt="Github License"></a><br><a target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-ils/releases"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep-16413624210603.svg" alt="Github Release"></a><br>如你所见，Keep 主题界面设计十分简洁、大气，同时也功能齐全、不失优雅，这正是 Keep 主题的开发理念。也曾尝试过花里胡哨，发现不仅配置繁琐、容易审美疲劳，而且背驰了写博客的初衷，记录生活、展示文字，应该才是搭建博客网站的最终追求，为此 Keep 主题应运而生。简约轻快、化繁为简、配置简单、突出内容、长期维护，如果你也喜欢或认可这些特点，一起来探索吧~</p>
-<h2 id="文档-Documents"><a href="#文档-Documents" class="headerlink" title="文档 | Documents"></a>文档 | Documents</h2><p>在使用 Keep 主题过程中，请仔细阅读<a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/">官方使用文档<i class="fas fa-external-link-alt"></i></a>，绝大部分问题，都能在文档里找到参考。</p>
+<h1 id="hexo-theme-keep">hexo-theme-keep</h1>
+<p>«Keep» 是一款简约优雅的 <a class="link" target="_blank" rel="noopener" href="https://hexo.io">Hexo<i class="fas fa-external-link-alt"></i></a>
+主题。它能让你更专注于写作。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-ils/blob/master/LICENSE"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg" alt="Github License"></a> <a target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-ils/releases"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep-16413624210603.svg" alt="Github Release"></a> 如你所见，Keep
+主题界面设计十分简洁、大气，同时也功能齐全、不失优雅，这正是 Keep
+主题的开发理念。也曾尝试过花里胡哨，发现不仅配置繁琐、容易审美疲劳，而且背驰了写博客的初衷，记录生活、展示文字，应该才是搭建博客网站的最终追求，为此
+Keep
+主题应运而生。简约轻快、化繁为简、配置简单、突出内容、长期维护，如果你也喜欢或认可这些特点，一起来探索吧~</p>
+<h2 id="文档-documents">文档 | Documents</h2>
+<p>在使用 Keep 主题过程中，请仔细阅读<a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/">官方使用文档<i class="fas fa-external-link-alt"></i></a>，绝大部分问题，都能在文档里找到参考。</p>
 <ul>
 <li><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/">Keep 主题 - 官方文档<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/quick-start.html">Keep 主题 - 快速开始<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep 主题 - 配置指南<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep 主题 - 进阶设置<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/quick-start.html">Keep
+主题 - 快速开始<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep
+主题 - 配置指南<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep 主题
+- 进阶设置<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
-<h2 id="star2-在线预览"><a href="#star2-在线预览" class="headerlink" title=":star2: 在线预览"></a>:star2: 在线预览</h2><ul>
-<li><strong><a class="link" target="_blank" rel="noopener" href="https://xpoet.cn/">XPoet’s Blog<i class="fas fa-external-link-alt"></i></a></strong></li>
-<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep.xpoet.cn/">keep 演示网站<i class="fas fa-external-link-alt"></i></a></strong></li>
-<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/">keep 官方文档<i class="fas fa-external-link-alt"></i></a></strong></li>
+<h2 id="star2-在线预览">:star2: 在线预览</h2>
+<ul>
+<li><strong><a class="link" target="_blank" rel="noopener" href="https://xpoet.cn/">XPoet's Blog<i class="fas fa-external-link-alt"></i></a></strong></li>
+<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep.xpoet.cn/">keep
+演示网站<i class="fas fa-external-link-alt"></i></a></strong></li>
+<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/">keep
+官方文档<i class="fas fa-external-link-alt"></i></a></strong></li>
 </ul>
-<h2 id="rocket-安装"><a href="#rocket-安装" class="headerlink" title=":rocket: 安装"></a>:rocket: 安装</h2><p>如果你在使用 Hexo 5.0 或更高版本，最简单的安装方式是通过 npm：</p>
+<h2 id="rocket-安装">:rocket: 安装</h2>
+<p>如果你在使用 Hexo 5.0 或更高版本，最简单的安装方式是通过 npm：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm install hexo-theme-keep<br></code></pre></td></tr></table></figure>
-
 <p>你也可以直接克隆整个仓库：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ git <span class="hljs-built_in">clone</span> https://github.com/XPoet/hexo-theme-keep themes/keep<br></code></pre></td></tr></table></figure>
-
-<p>安装完成后，在 Hexo 配置文件中将 <code>theme</code> 设置为 <code>keep</code>。</p>
+<p>安装完成后，在 Hexo 配置文件中将 <code>theme</code> 设置为
+<code>keep</code>。</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">theme:</span> <span class="hljs-string">keep</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="wrench-使用"><a href="#wrench-使用" class="headerlink" title=":wrench: 使用"></a>:wrench: 使用</h2><p>请查看 «Keep» 官方文档：</p>
+<h2 id="wrench-使用">:wrench: 使用</h2>
+<p>请查看 «Keep» 官方文档：</p>
 <ul>
-<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/">Keep 官方文档<i class="fas fa-external-link-alt"></i></a></strong></li>
-<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep 主题配置指南<i class="fas fa-external-link-alt"></i></a></strong></li>
-<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep 主题进阶使用<i class="fas fa-external-link-alt"></i></a></strong></li>
+<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/">Keep
+官方文档<i class="fas fa-external-link-alt"></i></a></strong></li>
+<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep
+主题配置指南<i class="fas fa-external-link-alt"></i></a></strong></li>
+<li><strong><a class="link" target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep
+主题进阶使用<i class="fas fa-external-link-alt"></i></a></strong></li>
 </ul>
-<p>不推荐直接修改 «Keep» 主题的文件。因为这可能导致错误（例如 git merge 冲突），并且在升级主题时修改的文件可能丢失。</p>
-<h2 id="dart-更新"><a href="#dart-更新" class="headerlink" title=":dart: 更新"></a>:dart: 更新</h2><p>«Keep» 不定期发布新版本。你可以通过如下命令更新 «Keep»。</p>
+<p>不推荐直接修改 «Keep» 主题的文件。因为这可能导致错误（例如 git merge
+冲突），并且在升级主题时修改的文件可能丢失。</p>
+<h2 id="dart-更新">:dart: 更新</h2>
+<p>«Keep» 不定期发布新版本。你可以通过如下命令更新 «Keep»。</p>
 <p>通过 npm 安装最新版本：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm update hexo-theme-keep<br></code></pre></td></tr></table></figure>
-
 <p>或者通过 git 更新到最新的 master 分支：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> themes/keep<br>$ git pull<br></code></pre></td></tr></table></figure>
-
 <p><em>如果你修改了主题源码：</em></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ git add .<br>$ git stash<br>$ git pull<br>$ git stash pop<br></code></pre></td></tr></table></figure>
-
-<h2 id="art-贡献"><a href="#art-贡献" class="headerlink" title=":art: 贡献"></a>:art: 贡献</h2><p>我们欢迎你加入 «Keep» 的开发，贡献出你的一份力量。请看<a class="link" target="_blank" rel="noopener" href="https://keep.xpoet.cn/2020/11/Keep-%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/">Keep 代码贡献指南<i class="fas fa-external-link-alt"></i></a>。</p>
-<h2 id="clapper-贡献者"><a href="#clapper-贡献者" class="headerlink" title=":clapper: 贡献者"></a>:clapper: 贡献者</h2><p>这个项目的存在多亏了所有的贡献者。</p>
-<a target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-keep/graphs/contributors">
-  <img src="/2022/01/05/hello-hexo-keep/contributors.svg">
-</a>
-
-<h2 id="sparkling-heart-鸣谢"><a href="#sparkling-heart-鸣谢" class="headerlink" title=":sparkling_heart: 鸣谢"></a>:sparkling_heart: 鸣谢</h2><p>«Keep» 特别感谢这些支持我们核心基础设施的优质服务：</p>
+<h2 id="art-贡献">:art: 贡献</h2>
+<p>我们欢迎你加入 «Keep» 的开发，贡献出你的一份力量。请看<a class="link" target="_blank" rel="noopener" href="https://keep.xpoet.cn/2020/11/Keep-代码贡献指南/">Keep
+代码贡献指南<i class="fas fa-external-link-alt"></i></a>。</p>
+<h2 id="clapper-贡献者">:clapper: 贡献者</h2>
+<p>这个项目的存在多亏了所有的贡献者。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-keep/graphs/contributors">
+<img src="/2022/01/05/hello-hexo-keep/contributors.svg"> </a></p>
+<h2 id="sparkling_heart-鸣谢">:sparkling_heart: 鸣谢</h2>
+<p>«Keep» 特别感谢这些支持我们核心基础设施的优质服务：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com"><img height="38" src="/2022/01/05/hello-hexo-keep/GitHub-LOGO.5sq0168mirg0.png"></a></p>
 <blockquote>
 <p>GitHub 容许我们托管 Git 仓库及运行测试。</p>
@@ -305,7 +325,9 @@
 <blockquote>
 <p>jsDelivr 提供了 CDN 服务。</p>
 </blockquote>
-<h2 id="memo-许可"><a href="#memo-许可" class="headerlink" title=":memo: 许可"></a>:memo: 许可</h2><p><a class="link" target="_blank" rel="noopener" href="https://github.com/XPoet/picx/blob/master/LICENSE">MIT<i class="fas fa-external-link-alt"></i></a> Copyright © 2020-2021 XPoet</p>
+<h2 id="memo-许可">:memo: 许可</h2>
+<p><a class="link" target="_blank" rel="noopener" href="https://github.com/XPoet/picx/blob/master/LICENSE">MIT<i class="fas fa-external-link-alt"></i></a>
+Copyright © 2020-2021 XPoet</p>
 
         </div>
 
@@ -327,13 +349,13 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2022/01/05/hello-world/"
+                           href="/2022/02/11/%E5%90%B9%E5%A1%91%E6%9C%BA%E6%A8%A1%E5%A4%B4/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-title-item">吹塑机模头</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -564,7 +586,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-theme-keep"><span class="nav-text">hexo-theme-keep</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3-Documents"><span class="nav-text">文档 | Documents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#star2-%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88"><span class="nav-text">:star2: 在线预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rocket-%E5%AE%89%E8%A3%85"><span class="nav-text">:rocket: 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wrench-%E4%BD%BF%E7%94%A8"><span class="nav-text">:wrench: 使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dart-%E6%9B%B4%E6%96%B0"><span class="nav-text">:dart: 更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#art-%E8%B4%A1%E7%8C%AE"><span class="nav-text">:art: 贡献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clapper-%E8%B4%A1%E7%8C%AE%E8%80%85"><span class="nav-text">:clapper: 贡献者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sparkling-heart-%E9%B8%A3%E8%B0%A2"><span class="nav-text">:sparkling_heart: 鸣谢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#memo-%E8%AE%B8%E5%8F%AF"><span class="nav-text">:memo: 许可</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-theme-keep"><span class="nav-text">hexo-theme-keep</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3-documents"><span class="nav-text">文档 | Documents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#star2-%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88"><span class="nav-text">:star2: 在线预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rocket-%E5%AE%89%E8%A3%85"><span class="nav-text">:rocket: 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wrench-%E4%BD%BF%E7%94%A8"><span class="nav-text">:wrench: 使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dart-%E6%9B%B4%E6%96%B0"><span class="nav-text">:dart: 更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#art-%E8%B4%A1%E7%8C%AE"><span class="nav-text">:art: 贡献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clapper-%E8%B4%A1%E7%8C%AE%E8%80%85"><span class="nav-text">:clapper: 贡献者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sparkling_heart-%E9%B8%A3%E8%B0%A2"><span class="nav-text">:sparkling_heart: 鸣谢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#memo-%E8%AE%B8%E5%8F%AF"><span class="nav-text">:memo: 许可</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
