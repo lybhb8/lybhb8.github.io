@@ -252,7 +252,11 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very
+            <div>
+<p><strong>提示：如果图表不能正常显示</strong>
+<input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
+</div>
+<p>Welcome to <a class="link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very
 first post. Check <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation<i class="fas fa-external-link-alt"></i></a> for
 more info. If you get any problems when using Hexo, you can find the
 answer in <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting<i class="fas fa-external-link-alt"></i></a> or
@@ -271,14 +275,14 @@ you can ask me on <a class="link" target="_blank" rel="noopener" href="https://g
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 <p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="test-echarts1">Test Echarts1</h3>
-<div id="echarts4209" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts356" style="width: 85%;height: 400px;margin: 0 auto"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts4209'));
+        var myChart = echarts.init(document.getElementById('echarts356'));
 
         // 指定图表的配置项和数据
         var option = {
@@ -343,6 +347,8 @@ you can ask me on <a class="link" target="_blank" rel="noopener" href="https://g
    ]
 };
 
+
+
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 </script>
@@ -374,21 +380,20 @@ zr.on('mousemove', function (params) {
     var pointInPixel = [params.offsetX, params.offsetY];
     zr.setCursorStyle(myChart.containPixel('grid', pointInPixel) ? 'copy' : 'default');
 });
-
-
 </script>
-<div id="echarts9558" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts9672" style="width: 85%;height: 400px;margin: 0 auto"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9558'));
+        var myChart = echarts.init(document.getElementById('echarts9672'));
 
         // 指定图表的配置项和数据
         var option = 
- {
+
+{
     title: {
         text: 'Click to Add Points'
     },
@@ -429,10 +434,17 @@ zr.on('mousemove', function (params) {
 }
 
 
-
-
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+</script>
+<script>
+function reloadPage(){ 
+    let i= 0;
+    if （i<1）
+    {location.reload(true);
+    i++;
+    }};
+setTimeout('reloadPage()',1000);
 </script>
 
         </div>

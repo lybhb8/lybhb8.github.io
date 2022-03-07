@@ -252,7 +252,11 @@
         
 
         <div class="article-content markdown-body">
-            <p>HXM
+            <body>
+<div>
+<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
+</div>
+<p>HXM
 50100是高分子量的乙烯己烯共聚物，适用于大型吹塑和模压热成型零件，需要：
 &gt; •良好的熔体强度 &gt; •良好的刚性 &gt; •卓越的ESCR &gt;
 •卓越的低温冲击强度 &gt; •耐用性 &gt; •可回收性</p>
@@ -271,14 +275,16 @@ Master File</p>
 </blockquote>
 <iframe src="./50100.pdf" width="100%" height="750" type="application/pdf">
 </iframe>
-<script>
-function reloadPage(){
-  location.reload()
-}
-</script>
-<body>
-<input type="button" value="如果PDF显示不正常，请重新刷新页面" onclick="reloadPage()">
 </body>
+<script>
+function reloadPage(){ 
+    let i= 0;
+    if （i<1）
+    {location.reload(true);
+    i++;
+    }};
+setTimeout('reloadPage()',1000);
+</script>
 
         </div>
 
