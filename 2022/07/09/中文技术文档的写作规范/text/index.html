@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. 这是显示在首页的概述，正文内容均会被隐藏。">
+    <meta name="description" content="分享知识的快乐和力量">
     <meta name="author" content="波波林">
     
     <title>
-        
-            Hello World |
         
         吹塑技术小栈
     </title>
@@ -189,7 +187,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Hello World</span>
+            <span class="title-hover-animation"></span>
         </div>
 
         
@@ -208,32 +206,10 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-07-07 11:33:19</span>
-        <span class="mobile">2022-07-07 11:33</span>
+        <span class="pc">2022-07-09 10:00:47</span>
+        <span class="mobile">2022-07-09 10:00</span>
     </span>
     
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/Web%E4%BA%92%E8%81%94%E7%BD%91/">Web互联网</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/Hexo/">Hexo</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
     
 
     
@@ -252,212 +228,82 @@
         
 
         <div class="article-content markdown-body">
-            <div>
+            <h1 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h1><h2 id="字间距"><a href="#字间距" class="headerlink" title="字间距"></a>字间距</h2><p>（1）全角中文字符与半角英文字符之间，应有一个半角空格。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：本文介绍如何快速启动Windows系统。<br><br>正确：本文介绍如何快速启动 Windows 系统。<br></code></pre></td></tr></table></figure>
 
-<p><strong>提示：如果图表不能正常显示</strong>  <input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
-</div>
+<p>（2）全角中文字符与半角阿拉伯数字之间，有没有半角空格都可，但必须保证风格统一，不能两种风格混杂。</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tap">正确：2011年5月15日，我订购了5台笔记本电脑与10台平板电脑。<br><br>正确：2011 年<span class="hljs-number"> 5 </span>月<span class="hljs-number"> 15 </span>日，我订购了<span class="hljs-number"> 5 </span>台笔记本电脑与<span class="hljs-number"> 10 </span>台平板电脑。<br></code></pre></td></tr></table></figure>
 
-<p>Welcome to <a class="link" target="_blank" rel="noopener" href="https://hexo.io/">Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link" target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+<p>半角的百分号，视同阿拉伯数字。</p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">正确：今年我国经济增长率是<span class="hljs-number">6.5</span><span class="hljs-comment">%。</span><br><br>正确：今年我国经济增长率是 <span class="hljs-number">6.5</span><span class="hljs-comment">%。</span><br></code></pre></td></tr></table></figure>
 
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>（3）英文单位若不翻译，单位前的阿拉伯数字与单位符号之间，应留出适当的空隙。</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nix">例<span class="hljs-number">1</span>：一部容量为 <span class="hljs-number">16</span> GB 的智能手机<br><br>例<span class="hljs-number">2</span>：<span class="hljs-number">1</span> <span class="hljs-attr">h</span> = <span class="hljs-number">60</span> <span class="hljs-attr">min</span> = <span class="hljs-number">3</span>,<span class="hljs-number">600</span> s<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>（4）半角英文字符和半角阿拉伯数字，与全角标点符号之间不留空格。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：他的电脑是 MacBook Air 。<br><br>正确：他的电脑是 MacBook Air。<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<h2 id="句子"><a href="#句子" class="headerlink" title="句子"></a>句子</h2><p>（1）避免使用长句。</p>
+<p>不包含任何标点符号的单个句子，或者以逗号分隔的句子构件，长度尽量保持在 20 个字以内；20～29 个字的句子，可以接受；30～39 个字的句子，语义必须明确，才能接受；多于 40 个字的句子，任何情况下都不能接受。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：本产品适用于从由一台服务器进行动作控制的单一节点结构到由多台服务器进行动作控制的并行处理程序结构等多种体系结构。<br><br>正确：本产品适用于多种体系结构。无论是由一台服务器（单一节点结构），还是由多台服务器（并行处理结构）进行动作控制，均可以使用本产品。<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a class="link" target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts6974" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<p>逗号分割的长句，总长度不应该超过 100 字或者正文的 3 行。</p>
+<p>（2）尽量使用简单句和并列句，避免使用复合句。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">并列句：他昨天生病了，没有参加会议。<br><br>复合句：那个昨天生病的人没有参加会议。<br></code></pre></td></tr></table></figure>
 
-<script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
+<p>（3）同样一个意思，尽量使用肯定句表达，不使用否定句表达。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：请确认没有接通装置的电源。<br><br>正确：请确认装置的电源已关闭。<br></code></pre></td></tr></table></figure>
 
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts6974'));
+<p>（4）避免使用双重否定句。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：没有删除权限的用户，不能删除此文件。<br><br>正确：用户必须拥有删除权限，才能删除此文件。<br></code></pre></td></tr></table></figure>
 
-        // 指定图表的配置项和数据
-        var option = {
-   tooltip : {
-       trigger: 'axis',
-       axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-           type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-       }
-   },
-   legend: {
-       data:['利润', '支出', '收入']
-   },
-   grid: {
-       left: '3%',
-       right: '4%',
-       bottom: '3%',
-       containLabel: true
-   },
-   xAxis : [
-       {
-           type : 'value'
-       }
-   ],
-   yAxis : [
-       {
-           type : 'category',
-           axisTick : {show: false},
-           data : ['周一','周二','周三','周四','周五','周六','周日']
-       }
-   ],
-   series : [
-       {
-           name:'利润',
-           type:'bar',
-           itemStyle : {
-               normal: {
-                   label: {show: true, position: 'inside'}
-               }
-           },
-           data:[200, 170, 240, 244, 200, 220, 210]
-       },
-       {
-           name:'收入',
-           type:'bar',
-           stack: '总量',
-           itemStyle: {
-               normal: {
-                   label : {show: true}
-               }
-           },
-           data:[320, 302, 341, 374, 390, 450, 420]
-       },
-       {
-           name:'支出',
-           type:'bar',
-           stack: '总量',
-           itemStyle: {normal: {
-               label : {show: true, position: 'left'}
-           }},
-           data:[-120, -132, -101, -134, -190, -230, -210]
-       }
-   ]
-};
+<h2 id="写作风格"><a href="#写作风格" class="headerlink" title="写作风格"></a>写作风格</h2><p>（1）尽量不使用被动语态，改为使用主动语态。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：假如此软件尚未被安装，<br><br>正确：假如尚未安装这个软件，<br></code></pre></td></tr></table></figure>
 
+<p>（2）不使用非正式的语言风格。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：Lady Gaga 的演唱会真是酷毙了，从没看过这么给力的表演！！！<br><br>正确：无法参加本次活动，我深感遗憾。<br></code></pre></td></tr></table></figure>
 
+<p>（3）不使用冷僻、生造或者文言文的词语，而要使用现代汉语的常用表达方式。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：这是唯二的快速启动的方法。<br><br>正确：这是仅有的两种快速启动的方法。<br></code></pre></td></tr></table></figure>
 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
+<p>（4）用对“的”、“地”、“得”。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs">她露出了开心的笑容。<br>（形容词＋的＋名词）<br><br>她开心地笑了。<br>（副词＋地＋动词）<br><br>她笑得很开心。<br>（动词＋得＋副词）<br></code></pre></td></tr></table></figure>
 
+<p>（5）使用代词时（比如“其”、“该”、“此”、“这”等词），必须明确指代的内容，保证只有一个含义。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：从管理系统可以监视中继系统和受其直接控制的分配系统。<br><br>正确：从管理系统可以监视两个系统：中继系统和受中继系统直接控制的分配系统。<br></code></pre></td></tr></table></figure>
 
-<h3 id="Test-Echarts2"><a href="#Test-Echarts2" class="headerlink" title="Test Echarts2"></a>Test Echarts2</h3><script>
-var symbolSize = 20;
-var data = [[10, 0], [28.5, 10], [29, 18], [20.5, 30], [21.9, 55], [38, 70],[37.8, 80] ,[17.3, 100]];
-var points = [];
-var zr = myChart.getZr();
+<p>（6）名词前不要使用过多的形容词。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">错误：此设备的使用必须在接受过本公司举办的正式的设备培训的技师的指导下进行。<br><br>正确：此设备必须在技师的指导下使用，且指导技师必须接受过由本公司举办的正式设备培训。<br></code></pre></td></tr></table></figure>
 
+<h2 id="英文处理"><a href="#英文处理" class="headerlink" title="英文处理"></a>英文处理</h2><p>（1）英文原文如果使用了复数形式，翻译成中文时，应该将其还原为单数形式。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">英文：<span class="hljs-string">...information</span> stored in random access memory <span class="hljs-params">(RAMs)</span><span class="hljs-string">...</span><br><br>中文：⋯⋯存储在随机存取存储器（RAM）里的信息⋯⋯<br></code></pre></td></tr></table></figure>
 
-zr.on('click', function (params) {
-    var pointInPixel = [params.offsetX, params.offsetY];
-    var pointInGrid = myChart.convertFromPixel('grid', pointInPixel);
+<p>（2）外文缩写可以使用半角圆点(<code>.</code>)表示缩写。</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs erlang">U.S.A.<br>Apple, Inc.<br></code></pre></td></tr></table></figure>
 
-    if (myChart.containPixel('grid', pointInPixel)) {
-        data.push(pointInGrid);
+<p>（3）表示中文时，英文省略号（<code>...</code>）应改为中文省略号（<code>⋯⋯</code>）。</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs erlang">英文：<span class="hljs-number">5</span> minutes later...<br><br>中文：<span class="hljs-number">5</span> 分钟过去了⋯⋯<br></code></pre></td></tr></table></figure>
 
-        myChart.setOption({
-            series: [{
-                id: 'a',
-                data: data
-            }]
-        });
-    }
-});
+<p>（4）英文书名或电影名改用中文表达时，双引号应改为书名号。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stata">英文：<span class="hljs-keyword">He</span> published <span class="hljs-keyword">an</span> article entitled <span class="hljs-string">&quot;The Future of the Aviation&quot;</span>.<br><br>中文：他发表了一篇名为《航空业的未来》的文章。<br></code></pre></td></tr></table></figure>
 
-zr.on('mousemove', function (params) {
-    var pointInPixel = [params.offsetX, params.offsetY];
-    zr.setCursorStyle(myChart.containPixel('grid', pointInPixel) ? 'copy' : 'default');
-});
-</script>
+<p>（5）第一次出现英文词汇时，在括号中给出中文标注。此后再次出现时，直接使用英文缩写即可。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">IOC（International Olympic Committee，国际奥林匹克委员会）。这样定义后，便可以直接使用“IOC”了。<br></code></pre></td></tr></table></figure>
 
+<p>（6）专有名词中每个词第一个字母均应大写，非专有名词则不需要大写。</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs applescript">“American Association <span class="hljs-keyword">of</span> Physicists <span class="hljs-keyword">in</span> Medicine”（美国医学物理学家协会）是专有名词，需要大写。<br><br>“online <span class="hljs-keyword">transaction</span> processing”（在线事务处理）不是专有名词，不应大写。<br></code></pre></td></tr></table></figure>
 
-<div id="echarts5259" style="width: 85%;height: 400px;margin: 0 auto"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
-
-<script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts5259'));
-
-        // 指定图表的配置项和数据
-        var option = 
-
-{
-    title: {
-        text: 'Click to Add Points'
-    },
-    tooltip: {
-        formatter: function (params) {
-            var data = params.data || [0, 0];
-            return '点位Y:' + data[1].toFixed(2) +'<br>' + '点值X:' + data[0].toFixed(2);
-        }
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis: {
-        min: 0,
-        max: 60,
-        type: 'value',
-        axisLine: {onZero: false}
-    },
-    yAxis: {
-        min: 0,
-        max: 100,
-        type: 'value',
-        axisLine: {onZero: false}
-    },
-    series: [
-        {
-            id: 'a',
-            type: 'line',
-            smooth: true,
-            symbolSize: symbolSize,
-            data: data
-        }
-    ]
-
-}
-
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-</script>
-
-
-
-<script>
-function reloadPage(){ 
-    let i= 0;
-    if （i<1）
-    {location.reload(true);
-    i++;
-    }};
-setTimeout('reloadPage()',1000);
-</script>
         </div>
 
         
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：Hello World</li>
+        <li>本文标题：</li>
         <li>本文作者：波波林</li>
-        <li>创建时间：2022-07-07 11:33:19</li>
+        <li>创建时间：2022-07-09 10:00:47</li>
         <li>
-            本文链接：http://blowmoldingshare.cn/2022/07/07/hello-world/
+            本文链接：http://blowmoldingshare.cn/2022/07/09/中文技术文档的写作规范/text/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -469,14 +315,6 @@ setTimeout('reloadPage()',1000);
         
 
         
-            <ul class="post-tags-box">
-                
-                    <li class="tag-item">
-                        <a href="/tags/Hexo/">#Hexo</a>&nbsp;
-                    </li>
-                
-            </ul>
-        
 
         
             <div class="article-nav">
@@ -484,13 +322,13 @@ setTimeout('reloadPage()',1000);
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2022/07/09/%E4%B8%AD%E6%96%87%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/"
+                           href="/2022/07/09/%E4%B8%AD%E6%96%87%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/title/"
                         >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">中文技术文档的写作规范</span>
+                                <span class="post-nav-title-item"></span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
@@ -500,10 +338,10 @@ setTimeout('reloadPage()',1000);
                     <div class="article-next">
                         <a class="next"
                            rel="next"
-                           href="/2022/07/01/%E6%8C%A4%E5%87%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E6%80%A7%E4%B8%8E%E9%80%89%E5%9E%8B/"
+                           href="/2022/07/09/%E4%B8%AD%E6%96%87%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/structure/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">挤出系统的特性与选型</span>
+                                <span class="post-nav-title-item"></span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -721,7 +559,7 @@ setTimeout('reloadPage()',1000);
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Test-Echarts1"><span class="nav-number">1.5.</span> <span class="nav-text">Test Echarts1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Test-Echarts2"><span class="nav-number">1.6.</span> <span class="nav-text">Test Echarts2</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">文本</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E9%97%B4%E8%B7%9D"><span class="nav-number">1.1.</span> <span class="nav-text">字间距</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A5%E5%AD%90"><span class="nav-number">1.2.</span> <span class="nav-text">句子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%BD%9C%E9%A3%8E%E6%A0%BC"><span class="nav-number">1.3.</span> <span class="nav-text">写作风格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8B%B1%E6%96%87%E5%A4%84%E7%90%86"><span class="nav-number">1.4.</span> <span class="nav-text">英文处理</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
