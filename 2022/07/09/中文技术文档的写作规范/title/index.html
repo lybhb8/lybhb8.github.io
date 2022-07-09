@@ -228,7 +228,9 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="层级"><a href="#层级" class="headerlink" title="层级"></a>层级</h2><p>标题分为四级。</p>
+            <h1 id="标题">标题</h1>
+<h2 id="层级">层级</h2>
+<p>标题分为四级。</p>
 <ul>
 <li>一级标题：文章的标题</li>
 <li>二级标题：文章主要部分的大标题</li>
@@ -237,24 +239,20 @@
 </ul>
 <p>下面是示例。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题</span><br><br><span class="hljs-section">## 二级标题</span><br><br><span class="hljs-section">### 三级标题</span><br><br><span class="hljs-section">#### 四级标题</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>（1）一级标题下，不能直接出现三级标题。</p>
+<h2 id="原则">原则</h2>
+<p>（1）一级标题下，不能直接出现三级标题。</p>
 <p>示例：下面的文章结构，缺少二级标题。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题</span><br><br><span class="hljs-section">### 三级标题</span><br></code></pre></td></tr></table></figure>
-
 <p>（2）标题要避免孤立编号（即同级标题只有一个）。</p>
 <p>示例：下面的文章结构，<code>二级标题 A</code>只包含一个三级标题，完全可以省略<code>三级标题 A</code>。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">## 二级标题 A</span><br><br><span class="hljs-section">### 三级标题 A</span><br><br><span class="hljs-section">## 二级标题 B</span><br></code></pre></td></tr></table></figure>
-
 <p>（3）下级标题不重复上一级标题的名字。</p>
 <p>示例：下面的文章结构，二级标题与下属的三级标题同名，建议避免。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section">## 概述</span><br><br><span class="hljs-section">### 概述</span><br></code></pre></td></tr></table></figure>
-
 <p>（4）谨慎使用四级标题，尽量避免出现，保持层级的简单，防止出现过于复杂的章节。</p>
 <p>如果三级标题下有并列性的内容，建议只使用项目列表（Item list）。</p>
 <p>示例：下面的结构二要好于结构一。结构一适用的场景，主要是较长篇幅的内容。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs markdown">结构一<br><br><span class="hljs-section">### 三级标题</span><br><br><span class="hljs-section">#### 四级标题 A</span><br><br><span class="hljs-section">#### 四级标题 B</span><br><br><span class="hljs-section">#### 四级标题 C</span><br><br>结构二<br><br><span class="hljs-section">### 三级标题</span><br><br><span class="hljs-strong">**（1）A**</span><br><br><span class="hljs-strong">**（2）B**</span><br><br><span class="hljs-strong">**（3）C**</span><br></code></pre></td></tr></table></figure>
-
 
         </div>
 

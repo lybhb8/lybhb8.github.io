@@ -228,40 +228,51 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="文档体系"><a href="#文档体系" class="headerlink" title="文档体系"></a>文档体系</h1><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>软件手册是一部完整的书，建议采用下面的结构。</p>
+            <h1 id="文档体系">文档体系</h1>
+<h2 id="结构">结构</h2>
+<p>软件手册是一部完整的书，建议采用下面的结构。</p>
 <ul>
-<li><strong>简介</strong>（Introduction）：[必备] [文件] 提供对产品和文档本身的总体的、扼要的说明</li>
-<li><strong>快速上手</strong>（Getting Started）：[可选] [文件] 如何最快速地使用产品</li>
-<li><strong>入门篇</strong>（Basics）：[必备] [目录] 又称“使用篇”，提供初级的使用教程<ul>
-<li><strong>环境准备</strong>（Prerequisite）：[必备] [文件] 软件使用需要满足的前置条件</li>
-<li><strong>安装</strong>（Installation）：[可选] [文件] 软件的安装方法</li>
-<li><strong>设置</strong>（Configuration）：[必备] [文件] 软件的设置</li>
-</ul>
-</li>
-<li><strong>进阶篇</strong>（Advanced)：[可选] [目录] 又称“开发篇”，提供中高级的开发教程</li>
-<li><strong>API</strong>（Reference）：[可选] [目录|文件] 软件 API 的逐一介绍</li>
+<li><strong>简介</strong>（Introduction）：[必备] [文件]
+提供对产品和文档本身的总体的、扼要的说明</li>
+<li><strong>快速上手</strong>（Getting Started）：[可选] [文件]
+如何最快速地使用产品</li>
+<li><strong>入门篇</strong>（Basics）：[必备] [目录]
+又称“使用篇”，提供初级的使用教程
+<ul>
+<li><strong>环境准备</strong>（Prerequisite）：[必备] [文件]
+软件使用需要满足的前置条件</li>
+<li><strong>安装</strong>（Installation）：[可选] [文件]
+软件的安装方法</li>
+<li><strong>设置</strong>（Configuration）：[必备] [文件]
+软件的设置</li>
+</ul></li>
+<li><strong>进阶篇</strong>（Advanced)：[可选] [目录]
+又称“开发篇”，提供中高级的开发教程</li>
+<li><strong>API</strong>（Reference）：[可选] [目录|文件] 软件 API
+的逐一介绍</li>
 <li><strong>FAQ</strong>：[可选] [文件] 常见问题解答</li>
-<li><strong>附录</strong>（Appendix）：[可选] [目录] 不属于教程本身、但对阅读教程有帮助的内容<ul>
+<li><strong>附录</strong>（Appendix）：[可选] [目录]
+不属于教程本身、但对阅读教程有帮助的内容
+<ul>
 <li><strong>Glossary</strong>：[可选] [文件] 名词解释</li>
 <li><strong>Recipes</strong>：[可选] [文件] 最佳实践</li>
 <li><strong>Troubleshooting</strong>：[可选] [文件] 故障处理</li>
 <li><strong>ChangeLog</strong>：[可选] [文件] 版本说明</li>
 <li><strong>Feedback</strong>：[可选] [文件] 反馈方式</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <p>下面是两个真实范例，可参考。</p>
 <ul>
-<li><a class="link" target="_blank" rel="noopener" href="https://redux.js.org/introduction/getting-started">Redux 手册<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link" target="_blank" rel="noopener" href="https://redux.js.org/introduction/getting-started">Redux
+手册<i class="fas fa-external-link-alt"></i></a></li>
 <li><a class="link" target="_blank" rel="noopener" href="http://flight-manual.atom.io/">Atom 手册<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
-<h2 id="文件名"><a href="#文件名" class="headerlink" title="文件名"></a>文件名</h2><p>文档的文件名不得含有空格。</p>
+<h2 id="文件名">文件名</h2>
+<p>文档的文件名不得含有空格。</p>
 <p>文件名必须使用半角字符，不得使用全角字符。这也意味着，中文不能用于文件名。</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dos">错误：名词解释.<span class="hljs-built_in">md</span><br><br>正确：glossary.<span class="hljs-built_in">md</span><br></code></pre></td></tr></table></figure>
-
 <p>文件名建议只使用小写字母，不使用大写字母。</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dos">错误：TroubleShooting.<span class="hljs-built_in">md</span><br><br>正确：troubleshooting.<span class="hljs-built_in">md</span><br></code></pre></td></tr></table></figure>
-
 <p>为了醒目，某些说明文件的文件名，可以使用大写字母，比如<code>README</code>、<code>LICENSE</code>。</p>
 <p>文件名包含多个单词时，单词之间建议使用半角的连词线（<code>-</code>）分隔。</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dos">不佳：advanced_usage.<span class="hljs-built_in">md</span><br><br>正确：advanced-usage.<span class="hljs-built_in">md</span><br></code></pre></td></tr></table></figure>
