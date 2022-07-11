@@ -1,6 +1,4 @@
-<h1 id="标题">标题</h1>
-<h2 id="层级">层级</h2>
-<p>标题分为四级。</p>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h2 id="层级"><a href="#层级" class="headerlink" title="层级"></a>层级</h2><p>标题分为四级。</p>
 <ul>
 <li>一级标题：文章的标题</li>
 <li>二级标题：文章主要部分的大标题</li>
@@ -8,55 +6,54 @@
 <li>四级标题：三级标题下面某一方面的小标题</li>
 </ul>
 <p>下面是示例。</p>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 一级标题</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 二级标题</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### 三级标题</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 四级标题</span></span></code></pre></div>
-<h2 id="原则">原则</h2>
-<p>（1）一级标题下，不能直接出现三级标题。</p>
+<pre><code class="markdown"># 一级标题
+
+## 二级标题
+
+### 三级标题
+
+#### 四级标题
+</code></pre>
+<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><p>（1）一级标题下，不能直接出现三级标题。</p>
 <p>示例：下面的文章结构，缺少二级标题。</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 一级标题</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 三级标题</span></span></code></pre></div>
+<pre><code class="markdown"># 一级标题
+
+### 三级标题
+</code></pre>
 <p>（2）标题要避免孤立编号（即同级标题只有一个）。</p>
 <p>示例：下面的文章结构，<code>二级标题 A</code>只包含一个三级标题，完全可以省略<code>三级标题 A</code>。</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 二级标题 A</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 三级标题 A</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 二级标题 B</span></span></code></pre></div>
+<pre><code class="markdown">## 二级标题 A
+
+### 三级标题 A
+
+## 二级标题 B
+</code></pre>
 <p>（3）下级标题不重复上一级标题的名字。</p>
 <p>示例：下面的文章结构，二级标题与下属的三级标题同名，建议避免。</p>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 概述</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 概述</span></span></code></pre></div>
+<pre><code class="markdown">## 概述
+
+### 概述
+</code></pre>
 <p>（4）谨慎使用四级标题，尽量避免出现，保持层级的简单，防止出现过于复杂的章节。</p>
 <p>如果三级标题下有并列性的内容，建议只使用项目列表（Item list）。</p>
 <p>示例：下面的结构二要好于结构一。结构一适用的场景，主要是较长篇幅的内容。</p>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>结构一</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 三级标题</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 四级标题 A</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 四级标题 B</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">#### 四级标题 C</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>结构二</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### 三级标题</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>**（1）A**</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>**（2）B**</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>**（3）C**</span></code></pre></div>
+<pre><code class="markdown">结构一
+
+### 三级标题
+
+#### 四级标题 A
+
+#### 四级标题 B
+
+#### 四级标题 C
+
+结构二
+
+### 三级标题
+
+**（1）A**
+
+**（2）B**
+
+**（3）C**
+</code></pre>
