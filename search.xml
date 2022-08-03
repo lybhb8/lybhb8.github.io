@@ -2579,7 +2579,7 @@ Index)</h3>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid515017719157892" width="90%" height="300"></div>
+        <div id="highchartsuuid3143236853296495" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -2711,11 +2711,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid515017719157892,op);
+                        var chart = Highcharts.chart(highchartsuuid3143236853296495,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid515017719157892,op);
+                var chart = Highcharts.chart(highchartsuuid3143236853296495,op);
             }
         </script>
     
@@ -2800,7 +2800,7 @@ Phillips<i class="fas fa-external-link-alt"></i></a></td>
 <script>
 function reloadPage(){ 
     let i= 0;
-    if （i<1）
+    if （i<2）
     {location.reload(true);
     i++;
     }};
@@ -2856,7 +2856,7 @@ Properties)比较:</h3>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5150177082563953" width="90%" height="300"></div>
+        <div id="highchartsuuid3143236772011280" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -2971,11 +2971,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5150177082563953,op);
+                        var chart = Highcharts.chart(highchartsuuid3143236772011280,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5150177082563953,op);
+                var chart = Highcharts.chart(highchartsuuid3143236772011280,op);
             }
         </script>
     
@@ -2985,7 +2985,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5150177206235159" width="90%" height="300"></div>
+        <div id="highchartsuuid3143236931423296" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3118,11 +3118,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5150177206235159,op);
+                        var chart = Highcharts.chart(highchartsuuid3143236931423296,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5150177206235159,op);
+                var chart = Highcharts.chart(highchartsuuid3143236931423296,op);
             }
         </script>
     
@@ -3133,7 +3133,7 @@ Strength at yield and Flexural Modulus)</h4>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5150177203879547" width="90%" height="300"></div>
+        <div id="highchartsuuid3143236934443441" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3274,11 +3274,11 @@ Strength at yield and Flexural Modulus)</h4>
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5150177203879547,op);
+                        var chart = Highcharts.chart(highchartsuuid3143236934443441,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5150177203879547,op);
+                var chart = Highcharts.chart(highchartsuuid3143236934443441,op);
             }
         </script>
     
@@ -3289,7 +3289,7 @@ at break &amp; Notched Tensile Impact Resistance &amp; ESCR)</h4>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5150177215105577" width="90%" height="300"></div>
+        <div id="highchartsuuid3143236933756783" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3467,11 +3467,11 @@ at break &amp; Notched Tensile Impact Resistance &amp; ESCR)</h4>
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5150177215105577,op);
+                        var chart = Highcharts.chart(highchartsuuid3143236933756783,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5150177215105577,op);
+                var chart = Highcharts.chart(highchartsuuid3143236933756783,op);
             }
         </script>
     
@@ -3482,7 +3482,7 @@ Softening Temperature &amp; Peak Melting Point)</h4>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5150177219133766" width="90%" height="300"></div>
+        <div id="highchartsuuid3143236938011184" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3606,11 +3606,11 @@ Softening Temperature &amp; Peak Melting Point)</h4>
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5150177219133766,op);
+                        var chart = Highcharts.chart(highchartsuuid3143236938011184,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5150177219133766,op);
+                var chart = Highcharts.chart(highchartsuuid3143236938011184,op);
             }
         </script>
     
@@ -3620,7 +3620,7 @@ Softening Temperature &amp; Peak Melting Point)</h4>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5150177215725534" width="90%" height="300"></div>
+        <div id="highchartsuuid31432369440807" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3746,11 +3746,11 @@ Softening Temperature &amp; Peak Melting Point)</h4>
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5150177215725534,op);
+                        var chart = Highcharts.chart(highchartsuuid31432369440807,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5150177215725534,op);
+                var chart = Highcharts.chart(highchartsuuid31432369440807,op);
             }
         </script>
     
@@ -3760,7 +3760,7 @@ Softening Temperature &amp; Peak Melting Point)</h4>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid515017721421568" width="90%" height="300"></div>
+        <div id="highchartsuuid3143236941207344" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3886,11 +3886,11 @@ Softening Temperature &amp; Peak Melting Point)</h4>
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid515017721421568,op);
+                        var chart = Highcharts.chart(highchartsuuid3143236941207344,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid515017721421568,op);
+                var chart = Highcharts.chart(highchartsuuid3143236941207344,op);
             }
         </script>
     
@@ -3923,11 +3923,11 @@ setTimeout('reloadPage()',1000);
 <!-- #### 1.6 工艺温度：
 
 <div style="width: 90%;margin: 0 auto">
-    <canvas id="chart4870" style="height: 500px"></canvas>
+    <canvas id="chart2504" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart4870').getContext('2d');
+    var ctx = document.getElementById('chart2504').getContext('2d');
     var options =  {
     type: 'line',
     data: {
@@ -4027,11 +4027,11 @@ setTimeout('reloadPage()',1000);
 <!-- #### 1.7 适用制品容积：
 
 <div style="width: 90%;margin: 0 auto">
-    <canvas id="chart752" style="height: 500px"></canvas>
+    <canvas id="chart425" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart752').getContext('2d');
+    var ctx = document.getElementById('chart425').getContext('2d');
     var options = {
    type: 'bar',
    data: {
@@ -5611,14 +5611,14 @@ you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">G
 <figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 <p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="test-echarts1">Test Echarts1</h3>
-<div id="echarts3898" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts6248" style="width: 85%;height: 400px;margin: 0 auto"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3898'));
+        var myChart = echarts.init(document.getElementById('echarts6248'));
 
         // 指定图表的配置项和数据
         var option = {
@@ -5717,14 +5717,14 @@ zr.on('mousemove', function (params) {
     zr.setCursorStyle(myChart.containPixel('grid', pointInPixel) ? 'copy' : 'default');
 });
 </script>
-<div id="echarts6846" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts2584" style="width: 85%;height: 400px;margin: 0 auto"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/echarts@4.8.0/dist/echarts.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts-gl@1.1.1/dist/echarts-gl.min.js"></script>
 
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts6846'));
+        var myChart = echarts.init(document.getElementById('echarts2584'));
 
         // 指定图表的配置项和数据
         var option = 
