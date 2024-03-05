@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Linux嵌入式编程学习笔记</title>
+    <url>/2024/03/05/Linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="Linux嵌入式编程-学习笔记"><a href="#Linux嵌入式编程-学习笔记" class="headerlink" title="Linux嵌入式编程-学习笔记"></a>Linux嵌入式编程-学习笔记</h2><blockquote>
+<ul>
+<li>主要涉及到嵌入式软件开发、嵌入式驱动开发、IOT开发、git等知识点。</li>
+<li>转载自<a href="https://github.com/xiaowenxia/embedded-notes/wiki">原文wiki</a>和<a href="https://xiaowenxia.github.io/embedded-notes/">xiaowenxia的博客</a></li>
+<li>应用mkdocs-material主题重新部署，更适合阅读。</li>
+<li>感谢原作者xiaowenxia的无私奉献！</li>
+<li>如有侵权，请联系删除。</li>
+</ul>
+</blockquote>
+<h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ul>
+<li><input checked disabled type="checkbox"> c基础知识</li>
+<li><input checked disabled type="checkbox"> 数据结构（链表 hash表 排序算法 设计模式等）</li>
+<li><input checked disabled type="checkbox"> 外设（串口 网口 i2s i2c spi sdio等）</li>
+<li><input checked disabled type="checkbox"> ARM cortex-m0 m3 m4 A8等芯片架构</li>
+<li><input disabled type="checkbox"> 操作系统（内存管理 进程管理 实时性要求 任务间通讯等）</li>
+<li><input checked disabled type="checkbox"> tcpip协议栈（tcpip模型 分层结构 ip tcp udp icmp igmp tftp http ftp等协议）</li>
+<li><input checked disabled type="checkbox"> linux 多线程 多进程通讯 linux系统任务调度和中断</li>
+<li><input disabled type="checkbox"> bash命令 shell makefile python github go javascript</li>
+<li><input disabled type="checkbox"> linux 启动过程</li>
+<li><input disabled type="checkbox"> git 命令</li>
+</ul>
+<h2 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h2><p><a href="http://blowmoldingshare.cn/mkdocs-embedded-notes/" title="Github Pages + MkDocs部署的笔记">Linux嵌入式编程-学习笔记</a></p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>转载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>People&#39;s Dream</title>
+    <url>/2022/02/27/People-s-Dream/</url>
+    <content><![CDATA[<p><strong>中文名称</strong>：人们的梦<br><strong>英文名称</strong>：People’s.Dream<br><strong>版本</strong>：尼古拉﹒德﹒安吉利斯<br><strong>专辑歌手</strong>：Nicolas.De.Angelas<br><strong>地区</strong>：法国</p>
+<p><img src="/2022/02/27/People-s-Dream/top.jpg"></p>
+<h3 id="专辑介绍"><a href="#专辑介绍" class="headerlink" title="专辑介绍:"></a><strong>专辑介绍:</strong></h3><p>​        尼古拉．德．安捷罗斯，一九五三年十二月二十六日出生于巴黎近郊，十二岁开始接触吉他。先后求学于多位大师门下，一九八一年发表了真正成名之作《镜中的安娜》，其影响迅速从法国波及世界。他为人诚恳可亲，演奏充满了罗曼斯式的意境云云。对所选的十四首曲子的具体介绍，有谓《旅途》微微地含有一种无形的忧愁感，《梦之果》略含悲伤之意，往往令人回忆起自己人生悲感的一段回忆。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280215&auto=0&height=66"></iframe>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280199&auto=1&height=66"></iframe>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=75051&auto=0&height=66"></iframe>
+
+
+
+<h3 id="其它分享："><a href="#其它分享：" class="headerlink" title="其它分享："></a>其它分享：</h3><p><a href="https://baijiahao.baidu.com/s?id=1664767514562027202&wfr=spider&for=pc">阿尔罕布拉宫的回忆</a></p>
+]]></content>
+      <categories>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>吉他</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Go入门指南</title>
     <url>/2024/03/05/Go%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<h1 id="Go入门指南"><a href="#Go入门指南" class="headerlink" title="Go入门指南"></a>Go入门指南</h1><p>以下是原作者所述：</p>
@@ -43,29 +99,6 @@
       </categories>
       <tags>
         <tag>转载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>People&#39;s Dream</title>
-    <url>/2022/02/27/People-s-Dream/</url>
-    <content><![CDATA[<p><strong>中文名称</strong>：人们的梦<br><strong>英文名称</strong>：People’s.Dream<br><strong>版本</strong>：尼古拉﹒德﹒安吉利斯<br><strong>专辑歌手</strong>：Nicolas.De.Angelas<br><strong>地区</strong>：法国</p>
-<p><img src="/2022/02/27/People-s-Dream/top.jpg"></p>
-<h3 id="专辑介绍"><a href="#专辑介绍" class="headerlink" title="专辑介绍:"></a><strong>专辑介绍:</strong></h3><p>​        尼古拉．德．安捷罗斯，一九五三年十二月二十六日出生于巴黎近郊，十二岁开始接触吉他。先后求学于多位大师门下，一九八一年发表了真正成名之作《镜中的安娜》，其影响迅速从法国波及世界。他为人诚恳可亲，演奏充满了罗曼斯式的意境云云。对所选的十四首曲子的具体介绍，有谓《旅途》微微地含有一种无形的忧愁感，《梦之果》略含悲伤之意，往往令人回忆起自己人生悲感的一段回忆。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280215&auto=0&height=66"></iframe>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280199&auto=1&height=66"></iframe>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=75051&auto=0&height=66"></iframe>
-
-
-
-<h3 id="其它分享："><a href="#其它分享：" class="headerlink" title="其它分享："></a>其它分享：</h3><p><a href="https://baijiahao.baidu.com/s?id=1664767514562027202&wfr=spider&for=pc">阿尔罕布拉宫的回忆</a></p>
-]]></content>
-      <categories>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>吉他</tag>
       </tags>
   </entry>
   <entry>
@@ -245,74 +278,6 @@
       </categories>
       <tags>
         <tag>吹塑机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello hexo-keep</title>
-    <url>/2022/01/05/hello-hexo-keep/</url>
-    <content><![CDATA[<div align="right">
-  语言:
-  简中
-  <a title="Chinese" href="README.md">English</a>
-  <a title="Chinese" href="README_zh-TW.md">繁中</a>
-</div>
-
-<p><a href="https://xpoet.cn"><img align="center" alt="Keep" src="/2022/01/05/hello-hexo-keep/keep-logo-slogan.svg"></a></p>
-<h1 id="hexo-theme-keep"><a href="#hexo-theme-keep" class="headerlink" title="hexo-theme-keep"></a>hexo-theme-keep</h1><p>«Keep» 是一款简约优雅的 <a href="https://hexo.io/">Hexo</a> 主题。它能让你更专注于写作。</p>
-<p><a href="https://github.com/XPoet/hexo-theme-ils/blob/master/LICENSE"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg" alt="Github License"></a><br><a href="https://github.com/XPoet/hexo-theme-ils/releases"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep-16413624210603.svg" alt="Github Release"></a><br><a href="https://www.npmjs.com/package/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="NPM version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/hexo-=5.0.0-blue" alt="Required Hexo version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/node-=12.0-success.svgstyle=flat-square&logo=Node.js&longCache=true" alt="Node.js Version"></a><br><a href="https://www.jsdelivr.com/package/npm/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="jsDelivr hits"></a></p>
-<h2 id="star2-在线预览"><a href="#star2-在线预览" class="headerlink" title=":star2: 在线预览"></a>:star2: 在线预览</h2><ul>
-<li><strong><a href="https://xpoet.cn/">XPoet’s Blog</a></strong></li>
-<li><strong><a href="https://keep.xpoet.cn/">keep 演示网站</a></strong></li>
-<li><strong><a href="https://keep-docs.xpoet.cn/">keep 官方文档</a></strong></li>
-</ul>
-<h2 id="rocket-安装"><a href="#rocket-安装" class="headerlink" title=":rocket: 安装"></a>:rocket: 安装</h2><p>如果你在使用 Hexo 5.0 或更高版本，最简单的安装方式是通过 npm：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm install hexo-theme-keep<br></code></pre></td></tr></table></figure>
-
-<p>你也可以直接克隆整个仓库：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ git <span class="hljs-built_in">clone</span> https://github.com/XPoet/hexo-theme-keep themes/keep<br></code></pre></td></tr></table></figure>
-
-<p>安装完成后，在 Hexo 配置文件中将 <code>theme</code> 设置为 <code>keep</code>。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">theme:</span> <span class="hljs-string">keep</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="wrench-使用"><a href="#wrench-使用" class="headerlink" title=":wrench: 使用"></a>:wrench: 使用</h2><p>请查看 «Keep» 官方文档：</p>
-<ul>
-<li><strong><a href="https://keep-docs.xpoet.cn/">Keep 官方文档</a></strong></li>
-<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep 主题配置指南</a></strong></li>
-<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep 主题进阶使用</a></strong></li>
-</ul>
-<p>不推荐直接修改 «Keep» 主题的文件。因为这可能导致错误（例如 git merge 冲突），并且在升级主题时修改的文件可能丢失。</p>
-<h2 id="dart-更新"><a href="#dart-更新" class="headerlink" title=":dart: 更新"></a>:dart: 更新</h2><p>«Keep» 不定期发布新版本。你可以通过如下命令更新 «Keep»。</p>
-<p>通过 npm 安装最新版本：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm update hexo-theme-keep<br></code></pre></td></tr></table></figure>
-
-<p>或者通过 git 更新到最新的 master 分支：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> themes/keep<br>$ git pull<br></code></pre></td></tr></table></figure>
-
-<p><em>如果你修改了主题源码：</em></p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ git add .<br>$ git stash<br>$ git pull<br>$ git stash pop<br></code></pre></td></tr></table></figure>
-
-<h2 id="art-贡献"><a href="#art-贡献" class="headerlink" title=":art: 贡献"></a>:art: 贡献</h2><p>我们欢迎你加入 «Keep» 的开发，贡献出你的一份力量。请看<a href="https://keep.xpoet.cn/2020/11/Keep-%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/">Keep 代码贡献指南</a>。</p>
-<h2 id="clapper-贡献者"><a href="#clapper-贡献者" class="headerlink" title=":clapper: 贡献者"></a>:clapper: 贡献者</h2><p>这个项目的存在多亏了所有的贡献者。</p>
-<a href="https://github.com/XPoet/hexo-theme-keep/graphs/contributors">
-  <img src="/2022/01/05/hello-hexo-keep/contributors.svg">
-</a>
-
-<h2 id="sparkling-heart-鸣谢"><a href="#sparkling-heart-鸣谢" class="headerlink" title=":sparkling_heart: 鸣谢"></a>:sparkling_heart: 鸣谢</h2><p>«Keep» 特别感谢这些支持我们核心基础设施的优质服务：</p>
-<p><a href="https://github.com"><img height="38" src="/2022/01/05/hello-hexo-keep/GitHub-LOGO.5sq0168mirg0.png"></a></p>
-<blockquote>
-<p>GitHub 容许我们托管 Git 仓库及运行测试。</p>
-</blockquote>
-<p><a href="https://www.jsdelivr.com"><img height="38" src="/2022/01/05/hello-hexo-keep/jsDelivr-LOGO.png"></a></p>
-<blockquote>
-<p>jsDelivr 提供了 CDN 服务。</p>
-</blockquote>
-<h2 id="memo-许可"><a href="#memo-许可" class="headerlink" title=":memo: 许可"></a>:memo: 许可</h2><p><a href="https://github.com/XPoet/picx/blob/master/LICENSE">MIT</a> Copyright © 2020-2021 XPoet</p>
-]]></content>
-      <categories>
-        <category>Web互联网</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2155,6 +2120,74 @@
       </tags>
   </entry>
   <entry>
+    <title>hello hexo-keep</title>
+    <url>/2022/01/05/hello-hexo-keep/</url>
+    <content><![CDATA[<div align="right">
+  语言:
+  简中
+  <a title="Chinese" href="README.md">English</a>
+  <a title="Chinese" href="README_zh-TW.md">繁中</a>
+</div>
+
+<p><a href="https://xpoet.cn"><img align="center" alt="Keep" src="/2022/01/05/hello-hexo-keep/keep-logo-slogan.svg"></a></p>
+<h1 id="hexo-theme-keep"><a href="#hexo-theme-keep" class="headerlink" title="hexo-theme-keep"></a>hexo-theme-keep</h1><p>«Keep» 是一款简约优雅的 <a href="https://hexo.io/">Hexo</a> 主题。它能让你更专注于写作。</p>
+<p><a href="https://github.com/XPoet/hexo-theme-ils/blob/master/LICENSE"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg" alt="Github License"></a><br><a href="https://github.com/XPoet/hexo-theme-ils/releases"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep-16413624210603.svg" alt="Github Release"></a><br><a href="https://www.npmjs.com/package/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="NPM version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/hexo-=5.0.0-blue" alt="Required Hexo version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/node-=12.0-success.svgstyle=flat-square&logo=Node.js&longCache=true" alt="Node.js Version"></a><br><a href="https://www.jsdelivr.com/package/npm/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="jsDelivr hits"></a></p>
+<h2 id="star2-在线预览"><a href="#star2-在线预览" class="headerlink" title=":star2: 在线预览"></a>:star2: 在线预览</h2><ul>
+<li><strong><a href="https://xpoet.cn/">XPoet’s Blog</a></strong></li>
+<li><strong><a href="https://keep.xpoet.cn/">keep 演示网站</a></strong></li>
+<li><strong><a href="https://keep-docs.xpoet.cn/">keep 官方文档</a></strong></li>
+</ul>
+<h2 id="rocket-安装"><a href="#rocket-安装" class="headerlink" title=":rocket: 安装"></a>:rocket: 安装</h2><p>如果你在使用 Hexo 5.0 或更高版本，最简单的安装方式是通过 npm：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm install hexo-theme-keep<br></code></pre></td></tr></table></figure>
+
+<p>你也可以直接克隆整个仓库：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ git <span class="hljs-built_in">clone</span> https://github.com/XPoet/hexo-theme-keep themes/keep<br></code></pre></td></tr></table></figure>
+
+<p>安装完成后，在 Hexo 配置文件中将 <code>theme</code> 设置为 <code>keep</code>。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">theme:</span> <span class="hljs-string">keep</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="wrench-使用"><a href="#wrench-使用" class="headerlink" title=":wrench: 使用"></a>:wrench: 使用</h2><p>请查看 «Keep» 官方文档：</p>
+<ul>
+<li><strong><a href="https://keep-docs.xpoet.cn/">Keep 官方文档</a></strong></li>
+<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep 主题配置指南</a></strong></li>
+<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep 主题进阶使用</a></strong></li>
+</ul>
+<p>不推荐直接修改 «Keep» 主题的文件。因为这可能导致错误（例如 git merge 冲突），并且在升级主题时修改的文件可能丢失。</p>
+<h2 id="dart-更新"><a href="#dart-更新" class="headerlink" title=":dart: 更新"></a>:dart: 更新</h2><p>«Keep» 不定期发布新版本。你可以通过如下命令更新 «Keep»。</p>
+<p>通过 npm 安装最新版本：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm update hexo-theme-keep<br></code></pre></td></tr></table></figure>
+
+<p>或者通过 git 更新到最新的 master 分支：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> themes/keep<br>$ git pull<br></code></pre></td></tr></table></figure>
+
+<p><em>如果你修改了主题源码：</em></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ git add .<br>$ git stash<br>$ git pull<br>$ git stash pop<br></code></pre></td></tr></table></figure>
+
+<h2 id="art-贡献"><a href="#art-贡献" class="headerlink" title=":art: 贡献"></a>:art: 贡献</h2><p>我们欢迎你加入 «Keep» 的开发，贡献出你的一份力量。请看<a href="https://keep.xpoet.cn/2020/11/Keep-%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/">Keep 代码贡献指南</a>。</p>
+<h2 id="clapper-贡献者"><a href="#clapper-贡献者" class="headerlink" title=":clapper: 贡献者"></a>:clapper: 贡献者</h2><p>这个项目的存在多亏了所有的贡献者。</p>
+<a href="https://github.com/XPoet/hexo-theme-keep/graphs/contributors">
+  <img src="/2022/01/05/hello-hexo-keep/contributors.svg">
+</a>
+
+<h2 id="sparkling-heart-鸣谢"><a href="#sparkling-heart-鸣谢" class="headerlink" title=":sparkling_heart: 鸣谢"></a>:sparkling_heart: 鸣谢</h2><p>«Keep» 特别感谢这些支持我们核心基础设施的优质服务：</p>
+<p><a href="https://github.com"><img height="38" src="/2022/01/05/hello-hexo-keep/GitHub-LOGO.5sq0168mirg0.png"></a></p>
+<blockquote>
+<p>GitHub 容许我们托管 Git 仓库及运行测试。</p>
+</blockquote>
+<p><a href="https://www.jsdelivr.com"><img height="38" src="/2022/01/05/hello-hexo-keep/jsDelivr-LOGO.png"></a></p>
+<blockquote>
+<p>jsDelivr 提供了 CDN 服务。</p>
+</blockquote>
+<h2 id="memo-许可"><a href="#memo-许可" class="headerlink" title=":memo: 许可"></a>:memo: 许可</h2><p><a href="https://github.com/XPoet/picx/blob/master/LICENSE">MIT</a> Copyright © 2020-2021 XPoet</p>
+]]></content>
+      <categories>
+        <category>Web互联网</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2023/05/31/hello-world/</url>
     <content><![CDATA[<div>
@@ -2175,11 +2208,11 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts5701" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts4899" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts5701'));
+        var myChart = echarts.init(document.getElementById('echarts4899'));
         // 指定图表的配置项和数据
         var option = {
    tooltip : {
@@ -2279,11 +2312,11 @@ zr.on('mousemove', function (params) {
 </script>
 
 
-<div id="echarts9554" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts4611" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9554'));
+        var myChart = echarts.init(document.getElementById('echarts4611'));
         // 指定图表的配置项和数据
         var option = 
 
@@ -2879,11 +2912,11 @@ setTimeout('reloadPage()',1000);
 </div>
 
 <h3 id="材料主要性能-Typical-Properties"><a href="#材料主要性能-Typical-Properties" class="headerlink" title="材料主要性能(Typical Properties):"></a>材料主要性能(Typical Properties):</h3><h4 id="工艺温度"><a href="#工艺温度" class="headerlink" title="工艺温度"></a>工艺温度</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart5465" style="height: 500px"></canvas>
+    <canvas id="chart3908" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart5465').getContext('2d');
+    var ctx = document.getElementById('chart3908').getContext('2d');
     var options =  {
     type: 'line',
     data: {
@@ -2981,11 +3014,11 @@ setTimeout('reloadPage()',1000);
 </script>
 
 <h4 id="适用制品容积"><a href="#适用制品容积" class="headerlink" title="适用制品容积"></a>适用制品容积</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart2009" style="height: 500px"></canvas>
+    <canvas id="chart8445" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart2009').getContext('2d');
+    var ctx = document.getElementById('chart8445').getContext('2d');
     var options =  {
     type: 'bar',
     data: {
@@ -3058,7 +3091,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid22133262711558255" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737248886908" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3171,11 +3204,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid22133262711558255,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737248886908,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid22133262711558255,op);
+                var chart = Highcharts.chart(highchartsuuid2225737248886908,op);
             }
         </script>
     
@@ -3185,7 +3218,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid22133262722488311" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737245079372" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3316,11 +3349,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid22133262722488311,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737245079372,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid22133262722488311,op);
+                var chart = Highcharts.chart(highchartsuuid2225737245079372,op);
             }
         </script>
     
@@ -3330,7 +3363,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid22133262726742816" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737243536627" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3472,11 +3505,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid22133262726742816,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737243536627,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid22133262726742816,op);
+                var chart = Highcharts.chart(highchartsuuid2225737243536627,op);
             }
         </script>
     
@@ -3486,7 +3519,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid22133262724410291" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737243889889" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3634,11 +3667,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid22133262724410291,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737243889889,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid22133262724410291,op);
+                var chart = Highcharts.chart(highchartsuuid2225737243889889,op);
             }
         </script>
     
@@ -3648,7 +3681,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid22133262727745473" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737247682021" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3773,11 +3806,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid22133262727745473,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737247682021,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid22133262727745473,op);
+                var chart = Highcharts.chart(highchartsuuid2225737247682021,op);
             }
         </script>
     
@@ -3787,7 +3820,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid2213326272878896" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737244047486" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3914,11 +3947,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid2213326272878896,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737244047486,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid2213326272878896,op);
+                var chart = Highcharts.chart(highchartsuuid2225737244047486,op);
             }
         </script>
     
@@ -3928,7 +3961,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid22133262724955478" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737255460064" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -4054,11 +4087,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid22133262724955478,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737255460064,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid22133262724955478,op);
+                var chart = Highcharts.chart(highchartsuuid2225737255460064,op);
             }
         </script>
     
@@ -4085,6 +4118,32 @@ setTimeout('reloadPage()',1000);
       </categories>
       <tags>
         <tag>吹塑原料HDPE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>吹塑级塑料原料: HD5401AA</title>
+    <url>/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/</url>
+    <content><![CDATA[<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
+<p> HD5401AA 是采用 1-己烯作为共聚单体的高密度聚乙烯树脂。其分子量分布宽，具有优异的耐环境应力开裂性能及刚韧平衡性，适用于生产各种中等容积的中空吹塑制品。</p>
+<iframe name="iframe1" src="./HD5401AA.pdf" width="100%" height="750" type="application/pdf"></iframe>
+
+<script>
+function reloadPage(){ 
+    let i= 0;
+    if （i<2）
+    {location.reload(true);
+    i++;
+    }};
+setTimeout('reloadPage()',1000);
+</script>
+
+
+]]></content>
+      <categories>
+        <category>塑料机械</category>
+      </categories>
+      <tags>
+        <tag>塑料原料HDPE</tag>
       </tags>
   </entry>
   <entry>
@@ -4233,56 +4292,6 @@ setTimeout('reloadPage()',1000);
       </tags>
   </entry>
   <entry>
-    <title>吹塑级塑料原料: HD5401AA</title>
-    <url>/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/</url>
-    <content><![CDATA[<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
-<p> HD5401AA 是采用 1-己烯作为共聚单体的高密度聚乙烯树脂。其分子量分布宽，具有优异的耐环境应力开裂性能及刚韧平衡性，适用于生产各种中等容积的中空吹塑制品。</p>
-<iframe name="iframe1" src="./HD5401AA.pdf" width="100%" height="750" type="application/pdf"></iframe>
-
-<script>
-function reloadPage(){ 
-    let i= 0;
-    if （i<2）
-    {location.reload(true);
-    i++;
-    }};
-setTimeout('reloadPage()',1000);
-</script>
-
-
-]]></content>
-      <categories>
-        <category>塑料机械</category>
-      </categories>
-      <tags>
-        <tag>塑料原料HDPE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>吹塑级HDPE 5621D</title>
-    <url>/2022/12/06/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5621D/</url>
-    <content><![CDATA[<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
-<iframe src="./5621D.pdf" width="100%" height="750" type="application/pdf"></iframe>
-
-<iframe src="./5621DEnglish.pdf" width="100%" height="750" type="application/pdf"></iframe>
-
-<script>
-function reloadPage(){ 
-    let i= 0;
-    if （i<2）
-    {location.reload(true);
-    i++;
-    }};
-setTimeout('reloadPage()',1000);
-</script>]]></content>
-      <categories>
-        <category>塑料机械</category>
-      </categories>
-      <tags>
-        <tag>塑料原料HDPE</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>吹塑级HDPE 5121B</title>
     <url>/2022/12/06/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5121B/</url>
     <content><![CDATA[<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
@@ -4331,43 +4340,22 @@ setTimeout('reloadPage()',1000);
       </tags>
   </entry>
   <entry>
-    <title>吹塑级塑料原料-HDPE-IBC-1000L原料</title>
-    <url>/2022/02/26/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-IBC-1000L%E5%8E%9F%E6%96%99/</url>
-    <content><![CDATA[<div>
-**如果PDF显示不正常**<input type="button" value="请重新刷新页面" onclick="location.reload(true)">
-</div>
+    <title>吹塑级HDPE 5621D</title>
+    <url>/2022/12/06/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5621D/</url>
+    <content><![CDATA[<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
+<iframe src="./5621D.pdf" width="100%" height="750" type="application/pdf"></iframe>
 
-<h3 id="1、-Lupolen-4261AG-UV60005"><a href="#1、-Lupolen-4261AG-UV60005" class="headerlink" title="1、 Lupolen 4261AG UV60005"></a>1、 Lupolen 4261AG UV60005</h3><blockquote>
-<ul>
-<li>高密度聚乙烯，具有优异的ESCR、高抗冲击性和耐腐蚀性。</li>
-<li>良好的耐化学性。它以颗粒形式提供，含有抗氧化剂和紫外线稳定剂。</li>
-<li>典型应用：包装危险品的中间体散装集装箱（IBC）以及加热燃油箱（汽车）。</li>
-<li>Lupolen 4261AG UV60005不适用于医疗和制药应用。</li>
-</ul>
-</blockquote>
-<iframe src="./LupolenA.pdf" width="100%" height="750" type="application/pdf"></iframe>
+<iframe src="./5621DEnglish.pdf" width="100%" height="750" type="application/pdf"></iframe>
 
-<h3 id="2、SABIC-HDPE-ICP4907S"><a href="#2、SABIC-HDPE-ICP4907S" class="headerlink" title="2、SABIC HDPE ICP4907S"></a>2、SABIC HDPE ICP4907S</h3><blockquote>
-<ul>
-<li>通常用于UN认证的吹塑中间体散装容器和加热油箱，最高可达1000升甚至更多。</li>
-<li>紫外线稳定和食品认证等级。</li>
-<li>良好的加工性能和良好的应力抗裂性、硬度和稳定性能。</li>
-<li>本产品不适用于且不得用于任何制药/医疗应用。</li>
-</ul>
-</blockquote>
-<iframe src="./SABIC® HDPE_ICP4907S_Global_Technical_Data_Sheet.pdf" width="100%" height="750" type="application/pdf"></iframe>
 <script>
 function reloadPage(){ 
     let i= 0;
-    if （i<1）
+    if （i<2）
     {location.reload(true);
     i++;
     }};
 setTimeout('reloadPage()',1000);
-</script>
-
-
-]]></content>
+</script>]]></content>
       <categories>
         <category>塑料机械</category>
       </categories>
@@ -4429,6 +4417,51 @@ function reloadPage(){
     }};
 setTimeout('reloadPage()',1000);
 </script>]]></content>
+      <categories>
+        <category>塑料机械</category>
+      </categories>
+      <tags>
+        <tag>塑料原料HDPE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>吹塑级塑料原料-HDPE-IBC-1000L原料</title>
+    <url>/2022/02/26/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-IBC-1000L%E5%8E%9F%E6%96%99/</url>
+    <content><![CDATA[<div>
+**如果PDF显示不正常**<input type="button" value="请重新刷新页面" onclick="location.reload(true)">
+</div>
+
+<h3 id="1、-Lupolen-4261AG-UV60005"><a href="#1、-Lupolen-4261AG-UV60005" class="headerlink" title="1、 Lupolen 4261AG UV60005"></a>1、 Lupolen 4261AG UV60005</h3><blockquote>
+<ul>
+<li>高密度聚乙烯，具有优异的ESCR、高抗冲击性和耐腐蚀性。</li>
+<li>良好的耐化学性。它以颗粒形式提供，含有抗氧化剂和紫外线稳定剂。</li>
+<li>典型应用：包装危险品的中间体散装集装箱（IBC）以及加热燃油箱（汽车）。</li>
+<li>Lupolen 4261AG UV60005不适用于医疗和制药应用。</li>
+</ul>
+</blockquote>
+<iframe src="./LupolenA.pdf" width="100%" height="750" type="application/pdf"></iframe>
+
+<h3 id="2、SABIC-HDPE-ICP4907S"><a href="#2、SABIC-HDPE-ICP4907S" class="headerlink" title="2、SABIC HDPE ICP4907S"></a>2、SABIC HDPE ICP4907S</h3><blockquote>
+<ul>
+<li>通常用于UN认证的吹塑中间体散装容器和加热油箱，最高可达1000升甚至更多。</li>
+<li>紫外线稳定和食品认证等级。</li>
+<li>良好的加工性能和良好的应力抗裂性、硬度和稳定性能。</li>
+<li>本产品不适用于且不得用于任何制药/医疗应用。</li>
+</ul>
+</blockquote>
+<iframe src="./SABIC® HDPE_ICP4907S_Global_Technical_Data_Sheet.pdf" width="100%" height="750" type="application/pdf"></iframe>
+<script>
+function reloadPage(){ 
+    let i= 0;
+    if （i<1）
+    {location.reload(true);
+    i++;
+    }};
+setTimeout('reloadPage()',1000);
+</script>
+
+
+]]></content>
       <categories>
         <category>塑料机械</category>
       </categories>
@@ -5058,6 +5091,53 @@ setTimeout('reloadPage()',1000);
       </tags>
   </entry>
   <entry>
+    <title>最新西门子工业常用软件官网下载链接(2022.07)</title>
+    <url>/2023/06/02/%E6%9C%80%E6%96%B0%E8%A5%BF%E9%97%A8%E5%AD%90%E5%B7%A5%E4%B8%9A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5-2022-07/</url>
+    <content><![CDATA[<h3 id="1-TIA-Portal"><a href="#1-TIA-Portal" class="headerlink" title="1 TIA Portal"></a>1 TIA Portal</h3><h4 id="SIMATIC-STEP-7（包括-Safety）、S7-PLCSIM-和-WinCC-V17-试用版下载"><a href="#SIMATIC-STEP-7（包括-Safety）、S7-PLCSIM-和-WinCC-V17-试用版下载" class="headerlink" title="SIMATIC STEP 7（包括 Safety）、S7-PLCSIM 和 WinCC V17 试用版下载"></a>SIMATIC STEP 7（包括 Safety）、S7-PLCSIM 和 WinCC V17 试用版下载</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109784440/zh">https://support.industry.siemens.com/cs/ww/en/view/109784440/zh</a></p>
+<h4 id="SIMATIC-WinCC-V17-运行系统-TIA-Portal"><a href="#SIMATIC-WinCC-V17-运行系统-TIA-Portal" class="headerlink" title="SIMATIC WinCC V17 运行系统 (TIA Portal)"></a>SIMATIC WinCC V17 运行系统 (TIA Portal)</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109793105/zh">https://support.industry.siemens.com/cs/ww/en/view/109793105/zh</a></p>
+<h4 id="SIMATIC-STEP-7-incl-Safety-and-WinCC-V16-TRIAL-Download"><a href="#SIMATIC-STEP-7-incl-Safety-and-WinCC-V16-TRIAL-Download" class="headerlink" title="SIMATIC STEP 7 incl. Safety and WinCC V16 TRIAL Download"></a>SIMATIC STEP 7 incl. Safety and WinCC V16 TRIAL Download</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109772803">https://support.industry.siemens.com/cs/ww/en/view/109772803</a></p>
+<h4 id="SIMATIC-WinCC-V16-Runtime-TIA-Portal"><a href="#SIMATIC-WinCC-V16-Runtime-TIA-Portal" class="headerlink" title="SIMATIC WinCC V16 Runtime (TIA Portal)"></a>SIMATIC WinCC V16 Runtime (TIA Portal)</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109772878">https://support.industry.siemens.com/cs/ww/en/view/109772878</a></p>
+<h4 id="SIMATIC-STEP-7-and-WinCC-V15-1-TRIAL-Download"><a href="#SIMATIC-STEP-7-and-WinCC-V15-1-TRIAL-Download" class="headerlink" title="SIMATIC STEP 7 and WinCC V15.1 TRIAL Download"></a>SIMATIC STEP 7 and WinCC V15.1 TRIAL Download</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109761045">https://support.industry.siemens.com/cs/ww/en/view/109761045</a></p>
+<h4 id="SIMATIC-WinCC-V15-1-Runtime-TIA-Portal"><a href="#SIMATIC-WinCC-V15-1-Runtime-TIA-Portal" class="headerlink" title="SIMATIC WinCC V15.1 Runtime (TIA Portal)"></a>SIMATIC WinCC V15.1 Runtime (TIA Portal)</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109761576">https://support.industry.siemens.com/cs/ww/en/view/109761576</a></p>
+<h4 id="Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17"><a href="#Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17" class="headerlink" title="Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17"></a>Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109784441">https://support.industry.siemens.com/cs/ww/en/view/109784441</a></p>
+<h4 id="Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17-1"><a href="#Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17-1" class="headerlink" title="Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17"></a>Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109784441">https://support.industry.siemens.com/cs/ww/en/view/109784441</a></p>
+<h3 id="2-WinCC-V7-5"><a href="#2-WinCC-V7-5" class="headerlink" title="2 WinCC V7.5"></a>2 WinCC V7.5</h3><h4 id="WinCC-V7-5-和-WinCC-V7-5-ASIA-的-SP2"><a href="#WinCC-V7-5-和-WinCC-V7-5-ASIA-的-SP2" class="headerlink" title="WinCC V7.5 和 WinCC V7.5 ASIA 的 SP2"></a>WinCC V7.5 和 WinCC V7.5 ASIA 的 SP2</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109783853/zh">https://support.industry.siemens.com/cs/ww/en/view/109783853/zh</a></p>
+<h4 id="Updates-for-WinCC-V7-5-SP1-and-WinCC-V7-5-SP1-ASIA"><a href="#Updates-for-WinCC-V7-5-SP1-and-WinCC-V7-5-SP1-ASIA" class="headerlink" title="Updates for WinCC V7.5 SP1 and WinCC V7.5 SP1 ASIA"></a>Updates for WinCC V7.5 SP1 and WinCC V7.5 SP1 ASIA</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109773812">https://support.industry.siemens.com/cs/ww/en/view/109773812</a></p>
+<h4 id="Service-Pack-1-for-WinCC-V7-5-and-WinCC-V7-5-ASIA"><a href="#Service-Pack-1-for-WinCC-V7-5-and-WinCC-V7-5-ASIA" class="headerlink" title="Service Pack 1 for WinCC V7.5 and WinCC V7.5 ASIA"></a>Service Pack 1 for WinCC V7.5 and WinCC V7.5 ASIA</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109772879">https://support.industry.siemens.com/cs/us/en/view/109772879</a></p>
+<h4 id="WinCC-安装软件"><a href="#WinCC-安装软件" class="headerlink" title="WinCC 安装软件"></a>WinCC 安装软件</h4><p><a href="http://www.wincc.com.cn/rjzsk.aspx?type=2#">http://www.wincc.com.cn/rjzsk.aspx?type=2#</a></p>
+<h4 id="SIMATIC-WinCC软件更新下载"><a href="#SIMATIC-WinCC软件更新下载" class="headerlink" title="SIMATIC WinCC软件更新下载"></a>SIMATIC WinCC软件更新下载</h4><p><a href="https://support.industry.siemens.com/cs/products?dtp=Download&amp;mfn=ps&amp;pnid=14866&amp;lc=en-CN">https://support.industry.siemens.com/cs/products?dtp=Download&amp;mfn=ps&amp;pnid=14866&amp;lc=en-CN</a></p>
+<h3 id="3-Step7-V5-X"><a href="#3-Step7-V5-X" class="headerlink" title="3 Step7 V5.X"></a>3 Step7 V5.X</h3><h4 id="STEP-7-V5-6-SP1-STEP-7-Professional-2017-SR1-试用版下载"><a href="#STEP-7-V5-6-SP1-STEP-7-Professional-2017-SR1-试用版下载" class="headerlink" title="STEP 7 V5.6 SP1/STEP 7 Professional 2017 SR1 试用版下载"></a>STEP 7 V5.6 SP1/STEP 7 Professional 2017 SR1 试用版下载</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109761679/zh">https://support.industry.siemens.com/cs/us/en/view/109761679/zh</a></p>
+<h4 id="STEP-7-V5-7-S7-GRAPH-V5-7-S7-SCL-V5-7-S7-PDIAG-V5-7-STEP-7-Professional-2021-试用版下载"><a href="#STEP-7-V5-7-S7-GRAPH-V5-7-S7-SCL-V5-7-S7-PDIAG-V5-7-STEP-7-Professional-2021-试用版下载" class="headerlink" title="STEP 7 V5.7 / S7 GRAPH V5.7 / S7 SCL V5.7 / S7 PDIAG V5.7 / STEP 7 Professional 2021 试用版下载"></a>STEP 7 V5.7 / S7 GRAPH V5.7 / S7 SCL V5.7 / S7 PDIAG V5.7 / STEP 7 Professional 2021 试用版下载</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109796156/zh">https://support.industry.siemens.com/cs/us/en/view/109796156/zh</a></p>
+<h4 id="STEP-7-V5-6-SP2-S7-GRAPH-V5-6-SP2-STEP-7-Professional-2017-SR2-Trial-Download"><a href="#STEP-7-V5-6-SP2-S7-GRAPH-V5-6-SP2-STEP-7-Professional-2017-SR2-Trial-Download" class="headerlink" title="STEP 7 V5.6 SP2 / S7-GRAPH V5.6 SP2 / STEP 7 Professional 2017 SR2 Trial Download"></a>STEP 7 V5.6 SP2 / S7-GRAPH V5.6 SP2 / STEP 7 Professional 2017 SR2 Trial Download</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109773842">https://support.industry.siemens.com/cs/us/en/view/109773842</a></p>
+<h3 id="4-SIMATIC-NET"><a href="#4-SIMATIC-NET" class="headerlink" title="4 SIMATIC NET"></a>4 SIMATIC NET</h3><h4 id="Download-of-the-SIMATIC-NET-PC-Software-V17"><a href="#Download-of-the-SIMATIC-NET-PC-Software-V17" class="headerlink" title="Download of the SIMATIC NET PC Software V17"></a>Download of the SIMATIC NET PC Software V17</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109798403">https://support.industry.siemens.com/cs/us/en/view/109798403</a></p>
+<h4 id="Download-of-the-SIMATIC-NET-PC-Software-V17-SP1"><a href="#Download-of-the-SIMATIC-NET-PC-Software-V17-SP1" class="headerlink" title="Download of the SIMATIC NET PC Software V17 SP1"></a>Download of the SIMATIC NET PC Software V17 SP1</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109808271">https://support.industry.siemens.com/cs/us/en/view/109808271</a></p>
+<h4 id="Contents-of-the-SIMATIC-NET-Trial-DVD-V16"><a href="#Contents-of-the-SIMATIC-NET-Trial-DVD-V16" class="headerlink" title="Contents of the SIMATIC NET Trial DVD V16"></a>Contents of the SIMATIC NET Trial DVD V16</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109776940">https://support.industry.siemens.com/cs/us/en/view/109776940</a></p>
+<h4 id="SIMATIC-NET-Trial-DVD-V15-SP1-download"><a href="#SIMATIC-NET-Trial-DVD-V15-SP1-download" class="headerlink" title="SIMATIC NET Trial DVD V15 SP1 download"></a>SIMATIC NET Trial DVD V15 SP1 download</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109762690">https://support.industry.siemens.com/cs/us/en/view/109762690</a></p>
+<h4 id="Contents-of-the-SIMATIC-NET-Trial-DVD-V15"><a href="#Contents-of-the-SIMATIC-NET-Trial-DVD-V15" class="headerlink" title="Contents of the SIMATIC NET Trial DVD V15"></a>Contents of the SIMATIC NET Trial DVD V15</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109759410">https://support.industry.siemens.com/cs/us/en/view/109759410</a></p>
+<h6 id="Contents-of-the-SIMATIC-NET-Trial-DVD-V14-SP1"><a href="#Contents-of-the-SIMATIC-NET-Trial-DVD-V14-SP1" class="headerlink" title="Contents of the SIMATIC NET Trial DVD V14 SP1"></a>Contents of the SIMATIC NET Trial DVD V14 SP1</h6><p><a href="https://support.industry.siemens.com/cs/us/en/view/109757169">https://support.industry.siemens.com/cs/us/en/view/109757169</a></p>
+<h3 id="5-WinCC-Flexible"><a href="#5-WinCC-Flexible" class="headerlink" title="5 WinCC Flexible"></a>5 WinCC Flexible</h3><h4 id="Update-Hotfix-for-WinCC-flexible-2008-Service-Pack-5"><a href="#Update-Hotfix-for-WinCC-flexible-2008-Service-Pack-5" class="headerlink" title="Update (Hotfix) for WinCC flexible 2008 Service Pack 5"></a>Update (Hotfix) for WinCC flexible 2008 Service Pack 5</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109757233">https://support.industry.siemens.com/cs/us/en/view/109757233</a></p>
+<h4 id="SIMATIC-WinCC-flexible-2008-TRIAL-Download"><a href="#SIMATIC-WinCC-flexible-2008-TRIAL-Download" class="headerlink" title="SIMATIC WinCC flexible 2008 TRIAL Download"></a>SIMATIC WinCC flexible 2008 TRIAL Download</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/100777999">https://support.industry.siemens.com/cs/us/en/view/100777999</a></p>
+<h4 id="WinCC-Flexible-Smart-V4"><a href="#WinCC-Flexible-Smart-V4" class="headerlink" title="WinCC Flexible Smart V4"></a>WinCC Flexible Smart V4</h4><p><a href="https://new.siemens.com/cn/zh/products/automation/simatic-hmi/panels/smart-line.html?ismobile=true">https://new.siemens.com/cn/zh/products/automation/simatic-hmi/panels/smart-line.html?ismobile=true</a></p>
+<h4 id="Servicetool-SIMATIC-ProSave"><a href="#Servicetool-SIMATIC-ProSave" class="headerlink" title="Servicetool SIMATIC ProSave"></a>Servicetool SIMATIC ProSave</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/10347815">https://support.industry.siemens.com/cs/us/en/view/10347815</a></p>
+<h3 id="6-小型控制器"><a href="#6-小型控制器" class="headerlink" title="6 小型控制器"></a>6 小型控制器</h3><h4 id="S7-200-SMART更智能，更经济的控制器"><a href="#S7-200-SMART更智能，更经济的控制器" class="headerlink" title="S7-200 SMART更智能，更经济的控制器"></a>S7-200 SMART更智能，更经济的控制器</h4><p><a href="https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/simatic-s7200-smart.html">https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/simatic-s7200-smart.html</a></p>
+<h4 id="LOGO-软件"><a href="#LOGO-软件" class="headerlink" title="LOGO! 软件"></a>LOGO! 软件</h4><p><a href="https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/logo/logo-software.html#LOGOSoftComfort">https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/logo/logo-software.html#LOGOSoftComfort</a></p>
+<h4 id="STEP-7-Micro-WIN-V4-0-SP7-升级版（须先安装-Micro-WIN-V4-0-正式版）"><a href="#STEP-7-Micro-WIN-V4-0-SP7-升级版（须先安装-Micro-WIN-V4-0-正式版）" class="headerlink" title="STEP 7-Micro/WIN V4.0 SP7 升级版（须先安装 Micro/WIN V4.0 正式版）"></a>STEP 7-Micro/WIN V4.0 SP7 升级版（须先安装 Micro/WIN V4.0 正式版）</h4><p><a href="https://support.automation.siemens.com/CN/view/zh/58523240">https://support.automation.siemens.com/CN/view/zh/58523240</a></p>
+<h4 id="PC-Access-V1-0-SP6-升级版（须先安装-PC-Access-V1-0-正式版）"><a href="#PC-Access-V1-0-SP6-升级版（须先安装-PC-Access-V1-0-正式版）" class="headerlink" title="PC Access V1.0 SP6 升级版（须先安装 PC Access V1.0 正式版）"></a>PC Access V1.0 SP6 升级版（须先安装 PC Access V1.0 正式版）</h4><p><a href="https://support.automation.siemens.com/WW/view/en/58495870">https://support.automation.siemens.com/WW/view/en/58495870</a></p>
+<h4 id="Wipeout-exe-文件下载"><a href="#Wipeout-exe-文件下载" class="headerlink" title="Wipeout.exe 文件下载"></a>Wipeout.exe 文件下载</h4><p><a href="https://support.automation.siemens.com/WW/view/en/2123168">https://support.automation.siemens.com/WW/view/en/2123168</a></p>
+<h4 id="LOGO-软件升级包-LOGO-Soft-Comfort-从-V1-0-2-0-3-0-4-0-5-0-升级到-V6-0（须先安装-LOGO-Soft-Comfort-的正式版）"><a href="#LOGO-软件升级包-LOGO-Soft-Comfort-从-V1-0-2-0-3-0-4-0-5-0-升级到-V6-0（须先安装-LOGO-Soft-Comfort-的正式版）" class="headerlink" title="LOGO! 软件升级包 LOGO!Soft Comfort 从 V1.0/2.0/3.0/4.0/5.0 升级到 V6.0（须先安装 LOGO!Soft Comfort 的正式版）"></a>LOGO! 软件升级包 LOGO!Soft Comfort 从 V1.0/2.0/3.0/4.0/5.0 升级到 V6.0（须先安装 LOGO!Soft Comfort 的正式版）</h4><p><a href="https://www.automation.siemens.com/logo/html_76/support/01ToolsDownloads/index.html">https://www.automation.siemens.com/logo/html_76/support/01ToolsDownloads/index.html</a></p>
+<h3 id="7-驱动相关软件"><a href="#7-驱动相关软件" class="headerlink" title="7 驱动相关软件"></a>7 驱动相关软件</h3><h4 id="SIZER-for-Siemens-Drives-Download-for-the-current-version-V3-23-and-all-previous-versions-up-to-version-V3-15"><a href="#SIZER-for-Siemens-Drives-Download-for-the-current-version-V3-23-and-all-previous-versions-up-to-version-V3-15" class="headerlink" title="SIZER for Siemens Drives - Download for the current version V3.23 and all previous versions up to version V3.15"></a>SIZER for Siemens Drives - Download for the current version V3.23 and all previous versions up to version V3.15</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/54992004">https://support.industry.siemens.com/cs/ae/en/view/54992004</a></p>
+<h4 id="SINAMICS-STARTER"><a href="#SINAMICS-STARTER" class="headerlink" title="SINAMICS STARTER"></a>SINAMICS STARTER</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/26233208">https://support.industry.siemens.com/cs/ae/en/view/26233208</a></p>
+<h4 id="SINAMICS-Startdrive-V17"><a href="#SINAMICS-Startdrive-V17" class="headerlink" title="SINAMICS Startdrive V17"></a>SINAMICS Startdrive V17</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/109794362">https://support.industry.siemens.com/cs/ae/en/view/109794362</a></p>
+<h4 id="DriveMonitor-版本-V5-5-SP2，用于-SIMOVERT-MASTERDRIVES、MICROMASTER-和-SIMOREG"><a href="#DriveMonitor-版本-V5-5-SP2，用于-SIMOVERT-MASTERDRIVES、MICROMASTER-和-SIMOREG" class="headerlink" title="DriveMonitor 版本 V5.5 SP2，用于 SIMOVERT MASTERDRIVES、MICROMASTER 和 SIMOREG"></a>DriveMonitor 版本 V5.5 SP2，用于 SIMOVERT MASTERDRIVES、MICROMASTER 和 SIMOREG</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/11769381/zh">https://support.industry.siemens.com/cs/ae/en/view/11769381/zh</a></p>
+]]></content>
+      <categories>
+        <category>自动化</category>
+      </categories>
+      <tags>
+        <tag>西门子</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>挤出系统的特性与选型</title>
     <url>/2022/07/01/%E6%8C%A4%E5%87%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E6%80%A7%E4%B8%8E%E9%80%89%E5%9E%8B/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我公司吹塑机产品种类齐全，涉及的行业如化工、日化、食品、汽车、光伏、水产、医疗等等；中空制品种类从 100mL 化妆品包装到 2000L 水桶容器；所用的原料有 HDPE、LDPE、PP、PVC、PA、TPU/TPE、PC、PETG 等,制品分层结构从单层到 2、3…7 层；客户实际需求、生产环境各不相同。以上方面专业性很强，知识面比较广，业务人员要想全面地了解贯通并在工作中熟练运用是需要一定的学习和实践过程。本文从吹塑机中的挤出系统单元阐述我公司挤出系统类型及其特点，如何在吹塑机产品中选择合适的挤出系统类型和配置以及相关事项。</p>
@@ -5366,7 +5446,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid22133262678844002" width="90%" height="300"></div>
+        <div id="highchartsuuid2225737212756231" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -5498,11 +5578,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid22133262678844002,op);
+                        var chart = Highcharts.chart(highchartsuuid2225737212756231,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid22133262678844002,op);
+                var chart = Highcharts.chart(highchartsuuid2225737212756231,op);
             }
         </script>
     
@@ -5587,53 +5667,6 @@ setTimeout('reloadPage()',1000);
       </categories>
       <tags>
         <tag>吹塑机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>最新西门子工业常用软件官网下载链接(2022.07)</title>
-    <url>/2023/06/02/%E6%9C%80%E6%96%B0%E8%A5%BF%E9%97%A8%E5%AD%90%E5%B7%A5%E4%B8%9A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5-2022-07/</url>
-    <content><![CDATA[<h3 id="1-TIA-Portal"><a href="#1-TIA-Portal" class="headerlink" title="1 TIA Portal"></a>1 TIA Portal</h3><h4 id="SIMATIC-STEP-7（包括-Safety）、S7-PLCSIM-和-WinCC-V17-试用版下载"><a href="#SIMATIC-STEP-7（包括-Safety）、S7-PLCSIM-和-WinCC-V17-试用版下载" class="headerlink" title="SIMATIC STEP 7（包括 Safety）、S7-PLCSIM 和 WinCC V17 试用版下载"></a>SIMATIC STEP 7（包括 Safety）、S7-PLCSIM 和 WinCC V17 试用版下载</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109784440/zh">https://support.industry.siemens.com/cs/ww/en/view/109784440/zh</a></p>
-<h4 id="SIMATIC-WinCC-V17-运行系统-TIA-Portal"><a href="#SIMATIC-WinCC-V17-运行系统-TIA-Portal" class="headerlink" title="SIMATIC WinCC V17 运行系统 (TIA Portal)"></a>SIMATIC WinCC V17 运行系统 (TIA Portal)</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109793105/zh">https://support.industry.siemens.com/cs/ww/en/view/109793105/zh</a></p>
-<h4 id="SIMATIC-STEP-7-incl-Safety-and-WinCC-V16-TRIAL-Download"><a href="#SIMATIC-STEP-7-incl-Safety-and-WinCC-V16-TRIAL-Download" class="headerlink" title="SIMATIC STEP 7 incl. Safety and WinCC V16 TRIAL Download"></a>SIMATIC STEP 7 incl. Safety and WinCC V16 TRIAL Download</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109772803">https://support.industry.siemens.com/cs/ww/en/view/109772803</a></p>
-<h4 id="SIMATIC-WinCC-V16-Runtime-TIA-Portal"><a href="#SIMATIC-WinCC-V16-Runtime-TIA-Portal" class="headerlink" title="SIMATIC WinCC V16 Runtime (TIA Portal)"></a>SIMATIC WinCC V16 Runtime (TIA Portal)</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109772878">https://support.industry.siemens.com/cs/ww/en/view/109772878</a></p>
-<h4 id="SIMATIC-STEP-7-and-WinCC-V15-1-TRIAL-Download"><a href="#SIMATIC-STEP-7-and-WinCC-V15-1-TRIAL-Download" class="headerlink" title="SIMATIC STEP 7 and WinCC V15.1 TRIAL Download"></a>SIMATIC STEP 7 and WinCC V15.1 TRIAL Download</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109761045">https://support.industry.siemens.com/cs/ww/en/view/109761045</a></p>
-<h4 id="SIMATIC-WinCC-V15-1-Runtime-TIA-Portal"><a href="#SIMATIC-WinCC-V15-1-Runtime-TIA-Portal" class="headerlink" title="SIMATIC WinCC V15.1 Runtime (TIA Portal)"></a>SIMATIC WinCC V15.1 Runtime (TIA Portal)</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109761576">https://support.industry.siemens.com/cs/ww/en/view/109761576</a></p>
-<h4 id="Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17"><a href="#Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17" class="headerlink" title="Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17"></a>Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109784441">https://support.industry.siemens.com/cs/ww/en/view/109784441</a></p>
-<h4 id="Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17-1"><a href="#Updates-for-STEP-7-V17-S7-PLCSIM-V17-and-WinCC-V17-1" class="headerlink" title="Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17"></a>Updates for STEP 7 V17, S7-PLCSIM V17 and WinCC V17</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109784441">https://support.industry.siemens.com/cs/ww/en/view/109784441</a></p>
-<h3 id="2-WinCC-V7-5"><a href="#2-WinCC-V7-5" class="headerlink" title="2 WinCC V7.5"></a>2 WinCC V7.5</h3><h4 id="WinCC-V7-5-和-WinCC-V7-5-ASIA-的-SP2"><a href="#WinCC-V7-5-和-WinCC-V7-5-ASIA-的-SP2" class="headerlink" title="WinCC V7.5 和 WinCC V7.5 ASIA 的 SP2"></a>WinCC V7.5 和 WinCC V7.5 ASIA 的 SP2</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109783853/zh">https://support.industry.siemens.com/cs/ww/en/view/109783853/zh</a></p>
-<h4 id="Updates-for-WinCC-V7-5-SP1-and-WinCC-V7-5-SP1-ASIA"><a href="#Updates-for-WinCC-V7-5-SP1-and-WinCC-V7-5-SP1-ASIA" class="headerlink" title="Updates for WinCC V7.5 SP1 and WinCC V7.5 SP1 ASIA"></a>Updates for WinCC V7.5 SP1 and WinCC V7.5 SP1 ASIA</h4><p><a href="https://support.industry.siemens.com/cs/ww/en/view/109773812">https://support.industry.siemens.com/cs/ww/en/view/109773812</a></p>
-<h4 id="Service-Pack-1-for-WinCC-V7-5-and-WinCC-V7-5-ASIA"><a href="#Service-Pack-1-for-WinCC-V7-5-and-WinCC-V7-5-ASIA" class="headerlink" title="Service Pack 1 for WinCC V7.5 and WinCC V7.5 ASIA"></a>Service Pack 1 for WinCC V7.5 and WinCC V7.5 ASIA</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109772879">https://support.industry.siemens.com/cs/us/en/view/109772879</a></p>
-<h4 id="WinCC-安装软件"><a href="#WinCC-安装软件" class="headerlink" title="WinCC 安装软件"></a>WinCC 安装软件</h4><p><a href="http://www.wincc.com.cn/rjzsk.aspx?type=2#">http://www.wincc.com.cn/rjzsk.aspx?type=2#</a></p>
-<h4 id="SIMATIC-WinCC软件更新下载"><a href="#SIMATIC-WinCC软件更新下载" class="headerlink" title="SIMATIC WinCC软件更新下载"></a>SIMATIC WinCC软件更新下载</h4><p><a href="https://support.industry.siemens.com/cs/products?dtp=Download&amp;mfn=ps&amp;pnid=14866&amp;lc=en-CN">https://support.industry.siemens.com/cs/products?dtp=Download&amp;mfn=ps&amp;pnid=14866&amp;lc=en-CN</a></p>
-<h3 id="3-Step7-V5-X"><a href="#3-Step7-V5-X" class="headerlink" title="3 Step7 V5.X"></a>3 Step7 V5.X</h3><h4 id="STEP-7-V5-6-SP1-STEP-7-Professional-2017-SR1-试用版下载"><a href="#STEP-7-V5-6-SP1-STEP-7-Professional-2017-SR1-试用版下载" class="headerlink" title="STEP 7 V5.6 SP1/STEP 7 Professional 2017 SR1 试用版下载"></a>STEP 7 V5.6 SP1/STEP 7 Professional 2017 SR1 试用版下载</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109761679/zh">https://support.industry.siemens.com/cs/us/en/view/109761679/zh</a></p>
-<h4 id="STEP-7-V5-7-S7-GRAPH-V5-7-S7-SCL-V5-7-S7-PDIAG-V5-7-STEP-7-Professional-2021-试用版下载"><a href="#STEP-7-V5-7-S7-GRAPH-V5-7-S7-SCL-V5-7-S7-PDIAG-V5-7-STEP-7-Professional-2021-试用版下载" class="headerlink" title="STEP 7 V5.7 / S7 GRAPH V5.7 / S7 SCL V5.7 / S7 PDIAG V5.7 / STEP 7 Professional 2021 试用版下载"></a>STEP 7 V5.7 / S7 GRAPH V5.7 / S7 SCL V5.7 / S7 PDIAG V5.7 / STEP 7 Professional 2021 试用版下载</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109796156/zh">https://support.industry.siemens.com/cs/us/en/view/109796156/zh</a></p>
-<h4 id="STEP-7-V5-6-SP2-S7-GRAPH-V5-6-SP2-STEP-7-Professional-2017-SR2-Trial-Download"><a href="#STEP-7-V5-6-SP2-S7-GRAPH-V5-6-SP2-STEP-7-Professional-2017-SR2-Trial-Download" class="headerlink" title="STEP 7 V5.6 SP2 / S7-GRAPH V5.6 SP2 / STEP 7 Professional 2017 SR2 Trial Download"></a>STEP 7 V5.6 SP2 / S7-GRAPH V5.6 SP2 / STEP 7 Professional 2017 SR2 Trial Download</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109773842">https://support.industry.siemens.com/cs/us/en/view/109773842</a></p>
-<h3 id="4-SIMATIC-NET"><a href="#4-SIMATIC-NET" class="headerlink" title="4 SIMATIC NET"></a>4 SIMATIC NET</h3><h4 id="Download-of-the-SIMATIC-NET-PC-Software-V17"><a href="#Download-of-the-SIMATIC-NET-PC-Software-V17" class="headerlink" title="Download of the SIMATIC NET PC Software V17"></a>Download of the SIMATIC NET PC Software V17</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109798403">https://support.industry.siemens.com/cs/us/en/view/109798403</a></p>
-<h4 id="Download-of-the-SIMATIC-NET-PC-Software-V17-SP1"><a href="#Download-of-the-SIMATIC-NET-PC-Software-V17-SP1" class="headerlink" title="Download of the SIMATIC NET PC Software V17 SP1"></a>Download of the SIMATIC NET PC Software V17 SP1</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109808271">https://support.industry.siemens.com/cs/us/en/view/109808271</a></p>
-<h4 id="Contents-of-the-SIMATIC-NET-Trial-DVD-V16"><a href="#Contents-of-the-SIMATIC-NET-Trial-DVD-V16" class="headerlink" title="Contents of the SIMATIC NET Trial DVD V16"></a>Contents of the SIMATIC NET Trial DVD V16</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109776940">https://support.industry.siemens.com/cs/us/en/view/109776940</a></p>
-<h4 id="SIMATIC-NET-Trial-DVD-V15-SP1-download"><a href="#SIMATIC-NET-Trial-DVD-V15-SP1-download" class="headerlink" title="SIMATIC NET Trial DVD V15 SP1 download"></a>SIMATIC NET Trial DVD V15 SP1 download</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109762690">https://support.industry.siemens.com/cs/us/en/view/109762690</a></p>
-<h4 id="Contents-of-the-SIMATIC-NET-Trial-DVD-V15"><a href="#Contents-of-the-SIMATIC-NET-Trial-DVD-V15" class="headerlink" title="Contents of the SIMATIC NET Trial DVD V15"></a>Contents of the SIMATIC NET Trial DVD V15</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109759410">https://support.industry.siemens.com/cs/us/en/view/109759410</a></p>
-<h6 id="Contents-of-the-SIMATIC-NET-Trial-DVD-V14-SP1"><a href="#Contents-of-the-SIMATIC-NET-Trial-DVD-V14-SP1" class="headerlink" title="Contents of the SIMATIC NET Trial DVD V14 SP1"></a>Contents of the SIMATIC NET Trial DVD V14 SP1</h6><p><a href="https://support.industry.siemens.com/cs/us/en/view/109757169">https://support.industry.siemens.com/cs/us/en/view/109757169</a></p>
-<h3 id="5-WinCC-Flexible"><a href="#5-WinCC-Flexible" class="headerlink" title="5 WinCC Flexible"></a>5 WinCC Flexible</h3><h4 id="Update-Hotfix-for-WinCC-flexible-2008-Service-Pack-5"><a href="#Update-Hotfix-for-WinCC-flexible-2008-Service-Pack-5" class="headerlink" title="Update (Hotfix) for WinCC flexible 2008 Service Pack 5"></a>Update (Hotfix) for WinCC flexible 2008 Service Pack 5</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/109757233">https://support.industry.siemens.com/cs/us/en/view/109757233</a></p>
-<h4 id="SIMATIC-WinCC-flexible-2008-TRIAL-Download"><a href="#SIMATIC-WinCC-flexible-2008-TRIAL-Download" class="headerlink" title="SIMATIC WinCC flexible 2008 TRIAL Download"></a>SIMATIC WinCC flexible 2008 TRIAL Download</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/100777999">https://support.industry.siemens.com/cs/us/en/view/100777999</a></p>
-<h4 id="WinCC-Flexible-Smart-V4"><a href="#WinCC-Flexible-Smart-V4" class="headerlink" title="WinCC Flexible Smart V4"></a>WinCC Flexible Smart V4</h4><p><a href="https://new.siemens.com/cn/zh/products/automation/simatic-hmi/panels/smart-line.html?ismobile=true">https://new.siemens.com/cn/zh/products/automation/simatic-hmi/panels/smart-line.html?ismobile=true</a></p>
-<h4 id="Servicetool-SIMATIC-ProSave"><a href="#Servicetool-SIMATIC-ProSave" class="headerlink" title="Servicetool SIMATIC ProSave"></a>Servicetool SIMATIC ProSave</h4><p><a href="https://support.industry.siemens.com/cs/us/en/view/10347815">https://support.industry.siemens.com/cs/us/en/view/10347815</a></p>
-<h3 id="6-小型控制器"><a href="#6-小型控制器" class="headerlink" title="6 小型控制器"></a>6 小型控制器</h3><h4 id="S7-200-SMART更智能，更经济的控制器"><a href="#S7-200-SMART更智能，更经济的控制器" class="headerlink" title="S7-200 SMART更智能，更经济的控制器"></a>S7-200 SMART更智能，更经济的控制器</h4><p><a href="https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/simatic-s7200-smart.html">https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/simatic-s7200-smart.html</a></p>
-<h4 id="LOGO-软件"><a href="#LOGO-软件" class="headerlink" title="LOGO! 软件"></a>LOGO! 软件</h4><p><a href="https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/logo/logo-software.html#LOGOSoftComfort">https://new.siemens.com/cn/zh/products/automation/systems/industrial/plc/logo/logo-software.html#LOGOSoftComfort</a></p>
-<h4 id="STEP-7-Micro-WIN-V4-0-SP7-升级版（须先安装-Micro-WIN-V4-0-正式版）"><a href="#STEP-7-Micro-WIN-V4-0-SP7-升级版（须先安装-Micro-WIN-V4-0-正式版）" class="headerlink" title="STEP 7-Micro/WIN V4.0 SP7 升级版（须先安装 Micro/WIN V4.0 正式版）"></a>STEP 7-Micro/WIN V4.0 SP7 升级版（须先安装 Micro/WIN V4.0 正式版）</h4><p><a href="https://support.automation.siemens.com/CN/view/zh/58523240">https://support.automation.siemens.com/CN/view/zh/58523240</a></p>
-<h4 id="PC-Access-V1-0-SP6-升级版（须先安装-PC-Access-V1-0-正式版）"><a href="#PC-Access-V1-0-SP6-升级版（须先安装-PC-Access-V1-0-正式版）" class="headerlink" title="PC Access V1.0 SP6 升级版（须先安装 PC Access V1.0 正式版）"></a>PC Access V1.0 SP6 升级版（须先安装 PC Access V1.0 正式版）</h4><p><a href="https://support.automation.siemens.com/WW/view/en/58495870">https://support.automation.siemens.com/WW/view/en/58495870</a></p>
-<h4 id="Wipeout-exe-文件下载"><a href="#Wipeout-exe-文件下载" class="headerlink" title="Wipeout.exe 文件下载"></a>Wipeout.exe 文件下载</h4><p><a href="https://support.automation.siemens.com/WW/view/en/2123168">https://support.automation.siemens.com/WW/view/en/2123168</a></p>
-<h4 id="LOGO-软件升级包-LOGO-Soft-Comfort-从-V1-0-2-0-3-0-4-0-5-0-升级到-V6-0（须先安装-LOGO-Soft-Comfort-的正式版）"><a href="#LOGO-软件升级包-LOGO-Soft-Comfort-从-V1-0-2-0-3-0-4-0-5-0-升级到-V6-0（须先安装-LOGO-Soft-Comfort-的正式版）" class="headerlink" title="LOGO! 软件升级包 LOGO!Soft Comfort 从 V1.0/2.0/3.0/4.0/5.0 升级到 V6.0（须先安装 LOGO!Soft Comfort 的正式版）"></a>LOGO! 软件升级包 LOGO!Soft Comfort 从 V1.0/2.0/3.0/4.0/5.0 升级到 V6.0（须先安装 LOGO!Soft Comfort 的正式版）</h4><p><a href="https://www.automation.siemens.com/logo/html_76/support/01ToolsDownloads/index.html">https://www.automation.siemens.com/logo/html_76/support/01ToolsDownloads/index.html</a></p>
-<h3 id="7-驱动相关软件"><a href="#7-驱动相关软件" class="headerlink" title="7 驱动相关软件"></a>7 驱动相关软件</h3><h4 id="SIZER-for-Siemens-Drives-Download-for-the-current-version-V3-23-and-all-previous-versions-up-to-version-V3-15"><a href="#SIZER-for-Siemens-Drives-Download-for-the-current-version-V3-23-and-all-previous-versions-up-to-version-V3-15" class="headerlink" title="SIZER for Siemens Drives - Download for the current version V3.23 and all previous versions up to version V3.15"></a>SIZER for Siemens Drives - Download for the current version V3.23 and all previous versions up to version V3.15</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/54992004">https://support.industry.siemens.com/cs/ae/en/view/54992004</a></p>
-<h4 id="SINAMICS-STARTER"><a href="#SINAMICS-STARTER" class="headerlink" title="SINAMICS STARTER"></a>SINAMICS STARTER</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/26233208">https://support.industry.siemens.com/cs/ae/en/view/26233208</a></p>
-<h4 id="SINAMICS-Startdrive-V17"><a href="#SINAMICS-Startdrive-V17" class="headerlink" title="SINAMICS Startdrive V17"></a>SINAMICS Startdrive V17</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/109794362">https://support.industry.siemens.com/cs/ae/en/view/109794362</a></p>
-<h4 id="DriveMonitor-版本-V5-5-SP2，用于-SIMOVERT-MASTERDRIVES、MICROMASTER-和-SIMOREG"><a href="#DriveMonitor-版本-V5-5-SP2，用于-SIMOVERT-MASTERDRIVES、MICROMASTER-和-SIMOREG" class="headerlink" title="DriveMonitor 版本 V5.5 SP2，用于 SIMOVERT MASTERDRIVES、MICROMASTER 和 SIMOREG"></a>DriveMonitor 版本 V5.5 SP2，用于 SIMOVERT MASTERDRIVES、MICROMASTER 和 SIMOREG</h4><p><a href="https://support.industry.siemens.com/cs/ae/en/view/11769381/zh">https://support.industry.siemens.com/cs/ae/en/view/11769381/zh</a></p>
-]]></content>
-      <categories>
-        <category>自动化</category>
-      </categories>
-      <tags>
-        <tag>西门子</tag>
       </tags>
   </entry>
   <entry>
