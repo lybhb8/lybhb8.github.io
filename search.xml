@@ -46,6 +46,64 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux嵌入式编程笔记</title>
+    <url>/2024/03/05/Linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="embedded-notes"><a href="#embedded-notes" class="headerlink" title="embedded-notes"></a>embedded-notes</h2><blockquote>
+<ul>
+<li>主要涉及到嵌入式软件开发、嵌入式驱动开发、IOT开发、git等知识点。</li>
+<li>转载自<a href="https://github.com/xiaowenxia/embedded-notes/wiki">原文wiki</a>和<a href="https://xiaowenxia.github.io/embedded-notes/">xiaowenxia的博客</a></li>
+<li>应用mkdocs-material主题重新部署，更适合阅读。</li>
+<li>感谢原作者xiaowenxia的无私奉献！</li>
+<li>如有侵权，请联系删除。</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h3><ul>
+<li><input checked disabled type="checkbox"> c基础知识</li>
+<li><input checked disabled type="checkbox"> 数据结构（链表 hash表 排序算法 设计模式等）</li>
+<li><input checked disabled type="checkbox"> 外设（串口 网口 i2s i2c spi sdio等）</li>
+<li><input checked disabled type="checkbox"> ARM cortex-m0 m3 m4 A8等芯片架构</li>
+<li><input disabled type="checkbox"> 操作系统（内存管理 进程管理 实时性要求 任务间通讯等）</li>
+<li><input checked disabled type="checkbox"> tcpip协议栈（tcpip模型 分层结构 ip tcp udp icmp igmp tftp http ftp等协议）</li>
+<li><input checked disabled type="checkbox"> linux 多线程 多进程通讯 linux系统任务调度和中断</li>
+<li><input disabled type="checkbox"> bash命令 shell makefile python github go javascript</li>
+<li><input disabled type="checkbox"> linux 启动过程</li>
+<li><input disabled type="checkbox"> git 命令</li>
+</ul>
+<hr>
+<h2 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h2><p><a href="http://blowmoldingshare.cn/mkdocs-embedded-notes/">Linux嵌入式编程-学习笔记</a></p>
+]]></content>
+      <categories>
+        <category>Web互联网</category>
+      </categories>
+      <tags>
+        <tag>转载</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>People&#39;s Dream</title>
+    <url>/2022/02/27/People-s-Dream/</url>
+    <content><![CDATA[<p><strong>中文名称</strong>：人们的梦<br><strong>英文名称</strong>：People’s.Dream<br><strong>版本</strong>：尼古拉﹒德﹒安吉利斯<br><strong>专辑歌手</strong>：Nicolas.De.Angelas<br><strong>地区</strong>：法国</p>
+<p><img src="/2022/02/27/People-s-Dream/top.jpg"></p>
+<h3 id="专辑介绍"><a href="#专辑介绍" class="headerlink" title="专辑介绍:"></a><strong>专辑介绍:</strong></h3><p>​        尼古拉．德．安捷罗斯，一九五三年十二月二十六日出生于巴黎近郊，十二岁开始接触吉他。先后求学于多位大师门下，一九八一年发表了真正成名之作《镜中的安娜》，其影响迅速从法国波及世界。他为人诚恳可亲，演奏充满了罗曼斯式的意境云云。对所选的十四首曲子的具体介绍，有谓《旅途》微微地含有一种无形的忧愁感，《梦之果》略含悲伤之意，往往令人回忆起自己人生悲感的一段回忆。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280215&auto=0&height=66"></iframe>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280199&auto=1&height=66"></iframe>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=75051&auto=0&height=66"></iframe>
+
+
+
+<h3 id="其它分享："><a href="#其它分享：" class="headerlink" title="其它分享："></a>其它分享：</h3><p><a href="https://baijiahao.baidu.com/s?id=1664767514562027202&wfr=spider&for=pc">阿尔罕布拉宫的回忆</a></p>
+]]></content>
+      <categories>
+        <category>音乐</category>
+      </categories>
+      <tags>
+        <tag>吉他</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MarkDown超级教程 Obsidian版</title>
     <url>/2022/07/13/MarkDown%E8%B6%85%E7%BA%A7%E6%95%99%E7%A8%8B%20Obsidian%E7%89%88/</url>
     <content><![CDATA[<h1 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown?"></a>什么是 Markdown?</h1><ol>
@@ -1885,6 +1943,74 @@
       </tags>
   </entry>
   <entry>
+    <title>hello hexo-keep</title>
+    <url>/2022/01/05/hello-hexo-keep/</url>
+    <content><![CDATA[<div align="right">
+  语言:
+  简中
+  <a title="Chinese" href="README.md">English</a>
+  <a title="Chinese" href="README_zh-TW.md">繁中</a>
+</div>
+
+<p><a href="https://xpoet.cn"><img align="center" alt="Keep" src="/2022/01/05/hello-hexo-keep/keep-logo-slogan.svg"></a></p>
+<h1 id="hexo-theme-keep"><a href="#hexo-theme-keep" class="headerlink" title="hexo-theme-keep"></a>hexo-theme-keep</h1><p>«Keep» 是一款简约优雅的 <a href="https://hexo.io/">Hexo</a> 主题。它能让你更专注于写作。</p>
+<p><a href="https://github.com/XPoet/hexo-theme-ils/blob/master/LICENSE"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg" alt="Github License"></a><br><a href="https://github.com/XPoet/hexo-theme-ils/releases"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep-16413624210603.svg" alt="Github Release"></a><br><a href="https://www.npmjs.com/package/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="NPM version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/hexo-=5.0.0-blue" alt="Required Hexo version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/node-=12.0-success.svgstyle=flat-square&logo=Node.js&longCache=true" alt="Node.js Version"></a><br><a href="https://www.jsdelivr.com/package/npm/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="jsDelivr hits"></a></p>
+<h2 id="star2-在线预览"><a href="#star2-在线预览" class="headerlink" title=":star2: 在线预览"></a>:star2: 在线预览</h2><ul>
+<li><strong><a href="https://xpoet.cn/">XPoet’s Blog</a></strong></li>
+<li><strong><a href="https://keep.xpoet.cn/">keep 演示网站</a></strong></li>
+<li><strong><a href="https://keep-docs.xpoet.cn/">keep 官方文档</a></strong></li>
+</ul>
+<h2 id="rocket-安装"><a href="#rocket-安装" class="headerlink" title=":rocket: 安装"></a>:rocket: 安装</h2><p>如果你在使用 Hexo 5.0 或更高版本，最简单的安装方式是通过 npm：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm install hexo-theme-keep<br></code></pre></td></tr></table></figure>
+
+<p>你也可以直接克隆整个仓库：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ git <span class="hljs-built_in">clone</span> https://github.com/XPoet/hexo-theme-keep themes/keep<br></code></pre></td></tr></table></figure>
+
+<p>安装完成后，在 Hexo 配置文件中将 <code>theme</code> 设置为 <code>keep</code>。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">theme:</span> <span class="hljs-string">keep</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="wrench-使用"><a href="#wrench-使用" class="headerlink" title=":wrench: 使用"></a>:wrench: 使用</h2><p>请查看 «Keep» 官方文档：</p>
+<ul>
+<li><strong><a href="https://keep-docs.xpoet.cn/">Keep 官方文档</a></strong></li>
+<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep 主题配置指南</a></strong></li>
+<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep 主题进阶使用</a></strong></li>
+</ul>
+<p>不推荐直接修改 «Keep» 主题的文件。因为这可能导致错误（例如 git merge 冲突），并且在升级主题时修改的文件可能丢失。</p>
+<h2 id="dart-更新"><a href="#dart-更新" class="headerlink" title=":dart: 更新"></a>:dart: 更新</h2><p>«Keep» 不定期发布新版本。你可以通过如下命令更新 «Keep»。</p>
+<p>通过 npm 安装最新版本：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm update hexo-theme-keep<br></code></pre></td></tr></table></figure>
+
+<p>或者通过 git 更新到最新的 master 分支：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> themes/keep<br>$ git pull<br></code></pre></td></tr></table></figure>
+
+<p><em>如果你修改了主题源码：</em></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ git add .<br>$ git stash<br>$ git pull<br>$ git stash pop<br></code></pre></td></tr></table></figure>
+
+<h2 id="art-贡献"><a href="#art-贡献" class="headerlink" title=":art: 贡献"></a>:art: 贡献</h2><p>我们欢迎你加入 «Keep» 的开发，贡献出你的一份力量。请看<a href="https://keep.xpoet.cn/2020/11/Keep-%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/">Keep 代码贡献指南</a>。</p>
+<h2 id="clapper-贡献者"><a href="#clapper-贡献者" class="headerlink" title=":clapper: 贡献者"></a>:clapper: 贡献者</h2><p>这个项目的存在多亏了所有的贡献者。</p>
+<a href="https://github.com/XPoet/hexo-theme-keep/graphs/contributors">
+  <img src="/2022/01/05/hello-hexo-keep/contributors.svg">
+</a>
+
+<h2 id="sparkling-heart-鸣谢"><a href="#sparkling-heart-鸣谢" class="headerlink" title=":sparkling_heart: 鸣谢"></a>:sparkling_heart: 鸣谢</h2><p>«Keep» 特别感谢这些支持我们核心基础设施的优质服务：</p>
+<p><a href="https://github.com"><img height="38" src="/2022/01/05/hello-hexo-keep/GitHub-LOGO.5sq0168mirg0.png"></a></p>
+<blockquote>
+<p>GitHub 容许我们托管 Git 仓库及运行测试。</p>
+</blockquote>
+<p><a href="https://www.jsdelivr.com"><img height="38" src="/2022/01/05/hello-hexo-keep/jsDelivr-LOGO.png"></a></p>
+<blockquote>
+<p>jsDelivr 提供了 CDN 服务。</p>
+</blockquote>
+<h2 id="memo-许可"><a href="#memo-许可" class="headerlink" title=":memo: 许可"></a>:memo: 许可</h2><p><a href="https://github.com/XPoet/picx/blob/master/LICENSE">MIT</a> Copyright © 2020-2021 XPoet</p>
+]]></content>
+      <categories>
+        <category>Web互联网</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Smart20 吹塑机控制系统</title>
     <url>/2023/06/02/Smart-20-%E5%90%B9%E5%A1%91%E6%9C%BA%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h1 id="Smart20-吹塑机控制系统-BlowmoldingControlSystem"><a href="#Smart20-吹塑机控制系统-BlowmoldingControlSystem" class="headerlink" title="Smart20 吹塑机控制系统| BlowmoldingControlSystem"></a>Smart20 吹塑机控制系统| BlowmoldingControlSystem</h1><p>基于HMI+PLC 的吹塑机控制系统 A Blowmolding Control System Base by HMI+PLC </p>
@@ -2064,190 +2190,6 @@
       </tags>
   </entry>
   <entry>
-    <title>People&#39;s Dream</title>
-    <url>/2022/02/27/People-s-Dream/</url>
-    <content><![CDATA[<p><strong>中文名称</strong>：人们的梦<br><strong>英文名称</strong>：People’s.Dream<br><strong>版本</strong>：尼古拉﹒德﹒安吉利斯<br><strong>专辑歌手</strong>：Nicolas.De.Angelas<br><strong>地区</strong>：法国</p>
-<p><img src="/2022/02/27/People-s-Dream/top.jpg"></p>
-<h3 id="专辑介绍"><a href="#专辑介绍" class="headerlink" title="专辑介绍:"></a><strong>专辑介绍:</strong></h3><p>​        尼古拉．德．安捷罗斯，一九五三年十二月二十六日出生于巴黎近郊，十二岁开始接触吉他。先后求学于多位大师门下，一九八一年发表了真正成名之作《镜中的安娜》，其影响迅速从法国波及世界。他为人诚恳可亲，演奏充满了罗曼斯式的意境云云。对所选的十四首曲子的具体介绍，有谓《旅途》微微地含有一种无形的忧愁感，《梦之果》略含悲伤之意，往往令人回忆起自己人生悲感的一段回忆。</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280215&auto=0&height=66"></iframe>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=34280199&auto=1&height=66"></iframe>
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=75051&auto=0&height=66"></iframe>
-
-
-
-<h3 id="其它分享："><a href="#其它分享：" class="headerlink" title="其它分享："></a>其它分享：</h3><p><a href="https://baijiahao.baidu.com/s?id=1664767514562027202&wfr=spider&for=pc">阿尔罕布拉宫的回忆</a></p>
-]]></content>
-      <categories>
-        <category>音乐</category>
-      </categories>
-      <tags>
-        <tag>吉他</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello hexo-keep</title>
-    <url>/2022/01/05/hello-hexo-keep/</url>
-    <content><![CDATA[<div align="right">
-  语言:
-  简中
-  <a title="Chinese" href="README.md">English</a>
-  <a title="Chinese" href="README_zh-TW.md">繁中</a>
-</div>
-
-<p><a href="https://xpoet.cn"><img align="center" alt="Keep" src="/2022/01/05/hello-hexo-keep/keep-logo-slogan.svg"></a></p>
-<h1 id="hexo-theme-keep"><a href="#hexo-theme-keep" class="headerlink" title="hexo-theme-keep"></a>hexo-theme-keep</h1><p>«Keep» 是一款简约优雅的 <a href="https://hexo.io/">Hexo</a> 主题。它能让你更专注于写作。</p>
-<p><a href="https://github.com/XPoet/hexo-theme-ils/blob/master/LICENSE"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg" alt="Github License"></a><br><a href="https://github.com/XPoet/hexo-theme-ils/releases"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep-16413624210603.svg" alt="Github Release"></a><br><a href="https://www.npmjs.com/package/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="NPM version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/hexo-=5.0.0-blue" alt="Required Hexo version"></a><br><a href="https://hexo.io/"><img src="/2022/01/05/hello-hexo-keep/node-=12.0-success.svgstyle=flat-square&logo=Node.js&longCache=true" alt="Node.js Version"></a><br><a href="https://www.jsdelivr.com/package/npm/hexo-theme-keep"><img src="/2022/01/05/hello-hexo-keep/hexo-theme-keep.svg+xml" alt="jsDelivr hits"></a></p>
-<h2 id="star2-在线预览"><a href="#star2-在线预览" class="headerlink" title=":star2: 在线预览"></a>:star2: 在线预览</h2><ul>
-<li><strong><a href="https://xpoet.cn/">XPoet’s Blog</a></strong></li>
-<li><strong><a href="https://keep.xpoet.cn/">keep 演示网站</a></strong></li>
-<li><strong><a href="https://keep-docs.xpoet.cn/">keep 官方文档</a></strong></li>
-</ul>
-<h2 id="rocket-安装"><a href="#rocket-安装" class="headerlink" title=":rocket: 安装"></a>:rocket: 安装</h2><p>如果你在使用 Hexo 5.0 或更高版本，最简单的安装方式是通过 npm：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm install hexo-theme-keep<br></code></pre></td></tr></table></figure>
-
-<p>你也可以直接克隆整个仓库：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ git <span class="hljs-built_in">clone</span> https://github.com/XPoet/hexo-theme-keep themes/keep<br></code></pre></td></tr></table></figure>
-
-<p>安装完成后，在 Hexo 配置文件中将 <code>theme</code> 设置为 <code>keep</code>。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">theme:</span> <span class="hljs-string">keep</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="wrench-使用"><a href="#wrench-使用" class="headerlink" title=":wrench: 使用"></a>:wrench: 使用</h2><p>请查看 «Keep» 官方文档：</p>
-<ul>
-<li><strong><a href="https://keep-docs.xpoet.cn/">Keep 官方文档</a></strong></li>
-<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/configuration-guide.html">Keep 主题配置指南</a></strong></li>
-<li><strong><a href="https://keep-docs.xpoet.cn/usage-tutorial/advanced.html">Keep 主题进阶使用</a></strong></li>
-</ul>
-<p>不推荐直接修改 «Keep» 主题的文件。因为这可能导致错误（例如 git merge 冲突），并且在升级主题时修改的文件可能丢失。</p>
-<h2 id="dart-更新"><a href="#dart-更新" class="headerlink" title=":dart: 更新"></a>:dart: 更新</h2><p>«Keep» 不定期发布新版本。你可以通过如下命令更新 «Keep»。</p>
-<p>通过 npm 安装最新版本：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> hexo-site<br>$ npm update hexo-theme-keep<br></code></pre></td></tr></table></figure>
-
-<p>或者通过 git 更新到最新的 master 分支：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ <span class="hljs-built_in">cd</span> themes/keep<br>$ git pull<br></code></pre></td></tr></table></figure>
-
-<p><em>如果你修改了主题源码：</em></p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ git add .<br>$ git stash<br>$ git pull<br>$ git stash pop<br></code></pre></td></tr></table></figure>
-
-<h2 id="art-贡献"><a href="#art-贡献" class="headerlink" title=":art: 贡献"></a>:art: 贡献</h2><p>我们欢迎你加入 «Keep» 的开发，贡献出你的一份力量。请看<a href="https://keep.xpoet.cn/2020/11/Keep-%E4%BB%A3%E7%A0%81%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97/">Keep 代码贡献指南</a>。</p>
-<h2 id="clapper-贡献者"><a href="#clapper-贡献者" class="headerlink" title=":clapper: 贡献者"></a>:clapper: 贡献者</h2><p>这个项目的存在多亏了所有的贡献者。</p>
-<a href="https://github.com/XPoet/hexo-theme-keep/graphs/contributors">
-  <img src="/2022/01/05/hello-hexo-keep/contributors.svg">
-</a>
-
-<h2 id="sparkling-heart-鸣谢"><a href="#sparkling-heart-鸣谢" class="headerlink" title=":sparkling_heart: 鸣谢"></a>:sparkling_heart: 鸣谢</h2><p>«Keep» 特别感谢这些支持我们核心基础设施的优质服务：</p>
-<p><a href="https://github.com"><img height="38" src="/2022/01/05/hello-hexo-keep/GitHub-LOGO.5sq0168mirg0.png"></a></p>
-<blockquote>
-<p>GitHub 容许我们托管 Git 仓库及运行测试。</p>
-</blockquote>
-<p><a href="https://www.jsdelivr.com"><img height="38" src="/2022/01/05/hello-hexo-keep/jsDelivr-LOGO.png"></a></p>
-<blockquote>
-<p>jsDelivr 提供了 CDN 服务。</p>
-</blockquote>
-<h2 id="memo-许可"><a href="#memo-许可" class="headerlink" title=":memo: 许可"></a>:memo: 许可</h2><p><a href="https://github.com/XPoet/picx/blob/master/LICENSE">MIT</a> Copyright © 2020-2021 XPoet</p>
-]]></content>
-      <categories>
-        <category>Web互联网</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>iBooker 团队知识库</title>
-    <url>/2023/05/31/iBooker-%E5%9B%A2%E9%98%9F%E7%9F%A5%E8%AF%86%E5%BA%93/</url>
-    <content><![CDATA[<h1 id="iBooker-团队知识库"><a href="#iBooker-团队知识库" class="headerlink" title="iBooker 团队知识库"></a>iBooker 团队知识库</h1><blockquote>
-<p>协议：<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
-<p>承认吧，我们是弱者，正因为生来什么都没有，因此我们能拥有一切，以身为弱者而骄傲吧！——《游戏人生》</p>
-</blockquote>
-<ul>
-<li><a href="http://docs.apachecn.org/">ApacheCN 学习资源</a></li>
-<li><a href="https://apachecn.org/">ApacheCN首页</a></li>
-</ul>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><a href="https://wiki.apachecn.org/#/docs/business-5min-notes/README">5 分钟商学院精细笔记</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/the-way-to-wealth-freedom-notes/README">通往财富自由之路精细笔记</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/principles-zh/README">原则 · 中文版</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/README">生活黑客</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/%E4%B8%A4%E6%80%A7/README?id=%e4%b8%a4%e6%80%a7">两性</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E8%B0%83%E6%9F%A5%E7%A0%94%E7%A9%B6/README">中国社会阶层调查研究</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/ti-analysis/README">培训机构分析报告</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/america-against-america/README">美国反对美国</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/README">跨年演讲</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/pdd_3years">我在拼多多的三年</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E4%B8%AA%E4%BA%BA%E5%8F%8D%E6%8A%97%E6%8C%87%E5%8D%97/README">资本主义个人反抗指南</a></li>
-<li><a href="https://wiki.apachecn.org/#/docs/chzhshch/README">缠中说禅 108 课</a></li>
-</ul>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><h3 id="负责人"><a href="#负责人" class="headerlink" title="负责人"></a>负责人</h3><ul>
-<li><a href="https://github.com/wizardforcel">飞龙</a>: 562826179</li>
-</ul>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>在我们的 <a href="https://github.com/apachecn/team-wiki">apachecn/team-wiki</a> github 上提 issue.</li>
-<li>发邮件到 Email: <code>apachecn@163.com</code>.</li>
-<li>在我们的 <a href="http://www.apachecn.org/organization/348.html">组织学习交流群</a> 中联系群主/管理员即可.</li>
-</ul>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> pull apachecn<span class="hljs-number">0</span>/team-wiki<br><span class="hljs-attribute">docker</span> run -tid -p &lt;port&gt;:<span class="hljs-number">80</span> apachecn<span class="hljs-number">0</span>/team-wiki<br><span class="hljs-comment"># 访问 http://localhost:&#123;port&#125; 查看文档</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="PYPI"><a href="#PYPI" class="headerlink" title="PYPI"></a>PYPI</h3><figure class="highlight dts"><table><tr><td class="code"><pre><code class="hljs dts">pip install team-wiki<br>team-wiki <span class="hljs-params">&lt;port&gt;</span><br><span class="hljs-meta"># 访问 http:<span class="hljs-comment">//localhost:&#123;port&#125; 查看文档</span></span><br></code></pre></td></tr></table></figure>
-
-<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><figure class="highlight dts"><table><tr><td class="code"><pre><code class="hljs dts">npm install -g team-wiki<br>team-wiki <span class="hljs-params">&lt;port&gt;</span><br><span class="hljs-meta"># 访问 http:<span class="hljs-comment">//localhost:&#123;port&#125; 查看文档</span></span><br></code></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>iBooker 团队知识库</category>
-      </categories>
-      <tags>
-        <tag>转载</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>中国未来最大的挑战</title>
-    <url>/2022/02/20/%E4%B8%AD%E5%9B%BD%E6%9C%AA%E6%9D%A5%E6%9C%80%E5%A4%A7%E7%9A%84%E6%8C%91%E6%88%98/</url>
-    <content><![CDATA[<h2 id="饶毅：中国未来最大的挑战"><a href="#饶毅：中国未来最大的挑战" class="headerlink" title="饶毅：中国未来最大的挑战"></a>饶毅：中国未来最大的挑战</h2><p><img src="/2022/02/20/%E4%B8%AD%E5%9B%BD%E6%9C%AA%E6%9D%A5%E6%9C%80%E5%A4%A7%E7%9A%84%E6%8C%91%E6%88%98/640.webp"></p>
-<p>作者：饶毅 首都医科大学校长</p>
-<p>来源：诗评万象（ID：spwx6868）</p>
-<h3 id="中国在古代到底有没有过科学？"><a href="#中国在古代到底有没有过科学？" class="headerlink" title="中国在古代到底有没有过科学？"></a><strong>中国在古代到底有没有过科学？</strong></h3><p>第一点需要说明，中国流行一百多年的一种说法：“中国古代有很好的科学传统，到明清后中国科学落后于西方”，是误传。误传含有善意的原因。鸦片战争后，中国内忧外患，国人希望中国强大，提出我们“古代行，现代不行”以鼓励自己。<br>这种的说法传给外国人，特别是由英国的李约瑟再用英文说一遍以后“出口转内销”，对我们的心理有很大的安慰作用。这是在我国普遍自信比较低的时代诞生的一个迷思。<br>这一说法违反基本事实。中国在古代有没有过科学？有，但很弱，而且<strong>特别缺乏抽象、系统、深刻的科学</strong>，有的主要是比较简单的、接近实用和实用的，如与天文、农业、医学相关的科学。<br>以古希腊为重要起源的科学，经欧洲传入阿拉伯，再从阿拉伯传回西方，是一个非常有趣的、很长的历史过程，而中国极少参与。看过欧几里德《几何原本》的，就系统性、深刻性、准确性而言，会感慨两百年前的中国是否达到西方科学两千多年前的程度？<br>中国传统在科学方面不如西方，但我们并非愚蠢的民族，而是我们的智力主要没用于自然科学。我们的人文，例如中文的诗歌，可能有些人会认为是比英文的诗歌要美很多，包括结构上的巧妙。在两千多年前、甚至一千年前，很难看出选择科学、还是人文一定会有很大的不同。最近几百年，人类才认识到自然科学传统的巨大意义。<br>我们的文化对真理的追求相当弱，对自然的好奇整体上也是相当差。不仅以前差，现在恐怕还是不能盲目乐观。对真理和自然的态度成为文化传统的重要短板，今天可能不仅影响我们的科学技术，而且对我们的社会也有影响。</p>
-<h3 id="中国科学发展的历史很短？"><a href="#中国科学发展的历史很短？" class="headerlink" title="中国科学发展的历史很短？"></a><strong>中国科学发展的历史很短？</strong></h3><p>我们的科学主要是从国外、特别是西方引进，西学东渐最初很慢。几百年前一般人包括大多数中国人看不到科学的意义。</p>
-<p>西方传教士为了传教而用科学技术来向我们展示西方文化，用科学技术作为例子，而中国人还称之为“奇技淫巧”。<br>当时只有很少数的中国知识分子在翻译西方科学著作的时候，深刻地体会到西方的科学很强，而且远优于我们，但中国人普遍不了解。1840年鸦片战争，西方枪炮打开中国大门以后，中国才有共识：<strong>我们的科学技术不如人，而科技对国家整体发展很重要。</strong><br>此后，我们引进科学的速度加快，同时我们国家小学、中学、大学逐渐普遍采用西方模式，替代了中国原来以文科为主的教育。<br>19世纪末20世纪初，大学逐渐建立，西方的理科教育引进中国。理工科大面积引进西方教学的模式和内容。迄今绝大部分的中小学和大学的理工科教材，以西方科学的体系和成就为内容，教科书以翻译西方的教科书为主，有少数编译在翻译的基础上加入了自己的说法。偶尔出现过中国写书西方用的情况。</p>
-<p>1940年代，北京大学生物系的李景钧教授，用英文撰写《群体遗传学》一书，由北京大学出版社出版。在50年代初，因为李森科主义在中国流行，李景钧被迫离国出走，通过香港转至美国，在美国重新出版了这本书，且再版几次，成为全世界的群体遗传学教科书。当然，李景钧在北大写书的内容仍为西方科学成果。</p>
-<p>1949年以前中国条件很差、科学研究规模小。我们经常讲西南联大或北平协和医学院，她们确实在一些学科取得了重要成就，程度相当高，有可能清华大学数学系同时拥有陈省身和华罗庚的时候，是迄今为止我国数学离世界数学高峰最近的时候。当然今天中国的数学做得好的人比那时多，但要超过陈省身和华罗庚这样的组合，恐怕今天尚不敢确定，以后应该会出现。</p>
-<p>协和医学院在1920、1930年代的医学科学研究做得非常好。协和医学院是由美国洛克菲勒基金会出资建立，且非教会学校。建校原则要求研究、教学和医疗服务，三头并进。这种方针和政策在当时是很独特的。1920年代的中国，相当多的人饭都吃不饱，协和医学院居然要研究、教学、医疗并重，且研究做得非常好。</p>
-<p>我最近看到有一个例子，有一位鲜为人知的微生物学家——谢和平，他在北平做的研究工作、发表的论文数量和质量，在微生物方面，以后几十年协和医学院其他人全部加起来，可能也不如他当时的工作。</p>
-<p>国民政府主要在南京成立了中央研究院，蔡元培任院长。一方面经费有限，另外一方面，中央研究院和北京的北平研究院在建立以后不久，特别是当其房子建好不久，抗战就开始了，投入后得到的回报有限。当时做科学的人少、规模小，谈不上蓬勃发展。</p>
-<p>1949年以前，除了国家内忧外患、经济情况不能支持大规模的科学技术研究以外，还有一个重要的因素是中国人并不很喜欢自然科学，中国人真正愿意学自然科学的很少。北京大学生物系在创办的前几年，一共只有三个学生，其中之一是现在中国科学院物理学家郝柏林的父亲郝景盛。其他学科比生物可能好一些，但好不了很多，学科学的学生人数相当少。</p>
-<p>从1949年到也许是2000年左右的50年间，因为不敢做官发财，中国人愿意做自然科学的较多，也许是中国历史上不仅空前、还绝后的对科学兴趣最高的年代。但是，中国的经济情况并不允许支持大规模的科学研究。</p>
-<p>中国科学院多个研究所，与民国成立的中央研究院和北平研究院有承接关系，带动中国科学。曾定位科学院做研究，高校做教育，出现争议。热情最高的年代经费局限，两弹一星以及相关的学科得到支持。在非军事目的的科学方面，投入有限。生物学方面，1950后期到1960年代中期，胰岛素的工作做得很漂亮。</p>
-<p>袁隆平作为个人，在农业研究方面获得突出成就。袁隆平于1930年出生于协和医院，他的出生证现在还存有，有他的小脚丫，更有趣的是负责的医生是林巧稚，所以袁隆平远非一般人误认为有农民背景，而是民国政府的官二代，他报考重庆的大学也是因为那时重庆是“国统区”。袁隆平一个人开始做研究，后来才得到支持。他做科研从1956年开始、研究水稻从1960年开始、杂交水稻是1964年开始。杂交水稻成功是1974年。</p>
-<p>2015年获诺贝尔奖的屠呦呦参加的523计划，早期由当时的中国人民解放军总后勤部部长邱会作参加，以后主要直接主持的是军事医学科学院和卫生部为行政主管，协调全国多个单位。屠呦呦这一辈人的老师主要是西方留学生。屠呦呦和她的课题组在青蒿素方面做得很漂亮，她获诺贝尔奖是当之无愧的。</p>
-<p>毛泽东去世之后，邓小平对中国发展有很大的推动。他支持中国高等教育和科学技术，1970年代中晚期很多年轻人投身科学技术与那时风气分不开。不过很快大家意识到中国科学技术与西方有很大差别，很多人出国留学。</p>
-<p>从70年代末到90年代末，虽然中国人对科学感兴趣，但出国造成了中国国内自然科学人才的缺乏，虽然有少部分人回国、还有更少部分人在中国也做了重要工作，但留学对中国国内科学技术在短时间造成的直接问题是负面为主，长期也许还是带来了更多正面。</p>
-<p>中国投入自然科学的经费直到90年代都非常有限。经费的增加主要是1998年北京大学百年校庆的时候，联合清华大学向国家提出建设世界一流大学，也就是所谓“985”计划，而同期中国科学院向国家提出“知识创新计划”。两个计划为高校和科学院带来了新的资源。但1998年高校和科学院都不清楚支持能持续多久，当时主要目的是救穷救急。</p>
-<p>1985和知识创新计划到2003年得以延续第二期，大家也看到中国经济的发展会持续，所以中国高校和科研机构普遍能够真正、而非口头上考虑如何发展科学。在之前都是某个特殊计划按某个当时的情况投入，而2003年以后大家共同认识到中国可以稳定地发展科学，真正能摆脱当时的问题，用心思来想发展，如果说主要是这十几年，也有一定的道理。</p>
-<p><strong>了解科学在中国的历程，虽然可以算100多年，但很多人有共识可以安心考虑发展只有十几年。</strong></p>
-<h3 id="华人群体盛行实用主义"><a href="#华人群体盛行实用主义" class="headerlink" title="华人群体盛行实用主义"></a><strong>华人群体盛行实用主义</strong></h3><p>是否我们就一定可以快速、长期、稳定的发展？很多人包括我自己都这样希望。希望与现实的距离与第三点有关：华人是一个盛行实用主义的群体，不论是国内还是海外。<strong>而实用主义可能促进科学，也可能促退科学。</strong><br>“学好数理化，走遍天下都不怕”是实用主义的口号，从1950年到2000年可能让较多人对科学技术感兴趣。但那50年的兴趣不是因为我们真正对真理有追求、对自然有好奇，而是1949年发现升官发财此路不通。</p>
-<p>作为整体，<strong>我们中国很多人对科学感兴趣是因为实用主义。虽然当时口号也叫向科学进军，但恐怕实用才是中国人愿意做科学最大的原因。这个原因一旦消失，科学技术的人才就出现问题。</strong></p>
-<p>经济发展快的现在，升官发财再度成为中国人的追求。海外华人本质上也很实用主义。即使很多海外华人说不回国是因为在国内创造性的教育环境比较差，影响孩子的教育。</p>
-<p>但仔细看海外的华人，他们的第二代大部分人是学实用的职业，按当地赚钱为标准，其中学医算高尚的有道德的赚钱，从事忽悠行业的华人子弟比较普遍，学自然科学、以自然科学为职业的海外华人的第二代、第三代比例相当低的，显示我们中国人万变不离其宗的实用主义。</p>
-<p>即使有1950年到2000年左右50年的中国人表面对科学的较高兴趣，其实科学在中国、在华人里都相当弱，它没有成为文化。</p>
-<p>今天我们既可以看到科学经费和其他的环境条件对中国发展科学是越来越好，<strong>同时我们要考虑缺乏对真理的追求、缺乏对自然的好奇的文化，实用主义对中国科学进一步发展有很大的负面影响。</strong></p>
-<p>有幼稚的观点，认为莫言得文学奖、屠呦呦得医学奖是中国要井喷诺贝尔奖。我们做出的重要科学工作会与日俱增，但增加并非无限的，限制之一是我们科学人才越来越少。</p>
-<p>条件的上升曲线和人才的下降曲线将决定我们中国科学最后的高度，不一定是不断上升，而可能出现平台，而平台的高度不一定能够达到我们希望的高度。</p>
-<p><strong>我们经常喜欢说中华民族是勤劳、勇敢、智慧的民族，我们当然希望是这样，我特别希望是这样，但智慧不是很容易衡量的，如果你要用自然科学来衡量，那我们差得还是很远。</strong></p>
-<p>我们要证明自己有智慧，还有相当大的距离，还有相当多的工作。对于我们来说，证明我们是有智慧的民族是一个很有挑战性的事，而不是已经证明了、更不是举世公认。</p>
-<h3 id="中国未来需要自然科学"><a href="#中国未来需要自然科学" class="headerlink" title="中国未来需要自然科学"></a><strong>中国未来需要自然科学</strong></h3><p><strong>对任何一个大国来说，科学技术与国家的未来至少在相当长的时间是密切相关的</strong>，英国的强盛、德国的崛起、美国的崛起、日本的崛起，都有很强的科学基础。</p>
-<p>美国在19世纪末经济发展的同时，实际为其科学做了很多准备。其中很重要的一方面是美国一批企业家推动、支持建立了美国现代的大学，这些大学在二十世纪起了很大作用。19世纪的哈佛、耶鲁在全世界无足轻重，因为当时它们并没有很强的科学基础。</p>
-<p>美国在研究方面突出的是霍普金斯大学，它在19世纪成立以后，学习德国的研究型大学，有教学、有研究。<br>霍普金斯在19世纪末和20世纪初培养了一批重要的科学家，如遗传学的摩尔根是霍普金斯毕业生；卡耐基和梅隆支持大学，今天的卡耐基—梅隆是计算机很好的学校；美国的洛克菲勒出生中下阶层出身，他在每三个月只有25美元收入的时候就开始捐款，不是在有钱以后才捐、是在穷的时候就开始捐款。<br>他的捐款是很有特色的，效果非常好，他捐款资助的芝加哥大学，在经济学上是成就非凡。他捐款成立了洛克菲勒医学研究所（现洛克菲勒大学）是一个只有研究生、没有本科的学校。</p>
-<p>这个学校今天只有70多个教授，一半是美国科学院院士，1/10是诺贝尔奖金获得者，在她的历史上出现过20世纪最重要的科学工作。1944年提出的DNA是遗传物质，洛克菲勒还捐资成立了北京协和医学院，在美国还捐资成立黑人的女子学院，都很有远见，在很不同的方面发挥了重要作用。</p>
-<p>一战、二战让欧洲的科学技术人才流向美国，是美国快速发展的重要因素。但此前美国大学的发展为接纳科技人才提供了必要的基础。何况，犹太移民在美国发挥作用还需要他们在移民美国以后接受大学教育才具备以后的才华。<br>美国以国家经费支持科学研究是20世纪的事情。一方面是美国的军事相关的物理研究首先得到国家的支持，曼哈顿计划大大地影响了美国物质科学的发展。<br>而二战之后，特别是50年代受苏联卫星上天的刺激，美国国家对自然科学研究的投入急速增加，其中生物医学研究的增加还与人民的健康息息相关。美国的国立健康研究院(NIH)在五十年代初期经费很少，以后不断增加经费才成为今天年度经费超过三百亿美元的机构。</p>
-<p><strong>科学技术对于中国来说，可能迄今主要作用还是培养可以山寨国外成果的人员。</strong>科学在中国产生的原创性工作不多，能直接支撑产业的不多。但是，如果我们希望有朝一日走在世界的前列，<strong>必须有科学技术支撑的原创性工作</strong>。如果我们的产出不能超过西方、不能超过美国，难以想象我们能单纯通过商业模式的变更或分配方式的技巧走到前列？<br>人家做发明、你来分配，天底下恐怕没有这般好事。只有产出强的时候，才有分配的主导权。而商业模式变化包括把一个商业渠道改成另外一个商业渠道，是左口袋与右口袋的关系，有时增加、有时不增加总量。一个大国分配方法、商业模式虽然重要，产出更重要、可能永远是最重要。而产出的领先必需科学和技术支撑的原创性成果。</p>
-<p><strong>科学技术在相当长的时间内与中国的未来有密切关系。</strong>如果国家没有措施，按目前的趋势我们的科学技术人才是令人担忧的，中国的前途也存在相当大的隐患，至少从与日俱减的自然科学人才来说。</p>
-<p><strong>我们中华民族缺乏科学传统，科学在中国的发展历史短暂，加上实用主义的文化，我们如何扭转科技人才质量下滑、人数减少，激励一定数量的高质量的人才加入科学技术，正面影响中国的未来，是很大的挑战。</strong></p>
-]]></content>
-      <tags>
-        <tag>转载</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2023/05/31/hello-world/</url>
     <content><![CDATA[<div>
@@ -2268,11 +2210,11 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts7393" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts6351" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts7393'));
+        var myChart = echarts.init(document.getElementById('echarts6351'));
         // 指定图表的配置项和数据
         var option = {
    tooltip : {
@@ -2372,11 +2314,11 @@ zr.on('mousemove', function (params) {
 </script>
 
 
-<div id="echarts1614" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts8191" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1614'));
+        var myChart = echarts.init(document.getElementById('echarts8191'));
         // 指定图表的配置项和数据
         var option = 
 
@@ -2440,6 +2382,52 @@ setTimeout('reloadPage()',1000);
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iBooker 团队知识库</title>
+    <url>/2023/05/31/iBooker-%E5%9B%A2%E9%98%9F%E7%9F%A5%E8%AF%86%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="iBooker-团队知识库"><a href="#iBooker-团队知识库" class="headerlink" title="iBooker 团队知识库"></a>iBooker 团队知识库</h1><blockquote>
+<p>协议：<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
+<p>承认吧，我们是弱者，正因为生来什么都没有，因此我们能拥有一切，以身为弱者而骄傲吧！——《游戏人生》</p>
+</blockquote>
+<ul>
+<li><a href="http://docs.apachecn.org/">ApacheCN 学习资源</a></li>
+<li><a href="https://apachecn.org/">ApacheCN首页</a></li>
+</ul>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="https://wiki.apachecn.org/#/docs/business-5min-notes/README">5 分钟商学院精细笔记</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/the-way-to-wealth-freedom-notes/README">通往财富自由之路精细笔记</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/principles-zh/README">原则 · 中文版</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/%E7%94%9F%E6%B4%BB%E9%BB%91%E5%AE%A2/README">生活黑客</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/%E4%B8%A4%E6%80%A7/README?id=%e4%b8%a4%e6%80%a7">两性</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/%E4%B8%AD%E5%9B%BD%E7%A4%BE%E4%BC%9A%E8%B0%83%E6%9F%A5%E7%A0%94%E7%A9%B6/README">中国社会阶层调查研究</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/ti-analysis/README">培训机构分析报告</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/america-against-america/README">美国反对美国</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/%E8%B7%A8%E5%B9%B4%E6%BC%94%E8%AE%B2/README">跨年演讲</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/pdd_3years">我在拼多多的三年</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E4%B8%AA%E4%BA%BA%E5%8F%8D%E6%8A%97%E6%8C%87%E5%8D%97/README">资本主义个人反抗指南</a></li>
+<li><a href="https://wiki.apachecn.org/#/docs/chzhshch/README">缠中说禅 108 课</a></li>
+</ul>
+<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><h3 id="负责人"><a href="#负责人" class="headerlink" title="负责人"></a>负责人</h3><ul>
+<li><a href="https://github.com/wizardforcel">飞龙</a>: 562826179</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>在我们的 <a href="https://github.com/apachecn/team-wiki">apachecn/team-wiki</a> github 上提 issue.</li>
+<li>发邮件到 Email: <code>apachecn@163.com</code>.</li>
+<li>在我们的 <a href="http://www.apachecn.org/organization/348.html">组织学习交流群</a> 中联系群主/管理员即可.</li>
+</ul>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> pull apachecn<span class="hljs-number">0</span>/team-wiki<br><span class="hljs-attribute">docker</span> run -tid -p &lt;port&gt;:<span class="hljs-number">80</span> apachecn<span class="hljs-number">0</span>/team-wiki<br><span class="hljs-comment"># 访问 http://localhost:&#123;port&#125; 查看文档</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="PYPI"><a href="#PYPI" class="headerlink" title="PYPI"></a>PYPI</h3><figure class="highlight dts"><table><tr><td class="code"><pre><code class="hljs dts">pip install team-wiki<br>team-wiki <span class="hljs-params">&lt;port&gt;</span><br><span class="hljs-meta"># 访问 http:<span class="hljs-comment">//localhost:&#123;port&#125; 查看文档</span></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><figure class="highlight dts"><table><tr><td class="code"><pre><code class="hljs dts">npm install -g team-wiki<br>team-wiki <span class="hljs-params">&lt;port&gt;</span><br><span class="hljs-meta"># 访问 http:<span class="hljs-comment">//localhost:&#123;port&#125; 查看文档</span></span><br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>iBooker 团队知识库</category>
+      </categories>
+      <tags>
+        <tag>转载</tag>
       </tags>
   </entry>
   <entry>
@@ -2731,6 +2719,53 @@ setTimeout('reloadPage()',1000);
       </tags>
   </entry>
   <entry>
+    <title>中国未来最大的挑战</title>
+    <url>/2022/02/20/%E4%B8%AD%E5%9B%BD%E6%9C%AA%E6%9D%A5%E6%9C%80%E5%A4%A7%E7%9A%84%E6%8C%91%E6%88%98/</url>
+    <content><![CDATA[<h2 id="饶毅：中国未来最大的挑战"><a href="#饶毅：中国未来最大的挑战" class="headerlink" title="饶毅：中国未来最大的挑战"></a>饶毅：中国未来最大的挑战</h2><p><img src="/2022/02/20/%E4%B8%AD%E5%9B%BD%E6%9C%AA%E6%9D%A5%E6%9C%80%E5%A4%A7%E7%9A%84%E6%8C%91%E6%88%98/640.webp"></p>
+<p>作者：饶毅 首都医科大学校长</p>
+<p>来源：诗评万象（ID：spwx6868）</p>
+<h3 id="中国在古代到底有没有过科学？"><a href="#中国在古代到底有没有过科学？" class="headerlink" title="中国在古代到底有没有过科学？"></a><strong>中国在古代到底有没有过科学？</strong></h3><p>第一点需要说明，中国流行一百多年的一种说法：“中国古代有很好的科学传统，到明清后中国科学落后于西方”，是误传。误传含有善意的原因。鸦片战争后，中国内忧外患，国人希望中国强大，提出我们“古代行，现代不行”以鼓励自己。<br>这种的说法传给外国人，特别是由英国的李约瑟再用英文说一遍以后“出口转内销”，对我们的心理有很大的安慰作用。这是在我国普遍自信比较低的时代诞生的一个迷思。<br>这一说法违反基本事实。中国在古代有没有过科学？有，但很弱，而且<strong>特别缺乏抽象、系统、深刻的科学</strong>，有的主要是比较简单的、接近实用和实用的，如与天文、农业、医学相关的科学。<br>以古希腊为重要起源的科学，经欧洲传入阿拉伯，再从阿拉伯传回西方，是一个非常有趣的、很长的历史过程，而中国极少参与。看过欧几里德《几何原本》的，就系统性、深刻性、准确性而言，会感慨两百年前的中国是否达到西方科学两千多年前的程度？<br>中国传统在科学方面不如西方，但我们并非愚蠢的民族，而是我们的智力主要没用于自然科学。我们的人文，例如中文的诗歌，可能有些人会认为是比英文的诗歌要美很多，包括结构上的巧妙。在两千多年前、甚至一千年前，很难看出选择科学、还是人文一定会有很大的不同。最近几百年，人类才认识到自然科学传统的巨大意义。<br>我们的文化对真理的追求相当弱，对自然的好奇整体上也是相当差。不仅以前差，现在恐怕还是不能盲目乐观。对真理和自然的态度成为文化传统的重要短板，今天可能不仅影响我们的科学技术，而且对我们的社会也有影响。</p>
+<h3 id="中国科学发展的历史很短？"><a href="#中国科学发展的历史很短？" class="headerlink" title="中国科学发展的历史很短？"></a><strong>中国科学发展的历史很短？</strong></h3><p>我们的科学主要是从国外、特别是西方引进，西学东渐最初很慢。几百年前一般人包括大多数中国人看不到科学的意义。</p>
+<p>西方传教士为了传教而用科学技术来向我们展示西方文化，用科学技术作为例子，而中国人还称之为“奇技淫巧”。<br>当时只有很少数的中国知识分子在翻译西方科学著作的时候，深刻地体会到西方的科学很强，而且远优于我们，但中国人普遍不了解。1840年鸦片战争，西方枪炮打开中国大门以后，中国才有共识：<strong>我们的科学技术不如人，而科技对国家整体发展很重要。</strong><br>此后，我们引进科学的速度加快，同时我们国家小学、中学、大学逐渐普遍采用西方模式，替代了中国原来以文科为主的教育。<br>19世纪末20世纪初，大学逐渐建立，西方的理科教育引进中国。理工科大面积引进西方教学的模式和内容。迄今绝大部分的中小学和大学的理工科教材，以西方科学的体系和成就为内容，教科书以翻译西方的教科书为主，有少数编译在翻译的基础上加入了自己的说法。偶尔出现过中国写书西方用的情况。</p>
+<p>1940年代，北京大学生物系的李景钧教授，用英文撰写《群体遗传学》一书，由北京大学出版社出版。在50年代初，因为李森科主义在中国流行，李景钧被迫离国出走，通过香港转至美国，在美国重新出版了这本书，且再版几次，成为全世界的群体遗传学教科书。当然，李景钧在北大写书的内容仍为西方科学成果。</p>
+<p>1949年以前中国条件很差、科学研究规模小。我们经常讲西南联大或北平协和医学院，她们确实在一些学科取得了重要成就，程度相当高，有可能清华大学数学系同时拥有陈省身和华罗庚的时候，是迄今为止我国数学离世界数学高峰最近的时候。当然今天中国的数学做得好的人比那时多，但要超过陈省身和华罗庚这样的组合，恐怕今天尚不敢确定，以后应该会出现。</p>
+<p>协和医学院在1920、1930年代的医学科学研究做得非常好。协和医学院是由美国洛克菲勒基金会出资建立，且非教会学校。建校原则要求研究、教学和医疗服务，三头并进。这种方针和政策在当时是很独特的。1920年代的中国，相当多的人饭都吃不饱，协和医学院居然要研究、教学、医疗并重，且研究做得非常好。</p>
+<p>我最近看到有一个例子，有一位鲜为人知的微生物学家——谢和平，他在北平做的研究工作、发表的论文数量和质量，在微生物方面，以后几十年协和医学院其他人全部加起来，可能也不如他当时的工作。</p>
+<p>国民政府主要在南京成立了中央研究院，蔡元培任院长。一方面经费有限，另外一方面，中央研究院和北京的北平研究院在建立以后不久，特别是当其房子建好不久，抗战就开始了，投入后得到的回报有限。当时做科学的人少、规模小，谈不上蓬勃发展。</p>
+<p>1949年以前，除了国家内忧外患、经济情况不能支持大规模的科学技术研究以外，还有一个重要的因素是中国人并不很喜欢自然科学，中国人真正愿意学自然科学的很少。北京大学生物系在创办的前几年，一共只有三个学生，其中之一是现在中国科学院物理学家郝柏林的父亲郝景盛。其他学科比生物可能好一些，但好不了很多，学科学的学生人数相当少。</p>
+<p>从1949年到也许是2000年左右的50年间，因为不敢做官发财，中国人愿意做自然科学的较多，也许是中国历史上不仅空前、还绝后的对科学兴趣最高的年代。但是，中国的经济情况并不允许支持大规模的科学研究。</p>
+<p>中国科学院多个研究所，与民国成立的中央研究院和北平研究院有承接关系，带动中国科学。曾定位科学院做研究，高校做教育，出现争议。热情最高的年代经费局限，两弹一星以及相关的学科得到支持。在非军事目的的科学方面，投入有限。生物学方面，1950后期到1960年代中期，胰岛素的工作做得很漂亮。</p>
+<p>袁隆平作为个人，在农业研究方面获得突出成就。袁隆平于1930年出生于协和医院，他的出生证现在还存有，有他的小脚丫，更有趣的是负责的医生是林巧稚，所以袁隆平远非一般人误认为有农民背景，而是民国政府的官二代，他报考重庆的大学也是因为那时重庆是“国统区”。袁隆平一个人开始做研究，后来才得到支持。他做科研从1956年开始、研究水稻从1960年开始、杂交水稻是1964年开始。杂交水稻成功是1974年。</p>
+<p>2015年获诺贝尔奖的屠呦呦参加的523计划，早期由当时的中国人民解放军总后勤部部长邱会作参加，以后主要直接主持的是军事医学科学院和卫生部为行政主管，协调全国多个单位。屠呦呦这一辈人的老师主要是西方留学生。屠呦呦和她的课题组在青蒿素方面做得很漂亮，她获诺贝尔奖是当之无愧的。</p>
+<p>毛泽东去世之后，邓小平对中国发展有很大的推动。他支持中国高等教育和科学技术，1970年代中晚期很多年轻人投身科学技术与那时风气分不开。不过很快大家意识到中国科学技术与西方有很大差别，很多人出国留学。</p>
+<p>从70年代末到90年代末，虽然中国人对科学感兴趣，但出国造成了中国国内自然科学人才的缺乏，虽然有少部分人回国、还有更少部分人在中国也做了重要工作，但留学对中国国内科学技术在短时间造成的直接问题是负面为主，长期也许还是带来了更多正面。</p>
+<p>中国投入自然科学的经费直到90年代都非常有限。经费的增加主要是1998年北京大学百年校庆的时候，联合清华大学向国家提出建设世界一流大学，也就是所谓“985”计划，而同期中国科学院向国家提出“知识创新计划”。两个计划为高校和科学院带来了新的资源。但1998年高校和科学院都不清楚支持能持续多久，当时主要目的是救穷救急。</p>
+<p>1985和知识创新计划到2003年得以延续第二期，大家也看到中国经济的发展会持续，所以中国高校和科研机构普遍能够真正、而非口头上考虑如何发展科学。在之前都是某个特殊计划按某个当时的情况投入，而2003年以后大家共同认识到中国可以稳定地发展科学，真正能摆脱当时的问题，用心思来想发展，如果说主要是这十几年，也有一定的道理。</p>
+<p><strong>了解科学在中国的历程，虽然可以算100多年，但很多人有共识可以安心考虑发展只有十几年。</strong></p>
+<h3 id="华人群体盛行实用主义"><a href="#华人群体盛行实用主义" class="headerlink" title="华人群体盛行实用主义"></a><strong>华人群体盛行实用主义</strong></h3><p>是否我们就一定可以快速、长期、稳定的发展？很多人包括我自己都这样希望。希望与现实的距离与第三点有关：华人是一个盛行实用主义的群体，不论是国内还是海外。<strong>而实用主义可能促进科学，也可能促退科学。</strong><br>“学好数理化，走遍天下都不怕”是实用主义的口号，从1950年到2000年可能让较多人对科学技术感兴趣。但那50年的兴趣不是因为我们真正对真理有追求、对自然有好奇，而是1949年发现升官发财此路不通。</p>
+<p>作为整体，<strong>我们中国很多人对科学感兴趣是因为实用主义。虽然当时口号也叫向科学进军，但恐怕实用才是中国人愿意做科学最大的原因。这个原因一旦消失，科学技术的人才就出现问题。</strong></p>
+<p>经济发展快的现在，升官发财再度成为中国人的追求。海外华人本质上也很实用主义。即使很多海外华人说不回国是因为在国内创造性的教育环境比较差，影响孩子的教育。</p>
+<p>但仔细看海外的华人，他们的第二代大部分人是学实用的职业，按当地赚钱为标准，其中学医算高尚的有道德的赚钱，从事忽悠行业的华人子弟比较普遍，学自然科学、以自然科学为职业的海外华人的第二代、第三代比例相当低的，显示我们中国人万变不离其宗的实用主义。</p>
+<p>即使有1950年到2000年左右50年的中国人表面对科学的较高兴趣，其实科学在中国、在华人里都相当弱，它没有成为文化。</p>
+<p>今天我们既可以看到科学经费和其他的环境条件对中国发展科学是越来越好，<strong>同时我们要考虑缺乏对真理的追求、缺乏对自然的好奇的文化，实用主义对中国科学进一步发展有很大的负面影响。</strong></p>
+<p>有幼稚的观点，认为莫言得文学奖、屠呦呦得医学奖是中国要井喷诺贝尔奖。我们做出的重要科学工作会与日俱增，但增加并非无限的，限制之一是我们科学人才越来越少。</p>
+<p>条件的上升曲线和人才的下降曲线将决定我们中国科学最后的高度，不一定是不断上升，而可能出现平台，而平台的高度不一定能够达到我们希望的高度。</p>
+<p><strong>我们经常喜欢说中华民族是勤劳、勇敢、智慧的民族，我们当然希望是这样，我特别希望是这样，但智慧不是很容易衡量的，如果你要用自然科学来衡量，那我们差得还是很远。</strong></p>
+<p>我们要证明自己有智慧，还有相当大的距离，还有相当多的工作。对于我们来说，证明我们是有智慧的民族是一个很有挑战性的事，而不是已经证明了、更不是举世公认。</p>
+<h3 id="中国未来需要自然科学"><a href="#中国未来需要自然科学" class="headerlink" title="中国未来需要自然科学"></a><strong>中国未来需要自然科学</strong></h3><p><strong>对任何一个大国来说，科学技术与国家的未来至少在相当长的时间是密切相关的</strong>，英国的强盛、德国的崛起、美国的崛起、日本的崛起，都有很强的科学基础。</p>
+<p>美国在19世纪末经济发展的同时，实际为其科学做了很多准备。其中很重要的一方面是美国一批企业家推动、支持建立了美国现代的大学，这些大学在二十世纪起了很大作用。19世纪的哈佛、耶鲁在全世界无足轻重，因为当时它们并没有很强的科学基础。</p>
+<p>美国在研究方面突出的是霍普金斯大学，它在19世纪成立以后，学习德国的研究型大学，有教学、有研究。<br>霍普金斯在19世纪末和20世纪初培养了一批重要的科学家，如遗传学的摩尔根是霍普金斯毕业生；卡耐基和梅隆支持大学，今天的卡耐基—梅隆是计算机很好的学校；美国的洛克菲勒出生中下阶层出身，他在每三个月只有25美元收入的时候就开始捐款，不是在有钱以后才捐、是在穷的时候就开始捐款。<br>他的捐款是很有特色的，效果非常好，他捐款资助的芝加哥大学，在经济学上是成就非凡。他捐款成立了洛克菲勒医学研究所（现洛克菲勒大学）是一个只有研究生、没有本科的学校。</p>
+<p>这个学校今天只有70多个教授，一半是美国科学院院士，1/10是诺贝尔奖金获得者，在她的历史上出现过20世纪最重要的科学工作。1944年提出的DNA是遗传物质，洛克菲勒还捐资成立了北京协和医学院，在美国还捐资成立黑人的女子学院，都很有远见，在很不同的方面发挥了重要作用。</p>
+<p>一战、二战让欧洲的科学技术人才流向美国，是美国快速发展的重要因素。但此前美国大学的发展为接纳科技人才提供了必要的基础。何况，犹太移民在美国发挥作用还需要他们在移民美国以后接受大学教育才具备以后的才华。<br>美国以国家经费支持科学研究是20世纪的事情。一方面是美国的军事相关的物理研究首先得到国家的支持，曼哈顿计划大大地影响了美国物质科学的发展。<br>而二战之后，特别是50年代受苏联卫星上天的刺激，美国国家对自然科学研究的投入急速增加，其中生物医学研究的增加还与人民的健康息息相关。美国的国立健康研究院(NIH)在五十年代初期经费很少，以后不断增加经费才成为今天年度经费超过三百亿美元的机构。</p>
+<p><strong>科学技术对于中国来说，可能迄今主要作用还是培养可以山寨国外成果的人员。</strong>科学在中国产生的原创性工作不多，能直接支撑产业的不多。但是，如果我们希望有朝一日走在世界的前列，<strong>必须有科学技术支撑的原创性工作</strong>。如果我们的产出不能超过西方、不能超过美国，难以想象我们能单纯通过商业模式的变更或分配方式的技巧走到前列？<br>人家做发明、你来分配，天底下恐怕没有这般好事。只有产出强的时候，才有分配的主导权。而商业模式变化包括把一个商业渠道改成另外一个商业渠道，是左口袋与右口袋的关系，有时增加、有时不增加总量。一个大国分配方法、商业模式虽然重要，产出更重要、可能永远是最重要。而产出的领先必需科学和技术支撑的原创性成果。</p>
+<p><strong>科学技术在相当长的时间内与中国的未来有密切关系。</strong>如果国家没有措施，按目前的趋势我们的科学技术人才是令人担忧的，中国的前途也存在相当大的隐患，至少从与日俱减的自然科学人才来说。</p>
+<p><strong>我们中华民族缺乏科学传统，科学在中国的发展历史短暂，加上实用主义的文化，我们如何扭转科技人才质量下滑、人数减少，激励一定数量的高质量的人才加入科学技术，正面影响中国的未来，是很大的挑战。</strong></p>
+]]></content>
+      <tags>
+        <tag>转载</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>加州旅馆</title>
     <url>/2022/02/17/%E5%8A%A0%E5%B7%9E%E6%97%85%E9%A6%86/</url>
     <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1464389128&auto=1&height=66"></iframe>
@@ -2879,11 +2914,11 @@ setTimeout('reloadPage()',1000);
 </div>
 
 <h3 id="材料主要性能-Typical-Properties"><a href="#材料主要性能-Typical-Properties" class="headerlink" title="材料主要性能(Typical Properties):"></a>材料主要性能(Typical Properties):</h3><h4 id="工艺温度"><a href="#工艺温度" class="headerlink" title="工艺温度"></a>工艺温度</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart1252" style="height: 500px"></canvas>
+    <canvas id="chart4436" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart1252').getContext('2d');
+    var ctx = document.getElementById('chart4436').getContext('2d');
     var options =  {
     type: 'line',
     data: {
@@ -2981,11 +3016,11 @@ setTimeout('reloadPage()',1000);
 </script>
 
 <h4 id="适用制品容积"><a href="#适用制品容积" class="headerlink" title="适用制品容积"></a>适用制品容积</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart5683" style="height: 500px"></canvas>
+    <canvas id="chart5325" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart5683').getContext('2d');
+    var ctx = document.getElementById('chart5325').getContext('2d');
     var options =  {
     type: 'bar',
     data: {
@@ -3058,7 +3093,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid1145166745194329" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115423654831" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3171,11 +3206,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid1145166745194329,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115423654831,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid1145166745194329,op);
+                var chart = Highcharts.chart(highchartsuuid11533115423654831,op);
             }
         </script>
     
@@ -3185,7 +3220,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid1145166741119075" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115427726186" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3316,11 +3351,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid1145166741119075,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115427726186,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid1145166741119075,op);
+                var chart = Highcharts.chart(highchartsuuid11533115427726186,op);
             }
         </script>
     
@@ -3330,7 +3365,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid114516674849540" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115424072628" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3472,11 +3507,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid114516674849540,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115424072628,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid114516674849540,op);
+                var chart = Highcharts.chart(highchartsuuid11533115424072628,op);
             }
         </script>
     
@@ -3486,7 +3521,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid114516674493444" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115423632113" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3634,11 +3669,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid114516674493444,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115423632113,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid114516674493444,op);
+                var chart = Highcharts.chart(highchartsuuid11533115423632113,op);
             }
         </script>
     
@@ -3648,7 +3683,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid1145166744096851" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115432101429" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3773,11 +3808,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid1145166744096851,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115432101429,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid1145166744096851,op);
+                var chart = Highcharts.chart(highchartsuuid11533115432101429,op);
             }
         </script>
     
@@ -3787,7 +3822,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid1145166747526132" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115439258979" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3914,11 +3949,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid1145166747526132,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115439258979,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid1145166747526132,op);
+                var chart = Highcharts.chart(highchartsuuid11533115439258979,op);
             }
         </script>
     
@@ -3928,7 +3963,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid1145166749438816" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115437649775" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -4054,11 +4089,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid1145166749438816,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115437649775,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid1145166749438816,op);
+                var chart = Highcharts.chart(highchartsuuid11533115437649775,op);
             }
         </script>
     
@@ -4307,30 +4342,6 @@ setTimeout('reloadPage()',1000);
       </tags>
   </entry>
   <entry>
-    <title>吹塑级HDPE 5621D</title>
-    <url>/2022/12/06/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5621D/</url>
-    <content><![CDATA[<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
-<iframe src="./5621D.pdf" width="100%" height="750" type="application/pdf"></iframe>
-
-<iframe src="./5621DEnglish.pdf" width="100%" height="750" type="application/pdf"></iframe>
-
-<script>
-function reloadPage(){ 
-    let i= 0;
-    if （i<2）
-    {location.reload(true);
-    i++;
-    }};
-setTimeout('reloadPage()',1000);
-</script>]]></content>
-      <categories>
-        <category>塑料机械</category>
-      </categories>
-      <tags>
-        <tag>塑料原料HDPE</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>吹塑级塑料原料-HDPE-IBC-1000L原料</title>
     <url>/2022/02/26/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-IBC-1000L%E5%8E%9F%E6%96%99/</url>
     <content><![CDATA[<div>
@@ -4424,6 +4435,30 @@ setTimeout('reloadPage()',1000);
 function reloadPage(){ 
     let i= 0;
     if （i<1）
+    {location.reload(true);
+    i++;
+    }};
+setTimeout('reloadPage()',1000);
+</script>]]></content>
+      <categories>
+        <category>塑料机械</category>
+      </categories>
+      <tags>
+        <tag>塑料原料HDPE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>吹塑级HDPE 5621D</title>
+    <url>/2022/12/06/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5621D/</url>
+    <content><![CDATA[<p><strong>如果PDF显示不正常</strong><input type="button" value="请重新刷新页面" onclick="location.reload(true)"></p>
+<iframe src="./5621D.pdf" width="100%" height="750" type="application/pdf"></iframe>
+
+<iframe src="./5621DEnglish.pdf" width="100%" height="750" type="application/pdf"></iframe>
+
+<script>
+function reloadPage(){ 
+    let i= 0;
+    if （i<2）
     {location.reload(true);
     i++;
     }};
@@ -5366,7 +5401,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid1145166691180240" width="90%" height="300"></div>
+        <div id="highchartsuuid11533115376221829" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -5498,11 +5533,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid1145166691180240,op);
+                        var chart = Highcharts.chart(highchartsuuid11533115376221829,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid1145166691180240,op);
+                var chart = Highcharts.chart(highchartsuuid11533115376221829,op);
             }
         </script>
     
