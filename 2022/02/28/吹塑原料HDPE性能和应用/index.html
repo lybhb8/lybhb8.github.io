@@ -37,6 +37,13 @@
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
+ 
+    <!-- 在 head 或 footer 中引入 Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!--  如果需要更多图表类型（如地图、3D 等），可额外引入模块   -->
+    <script src="https://code.highcharts.com/modules/exporting.js"></script> <!-- 导出功能  -->
+    <script src="https://code.highcharts.com/modules/export-data.js"></script> <!-- 导出数据  -->
+
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="吹塑知识小栈" type="application/atom+xml">
 </head>
 
@@ -224,7 +231,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-05-31 22:48:50</span>
+        <span class="pc">2025-03-28 10:37:49</span>
     </span>
     
     
@@ -267,561 +274,147 @@
                 
 
                 <link rel="stylesheet" type="text&#x2F;css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><body>
+
 <div>
 **如果图表(charts)不能正常显示**<input type="button" value="请重新刷新" onclick="location.reload(true)">
 </div>
 
-<h3 id="材料主要性能-Typical-Properties"><a href="#材料主要性能-Typical-Properties" class="headerlink" title="材料主要性能(Typical Properties):"></a>材料主要性能(Typical Properties):</h3><h4 id="工艺温度"><a href="#工艺温度" class="headerlink" title="工艺温度"></a>工艺温度</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart7151" style="height: 500px"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-<script type="text/javascript">
-    var ctx = document.getElementById('chart7151').getContext('2d');
-    var options =  {
-    type: 'line',
-    data: {
-    labels: ['5502FA', 'HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
-    datasets: [
-    {
-        label: '?????????? ??C',
-        backgroundColor: '#FF3900',
-        borderColor: '#FF3900',
-        data: [205, 210, 215, 215, 220, 235],
-        fill: '+1'
-    }  ,
+<h3 id="材料主要性能-Typical-Properties"><a href="#材料主要性能-Typical-Properties" class="headerlink" title="材料主要性能(Typical Properties):"></a>材料主要性能(Typical Properties):</h3><h4 id="工艺温度"><a href="#工艺温度" class="headerlink" title="工艺温度"></a>工艺温度</h4><!-- 示例：折线图  -->
 
+<div id="chart-container" style="min-width: 300px; height: 400px; margin: 1em auto;"></div>
 
-    {
-        label: '?????????? ??C' ,
-        backgroundColor: '#00CFF0',
-        borderColor: '#7CB5EC',
-        data: [175, 180, 180, 185, 190, 205],
-        fill: false 
-    },
-
-
-??    
-
-    ]
-    },
-
-   options: 
-   {
-
-
-      scales: {
-      yAxes: [{
-        // stacked: false,
-        ticks: {
-          beginAtZero: false ,
-
-          callback: function(value, index, values) 
-          {
-            return  value + '??C' ;
-            }
-
-          },
-
-        scaleLabel: {
-        display: true,
-        labelString: '???????'
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  Highcharts.chart('chart-container', {
+  
+        credits: {
+        enabled: true,                    // ???????????????????????????false????
+        text: 'www.hcharts.cn',             // ?????????
+        href: 'http://www.hcharts.cn'      // ??????
         },
-      }],
-
-      xAxes: [{
-        stacked: true,
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-
+    
+    
+        chart: {
+            zoomType: 'xy'
         },
-
-       responsive: true,
-
-       elements: {
-            line: {
-                tension: 0 // 0,?????????????
-            }
-        } ,
-
-       title: {
-       display: true,
-       text: '?????????? ??C'
-       },
-
-        tooltips: {
-                // mode: 'nearest',
-                backgroundColor: '#E3E6D9',
-                titleFontColor: '#0F0F0F',
-                bodyFontColor: '#0C0CE5',
-                cornerRadius: 3 
+    
+        lang:{
+   
+            },    
+    
+    
+        title: {
+            text: '工艺温度 °c'
+            },
+    
+        xAxis: {
+            categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
+            crosshair: true
         },
-
-
-        plugins: {
-            filler: {
-                propagate: true
+        yAxis: { 
+            min: 100,
+            labels: {
+                format: '{value} °c',
+                style: {
+                    color : 'rgb(050, 100, 250)'
+                }
+            },
+            title: {
+                text: '工艺温度 °c',
+                style: {
+                    color : 'rgb(050, 100, 250)'
+                }
             }
-        }
-
-
-??    
-    }
- }
-;
-    new Chart(ctx, options);
+            },
+    
+    
+    
+        tooltip: {
+            shared: true,
+            backgroundColor: '#ECECE5',   // ???????
+            borderColor: '#FCFCF5',
+            borderRadius: 10,             // ??????
+            shadow: true,                 // ?????????
+            animation: true,               
+            useHTML: true
+        },
+    
+        series: [{
+            name: '最高温度',
+            type: 'spline',
+            data: [205, 210, 215, 215, 220, 235],
+            color: '#FF3900',
+            tooltip: {
+                valueSuffix: ' °c'
+            }
+        },
+    
+        {
+            name: '最低温度',
+            type: 'spline',
+            data: [175, 180, 180, 185, 190, 205],
+            color : 'rgb(050, 100, 250)',
+            tooltip: {
+                valueSuffix: ' °c'
+            }
+            }]
+  });
+});
 </script>
 
-<h4 id="适用制品容积"><a href="#适用制品容积" class="headerlink" title="适用制品容积"></a>适用制品容积</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart2029" style="height: 500px"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-<script type="text/javascript">
-    var ctx = document.getElementById('chart2029').getContext('2d');
-    var options =  {
-    type: 'bar',
-    data: {
-    labels: ['5502FA', 'HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
-    datasets: [
+<h4 id="密度-Density"><a href="#密度-Density" class="headerlink" title="密度(Density)"></a>密度(Density)</h4><div id="chart-container1" style="min-width: 300px; height: 400px; margin: 1em auto;"></div>
 
-
-     {
-        label: '???????????(??)L',
-        backgroundColor: 'rgb(220, 220, 210)',
-        borderColor: 'rgb(210, 210, 210)',
-        hoverBackgroundColor: 'rgb(230, 230, 200)',
-        data: [1, 10, 30, 50, 80, 120]     
-    }  ,
-
-    {
-        label: '??????????(??)L',
-        backgroundColor: '#7CB5EC',
-        borderColor: '#7CB5EC',
-        hoverBackgroundColor: '#5C95CC',
-        data: [15, 60, 120, 160, 200, 250]     
-    }
-    ]
-    },
-
-   options: 
-   {
-
-
-      scales: {
-      yAxes: [{
-        stacked: false,
-        ticks: {
-          beginAtZero: true
-        }
-      }],
-      xAxes: [{
-        stacked: true,
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-
-    },
-       responsive: true,
-       title: {
-       display: true,
-       text: '???????????  ????(L)'
-<head>
-   <script src="http://code.highcharts.com/highcharts.js"></script>
-       },
-
-        tooltips: {
-                mode: 'nearest',
-                backgroundColor: '#E3E6D9',
-                titleFontColor: '#0F0F0F',
-                bodyFontColor: '#0C0CE5',
-                cornerRadius: 3 
-        }
-
-    }
- }
-;
-    new Chart(ctx, options);
-
-
-<h4 id="密度-Density"><a href="#密度-Density" class="headerlink" title="密度(Density)"></a>密度(Density)</h4><!--
-
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid61647452253738770" width="90%" height="300"></div>
-        <script>
-            var op = Object.assign({
-    chart: {
-        type: 'bar' 
-    },
-    title: {
-        text: '我的第一个图表'
-    },
-    xAxis: {
-        categories: ['苹果', '香蕉', '橙子'] 
-    },
-    yAxis: {
-        title: {
-            text: '吃水果个数' 
-        }
-    },
-    series: [{                
-        name: '小明',  
-        data: [1, 0, 4] 
-    }, {
-        name: '小红',
-        data: [5, 7, 3]
-    }]
-},{
-credits: {
-enabled: false,                    // ???????????????????????????false????
-text: 'www.hcharts.cn',             // ?????????
-href: 'http://www.hcharts.cn'      // ??????
-},
-
-chart: {
-    type: 'column'
-},
-title: {
-    text: '吹塑原料HDPE密度'
-},
-
-lang:{
-    contextButtonTitle:"??????????",
-    decimalPoint:".",
-    downloadJPEG:"????JPEG??",
-    downloadPDF:"????PDF???",
-    downloadPNG:"????PNG???",
-    downloadSVG:"????SVG???",
-    drillUpText:"???? {series.name}",
-    loading:"??????",
-    months:["???","????","????","????","????","????","????","????","????","???","????","?????"],
-    noData:"???????",
-    numericSymbols: [ "??" , "??" , "G" , "T" , "P" , "E"],
-    printChart:"??????",
-    resetZoom:"???????",
-    resetZoomTitle:"??????",
-    shortMonths: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"],
-    thousandsSep:",",
-    weekdays: ["?????", "??????", "??????", "??????", "??????", "??????", "??????","??????"]
-        },    
-
-
-
-
-
-xAxis: {
-    categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
-    crosshair: true
-},
-yAxis: {
-    min: 0.9,
-    max: 1,
-    title: {
-        text: '密度(g/cm3)'
-    }
-},
-tooltip: {
-    // head + ??? point + footer ?????????? table
-    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-    '<td style="padding:0"><b>{point.y:.3f} g/cm3 </b></td></tr>',
-    footerFormat: '</table>',
-    valueDecimals: 3,
-    shared: true,
-    backgroundColor: '#ECECE5',   // ???????
-    borderColor: '#FCFCF5',
-    borderRadius: 10,             // ??????
-    shadow: true,                 // ?????????
-    animation: true,               
-    useHTML: true
-
-},
-plotOptions: {
-    column: {
-        borderWidth: 1
-    }
-},
-series: [{
-    name : '密度',
-    color : 'rgb(050, 100, 250)',
-    data: [0.953, 0.951, 0.948, 0.945, 0.953, 0.950] 
-}]
-
-}
-)
-            if(op.url){
-                $.ajax({
-                    url: op.url,
-                    type: "JSON",
-                    method: op.method || "GET",
-                    success: function(res){
-                        if(op.seriesFormat){
-                            op.series = op.seriesFormat(res)
-                        } else {
-                            op.series = res;
-                        }
-                        var chart = Highcharts.chart(highchartsuuid61647452253738770,op);
-                    }
-                })
-            }else{
-                var chart = Highcharts.chart(highchartsuuid61647452253738770,op);
-            }
-        </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  Highcharts.chart('chart-container1', {
     
-
-<h4 id="熔融指数-Melt-Index"><a href="#熔融指数-Melt-Index" class="headerlink" title="熔融指数(Melt Index)"></a>熔融指数(Melt Index)</h4>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid61647452258633834" width="90%" height="300"></div>
-        <script>
-            var op = Object.assign({
-    chart: {
-        type: 'bar' 
-    },
-    title: {
-        text: '我的第一个图表'
-    },
-    xAxis: {
-        categories: ['苹果', '香蕉', '橙子'] 
-    },
-    yAxis: {
-        title: {
-            text: '吃水果个数' 
-        }
-    },
-    series: [{                
-        name: '小明',  
-        data: [1, 0, 4] 
-    }, {
-        name: '小红',
-        data: [5, 7, 3]
-    }]
-},{        
-credits: {
-enabled: false,                    // ???????????????????????????false????
-text: 'www.hcharts.cn',             // ?????????
-href: 'http://www.hcharts.cn',      // ??????
-position: {                         // ???????? 
-    align: 'left',
-    x: 400,
-    verticalAlign: 'bottom',
-    y: -100
-},
-style: {                            // ???????
-    cursor: 'pointer',
-    color: 'red',
-    fontSize: '30px'
-}
-},
-
-chart: {
-    type: 'column'
-},
-title: {
-    text: '???????????(Melt Index)'
-},
-
-lang:{
-    contextButtonTitle:"??????????",
-    decimalPoint:".",
-    downloadJPEG:"????JPEG??",
-    downloadPDF:"????PDF???",
-    downloadPNG:"????PNG???",
-    downloadSVG:"????SVG???",
-    drillUpText:"???? {series.name}",
-    loading:"??????",
-    months:["???","????","????","????","????","????","????","????","????","???","????","?????"],
-    noData:"???????",
-    numericSymbols: [ "??" , "??" , "G" , "T" , "P" , "E"],
-    printChart:"??????",
-    resetZoom:"???????",
-    resetZoomTitle:"??????",
-    shortMonths: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"],
-    thousandsSep:",",
-    weekdays: ["?????", "??????", "??????", "??????", "??????", "??????", "??????","??????"]
-        },    
-
-
-
-
-
-xAxis: {
-    categories: [
-        '5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'
-    ],
-    crosshair: true
-},
-yAxis: {
-    min: 0,
-    title: {
-        text: '熔融指数(g/10min)'
-    }
-},
-tooltip: {
-    // head + ??? point + footer ?????????? table
-    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-    '<td style="padding:0"><b>{point.y:.2f} g/10min </b></td></tr>',
-    footerFormat: '</table>',
-    shared: true,
-    backgroundColor: '#ECECE5',   // ???????
-    borderColor: '#FCFCF5',
-    borderRadius: 10,             // ??????
-    shadow: true,                 // ?????????
-    animation: true,               
-    useHTML: true
-},
-plotOptions: {
-    column: {
-        borderWidth: 1
-    }
-},
-series: [{
-    name: ' *10(190??/2.16 kg)',
-    color : 'rgb(230, 150, 050)',
-    data: [2, 0.8, 0.9, 0.48, 0.2, 0.16]
-}, {
-    name: '(190??C/ 5.0 kg)',
-    color : 'rgb(050, 200, 200)',
-    data: [1.2, 0.55, 0.57, 0.35, 0.14, 0.11]
-},  {
-    name: '(190??C/ 21.6 kg)',
-    color : 'rgb(050, 100, 250)',
-    data: [20, 9.5, 10, 6, 2.5, 2]
-}]
-
-}
-)
-            if(op.url){
-                $.ajax({
-                    url: op.url,
-                    type: "JSON",
-                    method: op.method || "GET",
-                    success: function(res){
-                        if(op.seriesFormat){
-                            op.series = op.seriesFormat(res)
-                        } else {
-                            op.series = res;
-                        }
-                        var chart = Highcharts.chart(highchartsuuid61647452258633834,op);
-                    }
-                })
-            }else{
-                var chart = Highcharts.chart(highchartsuuid61647452258633834,op);
-            }
-        </script>
-    
-
-<h4 id="屈服抗拉强度和弯曲模量-Tensile-Strength-at-yield-and-Flexural-Modulus"><a href="#屈服抗拉强度和弯曲模量-Tensile-Strength-at-yield-and-Flexural-Modulus" class="headerlink" title="屈服抗拉强度和弯曲模量(Tensile Strength at yield and Flexural Modulus)"></a>屈服抗拉强度和弯曲模量(Tensile Strength at yield and Flexural Modulus)</h4>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid61647452258953044" width="90%" height="300"></div>
-        <script>
-            var op = Object.assign({
-    chart: {
-        type: 'bar' 
-    },
-    title: {
-        text: '我的第一个图表'
-    },
-    xAxis: {
-        categories: ['苹果', '香蕉', '橙子'] 
-    },
-    yAxis: {
-        title: {
-            text: '吃水果个数' 
-        }
-    },
-    series: [{                
-        name: '小明',  
-        data: [1, 0, 4] 
-    }, {
-        name: '小红',
-        data: [5, 7, 3]
-    }]
-},
-{
     credits: {
     enabled: false,                    // ???????????????????????????false????
     text: 'www.hcharts.cn',             // ?????????
     href: 'http://www.hcharts.cn'      // ??????
     },
 
-
-     chart: {
-        zoomType: 'xy'
+    chart: {
+        type: 'column'
     },
     title: {
-        text: '???????????????????'
-        },
-
+        text: '吹塑原料HDPE密度'
+    },
+    
     lang:{
-    contextButtonTitle:"??????????",
-    decimalPoint:".",
-    downloadJPEG:"????JPEG??",
-    downloadPDF:"????PDF???",
-    downloadPNG:"????PNG???",
-    downloadSVG:"????SVG???",
-    drillUpText:"???? {series.name}",
-    loading:"??????",
-    months:["???","????","????","????","????","????","????","????","????","???","????","?????"],
-    noData:"???????",
-    numericSymbols: [ "??" , "??" , "G" , "T" , "P" , "E"],
-    printChart:"??????",
-    resetZoom:"???????",
-    resetZoomTitle:"??????",
-    shortMonths: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"],
-    thousandsSep:",",
-    weekdays: ["?????", "??????", "??????", "??????", "??????", "??????", "??????","??????"]
-        },    
+        contextButtonTitle:"菜单",
+        decimalPoint:".",
+        downloadJPEG:"下载JPEG图片",
+        downloadPDF:"下载PDF文件",
+        downloadPNG:"下载PNG图片",
+        downloadSVG:"下载SVG图片",
+        drillUpText:"???? {series.name}",
+        loading:"加载",
+        printChart:"打印charts",
+        resetZoom:"重置窗口",
+        resetZoomTitle:"",
+        
+            },    
+    
 
-
-
-    xAxis: [{
+    xAxis: {
         categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
         crosshair: true
-    }],
-    yAxis: [{ // Primary yAxis
-        labels: {
-            format: '{value} MPa',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        },
+    },
+    yAxis: {
+        min: 0.9,
+        max: 1,
         title: {
-            text: '???????????',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
+            text: '密度(g/cm3)'
         }
-        }, 
-        { // Secondary yAxis
-        title: {
-            text: '???????',
-            style: {
-                color: Highcharts.getOptions().colors[0]
-            }
-        },
-        labels: {
-            format: '{value} MPa',
-            style: {
-                color: Highcharts.getOptions().colors[0]
-            }
-        },
-        opposite: true
-    }],
-
-
-
+    },
     tooltip: {
+        // head + ??? point + footer ?????????? table
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        '<td style="padding:0"><b>{point.y:.3f} g/cm3 </b></td></tr>',
+        footerFormat: '</table>',
+        valueDecimals: 3,
         shared: true,
         backgroundColor: '#ECECE5',   // ???????
         borderColor: '#FCFCF5',
@@ -829,301 +422,92 @@ series: [{
         shadow: true,                 // ?????????
         animation: true,               
         useHTML: true
-        },
-
+    
+    },
+    plotOptions: {
+        column: {
+            borderWidth: 1
+        }
+    },
     series: [{
-        name: '???????',
-        type: 'column',
-        yAxis: 1,
-        data: [1300, 1300, 1200, 850, 1300, 1200],
-        tooltip: {
-            valueSuffix: ' MPa'
-        }
-        }, 
-
-
-
-        {
-        name: '???????????',
-        type: 'spline',
-        data: [27, 28, 25, 24, 27, 24],
-        tooltip: {
-            valueSuffix: ' MPa'
-        }
-    }]
-
-}
-)
-            if(op.url){
-                $.ajax({
-                    url: op.url,
-                    type: "JSON",
-                    method: op.method || "GET",
-                    success: function(res){
-                        if(op.seriesFormat){
-                            op.series = op.seriesFormat(res)
-                        } else {
-                            op.series = res;
-                        }
-                        var chart = Highcharts.chart(highchartsuuid61647452258953044,op);
-                    }
-                })
-            }else{
-                var chart = Highcharts.chart(highchartsuuid61647452258953044,op);
-            }
-        </script>
-    
-
-<h4 id="断裂伸长率-amp-抗缺口拉伸冲击强度-amp-ESCR-Elongation-at-break-amp-Notched-Tensile-Impact-Resistance-amp-ESCR"><a href="#断裂伸长率-amp-抗缺口拉伸冲击强度-amp-ESCR-Elongation-at-break-amp-Notched-Tensile-Impact-Resistance-amp-ESCR" class="headerlink" title="断裂伸长率&amp;抗缺口拉伸冲击强度&amp;ESCR(Elongation at break &amp; Notched Tensile Impact Resistance &amp; ESCR)"></a>断裂伸长率&amp;抗缺口拉伸冲击强度&amp;ESCR(Elongation at break &amp; Notched Tensile Impact Resistance &amp; ESCR)</h4>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid6164745225208306" width="90%" height="300"></div>
-        <script>
-            var op = Object.assign({
-    chart: {
-        type: 'bar' 
-    },
-    title: {
-        text: '我的第一个图表'
-    },
-    xAxis: {
-        categories: ['苹果', '香蕉', '橙子'] 
-    },
-    yAxis: {
-        title: {
-            text: '吃水果个数' 
-        }
-    },
-    series: [{                
-        name: '小明',  
-        data: [1, 0, 4] 
-    }, {
-        name: '小红',
-        data: [5, 7, 3]
-    }]
-},
-{
-    credits: {
-    enabled: false,                    // ???????????????????????????false????
-    text: 'www.hcharts.cn',             // ?????????
-    href: 'http://www.hcharts.cn'      // ??????
-    },
-
-
-
-    xAxis: [{
-        categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
-        crosshair: true
-    }],
-    yAxis: [{ // Primary yAxis
-        labels: {
-            format: '{value} %',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        },
-        title: {
-            text: '断裂伸长率',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        }
-    }, 
-        { // Secondary yAxis
-        title: {
-            text: '抗缺口拉伸冲击强度',
-            style: {
-                color: Highcharts.getOptions().colors[0]
-            }
-        },
-        labels: {
-            format: '{value} kJ/m?',
-            style: {
-                color: Highcharts.getOptions().colors[0]
-            }
-        },
-        opposite: true
-    },
-
-    { // Tertiary yAxis
-
-         title: {
-        text: '耐环境应力 ESCR',
-        style: {
-            color : 'rgb(050, 100, 250)'
-        }
-           },
-
-        labels: {
-        format: '{value} hr',
-        style: {
-            color : 'rgb(050, 100, 250)'
-        },
-          opposite: true
-    }    
-
-    }],
-
-
-    tooltip: {
-        shared: true,
-        backgroundColor: '#ECECE5',   // ???????
-        borderColor: '#FCFCF5',
-        borderRadius: 10,             // ??????
-        shadow: true,                 // ?????????
-        animation: true,               
-        useHTML: true
-    },
-
-    series: 
-    [    {
-        name: 'ESCR',
-        type: 'column',
-        yAxis: 2,
-        data: [60, 300, 600, 800, 300, 250],
+        name : '密度',
         color : 'rgb(050, 100, 250)',
-        tooltip: {
-            valueSuffix: ' Hr'
-        }
-        }, 
-
-
-
-        {
-        name: '断裂伸长率',
-        type: 'spline',
-        data: [700, 750, 700, 680, 600, 550],
-        color: Highcharts.getOptions().colors[1],
-        tooltip: {
-            valueSuffix: ' %'
-        }
-        },
-
-
-
-        {
-        name: '抗缺口拉伸冲击强度',
-        type: 'spline',
-        yAxis: 1,
-        data: [140, 160, 190, 195, 250, 280],
-        color: Highcharts.getOptions().colors[0],
-        tooltip: {
-            valueSuffix: ' kJ/m?'
-        }
-        } ]
-
-}
-)
-            if(op.url){
-                $.ajax({
-                    url: op.url,
-                    type: "JSON",
-                    method: op.method || "GET",
-                    success: function(res){
-                        if(op.seriesFormat){
-                            op.series = op.seriesFormat(res)
-                        } else {
-                            op.series = res;
-                        }
-                        var chart = Highcharts.chart(highchartsuuid6164745225208306,op);
-                    }
-                })
-            }else{
-                var chart = Highcharts.chart(highchartsuuid6164745225208306,op);
-            }
-        </script>
-    
-
-<h4 id="维卡软化温度-A50-amp-熔融温度-DSC-Vicat-Softening-Temperature-amp-Peak-Melting-Point"><a href="#维卡软化温度-A50-amp-熔融温度-DSC-Vicat-Softening-Temperature-amp-Peak-Melting-Point" class="headerlink" title="维卡软化温度(A50)&amp;熔融温度(DSC)(Vicat Softening Temperature &amp; Peak Melting Point)"></a>维卡软化温度(A50)&amp;熔融温度(DSC)(Vicat Softening Temperature &amp; Peak Melting Point)</h4>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid61647452259588378" width="90%" height="300"></div>
-        <script>
-            var op = Object.assign({
-    chart: {
-        type: 'bar' 
-    },
-    title: {
-        text: '我的第一个图表'
-    },
-    xAxis: {
-        categories: ['苹果', '香蕉', '橙子'] 
-    },
-    yAxis: {
-        title: {
-            text: '吃水果个数' 
-        }
-    },
-    series: [{                
-        name: '小明',  
-        data: [1, 0, 4] 
-    }, {
-        name: '小红',
-        data: [5, 7, 3]
+        data: [0.953, 0.951, 0.948, 0.945, 0.953, 0.950] 
     }]
-},
-{
-    credits: {
+    
+    
+         
+  });
+});
+</script>
+
+<h4 id="熔融指数-Melt-Index"><a href="#熔融指数-Melt-Index" class="headerlink" title="熔融指数(Melt Index)"></a>熔融指数(Melt Index)</h4><div>
+
+<div id="chart-container2" style="min-width: 300px; height: 400px; margin: 1em auto;"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  Highcharts.chart('chart-container2', {
+     credits: {
     enabled: false,                    // ???????????????????????????false????
     text: 'www.hcharts.cn',             // ?????????
-    href: 'http://www.hcharts.cn'      // ??????
+    href: 'http://www.hcharts.cn',      // ??????
+    position: {                         // ???????? 
+        align: 'left',
+        x: 400,
+        verticalAlign: 'bottom',
+        y: -100
+    },
+    style: {                            // ???????
+        cursor: 'pointer',
+        color: 'red',
+        fontSize: '30px'
+    }
     },
 
-
-     chart: {
-        zoomType: 'xy'
+    chart: {
+        type: 'column'
     },
     title: {
-        text: '?????????????'
-        },
-
+        text: '熔融指数(Melt Index)'
+    },
+    
     lang:{
-    contextButtonTitle:"??????????",
-    decimalPoint:".",
-    downloadJPEG:"????JPEG??",
-    downloadPDF:"????PDF???",
-    downloadPNG:"????PNG???",
-    downloadSVG:"????SVG???",
-    drillUpText:"???? {series.name}",
-    loading:"??????",
-    months:["???","????","????","????","????","????","????","????","????","???","????","?????"],
-    noData:"???????",
-    numericSymbols: [ "??" , "??" , "G" , "T" , "P" , "E"],
-    printChart:"??????",
-    resetZoom:"???????",
-    resetZoomTitle:"??????",
-    shortMonths: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"],
-    thousandsSep:",",
-    weekdays: ["?????", "??????", "??????", "??????", "??????", "??????", "??????","??????"]
-        },    
-
+        contextButtonTitle:"菜单",
+        decimalPoint:".",
+        downloadJPEG:"下载JPEG图片",
+        downloadPDF:"下载PDF文件",
+        downloadPNG:"下载PNG图片",
+        downloadSVG:"下载SVG图片",
+        drillUpText:"???? {series.name}",
+        loading:"加载",
+        printChart:"打印charts",
+        resetZoom:"重置窗口",
+        resetZoomTitle:"",
+            },    
+    
+    
+    
+    
+    
     xAxis: {
-        categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
+        categories: [
+            '5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'
+        ],
         crosshair: true
     },
-    yAxis: { 
-        min: 100,
-        labels: {
-            format: '{value} ??C',
-            style: {
-                color : 'rgb(050, 100, 250)'
-            }
-        },
+    yAxis: {
+        min: 0,
         title: {
-            text: '??????????',
-            style: {
-                color : 'rgb(050, 100, 250)'
-            }
+            text: '熔融指数(g/10min)'
         }
-        },
-
-
-
+    },
     tooltip: {
+        // head + ??? point + footer ?????????? table
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+        '<td style="padding:0"><b>{point.y:.2f} g/10min </b></td></tr>',
+        footerFormat: '</table>',
         shared: true,
         backgroundColor: '#ECECE5',   // ???????
         borderColor: '#FCFCF5',
@@ -1132,196 +516,424 @@ series: [{
         animation: true,               
         useHTML: true
     },
-
-    series: [{
-        name: '???',
-        type: 'spline',
-        data: [132, 132, 133, 134, 137, 142],
-        color: '#FF3900',
-        tooltip: {
-            valueSuffix: ' ??C'
+    plotOptions: {
+        column: {
+            borderWidth: 1
         }
     },
-
-    {
-        name: '??????',
-        type: 'spline',
-        data: [121, 125, 126, 125, 115, 121],
+    series: [{
+        name: ' *10(190??/2.16 kg)',
+        color : 'rgb(230, 150, 050)',
+        data: [2, 0.8, 0.9, 0.48, 0.2, 0.16]
+    }, {
+        name: '(190??C/ 5.0 kg)',
+        color : 'rgb(050, 200, 200)',
+        data: [1.2, 0.55, 0.57, 0.35, 0.14, 0.11]
+    },  {
+        name: '(190??C/ 21.6 kg)',
         color : 'rgb(050, 100, 250)',
+        data: [20, 9.5, 10, 6, 2.5, 2]
+    }]
+         
+  });
+});
+</script>
+
+<h4 id="屈服抗拉强度和弯曲模量-Tensile-Strength-at-yield-and-Flexural-Modulus"><a href="#屈服抗拉强度和弯曲模量-Tensile-Strength-at-yield-and-Flexural-Modulus" class="headerlink" title="屈服抗拉强度和弯曲模量(Tensile Strength at yield and Flexural Modulus)"></a>屈服抗拉强度和弯曲模量(Tensile Strength at yield and Flexural Modulus)</h4><div id="chart-container3" style="min-width: 300px; height: 400px; margin: 1em auto;"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  Highcharts.chart('chart-container3', {
+    
+  credits: {
+        enabled: false,                    // ???????????????????????????false????
+        text: 'www.hcharts.cn',             // ?????????
+        href: 'http://www.hcharts.cn'      // ??????
+        },
+    
+    
+         chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: '屈服抗拉强度和弯曲模量'
+            },
+    
+        lang:{
+            contextButtonTitle:"菜单",
+            decimalPoint:".",
+            downloadJPEG:"下载JPEG图片",
+            downloadPDF:"下载PDF文件",
+            downloadPNG:"下载PNG图片",
+            downloadSVG:"下载SVG图片",
+            drillUpText:"???? {series.name}",
+            loading:"加载",
+            printChart:"打印charts",
+            resetZoom:"重置窗口",
+            resetZoomTitle:"",
+            },    
+    
+    
+    
+        xAxis: [{
+            categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value} MPa',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '屈服抗拉强度',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+            }, 
+            { // Secondary yAxis
+            title: {
+                text: '弯曲模量',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                format: '{value} MPa',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        }],
+    
+    
+    
         tooltip: {
-            valueSuffix: ' ??C'
-        }
+            shared: true,
+            backgroundColor: '#ECECE5',   // ???????
+            borderColor: '#FCFCF5',
+            borderRadius: 10,             // ??????
+            shadow: true,                 // ?????????
+            animation: true,               
+            useHTML: true
+            },
+    
+        series: [{
+            name: '屈服抗拉强度',
+            type: 'column',
+            yAxis: 1,
+            data: [1300, 1300, 1200, 850, 1300, 1200],
+            tooltip: {
+                valueSuffix: ' MPa'
+            }
+            }, 
+    
+    
+    
+            {
+            name: '弯曲模量',
+            type: 'spline',
+            data: [27, 28, 25, 24, 27, 24],
+            tooltip: {
+                valueSuffix: ' MPa'
+            }
         }]
-
-}
-)
-            if(op.url){
-                $.ajax({
-                    url: op.url,
-                    type: "JSON",
-                    method: op.method || "GET",
-                    success: function(res){
-                        if(op.seriesFormat){
-                            op.series = op.seriesFormat(res)
-                        } else {
-                            op.series = res;
-                        }
-                        var chart = Highcharts.chart(highchartsuuid61647452259588378,op);
-                    }
-                })
-            }else{
-                var chart = Highcharts.chart(highchartsuuid61647452259588378,op);
-            }
-        </script>
     
+});
+});
+</script>
 
-<h4 id="工艺温度-1"><a href="#工艺温度-1" class="headerlink" title="工艺温度"></a>工艺温度</h4>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid61647452256408130" width="90%" height="300"></div>
-        <script>
-            var op = Object.assign({
-    chart: {
-        type: 'bar' 
-    },
-    title: {
-        text: '我的第一个图表'
-    },
-    xAxis: {
-        categories: ['苹果', '香蕉', '橙子'] 
-    },
-    yAxis: {
-        title: {
-            text: '吃水果个数' 
-        }
-    },
-    series: [{                
-        name: '小明',  
-        data: [1, 0, 4] 
-    }, {
-        name: '小红',
-        data: [5, 7, 3]
-    }]
-},
-{
+<h4 id="断裂伸长率、抗缺口拉伸冲击强度、ESCR-Elongation-at-break，Notched-Tensile-Impact-Resistance-，-ESCR"><a href="#断裂伸长率、抗缺口拉伸冲击强度、ESCR-Elongation-at-break，Notched-Tensile-Impact-Resistance-，-ESCR" class="headerlink" title="断裂伸长率、抗缺口拉伸冲击强度、ESCR(Elongation at break，Notched Tensile Impact Resistance ， ESCR)"></a>断裂伸长率、抗缺口拉伸冲击强度、ESCR(Elongation at break，Notched Tensile Impact Resistance ， ESCR)</h4><div id="chart-container4" style="min-width: 300px; height: 400px; margin: 1em auto;"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  Highcharts.chart('chart-container4', {
     credits: {
-    enabled: false,                    // ???????????????????????????false????
-    text: 'www.hcharts.cn',             // ?????????
-    href: 'http://www.hcharts.cn'      // ??????
-    },
-
-
-    chart: {
-        zoomType: 'xy'
-    },
-
-    lang:{
-    contextButtonTitle:"??????????",
-    decimalPoint:".",
-    downloadJPEG:"????JPEG??",
-    downloadPDF:"????PDF???",
-    downloadPNG:"????PNG???",
-    downloadSVG:"????SVG???",
-    drillUpText:"???? {series.name}",
-    loading:"??????",
-    months:["???","????","????","????","????","????","????","????","????","???","????","?????"],
-    noData:"???????",
-    numericSymbols: [ "??" , "??" , "G" , "T" , "P" , "E"],
-    printChart:"??????",
-    resetZoom:"???????",
-    resetZoomTitle:"??????",
-    shortMonths: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"],
-    thousandsSep:",",
-    weekdays: ["?????", "??????", "??????", "??????", "??????", "??????", "??????","??????"]
-        },    
-
-
-    title: {
-        text: '???????'
+        enabled: false,                    // ???????????????????????????false????
+        text: 'www.hcharts.cn',             // ?????????
+        href: 'http://www.hcharts.cn'      // ??????
         },
-
-    xAxis: {
-        categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
-        crosshair: true
-    },
-    yAxis: { 
-        min: 100,
-        labels: {
-            format: '{value} ??C',
+    
+    
+    
+        xAxis: [{
+            categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value} %',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '断裂伸长率',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+        }, 
+            { // Secondary yAxis
+            title: {
+                text: '抗缺口拉伸冲击强度',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            labels: {
+                format: '{value} kJ/m?',
+                style: {
+                    color: Highcharts.getOptions().colors[0]
+                }
+            },
+            opposite: true
+        },
+    
+        { // Tertiary yAxis
+    
+             title: {
+            text: '耐环境应力 ESCR',
             style: {
                 color : 'rgb(050, 100, 250)'
             }
+               },
+    
+            labels: {
+            format: '{value} hr',
+            style: {
+                color : 'rgb(050, 100, 250)'
+            },
+              opposite: true
+        }    
+    
+        }],
+    
+    
+        tooltip: {
+            shared: true,
+            backgroundColor: '#ECECE5',   // ???????
+            borderColor: '#FCFCF5',
+            borderRadius: 10,             // ??????
+            shadow: true,                 // ?????????
+            animation: true,               
+            useHTML: true
+        },
+    
+        series: 
+        [    {
+            name: 'ESCR',
+            type: 'column',
+            yAxis: 2,
+            data: [60, 300, 600, 800, 300, 250],
+            color : 'rgb(050, 100, 250)',
+            tooltip: {
+                valueSuffix: ' Hr'
+            }
+            }, 
+    
+    
+    
+            {
+            name: '断裂伸长率',
+            type: 'spline',
+            data: [700, 750, 700, 680, 600, 550],
+            color: Highcharts.getOptions().colors[1],
+            tooltip: {
+                valueSuffix: ' %'
+            }
+            },
+    
+    
+    
+            {
+            name: '抗缺口拉伸冲击强度',
+            type: 'spline',
+            yAxis: 1,
+            data: [140, 160, 190, 195, 250, 280],
+            color: Highcharts.getOptions().colors[0],
+            tooltip: {
+                valueSuffix: ' kJ/m?'
+            }
+            } ]
+         
+  });
+});
+</script>
+
+<h4 id="维卡软化温度-A50-、熔融温度-DSC-Vicat-Softening-Temperature-Peak-Melting-Point"><a href="#维卡软化温度-A50-、熔融温度-DSC-Vicat-Softening-Temperature-Peak-Melting-Point" class="headerlink" title="维卡软化温度(A50)、熔融温度(DSC)(Vicat Softening Temperature,Peak Melting Point)"></a>维卡软化温度(A50)、熔融温度(DSC)(Vicat Softening Temperature,Peak Melting Point)</h4><div id="chart-container5" style="min-width: 300px; height: 400px; margin: 1em auto;"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  Highcharts.chart('chart-container5', {
+    credits: {
+        enabled: true,                    // ???????????????????????????false????
+        text: 'www.hcharts.cn',             // ?????????
+        href: 'http://www.hcharts.cn'      // ??????
+        },
+    
+    
+         chart: {
+            zoomType: 'xy'
         },
         title: {
-            text: '???????',
-            style: {
-                color : 'rgb(050, 100, 250)'
-            }
-        }
-        },
-
-
-
-    tooltip: {
-        shared: true,
-        backgroundColor: '#ECECE5',   // ???????
-        borderColor: '#FCFCF5',
-        borderRadius: 10,             // ??????
-        shadow: true,                 // ?????????
-        animation: true,               
-        useHTML: true
-    },
-
-    series: [{
-        name: '??????????',
-        type: 'spline',
-        data: [205, 210, 215, 215, 220, 235],
-        color: '#FF3900',
-        tooltip: {
-            valueSuffix: ' ??C'
-        }
-    },
-
-    {
-        name: '??????????',
-        type: 'spline',
-        data: [175, 180, 180, 185, 190, 205],
-        color : 'rgb(050, 100, 250)',
-        tooltip: {
-            valueSuffix: ' ??C'
-        }
-        }]
-
-}
-)
-            if(op.url){
-                $.ajax({
-                    url: op.url,
-                    type: "JSON",
-                    method: op.method || "GET",
-                    success: function(res){
-                        if(op.seriesFormat){
-                            op.series = op.seriesFormat(res)
-                        } else {
-                            op.series = res;
-                        }
-                        var chart = Highcharts.chart(highchartsuuid61647452256408130,op);
-                    }
-                })
-            }else{
-                var chart = Highcharts.chart(highchartsuuid61647452256408130,op);
-            }
-        </script>
+            text: '维卡软化温度(A50)、熔融温度'
+            },
     
+        lang:{
+  
+            },    
+    
+        xAxis: {
+            categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
+            crosshair: true
+        },
+        yAxis: { 
+            min: 100,
+            labels: {
+                format: '{value} °c',
+                style: {
+                    color : 'rgb(050, 100, 250)'
+                }
+            },
+            title: {
+                text: '温度 °c',
+                style: {
+                    color : 'rgb(050, 100, 250)'
+                }
+            }
+            },
+    
+    
+    
+        tooltip: {
+            shared: true,
+            backgroundColor: '#ECECE5',   // ???????
+            borderColor: '#FCFCF5',
+            borderRadius: 10,             // ??????
+            shadow: true,                 // ?????????
+            animation: true,               
+            useHTML: true
+        },
+    
+        series: [{
+            name: '熔融温度',
+            type: 'spline',
+            data: [132, 132, 133, 134, 137, 142],
+            color: '#FF3900',
+            tooltip: {
+                valueSuffix: '°c'
+            }
+        },
+    
+        {
+            name: '维卡软化温度(A50)',
+            type: 'spline',
+            data: [121, 125, 126, 125, 115, 121],
+            color : 'rgb(050, 100, 250)',
+            tooltip: {
+                valueSuffix: '°c'
+            }
+            }]
+    
+         
+  });
+});
+</script>
 
-<h4 id="适用制品容积-1"><a href="#适用制品容积-1" class="headerlink" title="适用制品容积"></a>适用制品容积</h4>
+
+
+<h4 id="适用制品容积"><a href="#适用制品容积" class="headerlink" title="适用制品容积"></a>适用制品容积</h4><div id="chart-container6" style="min-width: 300px; height: 400px; margin: 1em auto;"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  Highcharts.chart('chart-container6', {
+    credits: {
+        enabled: false,                    
+        text: 'www.hcharts.cn',             
+        href: 'http://www.hcharts.cn'      
+        },
+    
+    
+         chart: {
+            zoomType: 'xy'
+        },
+    
+        lang:{
+    
+            },    
+    
+        title: {
+            text: '适用制品容积'
+            },
+    
+        xAxis: {
+            categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
+            crosshair: true
+        },
+        yAxis: { 
+            min: 0,
+            labels: {
+                format: '{value} (升)L',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            title: {
+                text: '制品容积',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            }
+            },
+    
+    
+    
+        tooltip: {
+            shared: true,
+            backgroundColor: '#ECECE5',   // ???????
+            borderColor: '#FCFCF5',
+            borderRadius: 10,             // ??????
+            shadow: true,                 // ?????????
+            animation: true,               
+            useHTML: true
+        },
+    
+        series: [{
+            name: '制品容积',
+            type: 'spline',
+            data: [20, 60, 100, 160, 200, 250],
+            color : 'rgb(000, 50, 200)',
+            tooltip: {
+                valueSuffix: ' (最大)L'
+            }
+        },
+    
+        {
+            name: '制品容积',
+            type: 'spline',
+            data: [2, 15, 25, 50, 80, 120],
+            color : 'rgb(050, 150, 255)',
+            tooltip: {
+                valueSuffix: ' (最小)L'
+            }
+            }]
+    
+         
+  });
+});
+</script>
+
+<!--
+
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid61647452256337949" width="90%" height="300"></div>
+        <div id="highchartsuuid51038556089259751" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -1359,23 +971,7 @@ series: [{
     },
 
     lang:{
-    contextButtonTitle:"??????????",
-    decimalPoint:".",
-    downloadJPEG:"????JPEG??",
-    downloadPDF:"????PDF???",
-    downloadPNG:"????PNG???",
-    downloadSVG:"????SVG???",
-    drillUpText:"???? {series.name}",
-    loading:"??????",
-    months:["???","????","????","????","????","????","????","????","????","???","????","?????"],
-    noData:"???????",
-    numericSymbols: [ "??" , "??" , "G" , "T" , "P" , "E"],
-    printChart:"??????",
-    resetZoom:"???????",
-    resetZoomTitle:"??????",
-    shortMonths: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"],
-    thousandsSep:",",
-    weekdays: ["?????", "??????", "??????", "??????", "??????", "??????", "??????","??????"]
+
         },    
 
     title: {
@@ -1447,15 +1043,15 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid61647452256337949,op);
+                        var chart = Highcharts.chart(highchartsuuid51038556089259751,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid61647452256337949,op);
+                var chart = Highcharts.chart(highchartsuuid51038556089259751,op);
             }
         </script>
     
-<p> –&gt;</p>
+<p>–&gt;</p>
 <h3 id="适用制品："><a href="#适用制品：" class="headerlink" title="适用制品："></a>适用制品：</h3><h4 id="5502FA"><a href="#5502FA" class="headerlink" title="5502FA"></a><a class="link"   target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5502/" >5502FA<i class="fas fa-external-link-alt"></i></a></h4><p>  <img src="??????????????/timg (1).jpg" style="zoom:25%;" /> <img src="??????????????/loop_bottle.jpg" style="zoom:60%;" /></p>
 <h4 id="HD5401AA"><a href="#HD5401AA" class="headerlink" title="HD5401AA"></a><a class="link"   target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/" >HD5401AA<i class="fas fa-external-link-alt"></i></a></h4><p><img src="??????????????/jerry_can.jpg" style="zoom:48%;" /> <img src="??????????????/Lubricating-Oil.jpg" style="zoom:40%;" /></p>
 <h4 id="HXM50100"><a href="#HXM50100" class="headerlink" title="HXM50100"></a><a class="link"   target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HXM-50100/" >HXM50100<i class="fas fa-external-link-alt"></i></a></h4><p><img src="??????????????/huagong.jpg" style="zoom:70%;" /> <img src="??????????????/others-1.jpg" style="zoom:80%;" /></p>
@@ -1472,7 +1068,7 @@ function reloadPage(){
     }};
 setTimeout('reloadPage()',1000);
 </script>
---></body>
+--></div></body>
             </div>
 
             
@@ -1550,7 +1146,7 @@ setTimeout('reloadPage()',1000);
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%90%E6%96%99%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD-Typical-Properties"><span class="nav-number">1.</span> <span class="nav-text">材料主要性能(Typical Properties):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E8%89%BA%E6%B8%A9%E5%BA%A6"><span class="nav-number">1.1.</span> <span class="nav-text">工艺温度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%88%B6%E5%93%81%E5%AE%B9%E7%A7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">适用制品容积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%86%E5%BA%A6-Density"><span class="nav-number">1.3.</span> <span class="nav-text">密度(Density)</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%90%E6%96%99%E4%B8%BB%E8%A6%81%E6%80%A7%E8%83%BD-Typical-Properties"><span class="nav-number">1.</span> <span class="nav-text">材料主要性能(Typical Properties):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E8%89%BA%E6%B8%A9%E5%BA%A6"><span class="nav-number">1.1.</span> <span class="nav-text">工艺温度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%86%E5%BA%A6-Density"><span class="nav-number">1.2.</span> <span class="nav-text">密度(Density)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%86%94%E8%9E%8D%E6%8C%87%E6%95%B0-Melt-Index"><span class="nav-number">1.3.</span> <span class="nav-text">熔融指数(Melt Index)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%88%E6%9C%8D%E6%8A%97%E6%8B%89%E5%BC%BA%E5%BA%A6%E5%92%8C%E5%BC%AF%E6%9B%B2%E6%A8%A1%E9%87%8F-Tensile-Strength-at-yield-and-Flexural-Modulus"><span class="nav-number">1.4.</span> <span class="nav-text">屈服抗拉强度和弯曲模量(Tensile Strength at yield and Flexural Modulus)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%AD%E8%A3%82%E4%BC%B8%E9%95%BF%E7%8E%87%E3%80%81%E6%8A%97%E7%BC%BA%E5%8F%A3%E6%8B%89%E4%BC%B8%E5%86%B2%E5%87%BB%E5%BC%BA%E5%BA%A6%E3%80%81ESCR-Elongation-at-break%EF%BC%8CNotched-Tensile-Impact-Resistance-%EF%BC%8C-ESCR"><span class="nav-number">1.5.</span> <span class="nav-text">断裂伸长率、抗缺口拉伸冲击强度、ESCR(Elongation at break，Notched Tensile Impact Resistance ， ESCR)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%B4%E5%8D%A1%E8%BD%AF%E5%8C%96%E6%B8%A9%E5%BA%A6-A50-%E3%80%81%E7%86%94%E8%9E%8D%E6%B8%A9%E5%BA%A6-DSC-Vicat-Softening-Temperature-Peak-Melting-Point"><span class="nav-number">1.6.</span> <span class="nav-text">维卡软化温度(A50)、熔融温度(DSC)(Vicat Softening Temperature,Peak Melting Point)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%88%B6%E5%93%81%E5%AE%B9%E7%A7%AF"><span class="nav-number">1.7.</span> <span class="nav-text">适用制品容积</span></a></li></ol></li></ol>
     </div>
 </div>
 

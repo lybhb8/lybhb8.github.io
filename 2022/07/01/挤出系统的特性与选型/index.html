@@ -37,6 +37,13 @@
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
+ 
+    <!-- 在 head 或 footer 中引入 Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!--  如果需要更多图表类型（如地图、3D 等），可额外引入模块   -->
+    <script src="https://code.highcharts.com/modules/exporting.js"></script> <!-- 导出功能  -->
+    <script src="https://code.highcharts.com/modules/export-data.js"></script> <!-- 导出数据  -->
+
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="吹塑知识小栈" type="application/atom+xml">
 </head>
 
@@ -572,7 +579,7 @@
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid61647452213655965" width="90%" height="300"></div>
+        <div id="highchartsuuid5103855616798924" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -704,11 +711,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid61647452213655965,op);
+                        var chart = Highcharts.chart(highchartsuuid5103855616798924,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid61647452213655965,op);
+                var chart = Highcharts.chart(highchartsuuid5103855616798924,op);
             }
         </script>
     

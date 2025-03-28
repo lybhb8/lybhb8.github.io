@@ -35,6 +35,13 @@
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
+ 
+    <!-- 在 head 或 footer 中引入 Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!--  如果需要更多图表类型（如地图、3D 等），可额外引入模块   -->
+    <script src="https://code.highcharts.com/modules/exporting.js"></script> <!-- 导出功能  -->
+    <script src="https://code.highcharts.com/modules/export-data.js"></script> <!-- 导出数据  -->
+
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="吹塑知识小栈" type="application/atom+xml">
 </head>
 
@@ -444,15 +451,17 @@ function reloadPage(){
                     
                         
 
+
 **如果图表(charts)不能正常显示**
 
 
 材料主要性能(Typical Properties):工艺温度
-    
 
 
 
-    var ctx = document.getElementById('chart7151').getCont...
+
+document.addEventListener('DOMContentLoaded', function() {
+  ...
                     
                 </div>
 
@@ -460,8 +469,8 @@ function reloadPage(){
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed May 31 2023 22:48:50 GMT+0800">
-                2023-05-31
+            <span class="home-article-date" data-updated="Fri Mar 28 2025 10:37:49 GMT+0800">
+                2025-03-28
             </span>
         </span>
         
