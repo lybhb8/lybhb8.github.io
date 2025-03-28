@@ -2927,7 +2927,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5103855616798924" width="90%" height="300"></div>
+        <div id="highchartsuuid51042173198733971" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3059,11 +3059,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5103855616798924,op);
+                        var chart = Highcharts.chart(highchartsuuid51042173198733971,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5103855616798924,op);
+                var chart = Highcharts.chart(highchartsuuid51042173198733971,op);
             }
         </script>
     
@@ -3837,7 +3837,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid51038556089259751" width="90%" height="300"></div>
+        <div id="highchartsuuid5104217309247714" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3947,11 +3947,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid51038556089259751,op);
+                        var chart = Highcharts.chart(highchartsuuid5104217309247714,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid51038556089259751,op);
+                var chart = Highcharts.chart(highchartsuuid5104217309247714,op);
             }
         </script>
     
@@ -5133,11 +5133,11 @@ setTimeout('reloadPage()',1000);
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts3044" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts9793" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3044'));
+        var myChart = echarts.init(document.getElementById('echarts9793'));
         // 指定图表的配置项和数据
         var option = {
    tooltip : {
@@ -5237,11 +5237,11 @@ zr.on('mousemove', function (params) {
 </script>
 
 
-<div id="echarts3216" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts9676" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3216'));
+        var myChart = echarts.init(document.getElementById('echarts9676'));
         // 指定图表的配置项和数据
         var option = 
 
