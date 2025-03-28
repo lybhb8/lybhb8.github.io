@@ -2927,7 +2927,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5105544478108761" width="90%" height="300"></div>
+        <div id="highchartsuuid51259269859555417" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3059,11 +3059,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid5105544478108761,op);
+                        var chart = Highcharts.chart(highchartsuuid51259269859555417,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid5105544478108761,op);
+                var chart = Highcharts.chart(highchartsuuid51259269859555417,op);
             }
         </script>
     
@@ -3192,7 +3192,7 @@ document.addEventListener('DOMContentLoaded', function() {
   Highcharts.chart('chart-container', {
   
         credits: {
-        enabled: true,                    // ???????????????????????????false????
+        enabled: true,                    // 吹塑原料HDPE性能和应用?????????????false????
         text: 'www.hcharts.cn',             // ?????????
         href: 'http://www.hcharts.cn'      // ??????
         },
@@ -3273,7 +3273,7 @@ document.addEventListener('DOMContentLoaded', function() {
   Highcharts.chart('chart-container1', {
     
     credits: {
-    enabled: false,                    // ???????????????????????????false????
+    enabled: false,                    // 吹塑原料HDPE性能和应用?????????????false????
     text: 'www.hcharts.cn',             // ?????????
     href: 'http://www.hcharts.cn'      // ??????
     },
@@ -3353,7 +3353,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   Highcharts.chart('chart-container2', {
      credits: {
-    enabled: false,                    // ???????????????????????????false????
+    enabled: false,                    // 吹塑原料HDPE性能和应用?????????????false????
     text: 'www.hcharts.cn',             // ?????????
     href: 'http://www.hcharts.cn',      // ??????
     position: {                         // ???????? 
@@ -3450,7 +3450,7 @@ document.addEventListener('DOMContentLoaded', function() {
   Highcharts.chart('chart-container3', {
     
   credits: {
-        enabled: false,                    // ???????????????????????????false????
+        enabled: false,                    // 吹塑原料HDPE性能和应用?????????????false????
         text: 'www.hcharts.cn',             // ?????????
         href: 'http://www.hcharts.cn'      // ??????
         },
@@ -3556,7 +3556,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   Highcharts.chart('chart-container4', {
     credits: {
-        enabled: false,                    // ???????????????????????????false????
+        enabled: false,                    // 吹塑原料HDPE性能和应用?????????????false????
         text: 'www.hcharts.cn',             // ?????????
         href: 'http://www.hcharts.cn'      // ??????
         },
@@ -3674,7 +3674,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   Highcharts.chart('chart-container5', {
     credits: {
-        enabled: true,                    // ???????????????????????????false????
+        enabled: true,                    // 吹塑原料HDPE性能和应用?????????????false????
         text: 'www.hcharts.cn',             // ?????????
         href: 'http://www.hcharts.cn'      // ??????
         },
@@ -3831,137 +3831,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!--
 
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
-        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid5105544397092642" width="90%" height="300"></div>
-        <script>
-            var op = Object.assign({
-    chart: {
-        type: 'bar' 
-    },
-    title: {
-        text: '我的第一个图表'
-    },
-    xAxis: {
-        categories: ['苹果', '香蕉', '橙子'] 
-    },
-    yAxis: {
-        title: {
-            text: '吃水果个数' 
-        }
-    },
-    series: [{                
-        name: '小明',  
-        data: [1, 0, 4] 
-    }, {
-        name: '小红',
-        data: [5, 7, 3]
-    }]
-},
-{
-    credits: {
-    enabled: false,                    
-    text: 'www.hcharts.cn',             
-    href: 'http://www.hcharts.cn'      
-    },
-
-
-     chart: {
-        zoomType: 'xy'
-    },
-
-    lang:{
-
-        },    
-
-    title: {
-        text: '适用制品容积'
-        },
-
-    xAxis: {
-        categories: ['5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'],
-        crosshair: true
-    },
-    yAxis: { 
-        min: 0,
-        labels: {
-            format: '{value} (升)L',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        },
-        title: {
-            text: '??????',
-            style: {
-                color: Highcharts.getOptions().colors[1]
-            }
-        }
-        },
-
-
-
-    tooltip: {
-        shared: true,
-        backgroundColor: '#ECECE5',   // ???????
-        borderColor: '#FCFCF5',
-        borderRadius: 10,             // ??????
-        shadow: true,                 // ?????????
-        animation: true,               
-        useHTML: true
-    },
-
-    series: [{
-        name: '制品容积',
-        type: 'spline',
-        data: [20, 60, 100, 160, 200, 250],
-        color : 'rgb(000, 50, 200)',
-        tooltip: {
-            valueSuffix: ' (??)L'
-        }
-    },
-
-    {
-        name: '制品容积',
-        type: 'spline',
-        data: [2, 15, 25, 50, 80, 120],
-        color : 'rgb(050, 150, 255)',
-        tooltip: {
-            valueSuffix: ' (??)L'
-        }
-        }]
-
-}
-)
-            if(op.url){
-                $.ajax({
-                    url: op.url,
-                    type: "JSON",
-                    method: op.method || "GET",
-                    success: function(res){
-                        if(op.seriesFormat){
-                            op.series = op.seriesFormat(res)
-                        } else {
-                            op.series = res;
-                        }
-                        var chart = Highcharts.chart(highchartsuuid5105544397092642,op);
-                    }
-                })
-            }else{
-                var chart = Highcharts.chart(highchartsuuid5105544397092642,op);
-            }
-        </script>
-    
-<p>–&gt;</p>
-<h3 id="适用制品："><a href="#适用制品：" class="headerlink" title="适用制品："></a>适用制品：</h3><h4 id="5502FA"><a href="#5502FA" class="headerlink" title="5502FA"></a><a class="link"   href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5502/" >5502FA<i class="fas fa-external-link-alt"></i></a></h4><p>  <img src="??????????????/timg (1).jpg" style="zoom:25%;" /> <img src="??????????????/loop_bottle.jpg" style="zoom:60%;" /></p>
-<h4 id="HD5401AA"><a href="#HD5401AA" class="headerlink" title="HD5401AA"></a><a class="link"   href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/" >HD5401AA<i class="fas fa-external-link-alt"></i></a></h4><p><img src="??????????????/jerry_can.jpg" style="zoom:48%;" /> <img src="??????????????/Lubricating-Oil.jpg" style="zoom:40%;" /></p>
-<h4 id="HXM50100"><a href="#HXM50100" class="headerlink" title="HXM50100"></a><a class="link"   href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HXM-50100/" >HXM50100<i class="fas fa-external-link-alt"></i></a></h4><p><img src="??????????????/huagong.jpg" style="zoom:70%;" /> <img src="??????????????/others-1.jpg" style="zoom:80%;" /></p>
-<h4 id="4261A"><a href="#4261A" class="headerlink" title="4261A"></a><a class="link"   href="http://blowmoldingshare.cn/2022/02/26/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-IBC-1000L%E5%8E%9F%E6%96%99/" >4261A<i class="fas fa-external-link-alt"></i></a></h4><p><img src="??????????????/FS.jpg" style="zoom:50%;" /> <img src="??????????????/IBC_pow.fb60b875.jpg" style="zoom:30%;" /></p>
-<h4 id="TR571-DMDY1158"><a href="#TR571-DMDY1158" class="headerlink" title="TR571,DMDY1158"></a><a class="link"   href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-TR-571/" >TR571,DMDY1158<i class="fas fa-external-link-alt"></i></a></h4><p><img src="??????????????/Drum.jpg" style="zoom:25%;" /> <img src="??????????????/TP.jpg" style="zoom:50%;" /></p>
-</body>
+<h3 id="适用制品："><a href="#适用制品：" class="headerlink" title="适用制品："></a>适用制品：</h3><h4 id="5502FA"><a href="#5502FA" class="headerlink" title="5502FA"></a><a class="link" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5502/">5502FA<i class="fas fa-external-link-alt"></i></a></h4><p>  <img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/jerry_can.jpg" style="zoom:25%;"> <img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/loop_bottle.jpg" style="zoom:60%;"></p>
+<h4 id="HD5401AA"><a href="#HD5401AA" class="headerlink" title="HD5401AA"></a><a class="link" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/">HD5401AA<i class="fas fa-external-link-alt"></i></a></h4><p><img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/jerry_can.jpg" style="zoom:48%;"> <img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/Lubricating-Oil.jpg" style="zoom:40%;"></p>
+<h4 id="HXM50100"><a href="#HXM50100" class="headerlink" title="HXM50100"></a><a class="link" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HXM-50100/">HXM50100<i class="fas fa-external-link-alt"></i></a></h4><p><img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/huagong.jpg" style="zoom:70%;"> <img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/others-1.jpg" style="zoom:80%;"></p>
+<h4 id="4261A"><a href="#4261A" class="headerlink" title="4261A"></a><a class="link" href="http://blowmoldingshare.cn/2022/02/26/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-IBC-1000L%E5%8E%9F%E6%96%99/">4261A<i class="fas fa-external-link-alt"></i></a></h4><p><img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/FS.jpg" style="zoom:50%;"> <img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/IBC_pow.fb60b875.jpg" style="zoom:30%;"></p>
+<h4 id="TR571-DMDY1158"><a href="#TR571-DMDY1158" class="headerlink" title="TR571,DMDY1158"></a><a class="link" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-TR-571/">TR571,DMDY1158<i class="fas fa-external-link-alt"></i></a></h4><p><img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/Drum.jpg" style="zoom:25%;"> <img src="/2022/02/28/%E5%90%B9%E5%A1%91%E5%8E%9F%E6%96%99HDPE%E6%80%A7%E8%83%BD%E5%92%8C%E5%BA%94%E7%94%A8/TP.jpg" style="zoom:50%;"></p>
+</div></body>
 
 <script>
 function reloadPage(){ 
@@ -3972,7 +3848,7 @@ function reloadPage(){
     }};
 setTimeout('reloadPage()',1000);
 </script>
---></div></body>]]></content>
+]]></content>
       <categories>
         <category>塑料机械</category>
       </categories>
@@ -5133,11 +5009,11 @@ setTimeout('reloadPage()',1000);
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts3784" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts9988" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3784'));
+        var myChart = echarts.init(document.getElementById('echarts9988'));
         // 指定图表的配置项和数据
         var option = {
    tooltip : {
@@ -5237,11 +5113,11 @@ zr.on('mousemove', function (params) {
 </script>
 
 
-<div id="echarts7675" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts8928" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts7675'));
+        var myChart = echarts.init(document.getElementById('echarts8928'));
         // 指定图表的配置项和数据
         var option = 
 
