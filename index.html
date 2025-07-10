@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="分享知识的快乐和力量">
+    <meta name="author" content="波波林">
+    
+    <title>
+        
+        吹塑知识小栈
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/BBL.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lybhb8.github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/BBL.png","favicon":"/images/BBL.png","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="吹塑知识小栈" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+        
+<div class="first-screen-container flex-center fade-in-down-animation">
+    <div class="content flex-center">
+        
+            <div class="description hitokoto">
+                
+                    <div class="desc-item">Keep writing and Keep loving.</div>
+                
+            </div>
+        
+        
+            <script async 
+                    src="https://v1.hitokoto.cn/?encode=js"
+            >
+            </script>
+        
+        
+    </div>
+</div>
+
+    
+
+    <div class="page-main-content is-home">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper transparent-1">
+
+    <div class="header-content has-first-screen">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/BBL.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               吹塑知识小栈
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2025/07/10/%E5%A1%91%E6%96%99%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">
+                        塑料基础入门
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        如果PDF显示不正常
+这份文件是一份关于塑料基础入门的PDF文档，由钟匠咨询的 梁焕彬 编写。
+梁焕彬 拥有24年的模塑相关工作经验，其中6年专注于塑料市场开发，3年致力于塑料技术应用知识的培训咨询和科普工作推广。他目前是钟匠（上海）企业管理咨询有限...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Jul 10 2025 15:09:15 GMT+0800">
+                2025-07-10
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%A1%91%E6%96%99%E6%9C%BA%E6%A2%B0/">塑料机械</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2025/07/10/%E5%A1%91%E6%96%99%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2025/01/06/OMRON-%E6%B8%A9%E6%8E%A7%E5%99%A8E5DC%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%AE%AF/">
+                        OMRON 温控器E5DC无程序通讯
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        
+**如果PDF显示不正常**
+
+
+OMRON E5□C温控器 无程序通信本章介绍了E5□C的无程序通信。E5CC&#x2F;E5版本1.0(Ver1.0)不能对应。
+6- 1 无程序通信
+
+
+6- 1- 1 概要
+6- 1- 2 特征
+6- 1- ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Jul 10 2025 15:14:26 GMT+0800">
+                2025-07-10
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2025/01/06/OMRON-%E6%B8%A9%E6%8E%A7%E5%99%A8E5DC%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%AE%AF/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2025/01/06/%E9%98%BB%E9%9A%94%E7%94%A8%E5%A1%91%E6%96%99EVOH/">
+                        阻隔用塑料EVOH
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        
+**如果PDF显示不正常**
+
+
+1、 EVOH_基础物性
+
+2、EVOH_各种阻隔性
+
+3、EVOH_氧气阻隔性
+
+4、原料牌号 EVOH_ET3803RB
+
+
+
+
+function reloadPage(){ 
+	let i= 0;
+	if （i
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99EVOH/">塑料原料EVOH</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2025/01/06/%E9%98%BB%E9%9A%94%E7%94%A8%E5%A1%91%E6%96%99EVOH/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2025/01/06/%E5%90%B9%E5%A1%91%E6%9C%BA%E6%B6%B2%E5%8E%8B%E7%B3%BB%E7%BB%9F/">
+                        吹塑机液压系统
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        如果PDF显示不正常
+
+
+
+function reloadPage(){ 
+    let i= 0;
+    if （i
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%A1%91%E6%96%99%E6%9C%BA%E6%A2%B0/">塑料机械</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%90%B9%E5%A1%91%E6%9C%BA/">吹塑机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2025/01/06/%E5%90%B9%E5%A1%91%E6%9C%BA%E6%B6%B2%E5%8E%8B%E7%B3%BB%E7%BB%9F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/10/08/S7-1200-EasyPlus4-3/">
+                        S7-1200 EasyPlus4.3
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        S7-1200 技术手册 EasyPlus4.3
+说明
+S7-1200 EasyPlus 包括 S7-1200 PLC 系列的使用、通信、技术工艺等的编程配置的详细步，并对用户经常，甚至是必然遇到的问题、疑问的解答，以及隐含着其他许多问题答案的叙述性...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%A5%BF%E9%97%A8%E5%AD%90/">西门子</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2024/10/08/S7-1200-EasyPlus4-3/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/03/05/Linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">
+                        Linux嵌入式编程笔记
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        embedded-notes
+
+主要涉及到嵌入式软件开发、嵌入式驱动开发、IOT开发、git等知识点。
+转载自原文wiki和xiaowenxia的博客
+应用mkdocs-material主题重新部署，更适合阅读。
+感谢原作者xiaowenxia的无私...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Web%E4%BA%92%E8%81%94%E7%BD%91/">Web互联网</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%BD%AC%E8%BD%BD/">转载</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2024/03/05/Linux%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/03/05/Go%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
+                        Go入门指南
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        Go入门指南以下是原作者所述：
+在接触 Go 语言之后，对这门编程语言非常着迷，期间也陆陆续续开始一些帮助国内编程爱好者了解和发展 Go 语言的工作，比如开始录制视频教程《Go编程基础》。但由于目前国内并没有比较好的 Go 语言书籍，而国外的优秀书籍...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/Web%E4%BA%92%E8%81%94%E7%BD%91/">Web互联网</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%BD%AC%E8%BD%BD/">转载</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2024/03/05/Go%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/06/02/Smart-20-%E5%90%B9%E5%A1%91%E6%9C%BA%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/">
+                        Smart20 吹塑机控制系统
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        Smart20 吹塑机控制系统| BlowmoldingControlSystem基于HMI+PLC 的吹塑机控制系统 A Blowmolding Control System Base by HMI+PLC 
+
+系统仓库&#x2F;Github
+
+...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E5%90%B9%E5%A1%91%E6%9C%BA/">吹塑机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2023/06/02/Smart-20-%E5%90%B9%E5%A1%91%E6%9C%BA%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/06/02/%E6%9C%80%E6%96%B0%E8%A5%BF%E9%97%A8%E5%AD%90%E5%B7%A5%E4%B8%9A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5-2022-07/">
+                        最新西门子工业常用软件官网下载链接(2022.07)
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        1 TIA PortalSIMATIC STEP 7（包括 Safety）、S7-PLCSIM 和 WinCC V17 试用版下载https://support.industry.siemens.com/cs/ww/en/view/109784440...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%A5%BF%E9%97%A8%E5%AD%90/">西门子</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2023/06/02/%E6%9C%80%E6%96%B0%E8%A5%BF%E9%97%A8%E5%AD%90%E5%B7%A5%E4%B8%9A%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5-2022-07/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+                    <i class="fas fa-thumbtack top-icon"></i>
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/05/31/iBooker-%E5%9B%A2%E9%98%9F%E7%9F%A5%E8%AF%86%E5%BA%93/">
+                        iBooker 团队知识库
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        iBooker 团队知识库
+协议：CC BY-NC-SA 4.0
+承认吧，我们是弱者，正因为生来什么都没有，因此我们能拥有一切，以身为弱者而骄傲吧！——《游戏人生》
+
+
+ApacheCN 学习资源
+ApacheCN首页
+
+目录
+5 分钟商学院精细笔记...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jul 08 2025 22:47:57 GMT+0800">
+                2025-07-08
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/iBooker-%E5%9B%A2%E9%98%9F%E7%9F%A5%E8%AF%86%E5%BA%93/">iBooker 团队知识库</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E8%BD%AC%E8%BD%BD/">转载</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/2023/05/31/iBooker-%E5%9B%A2%E9%98%9F%E7%9F%A5%E8%AF%86%E5%BA%93/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+
+    
+        <a class="next btn"
+           href="/page/2/"
+        >下一页</a>
+    
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2025
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">波波林</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="分享知识的快乐和力量">
+    <meta name="author" content="波波林">
+    
+    <title>
+        
+            挤出系统的特性与选型 |
+        
+        吹塑知识小栈
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/BBL.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lybhb8.github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/BBL.png","favicon":"/images/BBL.png","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="吹塑知识小栈" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/BBL.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               吹塑知识小栈
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">挤出系统的特性与选型</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">波波林</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-07-01 10:52:39</span>
+        <span class="mobile">2022-07-01 10:52</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2025-07-08 22:47:57</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%A1%91%E6%96%99%E6%9C%BA%E6%A2%B0/">塑料机械</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%90%B9%E5%A1%91%E6%9C%BA/">吹塑机</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我公司吹塑机产品种类齐全，涉及的行业如化工、日化、食品、汽车、光伏、水产、医疗等等；中空制品种类从 100mL 化妆品包装到 2000L 水桶容器；所用的原料有 HDPE、LDPE、PP、PVC、PA、TPU&#x2F;TPE、PC、PETG 等,制品分层结构从单层到 2、3…7 层；客户实际需求、生产环境各不相同。以上方面专业性很强，知识面比较广，业务人员要想全面地了解贯通并在工作中熟练运用是需要一定的学习和实践过程。本文从吹塑机中的挤出系统单元阐述我公司挤出系统类型及其特点，如何在吹塑机产品中选择合适的挤出系统类型和配置以及相关事项。</p>
+<h3 id="挤出系统类型"><a href="#挤出系统类型" class="headerlink" title="挤出系统类型"></a>挤出系统类型</h3><h4 id="标准型"><a href="#标准型" class="headerlink" title="标准型"></a>标准型</h4><h5 id="规格参数"><a href="#规格参数" class="headerlink" title="规格参数"></a>规格参数</h5><table>
+<thead>
+<tr>
+<th>型号&#x2F;参数</th>
+<th>50</th>
+<th>60</th>
+<th>70</th>
+<th>80</th>
+<th>90</th>
+<th>90</th>
+<th>100</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>长径比</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr>
+<td>电机功率(kw)</td>
+<td>11</td>
+<td>15</td>
+<td>22</td>
+<td>30</td>
+<td>37</td>
+<td>45</td>
+<td>45</td>
+</tr>
+<tr>
+<td>塑化能力 kg&#x2F;h(HDPE)*</td>
+<td>40</td>
+<td>55</td>
+<td>90</td>
+<td>100</td>
+<td>135</td>
+<td>160</td>
+<td>185</td>
+</tr>
+</tbody></table>
+<p>注：*测试原料 HDPE 5502。</p>
+<h5 id="性能特点"><a href="#性能特点" class="headerlink" title="性能特点"></a>性能特点</h5><blockquote>
+<ul>
+<li>适用于 <a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5502/">HDPE 5502<i class="fas fa-external-link-alt"></i></a>等小中空原料及小比例(&lt;30%)的中中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/">HD5401AA<i class="fas fa-external-link-alt"></i></a>)的挤出塑化。</li>
+<li>对回收料比例不敏感，新料、小比例回料、大比例回收料(&gt;50%)的应用都可适用。</li>
+<li>装机功率小，效率高、能耗低。</li>
+<li>对原料种类及配方适应性低，PP 、ABS等不推荐使用。</li>
+<li>中中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/">HD5401AA<i class="fas fa-external-link-alt"></i></a>)及以上级别HDPE原料在高速挤出时，有+20℃以上的温升，型坯下坠较大。</li>
+<li>混合&gt;30%回收料，在高速挤出时，制品表面有划痕，外观差。</li>
+<li>满工作2-3年后，产量会下降。</li>
+</ul>
+</blockquote>
+<h4 id="进级型"><a href="#进级型" class="headerlink" title="进级型"></a>进级型</h4><h5 id="规格参数-1"><a href="#规格参数-1" class="headerlink" title="规格参数"></a>规格参数</h5><table>
+<thead>
+<tr>
+<th>型号&#x2F;参数</th>
+<th>50?</th>
+<th>60?</th>
+<th>70?</th>
+<th>80?</th>
+<th>90?</th>
+<th>100</th>
+<th>120</th>
+<th>135</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>长径比</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td>25</td>
+<td><strong>28</strong></td>
+<td><strong>28</strong></td>
+<td><strong>28</strong></td>
+</tr>
+<tr>
+<td>电机功率(kw)</td>
+<td>15</td>
+<td>22</td>
+<td>30</td>
+<td>37</td>
+<td>55</td>
+<td><strong>75</strong></td>
+<td><strong>90</strong></td>
+<td><strong>160</strong></td>
+</tr>
+<tr>
+<td>塑化能力 kg&#x2F;h(HDPE)*</td>
+<td>50</td>
+<td>80</td>
+<td>100</td>
+<td>135</td>
+<td>200</td>
+<td><strong>260</strong></td>
+<td><strong>340</strong></td>
+<td><strong>500</strong></td>
+</tr>
+</tbody></table>
+<p>注：？产品规划中；*测试原料 HDPE 5502。</p>
+<h5 id="性能特点-1"><a href="#性能特点-1" class="headerlink" title="性能特点"></a>性能特点</h5><blockquote>
+<ul>
+<li>适用于小中空原料( <a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5502/">HDPE 5502<i class="fas fa-external-link-alt"></i></a>)、中中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/">HD5401AA<i class="fas fa-external-link-alt"></i></a>)以及小比例(&lt;30%)的大中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-TR-571/">TR571<i class="fas fa-external-link-alt"></i></a>)的挤出塑化。</li>
+<li>以上原料的混合配方也能很好的塑化挤出。</li>
+<li>回收料适应性好，挤出稳定，产量波动小。</li>
+<li>PP(ABS?)原料能很好的适应。</li>
+<li>中中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/">HD5401AA<i class="fas fa-external-link-alt"></i></a>)以及小比例(&lt;30%)的大中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-TR-571/">TR571<i class="fas fa-external-link-alt"></i></a>)高速挤出时 (&gt;80%)，有&lt;+10℃的温升,但型坯壁厚可控，挤出稳定。</li>
+<li>满工作额定产量保持年限有待验证。</li>
+<li>螺杆全螺棱双金属耐磨镀层。</li>
+</ul>
+</blockquote>
+<h4 id="高分子型"><a href="#高分子型" class="headerlink" title="高分子型"></a>高分子型</h4><h5 id="规格参数-2"><a href="#规格参数-2" class="headerlink" title="规格参数"></a>规格参数</h5><table>
+<thead>
+<tr>
+<th>型号&#x2F;参数</th>
+<th>50</th>
+<th>60</th>
+<th>70</th>
+<th>80</th>
+<th>90</th>
+<th>100</th>
+<th>120</th>
+<th>150</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>长径比</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>25</td>
+</tr>
+<tr>
+<td>电机功率(kw)</td>
+<td>18.5</td>
+<td>30</td>
+<td>37</td>
+<td>55</td>
+<td>75</td>
+<td>90</td>
+<td>132</td>
+<td>200</td>
+</tr>
+<tr>
+<td>塑化能力 kg&#x2F;h(HDPE)*</td>
+<td>50</td>
+<td>95</td>
+<td>135</td>
+<td>200</td>
+<td>250</td>
+<td>350</td>
+<td>450</td>
+<td>720</td>
+</tr>
+</tbody></table>
+<p>注：*测试原料 HDPE 5502（70%新料+30%回收料），原料如为HD5401AA，降低10±2%；原料TR571降低18±2%。</p>
+<h5 id="性能特点-2"><a href="#性能特点-2" class="headerlink" title="性能特点"></a>性能特点</h5><blockquote>
+<ul>
+<li>适用于小中空原料( <a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HDPE-5502/">HDPE 5502<i class="fas fa-external-link-alt"></i></a>)、中中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-HD5401AA/">HD5401AA<i class="fas fa-external-link-alt"></i></a>)以及大中空原料(<a class="link" target="_blank" rel="noopener" href="http://blowmoldingshare.cn/2022/02/19/%E5%90%B9%E5%A1%91%E7%BA%A7%E5%A1%91%E6%96%99%E5%8E%9F%E6%96%99-TR-571/">TR571<i class="fas fa-external-link-alt"></i></a>)的挤出塑化。</li>
+<li>以上原料的混合配方，及&lt;30%回收料也能高产量、好的塑化质量稳定挤出。</li>
+<li>PP，ABS 原料很好的适应性。</li>
+<li>高速稳定挤出，无温升和过塑化现象。</li>
+<li>制品外观质量优良。</li>
+<li>启动扭矩大，电机电流高，不太适合频繁启动工况。</li>
+<li>回收料比例、回收料状态和原料混合均匀性敏感。</li>
+</ul>
+</blockquote>
+<h4 id="工程树脂专用型"><a href="#工程树脂专用型" class="headerlink" title="工程树脂专用型"></a>工程树脂专用型</h4><h5 id="原料类别"><a href="#原料类别" class="headerlink" title="原料类别"></a>原料类别</h5><blockquote>
+<ul>
+<li><a class="link" target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%B0%BC%E9%BE%996/9154400?fromtitle=PA6&fromid=9877726&fr=aladdin">PA 聚酰胺(尼龙)<i class="fas fa-external-link-alt"></i></a>，生产商:<a class="link" target="_blank" rel="noopener" href="https://www.ube.com/contents/en/chemical/nylon/nylon_extrusion.html">UBE<i class="fas fa-external-link-alt"></i></a>,  <a class="link" target="_blank" rel="noopener" href="https://hpp.arkema.cn/zh/materials-database/products/datasheet/Orgalloy%C2%AE%20GT%2001%20NAT">ARKEMA<i class="fas fa-external-link-alt"></i></a>，<a class="link" target="_blank" rel="noopener" href="https://lanxess.com/en/Products-and-Solutions/Focus-Topics/Blow-Molding/Material-Portfolio">LANXESS<i class="fas fa-external-link-alt"></i></a>等。</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%81%9A%E7%94%B2%E9%86%9B/5871176">POM 聚甲醛<i class="fas fa-external-link-alt"></i></a>。</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://baike.baidu.com/item/PETG%E6%9D%90%E6%96%99/989889?fr=aladdin">PETG<i class="fas fa-external-link-alt"></i></a> ，生产商:<a class="link" target="_blank" rel="noopener" href="https://www.eastman.com/Pages/ProductHome.aspx?product=71118384&pn=Cristal+EB062+Copolyester">伊士曼<i class="fas fa-external-link-alt"></i></a>，SK。</li>
+<li>TPU&#x2F;TPE&#x2F;TPV</li>
+</ul>
+</blockquote>
+<h5 id="规格性能"><a href="#规格性能" class="headerlink" title="规格性能"></a>规格性能</h5><blockquote>
+<ul>
+<li>PA 聚酰胺(尼龙): 100&#x2F;30:1。</li>
+<li>POM 聚甲醛:100&#x2F;32:1。</li>
+<li>都需要根据实际应用定制。</li>
+</ul>
+</blockquote>
+<h3 id="选择方法"><a href="#选择方法" class="headerlink" title="选择方法"></a>选择方法</h3><h4 id="典型产品类别"><a href="#典型产品类别" class="headerlink" title="典型产品类别"></a>典型产品类别</h4><blockquote>
+<ul>
+<li>日化  ：HDPE, PP，外观，混色要求。</li>
+<li>食品包装 ：HDPE, PP,  HDPE（PP）+EVOH（5，6多层阻隔），洁净，保鲜，外观要求。</li>
+<li>化工堆码桶：HDPE , 壁厚均匀性、刚性、强度、外观要求。</li>
+<li>工具箱包、九角托盘：HDPE回收料, 型坯壁厚均匀性、吹胀性、穿刺性要求。</li>
+<li>大型化工桶、民用水桶：HDPE , 壁厚均匀性、刚性、强度、外观要求。</li>
+<li>户外桌面版、医疗床板：HDPE,PP, 壁厚均匀性,外观要求。</li>
+<li>太阳能浮体、码头浮体、双面托盘：HMWPE,壁厚均匀性、刚性、强度要求。</li>
+<li>汽车零件：扰流板（ABS）、风管(HDPE)、油箱(PA、HDPE+EVOH)、水箱（HDPE）、气罐(PA)。</li>
+</ul>
+</blockquote>
+<p>根据 <strong>产品类别</strong>选择<strong>挤出机</strong>主要依据：</p>
+<blockquote>
+<ul>
+<li>原料种类。</li>
+<li>原料状态，新料？回收料？比例？填充料？</li>
+<li>制品质量重点。</li>
+</ul>
+</blockquote>
+<h4 id="产量计算"><a href="#产量计算" class="headerlink" title="产量计算"></a>产量计算</h4><h5 id="利用挤出系统选型工具（EXCEL）快速计算"><a href="#利用挤出系统选型工具（EXCEL）快速计算" class="headerlink" title="利用挤出系统选型工具（EXCEL）快速计算"></a>利用<strong>挤出系统选型工具</strong>（EXCEL）快速计算<img src="https://cdn.staticaly.com/gh/lybhb8/pix_rep@master/blog/%E6%8C%A4%E5%87%BA%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B.6d2a0jyq0dw0.webp" alt="挤出系统选型"></h5><h5 id="工具教程"><a href="#工具教程" class="headerlink" title="工具教程"></a>工具教程</h5><blockquote>
+<p>第一步</p>
+<p>输入参数：</p>
+<ul>
+<li><p>制品重量（g）</p>
+</li>
+<li><p>飞边重量（g）</p>
+</li>
+<li><p>工位（1,2）</p>
+</li>
+<li><p>模腔（1,2,3…）</p>
+</li>
+<li><p>总成型周期（s）</p>
+</li>
+<li><p>挤出机当量转速(%)</p>
+</li>
+</ul>
+<p>计算结果：</p>
+<ul>
+<li>当量产量（kg&#x2F;h）：当量转速下的塑化量。</li>
+<li>额定最大产量（kg&#x2F;h）：挤出机产量选择依据。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>第二步</p>
+<p>输入参数</p>
+<ul>
+<li><p>层数（1，2，3，4，5，6）。</p>
+</li>
+<li><p>各层层厚比例%：总比例&#x3D;‘6’+’5’+’4’+’3’+’2’+<strong>‘1’</strong>&#x3D;100。</p>
+</li>
+<li><p>输入顺序：在表格中，从右向左依次输入，<strong>第‘1’层</strong>的比例值不用输入，自动生成。</p>
+</li>
+</ul>
+<p>计算结果：</p>
+<ul>
+<li>各层额定最大产量（kg&#x2F;h）：绿色格提示。</li>
+</ul>
+</blockquote>
+<h4 id="综合确定"><a href="#综合确定" class="headerlink" title="综合确定"></a>综合确定</h4><blockquote>
+<ul>
+<li>产品类别 &gt;&gt; 挤出机类型。</li>
+<li>产量计算 &gt;&gt; 挤出机规格。</li>
+<li>整机综合考虑。</li>
+</ul>
+</blockquote>
+<h3 id="案例测试"><a href="#案例测试" class="headerlink" title="案例测试"></a>案例测试</h3><h4 id="测试1："><a href="#测试1：" class="headerlink" title="测试1："></a>测试1：</h4><blockquote>
+<p>设备要求：</p>
+<ul>
+<li>连续挤出，双工位，双模腔，260g洁净食品瓶，HDPE,双层（内外比例7：3）。</li>
+<li>总成型周期 ：32s。</li>
+</ul>
+</blockquote>
+<h4 id="测试2："><a href="#测试2：" class="headerlink" title="测试2："></a>测试2：</h4><blockquote>
+<p>设备要求：</p>
+<ul>
+<li>连续挤出，双工位，单模腔，1.4kg化工堆码桶，HDPE,三层（内中外比例2：6：2）。</li>
+<li>总成型周期 ：65s。</li>
+</ul>
+</blockquote>
+<h4 id="测试3："><a href="#测试3：" class="headerlink" title="测试3："></a>测试3：</h4><blockquote>
+<p>设备要求：</p>
+<ul>
+<li>储料机，8.5KG 九角托盘，100%HDPE 回收料。</li>
+<li>总成型周期 ：130s。</li>
+</ul>
+</blockquote>
+<h4 id="测试4："><a href="#测试4：" class="headerlink" title="测试4："></a>测试4：</h4><blockquote>
+<p>设备要求：</p>
+<ul>
+<li>储料机，5.5KG 扰流板，ABS, 50%飞边料。</li>
+<li>总成型周期 ：150s。</li>
+</ul>
+</blockquote>
+<h3 id="其它事项"><a href="#其它事项" class="headerlink" title="其它事项"></a>其它事项</h3><blockquote>
+<ul>
+<li>飞边收集系统： 飞边输送和冷却+粉碎机 &gt;&gt; 破碎料的状态 &gt;&gt;挤出稳定性</li>
+<li>原料输送和混合系统： 混合料均匀性  &gt;&gt; 挤出稳定性</li>
+<li>料斗形状： &gt;&gt; 挤出稳定性</li>
+<li><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi05.c.aliimg.com%2Fimg%2Fibank%2F2014%2F224%2F022%2F1767220422_260720927.jpg%3F__r__%3D1414062859796&refer=http%3A%2F%2Fi05.c.aliimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659772732&t=5f9edf37a69b075c557782e45a6f7d4a" style="zoom: 33%;"></li>
+<li>加料座水套水压、水温  &gt;&gt; 挤出稳定性</li>
+</ul>
+</blockquote>
+<body>
+
+<div>
+**提示：如果图表不能正常显示**  <input type="button" value="请重新刷新页面" onclick="location.reload(true)">
+</div>
+
+<h3 id="常用HDPE熔体流动指数-Melt-Index"><a href="#常用HDPE熔体流动指数-Melt-Index" class="headerlink" title="常用HDPE熔体流动指数(Melt Index)"></a>常用HDPE熔体流动指数(Melt Index)</h3>
+        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/highcharts.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
+        <div id="highchartsuuid41515194352600510" width="90%" height="300"></div>
+        <script>
+            var op = Object.assign({
+    chart: {
+        type: 'bar' 
+    },
+    title: {
+        text: '我的第一个图表'
+    },
+    xAxis: {
+        categories: ['苹果', '香蕉', '橙子'] 
+    },
+    yAxis: {
+        title: {
+            text: '吃水果个数' 
+        }
+    },
+    series: [{                
+        name: '小明',  
+        data: [1, 0, 4] 
+    }, {
+        name: '小红',
+        data: [5, 7, 3]
+    }]
+},{		
+   credits: {
+   enabled: false,                    // 默认值，如果想去掉版权信息，设置为false即可
+   text: 'www.hcharts.cn',             // 显示的文字
+   href: 'http://www.hcharts.cn',      // 链接地址
+   position: {                         // 位置设置 
+       align: 'left',
+       x: 400,
+       verticalAlign: 'bottom',
+       y: -100
+   },
+   style: {                            // 样式设置
+       cursor: 'pointer',
+       color: 'red',
+       fontSize: '30px'
+   }
+   },
+   
+
+chart: {
+	type: 'column'
+},
+title: {
+	text: '熔体流动指数(Melt Index)'
+},
+
+lang:{
+	contextButtonTitle:"图表导出菜单",
+	decimalPoint:".",
+	downloadJPEG:"下载JPEG图片",
+	downloadPDF:"下载PDF文件",
+	downloadPNG:"下载PNG文件",
+	downloadSVG:"下载SVG文件",
+	drillUpText:"返回 {series.name}",
+	loading:"加载中",
+	months:["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+	noData:"没有数据",
+	numericSymbols: [ "千" , "兆" , "G" , "T" , "P" , "E"],
+	printChart:"打印图表",
+	resetZoom:"恢复缩放",
+	resetZoomTitle:"恢复图表",
+	shortMonths: [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"],
+	thousandsSep:",",
+	weekdays: ["星期一", "星期二", "星期三", "星期三", "星期四", "星期五", "星期六","星期天"]
+		},	
+
+
+
+
+
+xAxis: {
+	categories: [
+		'5502FA','HD5401AA', 'HXM50100', '4261A', 'TR571', 'DMDY1158'
+	],
+	crosshair: true
+},
+yAxis: {
+	min: 0,
+	title: {
+		text: '流动指数(g/10min)'
+	}
+},
+tooltip: {
+	// head + 每个 point + footer 拼接成完整的 table
+	headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	'<td style="padding:0"><b>{point.y:.2f} g/10min </b></td></tr>',
+	footerFormat: '</table>',
+	shared: true,
+    backgroundColor: '#ECECE5',   // 背景颜色
+    borderColor: '#FCFCF5',
+    borderRadius: 10,             // 边框圆角
+    shadow: true,                 // 是否显示阴影
+    animation: true,               
+    useHTML: true
+},
+plotOptions: {
+	column: {
+		borderWidth: 1
+	}
+},
+series: [{
+	name: ' *10(190℃/2.16 kg)',
+	color : 'rgb(230, 150, 050)',
+	data: [2, 0.8, 0.9, 0.48, 0.2, 0.16]
+}, {
+	name: '(190°C/ 5.0 kg)',
+	color : 'rgb(050, 200, 200)',
+	data: [1.2, 0.55, 0.57, 0.35, 0.14, 0.11]
+},  {
+	name: '(190°C/ 21.6 kg)',
+	color : 'rgb(050, 100, 250)',
+	data: [20, 9.5, 10, 6, 2.5, 2]
+}]
+
+}
+)
+            if(op.url){
+                $.ajax({
+                    url: op.url,
+                    type: "JSON",
+                    method: op.method || "GET",
+                    success: function(res){
+                        if(op.seriesFormat){
+                            op.series = op.seriesFormat(res)
+                        } else {
+                            op.series = res;
+                        }
+                        var chart = Highcharts.chart(highchartsuuid41515194352600510,op);
+                    }
+                })
+            }else{
+                var chart = Highcharts.chart(highchartsuuid41515194352600510,op);
+            }
+        </script>
+    
+</body>
+
+<table>
+<thead>
+<tr>
+<th>测试方法（ISO 1133）</th>
+<th>单位</th>
+<th>HD5502FA</th>
+<th>HD5401AA</th>
+<th>HXM50100</th>
+<th>4261A</th>
+<th>TR571</th>
+<th>DMDY1158</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>熔融指数Melt Index（g&#x2F;10Min)</td>
+<td>2.16KG</td>
+<td>0.2</td>
+<td>0.08</td>
+<td>0.09</td>
+<td>0.048</td>
+<td>0.02</td>
+<td>0.016</td>
+</tr>
+<tr>
+<td></td>
+<td>5KG</td>
+<td>1.2</td>
+<td>0.55</td>
+<td>0.57</td>
+<td>0.35</td>
+<td>0.14</td>
+<td>0.11</td>
+</tr>
+<tr>
+<td></td>
+<td>21.6KG</td>
+<td>20</td>
+<td>9.5</td>
+<td>10</td>
+<td>6</td>
+<td>2.5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>适用制品最大容积 (L)</td>
+<td></td>
+<td>5</td>
+<td>60</td>
+<td>100</td>
+<td>160</td>
+<td>200</td>
+<td>250</td>
+</tr>
+<tr>
+<td>制造商</td>
+<td></td>
+<td><a class="link" target="_blank" rel="noopener" href="https://polymers.totalenergies.com/catalog?f%5B1%5D=im_field_polymer_productline:1446&nid=832&parent=1401&term=">TOTAL<i class="fas fa-external-link-alt"></i></a>&#x2F;赛科</td>
+<td><a class="link" target="_blank" rel="noopener" href="https://www.secco.com.cn/zh_cn/prepe/15.html">赛科<i class="fas fa-external-link-alt"></i></a></td>
+<td><a class="link" target="_blank" rel="noopener" href="https://www.cpchem.com/what-we-do/solutions/polyethylene/applications/blow-molding">Chevron Phillips<i class="fas fa-external-link-alt"></i></a></td>
+<td><a class="link" target="_blank" rel="noopener" href="https://www.lyondellbasell.com/en/products-technology/polymers/resin-type/hdpe/">Basell<i class="fas fa-external-link-alt"></i></a></td>
+<td><a class="link" target="_blank" rel="noopener" href="https://www.qchem.com.qa/App_Pages/Products/Polyethylene.aspx">Q-Chem<i class="fas fa-external-link-alt"></i></a></td>
+<td><a class="link" target="_blank" rel="noopener" href="http://qlsh.sinopec.com/qlsh/pro_service/plastic_pro/">齐鲁石化<i class="fas fa-external-link-alt"></i></a></td>
+</tr>
+</tbody></table>
+<script>
+function reloadPage(){ 
+	let i= 0;
+	if （i<2）
+	{location.reload(true);
+	i++;
+	}};
+setTimeout('reloadPage()',1000);
+</script>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%90%B9%E5%A1%91%E6%9C%BA/">#吹塑机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/07/09/%E4%B8%AD%E6%96%87%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E7%9A%84%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">中文技术文档的写作规范</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/03/12/%E8%A5%BF%E9%97%A8%E5%AD%90%E6%95%B0%E6%8E%A7%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">西门子数控理论基础教程</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%A4%E5%87%BA%E7%B3%BB%E7%BB%9F%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">挤出系统类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">标准型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8F%82%E6%95%B0"><span class="nav-number">2.1.1.</span> <span class="nav-text">规格参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E7%89%B9%E7%82%B9"><span class="nav-number">2.1.2.</span> <span class="nav-text">性能特点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9B%E7%BA%A7%E5%9E%8B"><span class="nav-number">2.2.</span> <span class="nav-text">进级型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8F%82%E6%95%B0-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">规格参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E7%89%B9%E7%82%B9-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">性能特点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%AB%98%E5%88%86%E5%AD%90%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">高分子型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%84%E6%A0%BC%E5%8F%82%E6%95%B0-2"><span class="nav-number">2.3.1.</span> <span class="nav-text">规格参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%A7%E8%83%BD%E7%89%B9%E7%82%B9-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">性能特点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E6%A0%91%E8%84%82%E4%B8%93%E7%94%A8%E5%9E%8B"><span class="nav-number">2.4.</span> <span class="nav-text">工程树脂专用型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E6%96%99%E7%B1%BB%E5%88%AB"><span class="nav-number">2.4.1.</span> <span class="nav-text">原料类别</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%A7%84%E6%A0%BC%E6%80%A7%E8%83%BD"><span class="nav-number">2.4.2.</span> <span class="nav-text">规格性能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">选择方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E4%BA%A7%E5%93%81%E7%B1%BB%E5%88%AB"><span class="nav-number">3.1.</span> <span class="nav-text">典型产品类别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A7%E9%87%8F%E8%AE%A1%E7%AE%97"><span class="nav-number">3.2.</span> <span class="nav-text">产量计算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E6%8C%A4%E5%87%BA%E7%B3%BB%E7%BB%9F%E9%80%89%E5%9E%8B%E5%B7%A5%E5%85%B7%EF%BC%88EXCEL%EF%BC%89%E5%BF%AB%E9%80%9F%E8%AE%A1%E7%AE%97"><span class="nav-number">3.2.1.</span> <span class="nav-text">利用挤出系统选型工具（EXCEL）快速计算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B"><span class="nav-number">3.2.2.</span> <span class="nav-text">工具教程</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%BC%E5%90%88%E7%A1%AE%E5%AE%9A"><span class="nav-number">3.3.</span> <span class="nav-text">综合确定</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B%E6%B5%8B%E8%AF%95"><span class="nav-number">4.</span> <span class="nav-text">案例测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%951%EF%BC%9A"><span class="nav-number">4.1.</span> <span class="nav-text">测试1：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%952%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">测试2：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%953%EF%BC%9A"><span class="nav-number">4.3.</span> <span class="nav-text">测试3：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%954%EF%BC%9A"><span class="nav-number">4.4.</span> <span class="nav-text">测试4：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E4%BA%8B%E9%A1%B9"><span class="nav-number">5.</span> <span class="nav-text">其它事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8HDPE%E7%86%94%E4%BD%93%E6%B5%81%E5%8A%A8%E6%8C%87%E6%95%B0-Melt-Index"><span class="nav-number">6.</span> <span class="nav-text">常用HDPE熔体流动指数(Melt Index)</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2025
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">波波林</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+</div>
+
+
+
+</body>
+</html>

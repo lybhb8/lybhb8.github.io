@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="在这个章节中，我们结合普通挤出机与开槽料桶挤出机（高分子型）的结构，分析其在挤出机理上的差异区别，进一步阐述挤出机的挤出原理。">
+    <meta name="author" content="波波林">
+    
+    <title>
+        
+            挤出机在吹塑工艺中的重要性（二） |
+        
+        吹塑知识小栈
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/BBL.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lybhb8.github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/BBL.png","favicon":"/images/BBL.png","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="吹塑知识小栈" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/BBL.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               吹塑知识小栈
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">挤出机在吹塑工艺中的重要性（二）</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">波波林</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2021-12-31 08:14:26</span>
+        <span class="mobile">2021-12-31 08:14</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2025-07-08 22:47:57</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E5%A1%91%E6%96%99%E6%9C%BA%E6%A2%B0/">塑料机械</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%90%B9%E5%A1%91%E6%9C%BA/">吹塑机</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <ul>
+<li>挤出机驱动电机的电能在工作中转化为什么？</li>
+<li>塑料原料在挤出塑化的热历程中其物理形态的变化过程？</li>
+<li>塑料熔体粘度在挤出塑化工艺过程中的意义？</li>
+</ul>
+<p>挤出机驱动电机的在工作过程中，通过齿轮箱驱动螺杆转动，塑化原料成为粘流态塑料，其驱动电机的电能90%转化为塑料的热能。<br>塑料原料在挤出塑化的热历程中，物理形态的基本变化过程：松散原料→固体塞→软化→熔化→均化。<br>“塑料熔体粘度在挤出塑化工艺过程中的意义“？这个问题在文章的末节同大家交流。</p>
+<p>在这个章节中，我们结合普通挤出机与开槽料桶挤出机（高分子型）的结构，分析其在挤出机理上的差异区别，进一步阐述挤出机的挤出原理。</p>
+<h2 id="普通挤出机-Conventional-与开槽料筒挤出机-Grooved-barrel-："><a href="#普通挤出机-Conventional-与开槽料筒挤出机-Grooved-barrel-：" class="headerlink" title="普通挤出机(Conventional)与开槽料筒挤出机(Grooved barrel)："></a>普通挤出机(Conventional)与开槽料筒挤出机(Grooved barrel)：</h2><h3 id="开槽料筒挤出机结构图："><a href="#开槽料筒挤出机结构图：" class="headerlink" title="开槽料筒挤出机结构图："></a>开槽料筒挤出机结构图：</h3><p><img src="/.io//2128331-20210929224530284-110367002.png" alt="image"><br>120Grooved barrel&#x2F;barrier screw</p>
+<p>Screw RPM: 50.00 1&#x2F;min &#x3D;  0.83 1&#x2F;s<br>Screw top speed: 100.00 mm&#x2F;s<br>Mass flow rate: 526.12 kg&#x2F;hr &#x3D;   146.14 g&#x2F;s &#x3D;  184.99 cm3&#x2F;s<br>Solids transport angle: 17.10 o<br>Maximum solids conveying mass flow rate: 982.07kg&#x2F;hr</p>
+<p>Energy consumption (for current screw speed)<br>Solids conveying region: 17.46 kW<br>Melt&#x2F;solids region: 73.03 kW<br>Melt region: 4.93 kW<br>Total: 95.43 kW</p>
+<p>Energy for material heating: 91.84 kW</p>
+<p>Screw torque: 18225. N m</p>
+<p>Screw back force on the tip: 293434. N<br>Screw back force on the bearing: 597021. N</p>
+<h3 id="普通挤出机结构图："><a href="#普通挤出机结构图：" class="headerlink" title="普通挤出机结构图："></a>普通挤出机结构图：</h3><p><img src="/.io//2128331-20210929224549685-1521176528.png" alt="image"><br>120Conventional screw</p>
+<p>Screw RPM: 60.00 1&#x2F;min </p>
+<p>Screw top speed: 120.00 mm&#x2F;s</p>
+<p>Solids transport angle: 2.70 o</p>
+<p>Maximum solids conveying mass flow rate: 2267.0kg&#x2F;hr</p>
+<p>Solids conveying region: 24.78 kW</p>
+<p>Melt&#x2F;solids region: 59.70 kW</p>
+<p>Melt region: 5.98 kW</p>
+<p>Total: 90.46 kW</p>
+<p>Energy for material heating: 51.07 kW</p>
+<p>Screw torque: 14398. N m</p>
+<p>Screw back force on the tip: 282443. N</p>
+<p>Screw back force on the bearing: 632317. N</p>
+<h3 id="两种结构主参数-拟合运算-："><a href="#两种结构主参数-拟合运算-：" class="headerlink" title="两种结构主参数(拟合运算)："></a>两种结构主参数(拟合运算)：</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>Grooved</th>
+<th>Conventional</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Diameter (D)</td>
+<td>120.00</td>
+<td>120.00</td>
+<td>mm</td>
+</tr>
+<tr>
+<td>Screw length</td>
+<td>28.5</td>
+<td>28.5</td>
+<td>L&#x2F;D</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>50.00</td>
+<td>60.00</td>
+<td>1&#x2F;min</td>
+</tr>
+<tr>
+<td>Mass flow</td>
+<td>526.12</td>
+<td>276.01</td>
+<td>kg&#x2F;hr</td>
+</tr>
+<tr>
+<td>End pressure</td>
+<td>24.83</td>
+<td>24.97</td>
+<td>MPa</td>
+</tr>
+<tr>
+<td>Melted after</td>
+<td>24.43</td>
+<td>25</td>
+<td>D</td>
+</tr>
+<tr>
+<td>Mean residence time</td>
+<td>67.51</td>
+<td>117.36</td>
+<td>S</td>
+</tr>
+</tbody></table>
+<h3 id="比较分析："><a href="#比较分析：" class="headerlink" title="比较分析："></a>比较分析：</h3><h4 id="固体熔化"><a href="#固体熔化" class="headerlink" title="固体熔化"></a>固体熔化</h4><h5 id="Grooved"><a href="#Grooved" class="headerlink" title="Grooved"></a>Grooved<img src="/.io//2128331-20210929224727748-1948391824.png" alt="image"></h5><p><img src="/.io//2128331-20210929224852780-1159158038.png" alt="image"></p>
+<h5 id="Conventional"><a href="#Conventional" class="headerlink" title="Conventional"></a>Conventional<img src="/.io//2128331-20210929225014298-476406624.png" alt="image"></h5><p><img src="/.io//2128331-20210929225023858-1503317741.png" alt="image"></p>
+<hr>
+<h4 id="温度场"><a href="#温度场" class="headerlink" title="温度场"></a>温度场</h4><h5 id="Grooved-1"><a href="#Grooved-1" class="headerlink" title="Grooved"></a>Grooved</h5><p><img src="/.io//2128331-20210929225247882-913978481.png" alt="image"><br><img src="/.io//2128331-20210929225354895-432851599.png" alt="image"></p>
+<h5 id="Conventional-1"><a href="#Conventional-1" class="headerlink" title="Conventional"></a>Conventional<img src="/.io//2128331-20210929225441582-1480406251.png" alt="image"></h5><p><img src="/.io//2128331-20210929225545959-343937940.png" alt="image"></p>
+<hr>
+<h4 id="压力降"><a href="#压力降" class="headerlink" title="压力降"></a>压力降</h4><h5 id="Grooved-2"><a href="#Grooved-2" class="headerlink" title="Grooved"></a>Grooved<img src="/.io//2128331-20210929225739506-436302865.png" alt="image"></h5><p><img src="/.io//2128331-20210929225309570-1151939094.png" alt="image"></p>
+<h5 id="Conventional-2"><a href="#Conventional-2" class="headerlink" title="Conventional"></a>Conventional<img src="/.io//2128331-20210929225840870-1859655761.png" alt="image"></h5><p><img src="/.io//2128331-20210929225915283-920244900.png" alt="image"></p>
+<hr>
+<h4 id="比较结果"><a href="#比较结果" class="headerlink" title="比较结果"></a>比较结果</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>Grooved</th>
+<th>Conventional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>温度设定(C）</td>
+<td>200</td>
+<td>200</td>
+</tr>
+<tr>
+<td>最高温度(C)</td>
+<td>209.5</td>
+<td>224.4</td>
+</tr>
+<tr>
+<td>温升(C)</td>
+<td>+9.5</td>
+<td>+24.4</td>
+</tr>
+<tr>
+<td>最高压力(MPa)</td>
+<td>66.23</td>
+<td>33.88</td>
+</tr>
+<tr>
+<td>模头设定压降(MPa)</td>
+<td>25</td>
+<td>25</td>
+</tr>
+<tr>
+<td>单转产量(kg&#x2F;h)&#x2F;(r&#x2F;min)</td>
+<td>9.6</td>
+<td>4.6</td>
+</tr>
+</tbody></table>
+<h4 id="分析结果"><a href="#分析结果" class="headerlink" title="分析结果"></a>分析结果</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>Grooved</th>
+<th>Conventional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>最高压力位置</td>
+<td>进料段末端</td>
+<td>压缩段末端</td>
+</tr>
+<tr>
+<td>固体输送能力</td>
+<td>强</td>
+<td>弱</td>
+</tr>
+<tr>
+<td>原料适应性</td>
+<td>好</td>
+<td>弱</td>
+</tr>
+<tr>
+<td>全回料能力</td>
+<td>弱</td>
+<td>好</td>
+</tr>
+<tr>
+<td>产量稳定性</td>
+<td>好</td>
+<td>弱</td>
+</tr>
+<tr>
+<td>加料段&#x2F;熔融段：热隔离</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>温升(C)+</td>
+<td>+9.5</td>
+<td>+24.4</td>
+</tr>
+<tr>
+<td>塑化质量</td>
+<td>适当</td>
+<td>过塑化</td>
+</tr>
+<tr>
+<td>启动扭矩</td>
+<td>高</td>
+<td>低</td>
+</tr>
+</tbody></table>
+<h4 id="加料区结构示意图"><a href="#加料区结构示意图" class="headerlink" title="加料区结构示意图"></a>加料区结构示意图</h4><p><img src="/.io//2128331-20210929225956616-209654986.png" alt="image"><br>加料区冷却水的作用：防止该区域的原料因摩擦热而产生的软化、熔膜现象产生，确保固体输送角的稳定性。其不利的方面：启动扭矩大；所以开机时，冷却水需要关闭，螺杆平稳增速；关机时，需挤空料筒存料。</p>
+<p>普通挤出机常见的不下料（架桥），挤出波动现象，其机理就是因为有原料软化、熔膜现象产生，造成轻者挤出波动（周期性），重者不下料。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>Grooved</th>
+<th>Conventional</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>固体输送角（°）</td>
+<td>17.10</td>
+<td>2.70</td>
+</tr>
+<tr>
+<td>驱动功率（kw）</td>
+<td>95.43</td>
+<td>90.46</td>
+</tr>
+<tr>
+<td>加热功率(kw)</td>
+<td>91.84</td>
+<td>51.07</td>
+</tr>
+<tr>
+<td>单位能耗(kw.h&#x2F;kg)</td>
+<td>0.355</td>
+<td>0.5127</td>
+</tr>
+<tr>
+<td>电机功率（kw）</td>
+<td>132</td>
+<td>90</td>
+</tr>
+<tr>
+<td>最高产量（kg&#x2F;h）</td>
+<td>526.12</td>
+<td>276.01</td>
+</tr>
+</tbody></table>
+<h2 id="公司主要型号普通挤出机与开槽料筒挤出机规格参数："><a href="#公司主要型号普通挤出机与开槽料筒挤出机规格参数：" class="headerlink" title="公司主要型号普通挤出机与开槽料筒挤出机规格参数："></a>公司主要型号普通挤出机与开槽料筒挤出机规格参数：</h2><h4 id="开槽料筒挤出机（推荐）"><a href="#开槽料筒挤出机（推荐）" class="headerlink" title="开槽料筒挤出机（推荐）"></a>开槽料筒挤出机（推荐）</h4><table>
+<thead>
+<tr>
+<th>型号&#x2F;参数</th>
+<th>50</th>
+<th>60</th>
+<th>70</th>
+<th>80</th>
+<th>90</th>
+<th>100</th>
+<th>120</th>
+<th>150</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>长径比</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>30</td>
+<td>28</td>
+</tr>
+<tr>
+<td>电机功率(kw)</td>
+<td>18.5</td>
+<td>30</td>
+<td>45</td>
+<td>55</td>
+<td>75</td>
+<td>90</td>
+<td>132</td>
+<td>200</td>
+</tr>
+<tr>
+<td>塑化能力kg&#x2F;h(HDPE)</td>
+<td>50</td>
+<td>85</td>
+<td>145</td>
+<td>180</td>
+<td>250</td>
+<td>300</td>
+<td>450</td>
+<td>600</td>
+</tr>
+</tbody></table>
+<h4 id="新型普通挤出机（不推荐）"><a href="#新型普通挤出机（不推荐）" class="headerlink" title="新型普通挤出机（不推荐）"></a>新型普通挤出机（不推荐）</h4><table>
+<thead>
+<tr>
+<th>型号&#x2F;参数</th>
+<th>50</th>
+<th>60</th>
+<th>70</th>
+<th>80</th>
+<th>90</th>
+<th>100</th>
+<th>120</th>
+<th>135</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>长径比</td>
+<td>28</td>
+<td>28</td>
+<td>28</td>
+<td>28</td>
+<td><strong>28</strong></td>
+<td><strong>28</strong></td>
+<td><strong>28</strong></td>
+<td><strong>28</strong></td>
+</tr>
+<tr>
+<td>电机功率(kw)</td>
+<td>11</td>
+<td>18.5</td>
+<td>30</td>
+<td>45</td>
+<td><strong>55</strong></td>
+<td><strong>75</strong></td>
+<td><strong>90</strong></td>
+<td><strong>160</strong></td>
+</tr>
+<tr>
+<td>塑化能力kg&#x2F;h(HDPE)</td>
+<td>40</td>
+<td>60</td>
+<td>90</td>
+<td>135</td>
+<td><strong>180</strong></td>
+<td><strong>240</strong></td>
+<td><strong>300</strong></td>
+<td><strong>550</strong></td>
+</tr>
+</tbody></table>
+<p>注解：上表中，新型普通挤出机型号50、60、70、80在规划中，塑化能力kg&#x2F;h以牌号HDPE 5502为基准。</p>
+<h2 id="挤出机的重要性"><a href="#挤出机的重要性" class="headerlink" title="挤出机的重要性"></a>挤出机的重要性</h2><p>通过以上的对比，可以看出挤出机不同的结构设计，其工作特性差异性很大，工作状态也很不同。<br>开槽料筒挤出机塑化能力强，产量高，波动小，基本无温升，节能，原料适应性强等各项主要指标都优于传统普通挤出机。而且，这种能力可保持5-8年以上。</p>
+<p>因为开槽料筒挤出机基本无温升，其塑化的型坯熔体粘度适度，下垂小，利于型坯壁厚控制和吹塑成型。而普通挤出机在高速挤出时，因为过高的温升，就不利于吹塑成型。（这也回答了篇首遗留的问题）</p>
+<p>普通挤出机过高的温升也加长了模内冷却的时间，也造成了熔体内低分子有机物的析出，附着于模头内壁上，造成型坯表面划痕，影响制品外观质量。<br>作为吹塑机的核心部件，挤出机的特性直接影响制品的质量，质量稳定性，生产效率，能耗等指标，直接关系到用户的效益和对公司产品的满意度。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%90%B9%E5%A1%91%E6%9C%BA/">#吹塑机</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/01/05/hello-hexo-keep/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">hello hexo-keep</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2021/12/30/%E6%8C%A4%E5%87%BA%E6%9C%BA%E5%9C%A8%E5%90%B9%E5%A1%91%E5%B7%A5%E8%89%BA%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7%EF%BC%88%E4%B8%80%EF%BC%89/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">挤出机在吹塑工艺中的重要性（一）</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%8C%A4%E5%87%BA%E6%9C%BA-Conventional-%E4%B8%8E%E5%BC%80%E6%A7%BD%E6%96%99%E7%AD%92%E6%8C%A4%E5%87%BA%E6%9C%BA-Grooved-barrel-%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">普通挤出机(Conventional)与开槽料筒挤出机(Grooved barrel)：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E6%A7%BD%E6%96%99%E7%AD%92%E6%8C%A4%E5%87%BA%E6%9C%BA%E7%BB%93%E6%9E%84%E5%9B%BE%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">开槽料筒挤出机结构图：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%8C%A4%E5%87%BA%E6%9C%BA%E7%BB%93%E6%9E%84%E5%9B%BE%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">普通挤出机结构图：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E7%A7%8D%E7%BB%93%E6%9E%84%E4%B8%BB%E5%8F%82%E6%95%B0-%E6%8B%9F%E5%90%88%E8%BF%90%E7%AE%97-%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">两种结构主参数(拟合运算)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90%EF%BC%9A"><span class="nav-number">1.4.</span> <span class="nav-text">比较分析：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BA%E4%BD%93%E7%86%94%E5%8C%96"><span class="nav-number">1.4.1.</span> <span class="nav-text">固体熔化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Grooved"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">Grooved</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Conventional"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">Conventional</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%A9%E5%BA%A6%E5%9C%BA"><span class="nav-number">1.4.2.</span> <span class="nav-text">温度场</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Grooved-1"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">Grooved</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Conventional-1"><span class="nav-number">1.4.2.2.</span> <span class="nav-text">Conventional</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%8B%E5%8A%9B%E9%99%8D"><span class="nav-number">1.4.3.</span> <span class="nav-text">压力降</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Grooved-2"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">Grooved</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Conventional-2"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">Conventional</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E7%BB%93%E6%9E%9C"><span class="nav-number">1.4.4.</span> <span class="nav-text">比较结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C"><span class="nav-number">1.4.5.</span> <span class="nav-text">分析结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A0%E6%96%99%E5%8C%BA%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="nav-number">1.4.6.</span> <span class="nav-text">加料区结构示意图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E5%8F%B8%E4%B8%BB%E8%A6%81%E5%9E%8B%E5%8F%B7%E6%99%AE%E9%80%9A%E6%8C%A4%E5%87%BA%E6%9C%BA%E4%B8%8E%E5%BC%80%E6%A7%BD%E6%96%99%E7%AD%92%E6%8C%A4%E5%87%BA%E6%9C%BA%E8%A7%84%E6%A0%BC%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">公司主要型号普通挤出机与开槽料筒挤出机规格参数：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E6%A7%BD%E6%96%99%E7%AD%92%E6%8C%A4%E5%87%BA%E6%9C%BA%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">2.0.1.</span> <span class="nav-text">开槽料筒挤出机（推荐）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%9E%8B%E6%99%AE%E9%80%9A%E6%8C%A4%E5%87%BA%E6%9C%BA%EF%BC%88%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">2.0.2.</span> <span class="nav-text">新型普通挤出机（不推荐）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%A4%E5%87%BA%E6%9C%BA%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">挤出机的重要性</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2025
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">波波林</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+</div>
+
+
+
+</body>
+</html>

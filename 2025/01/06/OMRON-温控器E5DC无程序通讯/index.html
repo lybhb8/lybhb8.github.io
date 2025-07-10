@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="分享知识的快乐和力量">
+    <meta name="author" content="波波林">
+    
+    <title>
+        
+            OMRON 温控器E5DC无程序通讯 |
+        
+        吹塑知识小栈
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/BBL.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"lybhb8.github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/BBL.png","favicon":"/images/BBL.png","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="吹塑知识小栈" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/BBL.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               吹塑知识小栈
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">OMRON 温控器E5DC无程序通讯</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">波波林</span>
+                            
+                                <span class="author-label">Lv3</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2025-01-06 16:22:14</span>
+        <span class="mobile">2025-01-06 16:22</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2025-07-10 15:14:26</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <div>
+**如果PDF显示不正常**<input type="button" value="请重新刷新页面" onclick="location.reload(true)">
+</div>
+
+<h1 id="OMRON-E5□C温控器-无程序通信"><a href="#OMRON-E5□C温控器-无程序通信" class="headerlink" title="OMRON E5□C温控器 无程序通信"></a>OMRON E5□C温控器 无程序通信</h1><p>本章介绍了E5□C的无程序通信。E5CC&#x2F;E5版本1.0(Ver1.0)不能对应。</p>
+<p><strong><a href="#6-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1">6- 1 无程序通信</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-1-1-%E6%A6%82%E8%A6%81">6- 1- 1 概要</a></li>
+<li><a href="#6-1-2-%E7%89%B9%E5%BE%81">6- 1- 2 特征</a></li>
+<li><a href="#6-1-3-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C">6- 1- 3 无程序通信的动作</a></li>
+<li><a href="#6-1-4-%E7%94%B5%E6%BA%90%E7%9A%84onoff%E6%97%B6%E9%97%B4">6- 1- 4 电源的ON&#x2F;OFF时间</a></li>
+<li><a href="#6-1-5-%E5%8F%AF%E8%BF%9E%E6%8E%A5%E7%9A%84plc">6- 1- 5 可连接的PLC</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-2-e5c%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 2 E5□C的设定</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-2-1-%E5%8D%8F%E8%AE%AE%E9%80%89%E6%8B%A9">6- 2- 1 协议选择</a></li>
+<li><a href="#6-2-2-%E9%80%9A%E4%BF%A1%E5%8D%95%E4%BD%8D%E7%BC%96%E5%8F%B7%E4%B8%8E%E9%80%9A%E4%BF%A1%E6%B3%A2%E7%89%B9%E7%8E%87">6- 2- 2 通信单位编号与通信波特率</a></li>
+<li><a href="#6-2-3-%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE%E7%AD%89%E5%BE%85%E6%97%B6%E9%97%B4">6- 2- 3 发送数据等待时间</a></li>
+<li><a href="#6-2-4-%E6%9C%80%E5%A4%A7%E9%80%9A%E4%BF%A1%E5%8D%95%E4%BD%8D%E7%BC%96%E5%8F%B7">6- 2- 4 最大通信单位编号</a></li>
+<li><a href="#6-2-5-%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%8C%BA%E5%9F%9F%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%80%E5%A7%8B%E5%9C%B0%E5%9D%80">6- 2- 5 链接数据(区域类型和开始地址)</a></li>
+<li><a href="#6-2-6-%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE%E7%AD%89%E5%BE%85%E6%97%B6%E9%97%B4">6- 2- 6 接收数据等待时间</a></li>
+<li><a href="#6-2-7-%E9%80%9A%E4%BF%A1%E8%8A%82%E7%82%B9%E7%BC%96%E5%8F%B7">6- 2- 7 通信节点编号</a></li>
+<li><a href="#6-2-8-%E4%B8%8A%E8%BD%BD%E4%B8%8B%E8%BD%BD%E8%AE%BE%E5%AE%9A">6- 2- 8 上载&#x2F;下载设定</a></li>
+<li><a href="#6-2-9-%E5%A4%8D%E5%88%B6">6- 2- 9 复制</a></li>
+<li><a href="#6-2-10%E9%80%9A%E4%BF%A1%E5%86%99%E5%85%A5">6- 2- 10 通信写入</a></li>
+<li><a href="#6-2-11%E9%80%9A%E4%BF%A1%E7%9B%91%E6%8E%A7">6- 2- 11 通信监控</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-3-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95">6- 3无程序通信的操作方法</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-3-1-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C%E8%AF%B7%E6%B1%82%E6%A0%87%E5%BF%97">6- 3- 1 无程序通信的动作(请求标志)</a></li>
+<li><a href="#6-3-2-%E5%93%8D%E5%BA%94%E6%A0%87%E5%BF%97">6- 3- 2 响应标志</a></li>
+<li><a href="#6-3-3-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C%E9%A2%86%E5%9F%9F">6- 3- 3 无程序通信的动作领域</a></li>
+<li><a href="#6-3-4-%E5%8A%A8%E4%BD%9C%E6%8C%87%E4%BB%A4%E4%BB%A3%E7%A0%81">6- 3- 4 动作指令代码</a></li>
+<li><a href="#6-3-5-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 3- 5 无程序通信的动作确认</a></li>
+<li><a href="#6-3-6-%E5%86%99%E5%85%A5%E6%A8%A1%E5%BC%8F">6- 3- 6 写入模式</a></li>
+<li><a href="#6-3-7-%E6%95%85%E9%9A%9C%E8%AF%8A%E6%96%AD">6- 3- 7 故障诊断</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-4-%E4%B8%8Ecp%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5">6- 4 与CP系列的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-4-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 4- 1 构成和步骤</a></li>
+<li><a href="#6-4-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF">6- 4- 2 开关设定和接线</a></li>
+<li><a href="#6-4-3-plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 4- 3 PLC的设定</a></li>
+<li><a href="#6-4-4-e5c%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 4- 4 E5□C的设定</a></li>
+<li><a href="#6-4-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 4- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-5-%E4%B8%8Ecj%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5">6-5与CJ系列的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-5-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 5- 1 构成和步骤</a></li>
+<li><a href="#6-5-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF">6- 5- 2 开关设定和接线</a></li>
+<li><a href="#6-5-3-plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 5- 3 PLC 的设定</a></li>
+<li><a href="#6-5-4-e5c%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 5- 4 E5□C 的设定</a></li>
+<li><a href="#6-5-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 5- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-6-%E4%B8%8E-nx1p2-%E7%9A%84%E8%BF%9E%E6%8E%A5">6-6与NX1P2的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-6-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 6- 1 构成和步骤</a></li>
+<li><a href="#6-6-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF">6- 6- 2 开关设定和接线</a></li>
+<li><a href="#6-6-3-plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 6- 3 PLC 的设定</a></li>
+<li><a href="#6-6-4-e5-c-%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 6- 4 E5□C 的设定</a></li>
+<li><a href="#6-6-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 6- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-7-%E4%B8%8E-nj-%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5">6-7与NJ系列的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-7-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 7- 1 构成和步骤</a></li>
+<li><a href="#6-7-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF">6- 7- 2 开关设定和接线</a></li>
+<li><a href="#6-7-3-plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 7- 3 PLC 的设定</a></li>
+<li><a href="#6-7-4-e5c%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 7- 4 E5□C 的设定</a></li>
+<li><a href="#6-7-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 7- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-8-%E4%B8%8Emelsec-q%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5">6-8与MELSEC-Q系列的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-8-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 8- 1 构成和步骤</a></li>
+<li><a href="#6-8-2-%E6%8E%A5%E7%BA%BF">6- 8- 2 接线</a></li>
+<li><a href="#6-8-3-plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 8- 3 PLC 的设定</a></li>
+<li><a href="#6-8-4-e5c%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 8- 4 E5□C 的设定</a></li>
+<li><a href="#6-8-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 8- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-9-%E4%B8%8Emelsec-fx%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5">6-9与MELSEC-FX系列的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-9-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 9- 1 构成和步骤</a></li>
+<li><a href="#6-9-2-%E6%8E%A5%E7%BA%BF">6- 9- 2 接线</a></li>
+<li><a href="#6-9-3-plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 9- 3 PLC 的设定</a></li>
+<li><a href="#6-9-4-e5c%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 9- 4 E5□C 的设定</a></li>
+<li><a href="#6-9-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 9- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-10-%E4%B8%8E-melsec-iq-r-%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5">6-10与MELSEC iQ-R系列的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-10-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 10- 1 构成和步骤</a></li>
+<li><a href="#6-10-2-%E6%8E%A5%E7%BA%BF">6- 10- 2 接线</a></li>
+<li><a href="#6-10-3plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 10- 3 PLC 的设定</a></li>
+<li><a href="#6-10-4-e5--c-%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 10- 4 E5□C 的设定</a></li>
+<li><a href="#6-10-5%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 10- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#6-11-%E4%B8%8E-keyence-kv-%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5">6-11与KEYENCEKV系列的连接</a></strong></p>
+<blockquote>
+<ul>
+<li><a href="#6-11-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4">6- 11- 1 构成和步骤</a></li>
+<li><a href="#6-11-2%E6%8E%A5%E7%BA%BF">6- 11- 2 接线</a></li>
+<li><a href="#6-11-3plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 11- 3 PLC 的设定</a></li>
+<li><a href="#6-11-4e5c%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 11- 4 E5□C 的设定</a></li>
+<li><a href="#6-11-5%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 11- 5 动作确认</a></li>
+</ul>
+</blockquote>
+<p><strong><a href="#%E9%99%84%E5%BD%953-2%E7%8A%B6%E6%80%81">附录：3-2状态</a></strong></p>
+<h2 id="6-1-无程序通信"><a href="#6-1-无程序通信" class="headerlink" title="6-1 无程序通信"></a>6-1 无程序通信</h2><h2 id="6-1-1-概要"><a href="#6-1-1-概要" class="headerlink" title="6-1-1 概要"></a>6-1-1 概要</h2><p>无程序通信是指通过可编程控制器(以下简称PLC)的存储器，读写E5口C的参数、运行或停止E5口C的功能。E5口C自动与PLC进行通信，无需编写通信程序。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/951138ec620cbf40d8dcb9a951c74841a19e5466fcdadb3e6e429fc76aa100c4.jpg"><br>1个通信线路最多可连接32台(三菱PX为16台)</p>
+<h2 id="6-1-2-特征"><a href="#6-1-2-特征" class="headerlink" title="6-1-2 特征"></a>6-1-2 特征</h2><ul>
+<li>本公司CS&#x2F;CJ&#x2F;CP系列可以连接三菱电机Q&#x2F;I&#x2F;FX系列、KEYENCEKV系列。- 分配至PLC存储器的E5口C参数，读写各为13个(三菱FX和KEYENCEKV读出为12个)。1台E5口C占有PLC存储器50字(连接32台接则占有960字)- 可设定PLC存储器的种类和地址，进行无程序通信。- E5口C之间可复制设定值，从而大幅减少设定工时和设定失误。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/255cb93b1a478ff334824401bc9cbea725580c3027961909f30c567ee257c229.jpg"></p>
+<h2 id="6-1-3-无程序通信的动作"><a href="#6-1-3-无程序通信的动作" class="headerlink" title="6-1-3 无程序通信的动作"></a>6-1-3 无程序通信的动作</h2><p>无程序通信按下列通信单位编号的顺序进行通信。</p>
+<p>0(主站)  $\rightarrow 1\rightarrow 2\cdot \cdot \cdot \rightarrow$  最大通信单位编号  $\rightarrow 0\rightarrow 1\cdot \cdot \cdot$</p>
+<p>接通主站(通信单位编号0)的电源，约5秒后开始无程序通信(主站电源被接通前，不进行通信)。主站开始通信，从站(通信单位编号  $\neq 0$  也开始通信。开始通信后，即使停止包含主站的任一E5口C，余下的E5口C也会继续通信。但是，由于停止的E5口C产生通信等候时间，通信周期变长。</p>
+<h2 id="6-1-4-电源的ON-OFF时间"><a href="#6-1-4-电源的ON-OFF时间" class="headerlink" title="6-1-4 电源的ON&#x2F;OFF时间"></a>6-1-4 电源的ON&#x2F;OFF时间</h2><h2 id="bullet-电源的ON时间"><a href="#bullet-电源的ON时间" class="headerlink" title="$\bullet$  电源的ON时间"></a>$\bullet$  电源的ON时间</h2><p>请在PLC之后或者与PLC同时接通E5口C的电源。若在无程序通信开始后启动PLC，可能发生如下情况。</p>
+<p>·检测到PLC通信错误·启动时，响应标志只显示一次EEEE</p>
+<h2 id="bullet-电源的OFF时间-仅使用三菱PLC时"><a href="#bullet-电源的OFF时间-仅使用三菱PLC时" class="headerlink" title="$\bullet$  电源的OFF时间(仅使用三菱PLC时)"></a>$\bullet$  电源的OFF时间(仅使用三菱PLC时)</h2><p>与PLC通信过程中，请将E5口C转至初始设定菜单后再切断E5口C的电源。在无程序通信过程中切断E5口C电源，可能检测到PLC通信错误。</p>
+<h2 id="bullet-仅重新启动E5口C时"><a href="#bullet-仅重新启动E5口C时" class="headerlink" title="$\bullet$  仅重新启动E5口C时"></a>$\bullet$  仅重新启动E5口C时</h2><p>请按下面的步骤重新启动主站。</p>
+<p>将所有E5口C转至初始设定菜单。</p>
+<p>2 按从站(通信单位编号  $\neq 0$  )、主站(通信单位编号0)的顺序再次接通电源，或返回操作菜单。</p>
+<p>(注)若不符合上述条件，检测到PLC错误时，请通过PLC的程序解除错误。</p>
+<h2 id="6-1-5-可连接的PLC"><a href="#6-1-5-可连接的PLC" class="headerlink" title="6-1-5 可连接的PLC"></a>6-1-5 可连接的PLC</h2><p>可连接的PLC如下所示。</p>
+<h3 id="SYSMAC-CS-CJ-CP系列"><a href="#SYSMAC-CS-CJ-CP系列" class="headerlink" title="SYSMAC CS&#x2F;CJ&#x2F;CP系列"></a>SYSMAC CS&#x2F;CJ&#x2F;CP系列</h3><table><tr><td rowspan="2">名称</td><td rowspan="2">型号</td><td colspan="2">通信端口</td></tr><tr><td>端口1</td><td>端口2</td></tr><tr><td rowspan="5">串行通信单元</td><td>CJ1W-SCU21-V1</td><td>RS-232C</td><td>RS-232C</td></tr><tr><td>CJ1W-SCU22</td><td></td><td></td></tr><tr><td>CJ1W-SCU41-V1</td><td>RS-422A/485
+(不可使用)</td><td>RS-232C</td></tr><tr><td>CJ1W-SCU42</td><td></td><td></td></tr><tr><td>CS1W-SCU21-V1</td><td>RS-232C</td><td>RS-232C</td></tr><tr><td rowspan="2">串行通信板</td><td>CS1W-SCB21-V1</td><td>RS-232C</td><td>RS-232C</td></tr><tr><td>CS1W-SCB41-V1</td><td></td><td>RS-422A/485
+(不可使用)</td></tr><tr><td rowspan="3">CPU单元</td><td>CS1/CJ1M系列</td><td colspan="2">RS-232C</td></tr><tr><td>CJ2系列</td><td colspan="2">RS-232C或可选板插槽</td></tr><tr><td>CP系列</td><td>RS-232C</td><td>RS-485*2
+或
+可选板插槽</td></tr><tr><td>串行通信可选板*1</td><td>CP1W-CIF11
+CP1W-CIF12</td><td colspan="2">RS-422A/485</td></tr></table>
+
+<p>(注)使用RS-232C端口时，请使用CJ1W-CIF11(RS-232C-422A&#x2F;485转换器)或  $\mathrm{K3SC}$ $\ast 1$  安装在上述可选板插槽中使用。 $^{\ast 2}$  仅CP1E-N口口S1型内置RS-485端口。</p>
+<h3 id="SYSMAC-NJ系列-NX1P"><a href="#SYSMAC-NJ系列-NX1P" class="headerlink" title="SYSMAC NJ系列&#x2F;NX1P"></a>SYSMAC NJ系列&#x2F;NX1P</h3><table><tr><td rowspan="2">名称</td><td rowspan="2">型号</td><td colspan="2">通信端口</td></tr><tr><td>端口1</td><td>端口2</td></tr><tr><td rowspan="2">串行通信单元</td><td>CJ1W-SCU22</td><td>RS-232C</td><td>RS-232C</td></tr><tr><td>CJ1W-SCU42</td><td>RS-422/485
+(不可使用)</td><td>RS-232C</td></tr><tr><td rowspan="2">CPU单元</td><td>NJ系列</td><td colspan="2">NJ系列无通信端口。请连接上述串行通信单元。</td></tr><tr><td>NX1P2</td><td colspan="2">可选板插槽</td></tr><tr><td rowspan="2">串行通信用可选板*1</td><td>NX1W-CIF11</td><td rowspan="2" colspan="2">RS-422A/485</td></tr><tr><td>NX1W-CIF12</td></tr></table>
+
+<p>(注)使用RS-232C端口时，请使用CJ1W-CIF11(RS-232C-422A&#x2F;485转换器)或  $\mathrm{K3SC}$ $\ast 1$  安装在上述可选板插槽中使用。</p>
+<h3 id="MELSEC-Q-L-FX-iQ-R系列"><a href="#MELSEC-Q-L-FX-iQ-R系列" class="headerlink" title="MELSEC-Q&#x2F;L&#x2F;FX&#x2F;iQ-R系列"></a>MELSEC-Q&#x2F;L&#x2F;FX&#x2F;iQ-R系列</h3><table><tr><td rowspan="2">名称</td><td rowspan="2">型号</td><td colspan="2">通信端口</td></tr><tr><td>端口1</td><td>端口2</td></tr><tr><td>iQ-R适用
+串行通信单元</td><td>RJ71C24</td><td>RS-232C
+(不可使用)</td><td>RS-422/485</td></tr><tr><td rowspan="2">Q适用
+串行通信单元</td><td>QJ71C24N</td><td>RS-232C
+(不可使用)</td><td>RS-422/485</td></tr><tr><td>QJ71C24N-R4</td><td>RS-422/485</td><td>RS-422/485</td></tr><tr><td>L适用
+串行通信单元</td><td>LJ71C24</td><td>RS-232C
+(不可使用)</td><td>RS-422/485</td></tr><tr><td>FX1N/INC对应*</td><td>FX2NC-485ADP</td><td rowspan="8" colspan="2">RS-485</td></tr><tr><td>功能扩展板或特殊适配器</td><td>FX1N-485-BD</td></tr><tr><td>FX2N/2NC对应*</td><td>FX2NC-485ADP</td></tr><tr><td>功能扩展板或特殊适配器</td><td>FX2N-485-BD</td></tr><tr><td>FX3S/3G/3GC用*</td><td>FX3U-485ADP-MB</td></tr><tr><td>功能扩展板或特殊适配器</td><td>FX3G-485-BD</td></tr><tr><td>FX3U/3UC用*</td><td>FX3U-485ADP-MB</td></tr><tr><td>功能扩展板或特殊适配器</td><td>FX3U-485-BD</td></tr></table>
+
+<p>*FX最多可连接16台ES口C。</p>
+<h3 id="KEYENCEKV系列"><a href="#KEYENCEKV系列" class="headerlink" title="KEYENCEKV系列"></a>KEYENCEKV系列</h3><table><tr><td rowspan="2">名称</td><td rowspan="2">型号</td><td colspan="2">通信端口</td></tr><tr><td>端口1</td><td>端口2</td></tr><tr><td>串行通信单元</td><td>KV-L21V</td><td>RS-232C
+(不可使用)</td><td>RS-232C/422A/485</td></tr></table>
+
+<h2 id="6-2-E5□C的设定"><a href="#6-2-E5□C的设定" class="headerlink" title="6-2 E5□C的设定"></a>6-2 E5□C的设定</h2><p>无程序通信中使用的参数，为下面灰色显示位置。“协议选择”设为“FCN5”“MPP”“F×P4”，则显示参数(包含部分一直显示的参数)。对于这些参数，下面按照通信设定菜单、调整菜单的顺序进行说明。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/ab63b08243e96d0c1b5610eb942c2ed594891342a07fb6b9b2a2215547f0608f.jpg"></p>
+<ul>
+<li>无论“协议选择”设定如何，都显示参数。(注)不显示通信设定菜单的“通信数据位”“通信终止位”“通信奇偶校验”。</li>
+</ul>
+<h2 id="6-2-1-协议选择"><a href="#6-2-1-协议选择" class="headerlink" title="6-2-1 协议选择"></a>6-2-1 协议选择</h2><p>连接本公司PLC时，设定为“FCN5”；连接三菱Q&#x2F;L时，设定为“MPP”；连接三菱FX和KEYENCEKV时，设定为“F×P4”；使用组合通信时，请设定为“MPP”。可连接的PLC机型请参照“6- 1- 5可连接的PLC”。关于组合通信，请参照“7- 1组合通信”。</p>
+<p>通信设定菜单显示条件：无</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td></tr><tr><td>协议选择</td><td>PSEL</td><td>LUF: CompoWay/F
+MEd: ModbusRTU
+LMP: 组合通信
+FCN5: 上位链接(FINS)
+MPP4: MC协议(格式4)
+F×P4: 专用协议(格式4)*</td><td>LUF</td></tr></table>
+
+<p>*E5□C版本2.1(Ver.2.1)以上可以选择。</p>
+<h2 id="6-2-2-通信单位编号与通信波特率"><a href="#6-2-2-通信单位编号与通信波特率" class="headerlink" title="6-2-2 通信单位编号与通信波特率"></a>6-2-2 通信单位编号与通信波特率</h2><p>“通信单位编号”必须从“0”开始按顺序设定，不允许跳号。“0”为主站，“1”以后为从站。“通信波特率”推荐值为“57.6”(三菱FX1&#x2F;2为“19.2”，FX3为“38.4”)。所有E5□C与PLC(仅无程序通信时)的设定请保持一致。</p>
+<p>通信设定菜单显示条件：无</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td></tr><tr><td>通信单位编号</td><td>U1-N0</td><td>0:主站
+1～15:从站</td><td>1</td></tr><tr><td>通信波特率</td><td>bP5</td><td>9.6: 9600bps
+19.2: 19200bps
+38.4: 38400bps
+57.6: 57600bps</td><td>9.6</td></tr></table>
+
+<h2 id="6-2-3-发送数据等待时间"><a href="#6-2-3-发送数据等待时间" class="headerlink" title="6-2-3 发送数据等待时间"></a>6-2-3 发送数据等待时间</h2><p>发送数据等待时间是指E5□C从PLC(组合通信时，则为E5□C从站)接收响应后到发送指令的等待时间。“发送数据等待时间”推荐值为“1”。发送时间过早，PLC(组合通信时，则为E5□C从站)无法接收时，请增大设定值。</p>
+<p>通信设定菜单显示条件：无</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td></tr><tr><td>发送数据等待时间</td><td>Sd比</td><td>0～99ms</td><td>20ms</td></tr></table>
+
+<h2 id="6-2-4-最大通信单位编号"><a href="#6-2-4-最大通信单位编号" class="headerlink" title="6-2-4 最大通信单位编号"></a>6-2-4 最大通信单位编号</h2><p>“最大通信单位编号”请设定为所连接E5□C的“通信单位编号”的最大值。“最大通信单位编号”与实际连接的E5□C的单位编号请保持一致。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/e611220b3539cf40e85b2b121dd4523ca8b20cfc235c07fcb161a55f5f0dc6d6.jpg"></p>
+<p>通信设定菜单</p>
+<p>显示条件：“协议选择”为“F□N5”“M□P4”“F×P4”或“协议选择”为“CMP”且“通信单位编号为“0(主站)”</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td></tr><tr><td>最大通信单位编号</td><td>M1×U</td><td>0～99</td><td>0</td></tr></table>
+
+<h2 id="6-2-5-链接数据-区域类型和开始地址"><a href="#6-2-5-链接数据-区域类型和开始地址" class="headerlink" title="6-2-5 链接数据(区域类型和开始地址)"></a>6-2-5 链接数据(区域类型和开始地址)</h2><p>E5□C使用的PLC存储器分为上载区域和下载区域。上载区域为监控E5□C的当前值、状态的区域，下载区域为将设定点、报警值写入E5□C的区域。</p>
+<table><tr><td>地址</td><td colspan="2">PLC存储器</td><td></td></tr><tr><td>XXXX</td><td>响应标志</td><td>表示请求标志处理结束</td><td></td></tr><tr><td>+1</td><td>通信状态</td><td>用于PLC侧确认无程序通信的动作</td><td></td></tr><tr><td>+2</td><td>监控值1</td><td rowspan="4">设定E5□C的当前值、状态
+通过“上载设定”将每个值设定为某个参数</td><td></td></tr><tr><td>+3</td><td>监控值2</td><td></td></tr><tr><td>...</td><td>...</td><td></td></tr><tr><td>+14</td><td>监控值13</td><td></td></tr><tr><td>下载区域</td><td>+15</td><td>请求标志</td><td>切换无程序通信的动作</td></tr><tr><td>+16</td><td>动作指令代码</td><td>根据代码发出动作指令</td><td></td></tr><tr><td>+17</td><td>设定值1</td><td rowspan="4">将该值写入E5□C的设定点、报警值
+通过“下载设定”将每个值设定为某个参数</td><td></td></tr><tr><td>+18</td><td>设定值2</td><td></td></tr><tr><td>...</td><td>...</td><td></td></tr><tr><td>+29</td><td>设定值13</td><td></td></tr></table>
+
+<p>响应标志、通信状态、请求标志、动作指令代码为预约区域。其使用方法请参照下文。</p>
+<ul>
+<li>请求标志 <a href="#6-3-1-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C%E8%AF%B7%E6%B1%82%E6%A0%87%E5%BF%97">6- 3- 1无程序通信的动作(请求标志)</a></li>
+<li>响应标志 <a href="#6-3-2-%E5%93%8D%E5%BA%94%E6%A0%87%E5%BF%97">6- 3- 2响应标志</a></li>
+<li>动作指令代码 <a href="#6-3-4-%E5%8A%A8%E4%BD%9C%E6%8C%87%E4%BB%A4%E4%BB%A3%E7%A0%81">6- 3- 4动作指令代码</a></li>
+<li>通信状态 <a href="#6-3-5-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 3- 5无程序通信的动作确认</a></li>
+</ul>
+<p>使用的PLC存储器通过“区域类型”、“开始地址上位”和“开始地址下位”设定。</p>
+<p>(注) 同一通信线路中连接多台E5□C时，将所有E5□C的开始地址设定为相同的值。通信单位编号0的E5□C从“开始地址”使用，编号1从“开始地址”+30字使用，编号2从“开始地址”+60字使用。</p>
+<table><tr><td>地址</td><td colspan="3">PLC存储器</td><td colspan="2">E5□C</td></tr><tr><td rowspan="8">1台
+占有30字</td><td>XXXX</td><td>响应标志</td><td rowspan="3">←</td><td rowspan="8" colspan="2">通信单位编号0</td></tr><tr><td>+1</td><td>通信状态</td></tr><tr><td>+2</td><td>监控值1</td></tr><tr><td></td><td>...</td><td></td></tr><tr><td>+15</td><td>请求标志</td><td rowspan="3">→</td></tr><tr><td>+16</td><td>动作指令代码</td></tr><tr><td>+17</td><td>设定值1</td></tr><tr><td></td><td>...</td><td></td></tr><tr><td rowspan="3"></td><td>+30</td><td>响应标志</td><td rowspan="2">←</td><td rowspan="3" colspan="2">No.1</td></tr><tr><td>+31</td><td>通信状态</td></tr><tr><td>...</td><td>...</td><td></td></tr></table>
+
+<p>*协议选择为Modbus时，通信数据位固定为8位；奇偶校验设定为偶数&#x2F;奇数时，通信终止位固定为1位、无奇偶校验时固定为2位，不显示项目。</p>
+<p>通信设定菜单  </p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td><td></td></tr><tr><td rowspan="21">区域类型</td><td rowspan="21">RPER</td><td>·“协议选择”为“FINS”时</td><td>0</td><td></td></tr><tr><td>0: DM</td><td>13: EMC</td><td></td></tr><tr><td>1: EM0</td><td>14: EMD</td><td></td></tr><tr><td>2: EM1</td><td>15: EMC</td><td></td></tr><tr><td>3: EM2</td><td>16: EMF</td><td></td></tr><tr><td>4: EM3</td><td>17: EM10</td><td></td></tr><tr><td>5: EM4</td><td>18: EM11</td><td></td></tr><tr><td>6: EM5</td><td>19: EM12</td><td></td></tr><tr><td>7: EM6</td><td>20: EM13</td><td></td></tr><tr><td>8: EM7</td><td>21: EM14</td><td></td></tr><tr><td>9: EM8</td><td>22: EM15</td><td></td></tr><tr><td>10: EM9</td><td>23: EM16</td><td></td></tr><tr><td>11: EMA</td><td>24: EM17</td><td></td></tr><tr><td>12: EMB</td><td>25: EM18</td><td></td></tr><tr><td>·“协议选择”为“MCP4”时</td><td>0: 数据寄存器 D</td><td>3: 文件寄存器 ZR ※ 1</td></tr><tr><td>1: 链接寄存器 W ※ 1</td><td rowspan="2">4~25: 数据寄存器 D</td><td rowspan="2"></td></tr><tr><td>2: 文件寄存器 R</td></tr><tr><td>·“协议选择”为“FXP4”时</td><td>0: 数据寄存器 D</td><td rowspan="4">2: 扩展寄存器 R</td></tr><tr><td>(数据存储器 DM)</td><td>(文件寄存器 FM)</td></tr><tr><td>1: -(链接寄存器 W) ※ 1</td><td rowspan="2">3~25: 不能使用</td></tr><tr><td>() 内为 KEYENCE KV 时的设备名。</td></tr><tr><td>开始地址上位</td><td>RdRH</td><td>0 ~ 99</td><td>0</td><td></td></tr><tr><td>开始地址下位</td><td>RdRL</td><td>0 ~ 9999</td><td>0</td><td></td></tr></table>
+
+<p>(注)1开始地址为开始地址上位及开始地址下位的合成值。例  $(\underline{\mathbf{l}})$  PLC的开始地址  $&#x3D; 123456$  时，E5口C的开始地址上位  $&#x3D; 12$  ，开始地址下位  $&#x3D; 3456$ $(\widehat{\Xi})$  使用※1的区域类型时，E5口C设定为PLC的开始地址(HEX表示)转换成10进制表示的数值。PLC的开始地址  $&#x3D; 12345$  时，E5口C的开始地址上位  $&#x3D; 7$  ，开始地址下位  $&#x3D; 4565$  2其他E5口C均设定与通信单位编号0的值相同的开始地址。</p>
+<h3 id="可使用PLC存储器"><a href="#可使用PLC存储器" class="headerlink" title="可使用PLC存储器"></a>可使用PLC存储器</h3><table><tr><td>协议选择</td><td>区域类型</td><td>可使用地址范围*2</td></tr><tr><td rowspan="2">上位链接(FINS)</td><td>DM</td><td rowspan="2">0～32767</td></tr><tr><td>EM0～18</td></tr><tr><td rowspan="4">MC协议(格式4)</td><td>数据寄存器(D)</td><td>0～12287</td></tr><tr><td>链接寄存器(W)</td><td>0～8191(1FFF HEX)</td></tr><tr><td>文件寄存器(R)</td><td>0～32767</td></tr><tr><td>文件寄存器(ZR)</td><td>0～999999(F423F HEX)</td></tr><tr><td rowspan="5">专用协议(格式4)</td><td>数据寄存器(D)</td><td rowspan="2">0～7999</td></tr><tr><td>数据存储器(DM)*1</td></tr><tr><td>链接寄存器(W)*1</td><td>0～16383(3FFF HEX)</td></tr><tr><td>扩展寄存器(R)</td><td rowspan="2">0～9999</td></tr><tr><td>文件寄存器(FM)*1</td></tr></table>
+
+<p>$^{*1}$  KEYENCEKV时的设备名。 $^{*2}$  范围因PLC机型而异。请参照所用PLC的手册，设定在可以使用的范围内。E5口C使用的最终地址可按如下公式计算。</p>
+<p>最终地址  $&#x3D;$  开始地址  $+$  (最大通信单位编号  $+1)\times 30$  字- 1</p>
+<p>例)使用3台E5口C(最大通信单位编号2)。开始地址为100最终地址  $&#x3D; 100 + 3\times 30 - 1 &#x3D; 189$</p>
+<h2 id="6-2-6-接收数据等待时间"><a href="#6-2-6-接收数据等待时间" class="headerlink" title="6-2-6 接收数据等待时间"></a>6-2-6 接收数据等待时间</h2><p>“接收数据等待时间”是指从PLC(组合通信时，则为E5口C从站)接收响应的等待时间。通常直接使用默认值。若变更接收数据等待时间，接通电源后开始无程序通信的时间则会改变。开始时间的计算公式如下所示。</p>
+<p>开始时间  $&#x3D;$  约1秒  $^+$  接收数据等待时间×4</p>
+<p>例)默认值为(  $1000\mathrm{ms})$  时，约为5秒</p>
+<p>通信设定菜单</p>
+<p>显示条件：“协议选择”为“FLN5”“MCP4”“FXP4”或“协议选择”为“CMP”且“通信单位编号为“0(主站)”</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td></tr><tr><td>接收数据等待时间</td><td>PUH</td><td>100 ~ 9999ms</td><td>1000ms</td></tr></table>
+
+<h2 id="6-2-7-通信节点编号"><a href="#6-2-7-通信节点编号" class="headerlink" title="6-2-7 通信节点编号"></a>6-2-7 通信节点编号</h2><p>“通信节点编号”设定：使用本公司PLC设为“(上位链接)机号No”，使用三菱PLC则设为“局号设定”。设定为与这些值相同的值。通常直接使用默认值。</p>
+<p>通信设定菜单</p>
+<p>显示条件：“协议选择”为“FLN5”“MCP4”“FXP4”</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td></tr><tr><td>通信节点编号</td><td>UHCT</td><td>0 ~ 99</td><td>0</td></tr></table>
+
+<h2 id="6-2-8-上载-下载设定"><a href="#6-2-8-上载-下载设定" class="headerlink" title="6-2-8 上载&#x2F;下载设定"></a>6-2-8 上载&#x2F;下载设定</h2><p>上载&#x2F;下载设定分别有13个。</p>
+<p>通信设定菜单</p>
+<p>显示条件：“协议选择”为“FNS”“MPY”“FXP”</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td colspan="2">默认值</td></tr><tr><td>上载设定1</td><td>UP 1</td><td rowspan="13">0～98</td><td>1</td><td>通信监控</td></tr><tr><td>上载设定2</td><td>UP 2</td><td>2</td><td>状态(高位侧)</td></tr><tr><td>上载设定3</td><td>UP 3</td><td>3</td><td>状态(低位侧)</td></tr><tr><td>上载设定4</td><td>UP 4</td><td>4</td><td>状态2(高位侧)</td></tr><tr><td>上载设定5</td><td>UP 5</td><td>6</td><td>小数点位置监控</td></tr><tr><td>上载设定6</td><td>UP 6</td><td>7</td><td>PV</td></tr><tr><td>上载设定7</td><td>UP 7</td><td>8</td><td>内部SP</td></tr><tr><td>上载设定8</td><td>UP 8</td><td>11</td><td>加热器电流值1监控</td></tr><tr><td>上载设定9</td><td>UP 9</td><td>16</td><td>MV监控(加热)</td></tr><tr><td>上载设定10</td><td>UP 10</td><td>0</td><td>空</td></tr><tr><td>上载设定11</td><td>UP 11</td><td>0</td><td>空</td></tr><tr><td>上载设定12</td><td>UP 12</td><td>0</td><td>空</td></tr><tr><td>上载设定13*</td><td>UP 13</td><td>0</td><td>空</td></tr><tr><td>下载设定1</td><td>dN 1</td><td rowspan="13">30～98</td><td>31</td><td>SP</td></tr><tr><td>下载设定2</td><td>dN 2</td><td>61</td><td>比例带</td></tr><tr><td>下载设定3</td><td>dN 3</td><td>62</td><td>积分时间</td></tr><tr><td>下载设定4</td><td>dN 4</td><td>63</td><td>微分时间</td></tr><tr><td>下载设定5</td><td>dN 5</td><td>32</td><td>报警值1</td></tr><tr><td>下载设定6</td><td>dN 6</td><td>33</td><td>报警上限1</td></tr><tr><td>下载设定7</td><td>dN 7</td><td>34</td><td>报警下限1</td></tr><tr><td>下载设定8</td><td>dN 8</td><td>35</td><td>报警值2</td></tr><tr><td>下载设定9</td><td>dN 9</td><td>36</td><td>报警上限2</td></tr><tr><td>下载设定10</td><td>dN 10</td><td>37</td><td>报警下限2</td></tr><tr><td>下载设定11</td><td>dN 11</td><td>45</td><td>加热器断线检测1</td></tr><tr><td>下载设定12</td><td>dN 12</td><td>57</td><td>PV输入偏移量</td></tr><tr><td>下载设定13</td><td>dN 13</td><td>75</td><td>SP斜坡设定值</td></tr></table>
+
+<p>*“协议选择”为“FXP”时不能使用。</p>
+<h2 id="bullet-设定变更示例"><a href="#bullet-设定变更示例" class="headerlink" title="$\bullet$  设定变更示例"></a>$\bullet$  设定变更示例</h2><p>将“下载设定11”设为报警值3时，设定值从“45(加热器断线检测1)”变更为“38(报警值3)”。</p>
+<p>上载／下载设定的设定值需从下表中选择。</p>
+<table><tr><td></td><td colspan="2">设定值</td></tr><tr><td rowspan="21">上载设定项目不 可进行下载设定</td><td>0</td><td>空</td></tr><tr><td>1</td><td>通信监控</td></tr><tr><td>2</td><td>状态(高位侧)</td></tr><tr><td>3</td><td>状态(低位侧)</td></tr><tr><td>4</td><td>状态2(高位侧)</td></tr><tr><td>5</td><td>状态2(低位侧)</td></tr><tr><td>6</td><td>小数点位置监控</td></tr><tr><td>7</td><td>MV</td></tr><tr><td>8</td><td>内部SP</td></tr><tr><td>9</td><td>多重SP监控</td></tr><tr><td>10</td><td>远程SP监控</td></tr><tr><td>11</td><td>加热器电流值1监控</td></tr><tr><td>12</td><td>加热器电流值2监控</td></tr><tr><td>13</td><td>泄漏电流值1监控</td></tr><tr><td>14</td><td>泄漏电流值2监控</td></tr><tr><td>15</td><td>剩余保温时间监控</td></tr><tr><td>16</td><td>MV监控(加热)</td></tr><tr><td>17</td><td>MV监控(冷却)</td></tr><tr><td>18</td><td>阀门开度监控</td></tr><tr><td>19</td><td>空</td></tr><tr><td>...</td><td>...</td></tr><tr><td rowspan="23">上载 下载设定项目</td><td>30</td><td>空</td></tr><tr><td>31</td><td>SP</td></tr><tr><td>32</td><td>报警值1</td></tr><tr><td>33</td><td>报警上限1</td></tr><tr><td>34</td><td>报警下限1</td></tr><tr><td>35</td><td>报警值2</td></tr><tr><td>36</td><td>报警上限2</td></tr><tr><td>37</td><td>报警下限2</td></tr><tr><td>38</td><td>报警值3</td></tr><tr><td>39</td><td>报警上限3</td></tr><tr><td>40</td><td>报警下限3</td></tr><tr><td>41</td><td>报警值4</td></tr><tr><td>42</td><td>报警上限4</td></tr><tr><td>43</td><td>报警下限4</td></tr><tr><td>44</td><td>手动MV</td></tr><tr><td>45</td><td>加热器断线检测1</td></tr><tr><td>46</td><td>加热器断线检测2</td></tr><tr><td>47</td><td>HS报警1</td></tr><tr><td>48</td><td>HS报警2</td></tr><tr><td>49</td><td>SPO</td></tr><tr><td>50</td><td>SP1</td></tr><tr><td>51</td><td>SP2</td></tr><tr><td>52</td><td>SP3</td></tr><tr><td></td><td>53</td><td>SP4</td></tr></table>
+
+<p>(注)1设定为“空”时，上载区域值变为0，下载区域不进行任何处理。2下载设定出现重复时，仅编号最小的下载设定有效，其他视为“空”。上载设定出现重复时，全部有效。</p>
+<table><tr><td></td><td colspan="2">设定值</td></tr><tr><td rowspan="45">上载</td><td>54</td><td>SP5</td></tr><tr><td>55</td><td>SP6</td></tr><tr><td>56</td><td>SP7</td></tr><tr><td>57</td><td>PV输入偏移量</td></tr><tr><td>58</td><td>PV输入斜坡系数</td></tr><tr><td>59</td><td>RSP输入补正值</td></tr><tr><td>60</td><td>RSP输入斜坡系数</td></tr><tr><td>61</td><td>比例带</td></tr><tr><td>62</td><td>积分时间</td></tr><tr><td>63</td><td>微分时间</td></tr><tr><td>64</td><td>比例带(冷却)</td></tr><tr><td>65</td><td>积分时间(冷却)</td></tr><tr><td>66</td><td>微分时间(冷却)</td></tr><tr><td>67</td><td>死区</td></tr><tr><td>68</td><td>手动复位值</td></tr><tr><td>69</td><td>滞后(加热)</td></tr><tr><td>70</td><td>滞后(冷却)</td></tr><tr><td>71</td><td>保温时间</td></tr><tr><td>72</td><td>等待时间</td></tr><tr><td>73</td><td>停止时的MV</td></tr><tr><td>74</td><td>PV自错时的MV</td></tr><tr><td>75</td><td>SP斜坡设定值</td></tr><tr><td>76</td><td>SP斜坡设定值(下降值)</td></tr><tr><td>77</td><td>MV上限</td></tr><tr><td>78</td><td>MV下限</td></tr><tr><td>79</td><td>MV变化率极限</td></tr><tr><td>80</td><td>平方根的提取</td></tr><tr><td>81</td><td>内部补助继电器1ON延时</td></tr><tr><td>82</td><td>内部补助继电器1OFF延时</td></tr><tr><td>83</td><td>内部补助继电器2ON延时</td></tr><tr><td>84</td><td>内部补助继电器2OFF延时</td></tr><tr><td>85</td><td>内部补助继电器3ON延时</td></tr><tr><td>86</td><td>内部补助继电器3OFF延时</td></tr><tr><td>87</td><td>内部补助继电器4ON延时</td></tr><tr><td>88</td><td>内部补助继电器4OFF延时</td></tr><tr><td>89</td><td>内部补助继电器5ON延时</td></tr><tr><td>90</td><td>内部补助继电器5OFF延时</td></tr><tr><td>91</td><td>内部补助继电器6ON延时</td></tr><tr><td>92</td><td>内部补助继电器6OFF延时</td></tr><tr><td>93</td><td>内部补助继电器7ON延时</td></tr><tr><td>94</td><td>内部补助继电器7OFF延时</td></tr><tr><td>95</td><td>内部补助继电器8ON延时</td></tr><tr><td>96</td><td>内部补助继电器8OFF延时</td></tr><tr><td>97</td><td>位置比例死区</td></tr><tr><td>98</td><td>开闭滞后</td></tr></table>
+
+<h2 id="6-2-9-复制"><a href="#6-2-9-复制" class="headerlink" title="6-2-9 复制"></a>6-2-9 复制</h2><p>除了“通信单位编号”，可将主站(通信单位编号  $&#x3D; 0$  )的全部设定值复制到从站(通信单位编号  $\neq 0$  )的功能。仅相同型号且相同版本可以复制，不同型号或不同版本不可复制。复制结束后，所有从站将自动复位。请确认对系统无影响后进行。</p>
+<table><tr><td>可复制的情况</td><td>型号与版本均相同
+例) E5CC-RX2ASM-002(V1.1)→ E5CC-RX2ASM-002(V1.1)</td></tr><tr><td>不可复制的情况</td><td>型号不同
+例) E5CC-RX2ASM-002→ E5CC-RX2ASM-002
+版本不同
+例) E5CC-RX2ASM-002(V1.1)→ E5CC-RX2ASM-002(V1.0)</td></tr></table>
+
+<p>通信设定菜单</p>
+<p>显示条件：“协议选择”为“MP”“FN5”“MP4”或“F*P4”，“通信单位编号”为“0(主站)”</p>
+<table><tr><td>参数名称</td><td>字符</td><td>设定范围</td><td>默认值</td></tr><tr><td rowspan="3">复制</td><td rowspan="3">□5P4</td><td>△FF(复制失败时: □D*)</td><td rowspan="3">△FF</td></tr><tr><td>RLL</td></tr><tr><td>1 ~ 15</td></tr></table>
+
+<h3 id="初始状态下的复制步骤"><a href="#初始状态下的复制步骤" class="headerlink" title="初始状态下的复制步骤"></a>初始状态下的复制步骤</h3><p>(1)用RS- 485对主站和从站接线，接通电源。(2)从站的“通信单位编号”从“1”开始以连号设定，返回操作菜单。</p>
+<p>(3)在主站进行通信设定菜单以外的设定。</p>
+<p>(4)在主站转至通信设定菜单，变更下面的通信设定。</p>
+<p>变更“协议选择”，将“通信单位编号”设为“0”、“通信波特率”设为“57.6”(三菱FX1&#x2F;2为“19.2”，FX3为“38.4”)、“发送数据等待时间”设为“1”，“最大通信单位编号”设为“通信单位编号”的最大值。其他的通信设定菜单参数可在必要时变更。变更过程中请勿返回至操作菜单。误返回时，“通信波特率”变回“9.6”，返回至操作菜单后，请再次变更“通信波特率”。</p>
+<p>(5)最后显示“□5P4”，进行复制。</p>
+<p>查选择“RLL”，在所有从站指定编号(通信单位编号)，将复制到指定编号的从站。</p>
+<table><tr><td>设定值</td><td>内容</td></tr><tr><td rowspan="2">△FF
+(□**)</td><td>为复制停止状态。复制正常结束后，也自动变为“△FF”。</td></tr><tr><td>复制失败时不显示△FF。“**”显示复制失败的从站的“通信单位编号”。该值将一直保持到下次复制正常结束或转至操作菜单为止。
+例)在通信单位编号2的从站失败时，将显示“□□□”。</td></tr><tr><td>RLL</td><td>复制到从1到“最大通信单位编号”的从站。
+开始复制后，从站的PV显示变为“□5P4”，对所有从站进行复位，则复制结束。</td></tr><tr><td>1~15</td><td>复制到指定编号的从站后，对所有从站进行复位。</td></tr></table>
+
+<p>(注)1复制不能中断。复制过程中即使变更设定值，也会继续正在实行的处理。2若复制失败，复制便中止，不会复制到剩下的从站。</p>
+<p>连接三菱PLC时，在复制过程中串行通信单元的ERR.会亮灯，并无大碍。ERR.会在PLC重新启动时熄灭。</p>
+<p>有关复制具体使用方法，请参照“&gt;- [6- 4- 4E5□C的设定”。</p>
+<h3 id="故障诊断"><a href="#故障诊断" class="headerlink" title="故障诊断"></a>故障诊断</h3><p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/a63cb2e35e401052f68c4421532ecfbefb08520e5b48c1b941d19f9f78b71763.jpg"></p>
+<p>(注)1发生错误后，再次接通E5□C的电源，进行上述a)操作。2按上述操作仍未解决问题时，或不清楚状况时，请再次接通所有E5□C的电源，对全部机型进行上述a)操作。</p>
+<h3 id="更换时的复制步骤"><a href="#更换时的复制步骤" class="headerlink" title="更换时的复制步骤"></a>更换时的复制步骤</h3><ul>
+<li>更换从站(通信单位编号  $\neq 0$  时</li>
+</ul>
+<p>(1)更换E5□C，接线并接通电源。(2)将所有E5□C转至初始设定菜单，停止无程序通信。组合通信时，无需上述处理。(3)设定更换后的E5□C的“通信单位编号”和“通信波特率”(57.6。三菱FX1&#x2F;2为“19.2”，FX3为“38.4”)，返回操作菜单。(4)从主站按指定编号复制到更换后的E5□C。(5)按从站、主站的顺序进行操作。更换到此结束。组合通信时，无需上述处理。</p>
+<ul>
+<li>更换主站(通信单位编号0)时</li>
+</ul>
+<p>由于是调换主站并复制，因此，PLC存储器的No.0和No.1的值会暂时改变。请断开PLC的电源，或确认对系统无影响，再进行下述操作。</p>
+<p>(1) 进行上述(1)～(2)操作。(2) 记录“通信单位编号1”从站的“通信单位编号”和“通信波特率”后，暂时将“通信单位编号”置于“0(主站)”。变更后请勿返回操作菜单。(3) 在更换后的E5□C的“通信单位编号”和“通信波特率”中输入记录值，返回操作菜单。(4) 从临时主站按指定编号复制到更换后的E5□C。(5) 调换临时主站和更换后的E5□C的“通信单位编号”。(6) 按从站、主站的顺序进行操作。更换到此结束。组合通信时，无需上述处理。</p>
+<h2 id="6-2-10通信写入"><a href="#6-2-10通信写入" class="headerlink" title="6-2-10通信写入"></a>6-2-10通信写入</h2><p>设定PLC(组合通信时，则为E5□C主站)的写入的允许和禁止。通常在“ON(许可)”状态下使用，紧急时若想从E5□C的显示部变更设定值，请暂时置于“OFF(禁止)”。但是，在PLC侧进行写入时置于“OFF”，PLC侧便会发生错误(PLC存储器的“响应标志”中设有错误代码)。此外，再次接通E5□C的电源，或转至初始设定菜单后再次返回操作菜单，则“通信写入”自动变为“ON”。</p>
+<h2 id="6-2-11通信监控"><a href="#6-2-11通信监控" class="headerlink" title="6-2-11通信监控"></a>6-2-11通信监控</h2><p>显示E5□C的通信周期(周期时间)。无法与PLC通信时显示“ERR”，可以通信时显示周期时间。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/09a1f2790c8b5a35484119164913756d1661fbd5b4d2953c4dd7fcd15e9a7a99.jpg"></p>
+<p>调整菜单显示条件：“协议选择”为“FN5”“MPP4”“FXP4”</p>
+<table><tr><td>参数名称</td><td>字符</td><td>监控范围※</td><td>默认值</td></tr><tr><td>通信监控</td><td>PLCM</td><td>正常时：0～9999ms。超过9999ms时为“≥≥≥”异常时：ERRR</td><td>-</td></tr></table>
+
+<p>(注)在PLC存储器监控时为  $0\sim$  FFFFFHEX(65535)，异常时为FFFFHEX。</p>
+<h2 id="6-3-无程序通信的操作方法"><a href="#6-3-无程序通信的操作方法" class="headerlink" title="6-3 无程序通信的操作方法"></a>6-3 无程序通信的操作方法</h2><p>以下介绍用PLC操作无程序通信的方法。</p>
+<h2 id="6-3-1-无程序通信的动作-请求标志"><a href="#6-3-1-无程序通信的动作-请求标志" class="headerlink" title="6-3-1 无程序通信的动作(请求标志)"></a>6-3-1 无程序通信的动作(请求标志)</h2><p>无程序通信含以下3个动作，通过PLC存储器的“请求标志”来切换动作。</p>
+<h3 id="1-监控值的更新-写入停止"><a href="#1-监控值的更新-写入停止" class="headerlink" title="1. 监控值的更新(写入停止)"></a>1. 监控值的更新(写入停止)</h3><p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/1a77db50c10b4a584c1c4031cbeb85d0c18aee4ee7f16600d71b84d1eab2787a.jpg"></p>
+<p>请求标志设为“0”之后，将响应标志设为“0”，更新监控值。</p>
+<h3 id="2-设定值的写入与监控值的更新-允许写入"><a href="#2-设定值的写入与监控值的更新-允许写入" class="headerlink" title="2. 设定值的写入与监控值的更新(允许写入)"></a>2. 设定值的写入与监控值的更新(允许写入)</h3><p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/c54d8505bd5bc12e8543f5240c802e3a41c95b353e13291196aad524face707d.jpg"></p>
+<p>请求标志设为“1”之后，按设定值、动作指令的顺序写入E5□C，将响应标志设为“1”，更新监控值。动作指令仅初次需处理，设定值则需要每次进行写入。因此，不能在E5□C侧变更与下载设定相同的参数。若想在E5□C侧变更，请参照“6- 2- 10通信写入”。</p>
+<h3 id="3-下载区域初始化"><a href="#3-下载区域初始化" class="headerlink" title="3. 下载区域初始化"></a>3. 下载区域初始化</h3><p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/38a48b4d8abebb09a51a605ff5eeb5745c21a98a0338ff095b04bb58b4617b7d.jpg"></p>
+<p>请求标志设为“2”之后，将下载区域设定值初始化为E5□C的值，将请求标志和响应标志设为“1”，转至上述第2项动作。</p>
+<h2 id="6-3-2-响应标志"><a href="#6-3-2-响应标志" class="headerlink" title="6-3-2 响应标志"></a>6-3-2 响应标志</h2><p>各请求标志相应的响应标志如下所示</p>
+<table><tr><td rowspan="2">请求标志</td><td colspan="2">响应标志</td></tr><tr><td>正常时</td><td>异常时</td></tr><tr><td>0：写入停止</td><td>0 *</td><td>EEEE</td></tr><tr><td>1：允许写入</td><td>1</td><td>E001～E013
+B000 or 动作指令代码</td></tr><tr><td>2：下载区域初始化</td><td>1</td><td>EEEE</td></tr></table>
+
+<p>*由于通信错误，无法读出请求标志时，响应标志为“EEEE”。</p>
+<table><tr><td>异常时的响应标志</td><td>错误原因</td></tr><tr><td>EEEE</td><td>下载区域读出无响应或发生了通信错误</td></tr><tr><td>E001～E013*1</td><td>·写入数据不在设定范围内
+·“通信写入”为“OFF”</td></tr><tr><td>8000(HEX) or 动作指令代码*2</td><td>·动作指令代码错误
+·动作指令不可受理的状态
+·“通信写入”为“OFF”</td></tr></table>
+
+<p>*1显示发生错误的下载设定的编号。发生多个错误时，显示最大的编号，错误解除后，则显示下一个的错误编号。中间的数据即使发生错误，仍继续写入剩余的数据。例)下载设定10和12发生错误时，响应标志为“E012”*2对动作指令代码与8000进行OR运算并显示。如果与设定范围外同时发生，优先显示动作指令的错误。例)动作指令代码“1101”发生错误时，响应标志为“9101”</p>
+<ul>
+<li>AT(自动调节)时的注意事项</li>
+</ul>
+<p>AT开始后，在结束或中止前，请勿变更下载区域的设定值。</p>
+<p>开始AT后，无程序通信不能变更E5口C的设定值。</p>
+<p>此外，AT结束时“请求标志”为“1(允许写入)”时，为更新所求PID，请将下载区域的设定值初始化为E5口C的设定值(下载区域未设定PID时也同样进行)。不想初始化时，请在AT开始后将“请求标志”设为“0(写入停止)”。AT结束后，将“请求标志”设为“1(允许写入)”，PLC存储器的值则写入E5口C；设为“2(下载区域初始化)”，下载区域则初始化为E5口C的设定值。</p>
+<ul>
+<li>ST(自调节)时的注意事项</li>
+</ul>
+<p>使用ST且在下载区域设定PID时，“请求标志”请务必直接使用“1(允许写入)*”。在操作过程中若将请求标志从“0(写入停止)”变为“1允许写入”，用ST求得的PID可能以PLC存储器的值进行覆盖。</p>
+<p>*开始无程序通信时，“请求标志”可设为“2(下载区域初始化)”。</p>
+<h2 id="6-3-3-无程序通信的动作领域"><a href="#6-3-3-无程序通信的动作领域" class="headerlink" title="6-3-3 无程序通信的动作领域"></a>6-3-3 无程序通信的动作领域</h2><p>无程序通信在接通电源后或复位后开始动作，若转至初始设定菜单则停止动作。</p>
+<table><tr><td colspan="2">菜单</td><td>无程序通信</td></tr><tr><td>操作、调整、手动、监控/设定项目、保护</td><td>设定区域 0</td><td>动作</td></tr><tr><td>初始设定、通信设定、高级功能设定、校正</td><td>设定区域 1</td><td>停止</td></tr></table>
+
+<h2 id="6-3-4-动作指令代码"><a href="#6-3-4-动作指令代码" class="headerlink" title="6-3-4 动作指令代码"></a>6-3-4 动作指令代码</h2><p>可设定的动作指令代码如下所示关于各动作指令的详情，请参照“2- 3- 8动作指令”。</p>
+<table><tr><td>动作指令</td><td>动作指令代码</td><td>切换</td></tr><tr><td rowspan="2">运行/停止</td><td>0100</td><td>运行</td></tr><tr><td>0101</td><td>停止</td></tr><tr><td rowspan="8">多重设定点</td><td>0200</td><td>SP0</td></tr><tr><td>0201</td><td>SPT</td></tr><tr><td>0202</td><td>SP2</td></tr><tr><td>0203</td><td>SP3</td></tr><tr><td>0204</td><td>SP4</td></tr><tr><td>0205</td><td>SP5</td></tr><tr><td>0206</td><td>SP6</td></tr><tr><td>0207</td><td>SP7</td></tr><tr><td rowspan="3">AT 实行/取消</td><td>0300</td><td>AT 中止</td></tr><tr><td>0301</td><td>100%AT 实行</td></tr><tr><td>0302</td><td>40%AT 实行</td></tr><tr><td rowspan="2">写入模式</td><td>0400</td><td>备份模式</td></tr><tr><td>0401</td><td>RAM 写入模式</td></tr><tr><td>RAM 数据保存</td><td>0500</td><td>RAM 数据保存</td></tr><tr><td>软件复位</td><td>0600</td><td>软件复位</td></tr><tr><td rowspan="2">自动/手动</td><td>0900</td><td>自动模式</td></tr><tr><td>0901</td><td>手动模式</td></tr><tr><td rowspan="7">报警闩锁解除</td><td>0C00</td><td>报警 1 闩锁解除</td></tr><tr><td>0C01</td><td>报警 2 闩锁解除</td></tr><tr><td>0C02</td><td>报警 3 闩锁解除</td></tr><tr><td>0C03</td><td>加热器断线闩锁解除</td></tr><tr><td>0C04</td><td>HS 报警闩锁解除</td></tr><tr><td>0C05</td><td>报警 4 闩锁解除</td></tr><tr><td>0C0F</td><td>所有闩锁解除</td></tr><tr><td rowspan="2">SP 模式</td><td>0D00</td><td>本地 SP 模式</td></tr><tr><td>0D01</td><td>远程 SP 模式</td></tr><tr><td rowspan="2">正向/反向运行反转</td><td>0E00</td><td>非反转</td></tr><tr><td>0E01</td><td>反转</td></tr><tr><td rowspan="2">程序启动</td><td>1100</td><td>复位</td></tr><tr><td>1101</td><td>启动</td></tr></table>
+
+<h2 id="6-3-5-无程序通信的动作确认"><a href="#6-3-5-无程序通信的动作确认" class="headerlink" title="6-3-5 无程序通信的动作确认"></a>6-3-5 无程序通信的动作确认</h2><p>通过上载区域“通信状态”，可以确认无程序通信的动作。上载区域每进行一次更新，“通信状态”的值都由  $0 \rightarrow 1 \rightarrow 0 \rightarrow \dots$  交替改变。</p>
+<h2 id="6-3-6-写入模式"><a href="#6-3-6-写入模式" class="headerlink" title="6-3-6 写入模式"></a>6-3-6 写入模式</h2><p>E5□C采用将设定值写入非易失性存储器的模式(备份模式)。无程序通信时若频繁变更设定值，请使用动作指令更改到RAM写入模式。但是，在RAM写入模式下再次接通电源，设定值将全部变回非易失性存储器的值。若想维持断电前的值，请在断电前使用动作指令进行RAM数据保存。</p>
+<h2 id="6-3-7-故障诊断"><a href="#6-3-7-故障诊断" class="headerlink" title="6-3-7 故障诊断"></a>6-3-7 故障诊断</h2><p>无程序通信可能产生的故障及对策如下所示</p>
+<table><tr><td>故障现象</td><td>原因与对策</td><td>参考页码</td></tr><tr><td rowspan="2">响应标志为EI***</td><td>写入下载设定**的设定值超出设定范围</td><td>3-3～3-6</td></tr><tr><td>“通信写入”为“OFF”</td><td>6-16</td></tr><tr><td rowspan="3">响应标志为8***(HEX)
+或9***(HEX)</td><td>动作指令代码错误</td><td>6-19</td></tr><tr><td>动作指令不可受理的状态</td><td>2-18～2-21</td></tr><tr><td>“通信写入”为“OFF”</td><td>6-16</td></tr><tr><td rowspan="3">响应标志为EEEE</td><td>比PLC先接通了E5□C电源</td><td>6-4</td></tr><tr><td>使用了范围外的PLC存储器</td><td>6-10</td></tr><tr><td>可能有干扰。屏蔽通信线路或在通信线路两端连接终端电阻</td><td>6-22
+6-33
+6-54</td></tr><tr><td rowspan="2">·PLC侧通信LED的闪烁不规则
+·E5□C的通信监控值太长</td><td>“最大通信单位编号”未设为“通信单位编号”的最大值
+·“通信单位编号”未从O开始连号，或有重复
+·“通信波特率”与其他E5□C不同</td><td>6-8
+6-8</td></tr><tr><td>E5□C转至初始设定菜单(设定区域1)</td><td>6-18</td></tr><tr><td rowspan="4">·PLC侧的通信LED熄灭
+·E5□C的通信监控为“EERR”</td><td>通信单位编号0的E5□C未接通电源。
+接线错误</td><td>6-4
+6-22
+6-33
+6-54</td></tr><tr><td>PLC与E5□C的通信设定错误</td><td>6-22
+6-33
+6-54
+6-25</td></tr><tr><td>E5□C转至初始设定菜单(设定区域1)</td><td>6-18</td></tr><tr><td>确认PLC的周期时间，超过“接收数据等待时间”时，将该时间设为长于周期时间。</td><td>6-11</td></tr><tr><td>串行通信单元的“ERR.”LED亮灯(使用三菱PLC时)</td><td>E5□C电源ON/OFF的时间错误</td><td>6-4</td></tr></table>
+
+<p>(注)关于其他原因，请参照“A-2故障诊断”。</p>
+<h2 id="6-4-与CP系列的连接"><a href="#6-4-与CP系列的连接" class="headerlink" title="6-4 与CP系列的连接"></a>6-4 与CP系列的连接</h2><h2 id="6-4-1-构成和步骤"><a href="#6-4-1-构成和步骤" class="headerlink" title="6-4-1 构成和步骤"></a>6-4-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<ul>
+<li>E5CC均使用同一型号(型号不同则不能使用复制功能)。- PLC存储器使用D0000～D0089，分配的E5CC参数为默认设定。- 市售USB电缆请使用USB2.0用A连接器－B连接器。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/e016c1da12f48d232a08e051578254b07904d73b719bf88d0816a584e7efad0c.jpg"></p>
+<p>(注)CX- Programmer和USB驱动程序的安装方法请参照《CX- Programmer用户手册》(W446)。</p>
+<p>使用步骤如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/cc9f576874339bf385963c6331ed8d10be9aab22c46396d3d0cab33308fdae7e.jpg"></p>
+<h2 id="6-4-2-开关设定和接线"><a href="#6-4-2-开关设定和接线" class="headerlink" title="6-4-2 开关设定和接线"></a>6-4-2 开关设定和接线</h2><p>CP1W- CIF11安装至CP1E之前，将背面的动作设定用拨动开关的No.4插针OFF、其他都ON。</p>
+<table><tr><td>针号</td><td>OFF</td><td>ON</td><td>设定内容</td></tr><tr><td>1</td><td>无</td><td>有(两端)</td><td>终端电阻有无的选择</td></tr><tr><td>2</td><td>4线式</td><td>2线式</td><td>2线式/4线式的选择</td></tr><tr><td>3</td><td>4线式</td><td>2线式</td><td>同上</td></tr><tr><td>4</td><td>-</td><td>-</td><td>空</td></tr><tr><td>5</td><td>无RS控制(常时接收)</td><td>有RS控制</td><td>RD的有无RS控制的选择</td></tr><tr><td>6</td><td>无RS控制(常时发送)</td><td>有RS控制</td><td>SD的有无RS控制的选择</td></tr></table>
+
+<p>CP1W- CIF11与E5CC的接线如下所示</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/330b4bd37d2da4c9cc76145b496cd53e1330cc11441134182c7c482e16947e79.jpg"></p>
+<p>(注)1最长传送距离：CP1W- CIF11为  $50\mathrm{m}$  、CP1W- CIF12为  $500\mathrm{m}$  02接线方法详情请参照《SYSMACCP系列CP1ECPU单元用户手册硬件篇(W479)》附- 3- 2RS- 422A&#x2F;485接线推荐示例”。</p>
+<h2 id="6-4-3-PLC的设定"><a href="#6-4-3-PLC的设定" class="headerlink" title="6-4-3 PLC的设定"></a>6-4-3 PLC的设定</h2><p>进行CP1E的通信设定，便于与E5CC通信。在设定过程中，PLC动作将停止或再次接通电源，请确认不存在任何问题后进行设定。</p>
+<h3 id="与PLC的连接"><a href="#与PLC的连接" class="headerlink" title="与PLC的连接"></a>与PLC的连接</h3><p>(1)用USB电缆连接电脑与CP1E，启动CX-Programmer。(2)选择主菜单中的“PLC”－“AutoOnline”－“DirectOnline”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/5b0960f075f150dd7e3babef2de4b871d71ecaf67c1e26d842947fe014c9138f.jpg"></p>
+<p>(3) 勾选 “USB connection”，点击 “Connect” 按钮。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/f6f7ed59ca753f7b2e0b52902323d2b793bedac634e5321bf5f65df2163e1236.jpg"></p>
+<p>(4) 勾选 “Transfer IO table and Special Unit Setup”，点击 “Yes” 按钮。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/2df3a7e588e4b215034bb5e2ac120fae8ad15d53a5ebe1190f06d89b0f595ac2.jpg"></p>
+<p>(5) 显示传送结束后，点击 “OK”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/a129357d913d685ad35090feac06d1e9848390ddff5e23b3ad6e2702931a9076.jpg"></p>
+<h3 id="串行通信可选端口的通信设定"><a href="#串行通信可选端口的通信设定" class="headerlink" title="串行通信可选端口的通信设定"></a>串行通信可选端口的通信设定</h3><p>(1)将PLC的动作模式变为“PROGRAM mode”，以变更通信设定(PLC系统设定)。选择主菜单中的“PLC”－“Operating Mode”－“Program”。显示确认画面后，点击“Yes”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/6ee0d98191dd478fbafb0b9e6dfba15ebd4d1065e1401d72734de4d2a18c955b.jpg"></p>
+<p>(2)双击“Settings”，显示PLC系统设定画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/67720abbc52cc67a01dc03d980941be6009b306f8482b4d9ef257e2d4cf63468.jpg"></p>
+<p>(3)点击“Serial Option Port”标签，勾选“Custom”，将通信速度设为“57600”。其他设定保持默认。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/f886d8bc7aa0ead9e19360e9b148561f8edfcf4979ba49d39c0512d76ce68f3c.jpg"></p>
+<p>(注)变更“unit number”时，请参照“6- 2- 7通信节点编号”。</p>
+<p>(4)从上图主菜单中选择“Options”－“Transfer to PLC”，传送设定内容。关闭画面，再次接通PLC的电源。PLC的设定到此结束。后面要确认动作，CX- Programmer请保持在线状态。</p>
+<h2 id="6-4-4-E5□C的设定"><a href="#6-4-4-E5□C的设定" class="headerlink" title="6-4-4 E5□C的设定"></a>6-4-4 E5□C的设定</h2><p>设定无程序通信(或组合通信)。参数显示方法请参照“6- 2 E5□C的设定”(组合通信时请参照“7- 1- 3 E5□C的设定”)。假设通信之外的设定都已结束而进行如下说明。请确保使用的所有E5□C都为同一型号。型号不同则不能使用复制功能。</p>
+<p>(1)将No.1(E5CC)的通信设定菜单中的“通信单位编号  $(U - N\bar{a})$  ”变为“1”，No.2的“通信单位编号”变为“2”。其他通信设定不要改变，请保持为初始值。No.1的“通信单位编号”初始值为“1”，所以无需变更。“通信单位编号”必须从1以连号设定。为使更改值生效，请务必返回到操作菜单。</p>
+<p>(2)变更No.0通信设定菜单中的以下参数。</p>
+<p>协议选择  $(P5EI)$  ：FN5(三菱Q&#x2F;L时设定为MP4，三菱FX或KEYENCEKV时设定为  $F\times P^4$  ，组合通信时设定为  $\mathcal{L}MP$  通信单位编号  $(U - N\bar{a})$  ：0通信波特率  $(bP5)$  ：57.6(三菱FX1&#x2F;2为19.2，FX3为38.4)发送数据等待时间  $(5dW)$  ：1最大通信单位编号  $(MR\times U)$  ：2</p>
+<p>设定结束后也请勿返回操作菜单。以上是假设通信之外的设定都已经结束的情况。进行通信之外的设定时，先进行通信之外的设定，通信设定放在最后。</p>
+<p>(3)将No.0的设定复制到No.1和No.2。</p>
+<p>(a)在No.0通信设定菜单中显示“复制  $(\bar{L}\bar{a} P\bar{y})$  0(b)按向上键选择“RLL”，等待3秒。为确认复制结束，请勿转至其他菜单或参数。如果已经转移，请重新显示“复制”。(c)PV显示按No.1、2的顺序变为“FPy”，之后均复位。(d)确认No.0的“复制”设定变为“FF(复制结束)”后，No.0返回操作菜单。</p>
+<p><strong>(e)无程序通信在此开始动作。确认CP1W-CIF11的“COMM”闪烁。</strong></p>
+<p>使用CJ1W- SCU21- V1时，“SD1”“RD1”闪烁，使用QJ71C24N- R4时，CH1的SD、RD闪烁。</p>
+<p>使用组合通信时，请变更主站SP，确认各从站SP变为了相同的值。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/8d43c542f3e4d23867d8c8bd08043aee3a833f5a03a4e3c795a0c4f2fef1ed87.jpg"></p>
+<p>连接三菱PLC时，在复制过程中串行通信单元的ERR.亮灯，请直接确认动作。ERR.会在PLC重新启动时熄灭。</p>
+<p>(注)关于复制详情，请参照“6- 2- 9复制”。</p>
+<h2 id="6-4-5-动作确认"><a href="#6-4-5-动作确认" class="headerlink" title="6-4-5 动作确认"></a>6-4-5 动作确认</h2><p>E5口C设定点、RUN&#x2F;STOP将变更，请确认不存在任何问题后再进行动作确认。</p>
+<h3 id="bullet-确认E5CC的监控值"><a href="#bullet-确认E5CC的监控值" class="headerlink" title="$\bullet$  确认E5CC的监控值"></a>$\bullet$  确认E5CC的监控值</h3><p>(1)将PLC的动作模式变为“PROGRAMmode”，以变更PLC存储器。执行“&gt;- [6- 4- 3PLC的设定”的“串行通信可选端口的通信设定”步骤(1)，转至程序模式。</p>
+<p>(2)双击“Memory”，显示PLC存储器画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/d9fe528e270ec9bb047ca1ebaa632db7df2c577722e9fc4efc2f79845e05ab54.jpg"></p>
+<p>(3)监控PLC存储器画面。</p>
+<p>双击画面左边的“D”区，选择菜单的“Online”－“Monitor”。显示“Monitor Memory Areas”画面，点击“Monitor”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/894c496425f25a15872905861a3a176e5de6f89d11c64f228d6c68fe2de28e4e.jpg"></p>
+<p>(4) 将 PLC 存储器的值变更为带符号的 10 进制数。选择菜单中的 “View” - “Display” - “Signed Decimal”。若选择 “View” - “Display” - “Hexadecimal”，则返回 HEX 显示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/14e20ccfb9d1da48ab3a0c52979e5eed1f7d420c0cb1cbd74fbc057c66059c27.jpg"></p>
+<p>(5) 确认 E5CC 的监控值。确认监控值的区域，称为上载区域。D0000 ~ D0014 为 No.0(E5CC)、D0030 ~ D0044 为 No.1、D0060 ~ D0074 为 No.2 的上载区域。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/ddacc7e4fc2c805a9f18da82e555f77d0c6c5b800c0218b1db01820b26e6e974.jpg"></p>
+<p>默认设定时，上载区域中设有以下参数。请确认上载区域的值如下所示(“- ”处无需确认)。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值</td></tr><tr><td>D0000</td><td>D0030</td><td>D0060</td><td>响应标志(固定)</td><td>0</td></tr><tr><td>D0001</td><td>D0031</td><td>D0061</td><td>通信状态(固定)</td><td>0和1交替显示</td></tr><tr><td>D0002</td><td>D0032</td><td>D0062</td><td>通信监控</td><td>-</td></tr><tr><td>D0003</td><td>D0033</td><td>D0063</td><td>状态(高位侧)</td><td>-</td></tr><tr><td>D0004</td><td>D0034</td><td>D0064</td><td>状态(低位侧)</td><td>-</td></tr><tr><td>D0005</td><td>D0035</td><td>D0065</td><td>状态2(高位侧)</td><td>-</td></tr><tr><td>D0006</td><td>D0036</td><td>D0066</td><td>小数点位置监控</td><td>-</td></tr><tr><td>D0007</td><td>D0037</td><td>D0067</td><td>PV</td><td>PV*</td></tr><tr><td>D0008</td><td>D0038</td><td>D0068</td><td>内部SP</td><td>-</td></tr><tr><td>D0009</td><td>D0039</td><td>D0069</td><td>加热器电流值1监控</td><td>-</td></tr><tr><td>D0010</td><td>D0040</td><td>D0070</td><td>MV监控(加热)</td><td>-</td></tr><tr><td>D0011</td><td>D0041</td><td>D0071</td><td>空</td><td>-</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>D0014</td><td>D0044</td><td>D0074</td><td>空</td><td>-</td></tr></table>
+
+<p>*出厂未连接传感器时，E5CC的PV显示为输入异常(5ERR)，上载区域的当前值为“1320(528HEX)”。</p>
+<h3 id="变更E5CC的设定值"><a href="#变更E5CC的设定值" class="headerlink" title="变更E5CC的设定值"></a>变更E5CC的设定值</h3><p>(1)确认变更E5CC设定值的区域。变更设定值的区域，称为下载区域。D0015～D0029为No.0(E5CC)、D0045～D0059为No.1、D0075～D0089为No.2的下载区域。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/0ac20e635f515c3a46dfa487c0eaa8111bbd9dcffff76db2bf1facfc31e80ff6.jpg"></p>
+<p>默认设定时，下载区域中设有以下参数。  </p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值(E5CC的出厂值)</td></tr><tr><td>D0015</td><td>D0045</td><td>D0075</td><td>请求标志(固定)</td><td>1 (0001 HEX)</td></tr><tr><td>D0016</td><td>D0046</td><td>D0076</td><td>动作指令代码(固定)</td><td>0 (0000 HEX)</td></tr><tr><td>D0017</td><td>D0047</td><td>D0077</td><td>SP</td><td>0 (0000 HEX)</td></tr><tr><td>D0018</td><td>D0048</td><td>D0078</td><td>比例带</td><td>80 (0050 HEX)</td></tr><tr><td>D0019</td><td>D0049</td><td>D0079</td><td>积分时间</td><td>11/3 (00E9 HEX)</td></tr><tr><td>D0020</td><td>D0050</td><td>D0080</td><td>微分时间</td><td>40 (0028 HEX)</td></tr><tr><td>D0021</td><td>D0051</td><td>D0081</td><td>报警值1</td><td>0 (0000 HEX)</td></tr><tr><td>D0022</td><td>D0052</td><td>D0082</td><td>报警上限1</td><td>0 (0000 HEX)</td></tr><tr><td>D0023</td><td>D0053</td><td>D0083</td><td>报警下限1</td><td>0 (0000 HEX)</td></tr><tr><td>D0024</td><td>D0054</td><td>D0084</td><td>报警值2</td><td>0 (0000 HEX)</td></tr><tr><td>D0025</td><td>D0055</td><td>D0085</td><td>报警上限2</td><td>0 (0000 HEX)</td></tr><tr><td>D0026</td><td>D0056</td><td>D0086</td><td>报警下限2</td><td>0 (0000 HEX)</td></tr><tr><td>D0027</td><td>D0057</td><td>D0087</td><td>加热器断线检测1</td><td>0 (0000 HEX)</td></tr><tr><td>D0028</td><td>D0058</td><td>D0088</td><td>PV输入偏移量</td><td>0 (0000 HEX)</td></tr><tr><td>D0029</td><td>D0059</td><td>D0089</td><td>SP斜坡设定值</td><td>0 (0000 HEX)</td></tr></table>
+
+<p>(2) 将下载区域初始化为E5CC的设定值。</p>
+<p>下载区域值未被初始化，因此初始化为E5CC的设定值。</p>
+<p>在PLC存储器画面双击D0015(请求标志)，则显示如下内容。输入“2(下载区域初始化)”并点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/cf9b9c238c84af873b9841ccc22738a284e2f9a0f355d80d861ba295c4dfcfe3.jpg"></p>
+<p>(3) 确认下载区域初始化。</p>
+<p>初始化完成后，D0000(响应标志)变为“1(正常结束)”、D0015(请求标志)自动变为“1(允许写入)”。请确认下载区域值已初始化为上表的值。请对No.1、2进行同样的确认。</p>
+<p>(4) 变更No.0的设定点。</p>
+<p>在PLC存储器画面双击D0017(设定点)，在“值”这栏输入“100(64 HEX)”并点击“OK”。请确认D0000(响应标志)保持“1(允许写入)”，No.0的SV显示为“100”。请对No.1、2进行同样的确认。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/2c568d17b8ae3e8ffb7deac5ab157c21646a2c020d6fa6b70faeac0568069efd.jpg"></p>
+<h3 id="将E5CC切换为停止"><a href="#将E5CC切换为停止" class="headerlink" title="将E5CC切换为停止"></a>将E5CC切换为停止</h3><p>(1)将PLC存储器的值变更为16进制数。在PLC存储器画面，选择菜单的“View”－“Display”－“Hexadecimal”。(2)停止No.0。将E5CC操作菜单中的“运行&#x2F;停止(R- 5)”设为“运行(RUN)”。带事件输入的机型，初始设定菜单中的“事件输入2分配(E- 2)”设为“运行&#x2F;停止(5tP)”，因此不显示“运行&#x2F;停止”。变为“(无NNE)”后，设为“运行”。</p>
+<p>(3)将No.0切换为停止。</p>
+<p>在PLC存储器画面，确认D0015(请求标志)为“0001(允许写人)”，双击D0016(动作指令代码)，输入“0101HEX(停止)”，点击“OK”。D0016变为“0000”，D0000(响应标志)保持“0001(允许写人)”，No.0的E5CC显示部的“STOP”亮灯。请对No.1、2进行同样的确认。关于其他动作指令代码，请参照“&gt;- [6- 3- 4动作指令代码”。</p>
+<h2 id="6-5-与CJ系列的连接"><a href="#6-5-与CJ系列的连接" class="headerlink" title="6-5 与CJ系列的连接"></a>6-5 与CJ系列的连接</h2><h2 id="6-5-1-构成和步骤"><a href="#6-5-1-构成和步骤" class="headerlink" title="6-5-1 构成和步骤"></a>6-5-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<ul>
+<li>E5CC均使用同一型号(型号不同则不能使用复制功能)。- PLC存储器使用  $\mathrm{D0000} \sim \mathrm{D0089}$ ，分配的E5CC参数为默认设定。- 市售USB电缆请使用USB2.0用A连接器-B连接器。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/a9a7db660003cd446811bbdca6dac42c777b77b76367b5352306d8fffdfbc1e0.jpg"></p>
+<p>(注)CX- Programmer和USB驱动程序的安装方法请参照《CX- Programmer用户手册》(W446)。</p>
+<p>使用步骤如下所示</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/98f34555ff71cf4d7af03a6156c673b18fd04df49faf54cbf44d9e07efea93dc.jpg"></p>
+<h2 id="6-5-2-开关设定和接线"><a href="#6-5-2-开关设定和接线" class="headerlink" title="6-5-2 开关设定和接线"></a>6-5-2 开关设定和接线</h2><p>CJ1W- CIF11安装至CJ1W- SCU21- V1之前，将背面罩盖内拨动开关的No.4插针OFF、其他都ON。</p>
+<table><tr><td>针号</td><td>OFF</td><td>ON</td><td>设定内容</td></tr><tr><td>1</td><td>无</td><td>有(两端)</td><td>终端电阻有无的选择</td></tr><tr><td>2</td><td>4线式</td><td>2线式</td><td>1线式/4线式的选择</td></tr><tr><td>3</td><td>4线式</td><td>2线式</td><td>同上</td></tr><tr><td>4</td><td>-</td><td>-</td><td>空</td></tr><tr><td>5</td><td>无RS控制(常时接收)</td><td>有RS控制</td><td>RD的有无RS控制的选择</td></tr><tr><td>6</td><td>无RS控制(常时发送)</td><td>有RS控制</td><td>3D的有无RS控制的选择</td></tr></table>
+
+<p>CJ1W- CIF11与E5CC的接线如下所示</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/2c5ff888a5c1457fadb4a895b0c87f7649bc8c4e075a11b6eed00c86481db103.jpg"></p>
+<p>(注)1 CJ1W- CIF11为非绝缘型，因此最长传送距离为  $50\mathrm{m}$  。总传送距离超过  $50\mathrm{m}$  时，请使用绝缘型NT- AL001或K3SC。此时，传送线路中请勿使用CJ1W- CIF11。使用NT- AL001或K3SC时的最长传送距离为  $500\mathrm{m}$  。2 接线方法详情请参考《SYSMAC CJ系列用户手册安装篇(W393)》的“附- 7关于RS- 422A转换适配器(CJ1W- CIF11)”。</p>
+<h2 id="6-5-3-PLC的设定"><a href="#6-5-3-PLC的设定" class="headerlink" title="6-5-3 PLC的设定"></a>6-5-3 PLC的设定</h2><p>进行CJ1W- SCU21- V1的通信设定，便于与E5CC通信。在设定过程中，PLC动作将停止或再次接通电源，请确认不存在任何问题后进行设定。</p>
+<h2 id="与PLC的连接-1"><a href="#与PLC的连接-1" class="headerlink" title="与PLC的连接"></a>与PLC的连接</h2><p>请参照“<a href="#6-4-3-plc%E7%9A%84%E8%AE%BE%E5%AE%9A">6- 4- 3PLC的设定”的“●与PLC的连接</a>”。</p>
+<h2 id="串行通信单元-以下称SCU-的通信设定"><a href="#串行通信单元-以下称SCU-的通信设定" class="headerlink" title="串行通信单元(以下称SCU)的通信设定"></a>串行通信单元(以下称SCU)的通信设定</h2><p>(1)将PLC的动作模式变为“Program Mode”，以变更SCU的通信设定。选择主菜单中的“PLC”－“Operating Mode”－“Program”。显示确认画面后，点击“Yes”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/9f6f4e5d78c21094485d542b6272c6340aa7e8f158157a053f9c3d2786a51739.jpg"></p>
+<p>(2)双击“IO Table and Unit Setup”，显示PLC的IO Table画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/92d2ac9ddd678a268ed808f74244ed9136caf9d84cf2822150b643f2f0bedd3c.jpg"></p>
+<p>(3)双击“CJ1W- SCU21- V1”，显示CJ1W- SCU21- V1的设定画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/fe161391119bb115ff523444bf9f7462d32bc2bda0d4378ae6cbc938d3d473dd.jpg"></p>
+<p>(4) 变更端口 1 的通信设定。</p>
+<p>将“Port 1: Port settings”变为“User settings”，将“Port 1: Baud rate”变为“57600bps”，点击“Transfer [PC to Unit]”。其他设定保持默认值。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/02a4a570574f3d0ca8cb0e134a50c7ae537b10e016c66b774422eeb6648a9bc2.jpg"></p>
+<p>(注)变更“unit number”时，请参照“6- 2- 7通信节点编号”。</p>
+<p>点击“Yes”传送设定，显示传送结束，点击“Close”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/3b67ffa282b9529c85259b403b285f1db578609ecbcba16b1cf9499afd34c796.jpg"></p>
+<p>点击“Yes”重启单元，选择“All ports”并点击“OK”。</p>
+<p>在重启完成画面点击“OK”。PLC的设定到此结束。后面要确认动作，CX- Programmer请保持在线状态。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/828bb0b563e35efe1c5d0e742ac21f259577ccc5b7a458b04208dd34a29969b0.jpg"></p>
+<h2 id="6-5-4-E5□C的设定"><a href="#6-5-4-E5□C的设定" class="headerlink" title="6-5-4 E5□C的设定"></a>6-5-4 E5□C的设定</h2><p>设定无程序通信。进行“&gt;- [6- 4- 4 E5□C的设定”。</p>
+<h2 id="6-5-5-动作确认"><a href="#6-5-5-动作确认" class="headerlink" title="6-5-5 动作确认"></a>6-5-5 动作确认</h2><p>进行“<a href="#6-4-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4">6- 4- 5动作确认</a>”。</p>
+<h2 id="6-6-与-NX1P2-的连接"><a href="#6-6-与-NX1P2-的连接" class="headerlink" title="6-6 与 NX1P2 的连接"></a>6-6 与 NX1P2 的连接</h2><h2 id="6-6-1-构成和步骤"><a href="#6-6-1-构成和步骤" class="headerlink" title="6-6-1 构成和步骤"></a>6-6-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<p>·E5CC均使用同一型号。(型号不同则不能使用复制功能。)</p>
+<p>·PLC存储器使用  $\mathrm{D0000}\sim \mathrm{D0089}$  ，分配的E5CC参数为默认设定。</p>
+<p>·Ethernet电缆可选择交叉电缆、直通电缆进行连接。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/34eec42dd0d88960313ac1dc71458c636590e2916f3b87d10cde463836e93c39.jpg"></p>
+<p>(注)Sysmac Studio 的安装方法请参照《Sysmac Studio Version1 操作手册 (W504)》。</p>
+<p>使用步骤如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/4db7a19d38b6c4eb2d9a89d93b54b2e4de20c221d907ae0c0831b991b33611e2.jpg"></p>
+<h2 id="6-6-2-开关设定和接线"><a href="#6-6-2-开关设定和接线" class="headerlink" title="6-6-2 开关设定和接线"></a>6-6-2 开关设定和接线</h2><p>NX1W- CIF11安装至NX1P2之前，将连接端子侧的拨动开关的No.4插针OFF、其他都ON。</p>
+<table><tr><td>针号</td><td>OFF</td><td>ON</td><td>设定内容</td></tr><tr><td>1</td><td>无</td><td>有(两端)</td><td>终端电阻有无的选择</td></tr><tr><td>2</td><td>4线式</td><td>2线式</td><td>2线式/4线式的选择</td></tr><tr><td>3</td><td>4线式</td><td>2线式</td><td>同上</td></tr><tr><td>4</td><td>-</td><td>-</td><td>空</td></tr><tr><td>5</td><td>无BS控制(常时接收)</td><td>有BS控制</td><td>BD的有无BS控制的选择</td></tr><tr><td>6</td><td>无BS控制(常时接收)</td><td>有RS控制</td><td>SD的有无BS控制的选择</td></tr></table>
+
+<p>NX1W- CIF11与E5CC的接线如下所示</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/2ed8a1fa25e741c7ea330e15a4f6fac356af877c32c95c0e653963615167d629.jpg"></p>
+<p>(注)1 最长传送距离：NX1W- CIF11为  $50\mathrm{m}$  、NX1W- CIF12为  $500\mathrm{m}$  。2 接线方法详情请参照《NX1P2CPU单元用户手册内置I&#x2F;O、可选板功能篇(W579)》。</p>
+<h2 id="6-6-3-PLC的设定"><a href="#6-6-3-PLC的设定" class="headerlink" title="6-6-3 PLC的设定"></a>6-6-3 PLC的设定</h2><p>进行NX1P2的通信设定，便于与E5CC通信。在设定过程中，PLC动作将停止，请确认不存在任何问题后进行设定。</p>
+<h3 id="bullet-与PLC的连接"><a href="#bullet-与PLC的连接" class="headerlink" title="$\bullet$  与PLC的连接"></a>$\bullet$  与PLC的连接</h3><p>(1)用Ethernet电缆连接电脑与NX1P2的内置EtherNet&#x2F;IP端口，启动Sysmac Studio。(2)选择主菜单中的“Controller”－“Communications Setup”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/a92c52cf8f43abafb09e057dd8e2aed6f8b36f822119edba255828e97c61bb7d.jpg"></p>
+<p>(3) 勾选 “Direct connection via Ethernet”，点击 “OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/423b057aadca32a9b7e63a444a89718222673dbcb444fbb0193249828aa4b9ab.jpg"></p>
+<p>(4) 在线连接 PLC。选择主菜单中的 “Controller” - “Online”，变更为在线模式。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/12d4b4323b11ac2876fd0d07f025acb7d83aab02a25c15b1f3e252dbff5b2e1e.jpg"></p>
+<h3 id="串行可选板的通信设定"><a href="#串行可选板的通信设定" class="headerlink" title="串行可选板的通信设定"></a>串行可选板的通信设定</h3><p>(1) 变更可选板的通信设定。选择主菜单中的 “Controller” - “Mode” - “PROGRAM Mode”。显示确认画面后，点击 “Yes”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/90df7c39d2e651cca46bd440a27ff800a5128aac9d0a4532970de1dbad99ed42.jpg"></p>
+<p>然后，选择主菜单中的 “Controller” - “Offline”，变更为离线模式。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/301f6d562d60a92c145ddf87576448f83d8984dbb60a7e5bcc30b80fad55f844.jpg"></p>
+<p>(2) 在多视图资源管理器中双击 “Configurations and Setup” - “Controller Setup” - “Option Board Settings”, 显示 “Option Board Settings” 画面, 从 “Configuration” - “Option board 1” 的下拉菜单中选择 NX1W-CIF11。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/0b277f046af1572de4a4a05c72a5670e919b91ba64e0f268d10babe054ec55f4.jpg"></p>
+<p>(3) 变更可选板 1 的串行设定。将 “Baud rate” 变更为 “57600bps”。其他设定保持默认值。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/5f5bed095d2789f5f397f6c0428cd82ba56ff692a2fce435c3a86fcb11c38aff.jpg"></p>
+<p>(4) 设定 CJ 单元用存储器。</p>
+<p>E5 □ C 将 NX1P2 的 CJ 单元用存储器中区域类型 DM 的存储器用作上载区域和下载区域。双击多视图资源管理器的 “Configurations and Setup” - “Controller Setup” - “Memory Settings”, 显示 “Memory Settings for CJ- series Units” 画面, 勾选区域类型 “DM” 的有效勾选框。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/f392f650ca33732c43267d7c58ef80a357a7829b69091dbe3113b415681bc03d.jpg"></p>
+<p>(5) 将 Sysmac Studio 创建的项目传送至 PLC。</p>
+<p>选择主菜单中的“Controller”－“Online”，设定为在线状态后，选择“Controller”- “Transfer”－“To Controller”。显示“Transfer to Controller”窗口，点击“Execute”，将项目传送至控制器。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/ce038b9d18b61147dcd26ff782347aa4c44ab8d9c195384a735edd46325643f9.jpg"></p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/f47b54e337e4efd9efb0a5a713a1f795a1a6e74ebb029e064c2322db4dcf3168.jpg"></p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/0b4edbe49974ceed587d709ffe527b82f89a727c0922ad3f265c25cb6b7516c8.jpg"></p>
+<p>将显示解除强制值更新的提示窗口，请点击“Yes”。显示提示正常结束的窗口时，传送结束。请点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/e13dd6f0ce2f3b25607de3c726abd4c051ff87c49bdea30c0d4a6adda31e32c3.jpg"></p>
+<h2 id="6-6-4-E5-C-的设定"><a href="#6-6-4-E5-C-的设定" class="headerlink" title="6-6-4 E5 C 的设定"></a>6-6-4 E5 C 的设定</h2><p>设定无程序通信。请进行“6- 4- 4 E5 C 的设定”。</p>
+<h2 id="6-6-5-动作确认"><a href="#6-6-5-动作确认" class="headerlink" title="6-6-5 动作确认"></a>6-6-5 动作确认</h2><p>E5 C 设定点、RUN&#x2F;STOP 将变更，请确认不存在任何问题后再进行动作确认。</p>
+<p>NX 系列、NJ 系列的 PLC 无法直接通过 PLC 的程序使用、监控 CJ 单元用存储器 (DM、EM 等)。因此，为了监控无程序通信使用的 CJ 单元用存储器，需分配至变量。</p>
+<h3 id="确认-E5-C-的监控值"><a href="#确认-E5-C-的监控值" class="headerlink" title="确认 E5 C 的监控值"></a>确认 E5 C 的监控值</h3><ul>
+<li>(1)为了变更 Sysmac Studio 的项目，需变更为离线模式。选择主菜单中的“Controller”－“Offline”。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/ace21efedee677c219aef24b4a4331532a01f489cb9b415fbbc97c1b13698605.jpg"></p>
+<ul>
+<li>(2)创建通过 Sysmac Studio 确认 E5CC 参数值的变量。</li>
+</ul>
+<p>(a)双击“Programming” “Data” “Global Variables”。在全局变量表内右击，选择菜单中的“Create New”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/32be82f801db9337ccd552e080fb7e6df6973fb92af8149be952317916e07742.jpg"></p>
+<p>(b)创建变量。</p>
+<p>在数据类型栏中输入“ARRAY[0. .89] OF WORD”，在分配目标栏中输入“%DO”，并勾选保持栏。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/690459252b380138dfe23fa157b723b32fe79134c487329f041d9bc638e01dc5.jpg"></p>
+<p>在这里将变量名称设定为“DO0X”后，分配至无程序通信上载区域、下载区域的 DO00 ~ D089 即可作为排列指定变量 DO0X[0] ~ DO0X[89] 在 PLC 的程序中使用。数据类型中的 [0. .89] 表示排列指定变量的起始编号和结束编号。</p>
+<p>E5 □ C 的无程序通信在每个单元中使用 PLC 存储器 30 字，若起始编号为 0，结束编号即为  $(30 \times \mathrm{n} - 1)$  。n 为同一无程序通信中使用的 E5 □ C 的数量。</p>
+<p>(注)关于排列指定的详情，请参照《NJ&#x2F;NX 系列 CPU 单元用户手册软件篇 (W501)》。</p>
+<h3 id="3-将-Sysmac-Studio-创建的项目传送至-PLC。"><a href="#3-将-Sysmac-Studio-创建的项目传送至-PLC。" class="headerlink" title="(3) 将 Sysmac Studio 创建的项目传送至 PLC。"></a>(3) 将 Sysmac Studio 创建的项目传送至 PLC。</h3><p>选择主菜单中的“Controller”－“Online”，设定为在线状态后，选择“Controller”- “Transfer”- “To Controller”。显示“Transfer to Controller”窗口，点击“Execute”，将项目传送至控制器。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/07a62ee89af98a8226971249928621fe2d61653e1fc988b61848e6fdd67aefca.jpg"></p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/6b57721aef254d2890627c1cf5087d03c6bd4cc901292c146c178d573db06b71.jpg"></p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/00ccbb1437bb289fe5fd68e3d84ca0a3e39d7dfb69cd7231028238facf9fab0e.jpg"></p>
+<p>将显示解除强制值更新的提示窗口，请点击“Yes”。显示提示正常结束的窗口时，传送结束。请点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/06274bc15dee124e8093dcb6c60c74c08e3e08c95de86da9aeb72f2870deb81c.jpg"></p>
+<p>(4) 进行设定，以引用 (2) 中创建的变量。</p>
+<p>(a) 选择主菜单中的 “View” - “Watch Tab Page”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/c5aafebed3589b9a174b8334841a8bae96286f22e24cbe77268bd379c81db24d.jpg"></p>
+<p>(b) 在画面下方的 “Watch(Table)1” 名称栏中输入 (2) 创建的变量名后，将显示 D000 ~ D038 的内容。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/6533581f8b1c2a53298c259d3031020a81fd82fda9b10fdb95e82fd759cbc164.jpg"></p>
+<p>(c) 将监视窗口的显示变更为 15 字&#x2F;行。在 “Wrapping pos.” 中输入 15，并点击 “Update”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/88c96b18105bf940e3562c0a91370c160a4c6f96eadb7539e24aee05e9c5061c.jpg"></p>
+<p>(5)确认上载区域中设定的参数值。</p>
+<p>D000～D014为  $\mathrm{N_0.0(E5CC)}$  、  $\mathrm{D030\sim D044}$  为No.1、  $\mathrm{D060\sim D074}$  为No.2的上载区域。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/85fd321f4f980d22d6080d51ba625f4611ac922dc29bc19aff90d488a6a64771.jpg"></p>
+<p>默认设定时，上载区域中设有以下参数</p>
+<p>请确认上载区域的值如下所示。</p>
+<p>(“- ”处无需确认)。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值</td></tr><tr><td>D000</td><td>D030</td><td>D060</td><td>响应标志(固定)</td><td>0</td></tr><tr><td>D001</td><td>D031</td><td>D061</td><td>通信状态(固定)</td><td>0和1交替显示</td></tr><tr><td>D002</td><td>D032</td><td>D062</td><td>通信监控</td><td>-</td></tr><tr><td>D003</td><td>D033</td><td>D063</td><td>状态(高位侧)</td><td>-</td></tr><tr><td>D004</td><td>D034</td><td>D064</td><td>状态(低位侧)</td><td></td></tr><tr><td>D005</td><td>D035</td><td>D065</td><td>状态2(高位侧)</td><td>-</td></tr><tr><td>D006</td><td>D036</td><td>D066</td><td>小数点位置监控</td><td>-</td></tr><tr><td>D007</td><td>D037</td><td>D067</td><td>当前值</td><td>当前值*</td></tr><tr><td>D008</td><td>D038</td><td>D068</td><td>内部SP</td><td>-</td></tr><tr><td>D009</td><td>D039</td><td>D069</td><td>加热器电流值1监控</td><td>-</td></tr><tr><td>D010</td><td>D040</td><td>D070</td><td>MV监控(加热)</td><td>-</td></tr><tr><td>D011</td><td>D041</td><td>D071</td><td>空</td><td>-</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>D014</td><td>D044</td><td>D074</td><td>空</td><td>-</td></tr></table>
+
+<p>*出厂未连接传感器时，E5CC的PV显示为输入异常，上载区域的当前值为“1320(528HEX)”。</p>
+<h3 id="变更E5CC的设定值-1"><a href="#变更E5CC的设定值-1" class="headerlink" title="变更E5CC的设定值"></a>变更E5CC的设定值</h3><p>(1)将下载区域初始化为E5CC的设定值。下载区域值未被初始化，因此初始化为E5CC的设定值。在监视窗口的D015(请求标志)值中输入“2(下载区域初始化)”，并按Enter键确定。D015～D029为  $\mathrm{N_0.0(E5CC)}$  、  $\mathrm{D045\sim D059}$  为No.1、  $\mathrm{D075\sim D089}$  为No.2的下载区域。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/4e0e3898af0be2b3922abc17d28beb4b15fd3171eaf59474d29e33ff3c5f3270.jpg"></p>
+<p>默认设定时，下载区域中设有以下参数。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值</td></tr><tr><td>D015</td><td>D045</td><td>D075</td><td>请求标志(固定)</td><td>1(0001HEX)</td></tr><tr><td>D016</td><td>D046</td><td>D076</td><td>动作指令代码(固定)</td><td>0(0000HEX)</td></tr><tr><td>D017</td><td>D047</td><td>D077</td><td>SP</td><td>0(0000HEX)</td></tr><tr><td>D018</td><td>D048</td><td>D078</td><td>比例带</td><td>80(0050HEX)</td></tr><tr><td>D019</td><td>D049</td><td>D079</td><td>积分时间</td><td>233(00E9HEX)</td></tr><tr><td>D020</td><td>D050</td><td>D080</td><td>微分时间</td><td>40(0028HEX)</td></tr><tr><td>D021</td><td>D051</td><td>D081</td><td>报警值1</td><td>0(0000HEX)</td></tr><tr><td>D022</td><td>D052</td><td>D082</td><td>报警上限1</td><td>0(0000HEX)</td></tr><tr><td>D023</td><td>D053</td><td>D083</td><td>报警下限1</td><td>0(0000HEX)</td></tr><tr><td>D024</td><td>D054</td><td>D084</td><td>报警值2</td><td>0(0000HEX)</td></tr><tr><td>D025</td><td>D055</td><td>D085</td><td>报警上限2</td><td>0(0000HEX)</td></tr><tr><td>D026</td><td>D056</td><td>D086</td><td>报警下限2</td><td>0(0000HEX)</td></tr><tr><td>D027</td><td>D057</td><td>D087</td><td>加热器断线检测1</td><td>0(0000HEX)</td></tr><tr><td>D028</td><td>D058</td><td>D088</td><td>PV输入偏移量</td><td>0(0000HEX)</td></tr><tr><td>D029</td><td>D059</td><td>D089</td><td>SP斜坡设定值</td><td>0(0000HEX)</td></tr></table>
+
+<h3 id="2-确认下载区域初始化。"><a href="#2-确认下载区域初始化。" class="headerlink" title="(2)确认下载区域初始化。"></a>(2)确认下载区域初始化。</h3><p>初始化完成后，D000(响应标志)变为“1(正常结束)”、D015(请求标志)自动变为“1(允许写入)”。请确认下载区域值已初始化为上表的值。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/5fffb8035a937cf53a79ccd8b76aaabd896d276a53aa5a82588074e31cb4912e.jpg"></p>
+<h3 id="3-变更设定点。"><a href="#3-变更设定点。" class="headerlink" title="(3)变更设定点。"></a>(3)变更设定点。</h3><p>在监视窗口的D017(设定点)值中输入“100(64HEX)”，并按Enter键确定。请确认D000(响应标志)保持“1(允许写入)”，No.0的E5CC的SV显示为“100”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/3ec0f67820e895a3465afd86c3d7181dc824b152d04a6dbfc14705f73462b156.jpg"></p>
+<h3 id="将E5CC切换为停止-1"><a href="#将E5CC切换为停止-1" class="headerlink" title="将E5CC切换为停止"></a>将E5CC切换为停止</h3><p>(1) 运行 No.0。将E5CC操作菜单中的“RUN&#x2F;STOP(R-5)”设为“RUN(PLUN)”。</p>
+<p>(2) 将No.0切换为停止。</p>
+<p>确认监视窗口中D015(请求标志)值为“0001HEX(允许写入)”，在D016(动作指令代码)中输入“0101HEX(停止)”，并按Enter键确定。D016变为“0000HEX”，D000(响应标志)保持“0001HEX(允许写入)”，No.0的E5CC显示部的“STOP”亮灯。请对No.1、2进行同样的确认。关于其他动作指令代码，请参照“&gt;- [6- 3- 4动作指令代码”。</p>
+<h2 id="6-7-与-NJ-系列的连接"><a href="#6-7-与-NJ-系列的连接" class="headerlink" title="6-7 与 NJ 系列的连接"></a>6-7 与 NJ 系列的连接</h2><h2 id="6-7-1-构成和步骤"><a href="#6-7-1-构成和步骤" class="headerlink" title="6-7-1 构成和步骤"></a>6-7-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<p>·E5CC均使用同一型号。(型号不同则不能使用复制功能。)</p>
+<p>·PLC存储器使用  $\mathrm{D0000}\sim \mathrm{D0089}$  ，分配的E5CC参数为默认设定。</p>
+<p>·市售USB电缆请使用USB2.0用A连接器－B连接器。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/00e6bbb84c1cd031fcbdce3c6459aa6aafa3106f2f277d4384a893a3171a7af2.jpg"></p>
+<p>(注)Sysmac Studio 和 USB 驱动程序的安装方法请参照《Sysmac Studio Version1 操作手册 (W504)》。</p>
+<p>使用步骤如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/eb495d6ebf5b5cc4cf6a918954d783d2e9cd07d0fcf32f8eaf3cb247222c8128.jpg"></p>
+<h2 id="6-7-2-开关设定和接线"><a href="#6-7-2-开关设定和接线" class="headerlink" title="6-7-2 开关设定和接线"></a>6-7-2 开关设定和接线</h2><p>CJ1W- CIF11安装至CJ1W- SCU22之前，将背面罩盖内拨动开关的No.4插针OFF、其他都ON。</p>
+<table><tr><td>针号</td><td>OFF</td><td>ON</td><td>设定内容</td></tr><tr><td>1</td><td>无</td><td>有(两端)</td><td>终端电阻有无的选择</td></tr><tr><td>2</td><td>4线式</td><td>2线式</td><td>2线式/4线式的选择</td></tr><tr><td>3</td><td>4线式</td><td>2线式</td><td>同上</td></tr><tr><td>4</td><td>-</td><td>-</td><td>空</td></tr><tr><td>5</td><td>无RS控制(常时接收)</td><td>有RS控制</td><td>BD的有无RS控制的选择</td></tr><tr><td>6</td><td>无RS控制(常时发送)</td><td>有RS控制</td><td>SD的有无RS控制的选择</td></tr></table>
+
+<p>CJ1W- CIF11与E5CC的接线如下所示</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/07ba4ed1ab578eeecd99f75ab29f5795d4a5845e4973dc9ce9a9be94a35d5dc2.jpg"></p>
+<p>(注)1 最长传送距离为  $50\mathrm{m}$  。2 接线方法详情请参考《SYSMAC CJ系列用户手册安装篇(W393)》的“附- 7关于RS- 422A转换适配器(CJ1W- CIF11)”。</p>
+<h2 id="6-7-3-PLC的设定"><a href="#6-7-3-PLC的设定" class="headerlink" title="6-7-3 PLC的设定"></a>6-7-3 PLC的设定</h2><p>进行CJ1W- SCU22的通信设定，便于与E5CC通信。在设定过程中，PLC动作将停止，请确认不存在任何问题后进行设定。</p>
+<h3 id="与PLC的连接-2"><a href="#与PLC的连接-2" class="headerlink" title="与PLC的连接"></a>与PLC的连接</h3><p>(1)用USB电缆连接电脑与NJ101-1000，启动Sysmac Studio。</p>
+<p>(2)选择主菜单中的“Controller”－“Communications Setup”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/1e64aa6289efc9bf2fd0cd7762d69f92669321ea8e2ad45f16a8af4a1bc95a57.jpg"></p>
+<p>(3) 勾选 “Direct connection via USB”，点击 “OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/8ce8e9e1512ac0ed4b817552bbd4b1ed6d6ba6cd04ae23f721985d3ad8cf7dd9.jpg"></p>
+<p>(4) 在线连接 PLC。选择主菜单中的 “Controller” - “Online”，变更为在线模式。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/3c06cea58e136eb7038c5972e640a2c5803b082a1e273364b3dd7243a8013193.jpg"></p>
+<h3 id="串行通信单元-以下称-SCU-的通信设定"><a href="#串行通信单元-以下称-SCU-的通信设定" class="headerlink" title="串行通信单元(以下称 SCU)的通信设定"></a>串行通信单元(以下称 SCU)的通信设定</h3><p>(1) 将 PLC 的动作模式变为 “PROGRAM Mode”，以变更 SCU 的通信设定。选择主菜单中的 “Controller” - “Mode” - “PROGRAM Mode”。显示确认画面后，点击 “Yes”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/939c49fd5d1aa6a41ac7019ca9d10265dc3eac8f406e182b59787d6f98315326.jpg"></p>
+<p>(2) 在多视图资源管理器中点击 “Configurations and Setup” - “CPU&#x2F;Expansion Racks” - “CPU Rack” - “Units”，显示与 PLC 连接的单元。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/9b04cfa4fc42bf7600bf1700f725bbab7bbffcc94000b1c6bf82f78f3314ee0c.jpg"></p>
+<p>(3) 双击 “CJ1W-SCU22”，显示 CJ1W-SCU22 的设定画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/7201b68914157a8c1a2b26595600b93a29b2e5979dd1e62bb95ccc1fea0d40dd.jpg"></p>
+<p>(4) 变更端口 1 的通信设定。</p>
+<p>将“Portl:Port settings”变为“User settings”，将“Portl: Baud rate”变为“57600bps”，点击“Transfer to Controller”，其他设定保持默认值。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/937cc6264ce25e7796724b0be8056f992a823ee7d263929e1ca7fedcefbdfc9b.jpg"></p>
+<p>(注)变更“unit number”时，请参照“6- 2- 7通信节点编号”。</p>
+<p>点击传送执行确认画面中的“Yes”，传送设定。为了使已传送的设定生效，在单元重启确认画面中点击“Yes”。在重启端口的选择画面中选择“All ports”，点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/b79b602338710ed1c30128d18469f1a9ad8ca1183ed3592c50420b4fdd0eff9c.jpg"></p>
+<p>在传送成功画面中点击“OK”。PLC的设定到此结束。后面要确认动作，Sysmac Studio请保持在线状态。</p>
+<h2 id="6-7-4-E5□C的设定"><a href="#6-7-4-E5□C的设定" class="headerlink" title="6-7-4 E5□C的设定"></a>6-7-4 E5□C的设定</h2><p>设定无程序通信。进行“&gt;- [6- 4- 4E5□C的设定”。</p>
+<h2 id="6-7-5-动作确认"><a href="#6-7-5-动作确认" class="headerlink" title="6-7-5 动作确认"></a>6-7-5 动作确认</h2><p>请进行“6- 6- 5动作确认”。</p>
+<h2 id="6-8-与MELSEC-Q系列的连接"><a href="#6-8-与MELSEC-Q系列的连接" class="headerlink" title="6-8 与MELSEC-Q系列的连接"></a>6-8 与MELSEC-Q系列的连接</h2><h2 id="6-8-1-构成和步骤"><a href="#6-8-1-构成和步骤" class="headerlink" title="6-8-1 构成和步骤"></a>6-8-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<ul>
+<li>E5CC均使用同一型号(型号不同则不能使用复制功能)。- PLC存储器使用  $\mathrm{D0}\sim \mathrm{B89}$ ，分配的E5CC参数为默认设定。- 市售USB电缆请使用USB2.0用A连接器-B连接器。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/6a40b62629fcc459bbd47d9b68ea3ef16bf442436872944ff37aeb9202bdb7fa.jpg"></p>
+<p>(注)GXWorks2的安装方法请参照《GXWorks2安装步骤书》(BCN- P5713)，USB驱动程序的安装方法请参照《GXWorks2 Version 1 操作手册(共通篇)》(SH- 080932CHN)。</p>
+<p>使用步骤如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/fae4faa907e3278c75293996fceba8cb5ae3fcf65e5323b18c46836a1be5a79f.jpg"></p>
+<h2 id="6-8-2-接线"><a href="#6-8-2-接线" class="headerlink" title="6-8-2 接线"></a>6-8-2 接线</h2><p>QJ71C24N- R4与E5CC接线如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/0ac0dc6ec5b82cab9b50c3667d6ab67b19104438f3d2005181e80f09bfe078c6.jpg"></p>
+<p>(注)1 终端电阻的合成电阻值须大于  $54\Omega$ 。2 最长传送距离为  $500\mathrm{m}$ 。3 接线方法详情请参照《Q适用串行通信单元用户手册(基本篇)》(SH- 080238C)的“3.3 RS- 422&#x2F;485接口规格”“4.4.2 RS- 422&#x2F;485接口的连接方法”。</p>
+<h2 id="6-8-3-PLC的设定"><a href="#6-8-3-PLC的设定" class="headerlink" title="6-8-3 PLC的设定"></a>6-8-3 PLC的设定</h2><p>进行QJ71C24N- R4的通信设定，便于与E5CC通信。在设定过程中，PLC动作将停止或再次接通电源，请确认不存在任何问题后进行设定。</p>
+<h3 id="与PLC的连接-3"><a href="#与PLC的连接-3" class="headerlink" title="与PLC的连接"></a>与PLC的连接</h3><p>(1)用USB电缆连接电脑与Q-CPU，启动GXWorks2。</p>
+<p>(2)选择主菜单中的“Online”－“Read from PLC”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/192c9040be9940b5872a75ba410f8c78242c89bc73b0d1d52544ff04609a3f8b.jpg"></p>
+<p>(3)选择“QCPU(Qmode)，”并点击“OK”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/022f8542bb5e92173901dc9398f46e03f9ed4f6316202005c187cab6f83973ba.jpg"></p>
+<p>(4) 点击 “OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/d5ed0d87abb82fcec8e5216991c82fa0b07d043b1a0f6455a7408c40f641a240.jpg"></p>
+<p>(5) 点击 “Execute”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/f5e9ede1f3374726158934aab29c8afbf6daf4c605836bb67ec7e8934f4d38ba.jpg"></p>
+<p>(6) 设定值读取完成后，点击“Close”，关闭上述画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/467612597de73e2ae705045d3f2b7cfce53aa4a9dee9c8bec753d31238d9c18e.jpg"></p>
+<h3 id="串行通信单元的通信设定"><a href="#串行通信单元的通信设定" class="headerlink" title="串行通信单元的通信设定"></a>串行通信单元的通信设定</h3><p>(1)双击“Switch Setting”，显示通信设定画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/c087c6be1430fc857d6479ee4829dddc0bf52504b5a3934da2ceb1dbdf153b5a.jpg"></p>
+<p>(2)变更CH1的通信设定。</p>
+<p>变更以下设定并点击“OK”。其他设定保持默认值。</p>
+<p>·校验位 ：有·奇数&#x2F;偶数校验 ：偶数·终止位 ：2·总和校验码 ：有·运行过程中写入 ：允许·设定变更 ：允许·通信波特率设定 ：57600bps(需在变更通信协议设定后进行)·通信协议设定 ：MC协议(格式4)</p>
+<h3 id="Switch-Setting-0000-QJ71C24N-R4"><a href="#Switch-Setting-0000-QJ71C24N-R4" class="headerlink" title="Switch Setting 0000:QJ71C24N-R4"></a>Switch Setting 0000:QJ71C24N-R4</h3><table><tr><td rowspan="9">Transmission Setting</td><td>Item</td><td>CH1</td><td>CH2</td></tr><tr><td>Operation setting</td><td>Independent</td><td>Independent</td></tr><tr><td>Data Bit</td><td>7</td><td>7</td></tr><tr><td>Parity Bit</td><td>Exist</td><td>None</td></tr><tr><td>Even/odd parity</td><td>Even</td><td>Odd</td></tr><tr><td>Stop bit</td><td>2</td><td>1</td></tr><tr><td>Sum check code</td><td>Exist</td><td>None</td></tr><tr><td>Online Change</td><td>Enable</td><td>Disable</td></tr><tr><td>Setting modifications</td><td>Enable</td><td>Disable</td></tr><tr><td>Communication rate setting</td><td></td><td>57600bps</td><td>Auto Setting</td></tr><tr><td>Communication protocol setting</td><td></td><td>MC protocol (Format 4)</td><td>MELSOFT Connection</td></tr><tr><td>Station number setting (0 to 31)</td><td></td><td>0</td><td></td></tr></table>
+
+<p>The following setting is available for product information 1012200000000000- B or later. Communication protocol setting - Predefined protocol</p>
+<p>* This dialog setting is linked to the Switch Setting of the PLC parameter. Default value will be shown in the dialog if the Switch Setting of the PLC parameter contains an out- of- range value.</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/bcf647c7e66e4c0cb310d49c6524ae3dbea2bd7b6184b2ab7c9ee85f5909e626.jpg"></p>
+<p>(注)变更“局号设定”时，请参照“6- 2- 7通信节点编号”</p>
+<p>(3)选择“Online”－“Write to PLC”，显示设定值写入画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/ba16803e833e6d50e66fd110f22601f1fbf3ce479a591b9683135af816843cf4.jpg"></p>
+<p>(4) 将设定值写入PLC。</p>
+<p>选择“Intelligent Function Module”标签，勾选串行通信单元的“Valid”。接着选择“PLC Module”标签，勾选参数的“Target”，点击“Execute”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/cfed2a8a4f9c55e52e34e2e292d009965748dfc86f4d07fef25e59bdb2d7548b.jpg"></p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/1bde63f66885be1e17cfb0acb5f0f891f8a657bf85e142543b72ff8c54047b79.jpg"></p>
+<p>(5) 将设定值写入PLC。</p>
+<p>以下画面显示前后会显示几个确认画面，全部点击“Yes”，或点击“Yes to All”。显示以下画面后点击“Close”，关闭写入画面，再次接通PLC的电源。PLC的设定到此结束。后面要确认动作，GX Works2请保持在线状态。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/152007b0f591fc21a955f09996838417193e739b21e4cbd218edaf1e57019697.jpg"></p>
+<h2 id="6-8-4-E5□C的设定"><a href="#6-8-4-E5□C的设定" class="headerlink" title="6-8-4 E5□C的设定"></a>6-8-4 E5□C的设定</h2><p>设定无程序通信。进行“&gt;- [6- 4- 4 E5□C的设定”。</p>
+<h2 id="6-8-5-动作确认"><a href="#6-8-5-动作确认" class="headerlink" title="6-8-5 动作确认"></a>6-8-5 动作确认</h2><p>E5口C设定点、RUN&#x2F;STOP将变更，请确认不存在任何问题后再进行动作确认。</p>
+<h3 id="确认E5CC的监控值"><a href="#确认E5CC的监控值" class="headerlink" title="确认E5CC的监控值"></a>确认E5CC的监控值</h3><ul>
+<li>(1) 显示PLC存储器画面。选择“Online”－“Monitor”－“Device&#x2F;Buffer Memory Batch Monitor”。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/0eb3489e09c9187b3112f9d1bfc6ef02a98da0c3dad0154ec7e552d5b9821046.jpg"></p>
+<ul>
+<li>(2) 监控PLC存储器画面。</li>
+</ul>
+<p>在“Device Name”中输入“D0”，按下电脑的“Enter”键，则开始监控“D0”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/f2b812a6307d5364eb21bf4f31daa2e0668be762a63d68d0cb0bc341d11818a1.jpg"></p>
+<ul>
+<li>(3) 变更为10进制数，以使值的确认更简单。</li>
+</ul>
+<p>点击上述画面的“DisplayFormat”，勾选监控形式的“WordMulti- point”和字元件字多点形式的“10Points”，然后点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/ebfb4f7fb3f05cf527cc2ff567ffabad1d95fc52e00389fbba7951d5dc5bac83.jpg"></p>
+<ul>
+<li>(4) 确认E5CC的监控值。</li>
+</ul>
+<p>确认监控值的区域，称为上载区域</p>
+<p>$\mathrm{D0}\sim \mathrm{D14}$  为  $\mathrm{No.0(E5CC)}$  的上载区域、  $\mathrm{D30\sim D44}$  为No.1的上载区域、  $\mathrm{D60\sim D74}$  为No.2的上载区域。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/e5d67c9173652dbf81e9137724c4022bd2a8ac5012e76d1a644cf4b8918eb963.jpg"></p>
+<p>默认设定时，上载区域中设有以下参数。</p>
+<p>请确认上载区域的值如下所示(“- ”处无需确认)。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值</td></tr><tr><td>D0</td><td>D30</td><td>D60</td><td>响应标志(固定)</td><td>0</td></tr><tr><td>D01</td><td>D31</td><td>D61</td><td>通信状态(固定)</td><td>0和1交替显示</td></tr><tr><td>D02</td><td>D32</td><td>D62</td><td>通信监控</td><td>-</td></tr><tr><td>D03</td><td>D33</td><td>D63</td><td>状态(高位侧)</td><td>-</td></tr><tr><td>D04</td><td>D34</td><td>D64</td><td>状态(低位侧)</td><td>-</td></tr><tr><td>D05</td><td>D35</td><td>D65</td><td>状态2(高位侧)</td><td>-</td></tr><tr><td>D06</td><td>D36</td><td>D66</td><td>小数点位置监控</td><td>-</td></tr><tr><td>D07</td><td>D37</td><td>D67</td><td>PV</td><td>PV*1</td></tr><tr><td>D08</td><td>D38</td><td>D68</td><td>内部SP</td><td>-</td></tr><tr><td>D09</td><td>D39</td><td>D69</td><td>加热器电流值1监控</td><td>-</td></tr><tr><td>D10</td><td>D40</td><td>D70</td><td>MV监控(加热)</td><td>-</td></tr><tr><td>D11</td><td>D41</td><td>D71</td><td>空</td><td>-</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>D14</td><td>D44</td><td>D74</td><td>空*2</td><td>-</td></tr></table>
+
+<p>$^{*1}$  出厂未连接传感器时，E5CC的PV显示为输入异常(5ERR)，上载区域的当前值为“1320(528HEX)”。 $^{*2}$  三菱FX时不能使用。</p>
+<h3 id="变更E5CC的设定值-2"><a href="#变更E5CC的设定值-2" class="headerlink" title="变更E5CC的设定值"></a>变更E5CC的设定值</h3><ul>
+<li>(1)确认变更E5CC设定值的区域。</li>
+</ul>
+<p>变更设定值的区域，称为下载区域。D15～D29为No.0(E5CC)的下载区域、D45～D59为No.1的下载区域、D75～D89为No.2的下载区域。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/1ac6f3edc527d98fd3c8ab1003e31a0473c4d47ba446b0478181fcd03cf23ef0.jpg"></p>
+<p>默认设定时，下载区域中设有以下参数。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值(E5CC的出厂值)</td></tr><tr><td>D15</td><td>D45</td><td>D75</td><td>请求标志(固定)</td><td>1 (0001 HEX)</td></tr><tr><td>D16</td><td>D46</td><td>D76</td><td>动作指令代码(固定)</td><td>0 (0000 HEX)</td></tr><tr><td>D17</td><td>D47</td><td>D77</td><td>SP</td><td>0 (0000 HEX)</td></tr><tr><td>D18</td><td>D48</td><td>D78</td><td>比例带</td><td>80 (0050 HEX)</td></tr><tr><td>D19</td><td>D49</td><td>D79</td><td>积分时间</td><td>233 (00E9 HEX)</td></tr><tr><td>D20</td><td>D50</td><td>D80</td><td>微分时间</td><td>40 (0028 HEX)</td></tr><tr><td>D21</td><td>D51</td><td>D81</td><td>报警值1</td><td>0 (0000 HEX)</td></tr><tr><td>D22</td><td>D52</td><td>D82</td><td>报警上限1</td><td>0 (0000 HEX)</td></tr><tr><td>D23</td><td>D53</td><td>D83</td><td>报警下限1</td><td>0 (0000 HEX)</td></tr><tr><td>D24</td><td>D54</td><td>D84</td><td>报警值2</td><td>0 (0000 HEX)</td></tr><tr><td>D25</td><td>D55</td><td>D85</td><td>报警上限2</td><td>0 (0000 HEX)</td></tr><tr><td>D26</td><td>D56</td><td>D86</td><td>报警下限2</td><td>0 (0000 HEX)</td></tr><tr><td>D27</td><td>D57</td><td>D87</td><td>加热器断线检测1</td><td>0 (0000 HEX)</td></tr><tr><td>D28</td><td>D58</td><td>D88</td><td>PV输入偏移量</td><td>0 (0000 HEX)</td></tr><tr><td>D29</td><td>D59</td><td>D89</td><td>SP斜坡设定值</td><td>0 (0000 HEX)</td></tr></table>
+
+<ul>
+<li>(2)将下载区域初始化为E5CC的设定值。</li>
+</ul>
+<p>下载区域值未被初始化，因此初始化为E5CC的设定值。在元件存储器画面双击“D15(请求标志)”，则显示以下内容。输入“2(下载区域初始化)”，依次点击“Set”、“Close”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/1d5c44c22eccf4bf2f410e5c34eba43881f41ba2ce594c876f23cda0935b9b64.jpg"></p>
+<ul>
+<li>(3)确认下载区域初始化。</li>
+</ul>
+<p>初始化完成后，D0(响应标志)变为“1(正常结束)”、D15(请求标志)自动变为“1(允许写入)”。请确认下载区域值已初始化为上表的值。请对No.1、2进行同样的确认。</p>
+<ul>
+<li>(4) 变更 No.0 的设定点。</li>
+</ul>
+<p>在元件存储器画面双击 D17(设定点)，在“Value”一栏输入“100(64 HEX)”并依次点击“Set”、“Close”。请确认 D0(响应标志)为“1(允许写入)”，No.0 的 SV 显示为“100”。请对 No.1、2 进行同样的确认。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/4ac4b1db7f5c469cef7daf677cda792d21bc69967f996535ad58fbefc5dfd10b.jpg"></p>
+<h3 id="将-E5CC-切换为停止"><a href="#将-E5CC-切换为停止" class="headerlink" title="将 E5CC 切换为停止"></a>将 E5CC 切换为停止</h3><ul>
+<li><p>(1) 运行 No.0。将 E5CC 操作菜单中的“运行&#x2F;停止  $(R - 5)$ ”设为“运行(PUN)”。带事件输入的机型，初始设定菜单中的“事件输入2分配  $(E - 2)$ ”设为“运行&#x2F;停止  $(S \pm \rho)$ ”，因此不显示“运行&#x2F;停止”。变为“无(NaNE)”后，设为“运行”。</p>
+</li>
+<li><p>(2) 将 No.0 切换为停止。</p>
+</li>
+</ul>
+<p>在元件存储器画面，D15(请求标志)为“1(允许写入)”时，双击“D16(动作指令代码)”。输入值之前，勾选“HEX”，输入“0101 hex(停止)”，依次点击“Set”、“Close”。D16 变为“0”，D0(响应标志)保持“1(允许写入)”，No.0 的 E5CC 显示部的“STOP”亮灯。请对 No.1、2 进行同样的确认。关于其他动作指令代码，请参照“&gt;- [6- 3- 4 动作指令代码”。</p>
+<h2 id="6-9-与MELSEC-FX系列的连接"><a href="#6-9-与MELSEC-FX系列的连接" class="headerlink" title="6-9 与MELSEC-FX系列的连接"></a>6-9 与MELSEC-FX系列的连接</h2><p>E5□C 版本 2.1(Ver.2.1) 以上可以使用。</p>
+<h2 id="6-9-1-构成和步骤"><a href="#6-9-1-构成和步骤" class="headerlink" title="6-9-1 构成和步骤"></a>6-9-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<ul>
+<li>E5CC 均使用同一型号(型号不同则不能使用复制功能)。- PLC 存储器使用 D0 ~ D89，分配的 E5CC 参数为默认设定。- USB 电缆请使用 A 插头 - 微型 B 插头。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/901156668e6ef5b592e76dfad9139a6833413d92117373a537051e48d9685167.jpg"></p>
+<p>(注)CX Works2 的安装方法请参照《CX Works2 安装步骤书》(BCN- P5713，USB 驱动程序的安装方法请参照《GX Works2 Version 1 操作手册(共通篇)》(SH- 080932CHN)。</p>
+<p>使用步骤如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/8ca12f798a74c543c210263e87b9c148c13d07150ff2112cd9dbf68a010076f1.jpg"></p>
+<h2 id="6-9-2-接线"><a href="#6-9-2-接线" class="headerlink" title="6-9-2 接线"></a>6-9-2 接线</h2><p>将位于FX3U- 485ADP- MB正面的终端电阻切换开关设定为  $110\Omega$ 。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/dd1860abd72d50a1eb1ff5161511b494b7112055198d2842c2f4b550902a79af.jpg"></p>
+<p>FX3U- 485ADP- MB与E5CC接线如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/3292ce031349fad4274b23097c33c056e21868c71562259df837d057a4094936.jpg"></p>
+<p>(注)1 终端电阻的合成电阻须大于  $54\Omega$ 。2 最长传送距离为  $500\mathrm{m}$ 。3 接线方法详情请参照《FX系列用户手册(数据通信篇)》(JY997D16901)的“D.计算机链接”的“4.5.11对接线”。</p>
+<h2 id="6-9-3-PLC的设定"><a href="#6-9-3-PLC的设定" class="headerlink" title="6-9-3 PLC的设定"></a>6-9-3 PLC的设定</h2><p>进行FX3U- 485ADP- MB的通信设定，便于与E5CC通信。在设定过程中，PLC动作将停止或再次接通电源，请确认不存在任何问题后进行设定。</p>
+<h1 id="与PLC的连接-4"><a href="#与PLC的连接-4" class="headerlink" title="与PLC的连接"></a>与PLC的连接</h1><p>(1)用USB电缆连接计算机与FX，启动GXWorks2。(2)选择主菜单中的“Online”－“Read from PLC”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/8214e8920d67309116efe9936da2b04ac281f903caf55fa1564101debc174bdf.jpg"></p>
+<p>(3)选择“FXCPU”，并点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/4847ef5e22e2ae20d22ca6edda84a0838d4f5b38074152f3eb66c59ac6fdedfa.jpg"></p>
+<p>(4) 双击 “Serial USB”，点选 “USB”，点击 “OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/b89de645a09b4b61ebe98ec4a55698db8455f26ecc3e6ff66199e843cc5c0306.jpg"></p>
+<p>(5) 点击 OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/09b184c377bebc9b0940688aacc54bb82522d2dad26eb025458b6b9179269e2e.jpg"></p>
+<p>(6) 点击 “Parameter + Program” 后，点击 “Execute”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/081ff552a4c84233bd719a12e8a4cc9d6846f0af92de378025a3cb8a1b20a865.jpg"></p>
+<p>(7) 设定值读取完成后，点击 “Close”，关闭上述画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/477de7ac3eb294027d96fb95b1f7a86d2d48eab2de0c0cd9014a6156140b54ff.jpg"></p>
+<h1 id="通信特殊适配器的通信设定"><a href="#通信特殊适配器的通信设定" class="headerlink" title="通信特殊适配器的通信设定"></a>通信特殊适配器的通信设定</h1><p>(1)双击“PLC Parameter”，显示FX参数设定画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/a9de5181adf4416cb8ce7cd0148f16a3a92354187f6fea3a0a6a06909a96278d.jpg"></p>
+<p>(2)变更CH1的通信设定。</p>
+<p>选择“PLC System(2)”标签，变更为以下设定后点击“End”。其他设定保持初始值。</p>
+<p>执行通信设定 ：打勾·协议 ：专用协议通信·奇偶校验 ：偶数·停止位 ：2bit·传送速度 ：38400·H&#x2F;W型 ：RS- 485·校验和 ：打勾·传送控制步骤 ：格式4(带CR、LF)</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/eff87b3379d632c2e14fc56176f30ab64de4c579f4609c6dcb1054717ccb2f12.jpg"></p>
+<p>(注)变更“局号设定”时，请参照“6- 2- 7通信节点编号”。</p>
+<p>(3) 选择 “Online” - “Write to PLC”，显示设定值的写入画面。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/e98a6e372cc14f021736f2a18295d257f9dc818618576f0fdd96b9554c41b2e6.jpg"></p>
+<p>(4) 将设定值写入  $\mathsf{PLC}$  。确认已勾选 “PLC Parameter”，然后点击 “Execute”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/2efd0cf234a18c5ada172b84e359b8ae4d99b9b30fbed5bc2fba97b6683ac5af.jpg"></p>
+<p>(5) 将设定值写入PLC。</p>
+<p>显示以下画面后，点击“Close”，关闭写入画面，重新接通PLC的电源。至此，PLC的设定完成。之后需确认动作，因此请保持GX Works2在线。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/7d616715d368a470e0879cd3de3345dff7cae2e682840a4969c122be2b63c8c6.jpg"></p>
+<h2 id="6-9-4-E5□C的设定"><a href="#6-9-4-E5□C的设定" class="headerlink" title="6-9-4 E5□C的设定"></a>6-9-4 E5□C的设定</h2><p>设定无程序通信。进行“&gt;- [6- 4- 4 E5□C的设定”。</p>
+<h2 id="6-9-5-动作确认"><a href="#6-9-5-动作确认" class="headerlink" title="6-9-5 动作确认"></a>6-9-5 动作确认</h2><p>进行“6- 8- 5动作确认”。</p>
+<h2 id="6-10-与-MELSEC-iQ-R-系列的连接"><a href="#6-10-与-MELSEC-iQ-R-系列的连接" class="headerlink" title="6-10 与 MELSEC iQ-R 系列的连接"></a>6-10 与 MELSEC iQ-R 系列的连接</h2><h2 id="6-10-1-构成和步骤"><a href="#6-10-1-构成和步骤" class="headerlink" title="6-10-1 构成和步骤"></a>6-10-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<ul>
+<li>E5CC 均使用同一型号(型号不同则不能使用复制功能)。- PLC 存储器使用 D0 ~ D89，分配的 E5CC 参数为默认设定。- USB 电缆使用 A 插头 - 迷你 B 插头。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/b971e39cea5e7b902868a91b366afc24c828622edf4136939bb5ef1f6d5f3ebd.jpg"></p>
+<p>(注)GX Works3 的安装方法请参照《GX Works3 安装步骤书》(BCN- P5999)，USB 驱动程序的安装方法请参照《GX Works3 操作手册》(SH- 081214)。</p>
+<p>使用步骤如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/d5f0bbe3aa6f7fbb468376c800a6ffa2b4dc0b6a346a27ec9eb552eae8c15293.jpg"></p>
+<h2 id="6-10-2-接线"><a href="#6-10-2-接线" class="headerlink" title="6-10-2 接线"></a>6-10-2 接线</h2><p>RJ71C24 与 E5CC 接线如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/d1d1aba037ce0dcadfc811326daf6b3185ab5a676332523d2570166bebf7ffc1.jpg"></p>
+<p>(注)1 终端电阻的合成电阻值须大于  $54\Omega$ 。2 最长传送距离为  $500\mathrm{m}$ 。3 接线方法详情请参照《MELSEC iQ- R 串行通信单元用户手册(启动篇)》(SH- 081248)的“2.3 RS- 422&#x2F;485 接口规格”、“6.2 RS- 22&#x2F;485 接口的连接方法”。</p>
+<h2 id="6-10-3PLC的设定"><a href="#6-10-3PLC的设定" class="headerlink" title="6-10-3PLC的设定"></a>6-10-3PLC的设定</h2><p>6- 10- 3 PLC 的设定进行 RJ71C24 的通信设定，便于与 E5CC 通信。在设定过程中，PLC 动作将停止或复位，请确认不存在任何问题后进行设定。</p>
+<h1 id="与PLC的连接-5"><a href="#与PLC的连接-5" class="headerlink" title="与PLC的连接"></a>与PLC的连接</h1><p>(1)用USB电缆连接电脑与CPU单元，启动GXWorks3。</p>
+<p>(2)选择主菜单中的“Online”－“ReadfromPLC”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/53a39a9d66119446da903ae824938c1a04d4cdcc66e8745c429fcf14029ee41b.jpg"></p>
+<p>(3)显示以下画面。确认变为“RCPU”后，点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/55284d0fad1cedeb9860e20f81d99a7e4af0b9689e216a49546592acaa7c0f38.jpg"></p>
+<p>(4)显示以下画面。</p>
+<p>点击“OK”予以关闭。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/6c75fcad577b1d85a05498892d5300d19a1ded9a2017a9ceb5603af3094553a1.jpg"></p>
+<p>(5) 显示以下画面，点击 “Close”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/976481712e03dc31ca3ff0cbb35249a1e5b1b02b0e6b0cd3c7e98f76782d72dc.jpg"></p>
+<p>(6) 双击 “Module Configuration”，在弹出画面中点击 “OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/be0eca9f7f1488dd5f96ce8520c26e1721f42b374a384c9213e47e7175f0ef3c.jpg"></p>
+<p>(7) 选择 “Online” - “Read Module Configuration from PLC”，在弹出画面中点击 “Yes”。显示 “Completed.”，点击 “OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/9f56f321aa89fea35ce639b10c92dcf5bbed1ace01ac526bbc15b62ae8a62583.jpg"></p>
+<h1 id="串行通信单元的通信设定-1"><a href="#串行通信单元的通信设定-1" class="headerlink" title="串行通信单元的通信设定"></a>串行通信单元的通信设定</h1><p>(1)执行上一项与PLC的连接后，将读取实机的单元构成。双击串行通信单元(SCU)的图。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/20ac0a7056e3d016fa8db16531c64da589644b8b72d87d7a0185492e795971e9.jpg"></p>
+<p>在弹出画面中点击“Yes”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/250fb15e85360f56771990830b2e113d611669cad1704260b0668ec41d1238f9.jpg"></p>
+<p>(2)将根据构成台数，显示是否为已安装单元添加标签的提示。全部点击“Yes”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/c01beb24c5d05115339ba2a31d1b0b54f14b5cf01da96fd3ddb08c7dc50c86e2.jpg"></p>
+<p>(3) 双击单元构成图，将显示 SCU 的设定画面，请设定对应的 ch。以下示例中，设定了 RJ71C24 单元的 CH2(RS-422&#x2F;485)。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/facf7c920aff9c07245565b6cf787d39ae7ce82916d6696497514cb5368302e0.jpg"></p>
+<table><tr><td>项目</td><td>值</td></tr><tr><td>Communication protocol setting</td><td>MC protocol(Format 4)</td></tr><tr><td>Communication speed setting</td><td>57600bps</td></tr><tr><td>Parity bit</td><td>Yes</td></tr><tr><td>Odd/even parity</td><td>Even</td></tr><tr><td>Stop bit</td><td>2</td></tr><tr><td>Sumcheck code</td><td>Yes</td></tr><tr><td>Online change</td><td>Enable</td></tr><tr><td>Setting change</td><td>Enable</td></tr></table>
+
+<p>(注)上述以外均为默认值。</p>
+<h1 id="将程序写入PLC"><a href="#将程序写入PLC" class="headerlink" title="将程序写入PLC"></a>将程序写入PLC</h1><p>SCU的设定到此结束。但没有程序仍无法运行</p>
+<p>需创建最小必备程序。</p>
+<p>(1)右击画面左侧的“Program”－“Initial”，选择“Add New Data”。显示画面后，点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/128c84c4b017ceb3c5465f450c11e591fb5e1ec5ae7f90aaf5ca23a46c6220fb.jpg"></p>
+<p>(2)选择“Convert”－“Convert”，程序将自动转换。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/8e7e0fd2a2f5ce9ad1c7308839f35a7d47539615ae1223eb173be7ee7475e5ff.jpg"></p>
+<p>(3)选择“Online”－“Write to PLC”，将设定值写入PLC。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/c38d4a566ab620ebf3ea38517c033120c63a4051ac3d9757e23526a80ca8fc84.jpg"></p>
+<p>(4) 在显示画面中勾选 “Untitled Project”，并点击 “Execute”。(将自动勾选所有选项。)</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/ad8f77ce45dd8f99df45685dbed3442e5c4e0b6f1cada62f697494e10f314351.jpg"></p>
+<p>(5) 显示以下画面，完成后点击 “Close”。(中途会显示弹出信息，点击 “OK”。)</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/53e68bfffc3dd0f6601c113d2895c4d33890e70d6ec4992edf012637db029706.jpg"></p>
+<p>(6) 打开 CPU 主体的正面罩盖，将中间的开关置于 RESET 侧，CPU 的 LED 灯灭后将开关置于原位。此时，将进入可通信状态。</p>
+<h2 id="6-10-4-E5-□-C-的设定"><a href="#6-10-4-E5-□-C-的设定" class="headerlink" title="6-10-4 E5 □ C 的设定"></a>6-10-4 E5 □ C 的设定</h2><p>设定无程序通信。进行 “&gt;- [6- 4- 4 E5 □ C 的设定”。</p>
+<h2 id="6-10-5动作确认"><a href="#6-10-5动作确认" class="headerlink" title="6-10-5动作确认"></a>6-10-5动作确认</h2><p>E5口C设定点、RUN&#x2F;STOP将变更，请确认不存在任何问题后再进行动作确认。</p>
+<h1 id="确认E5CC的监控值-1"><a href="#确认E5CC的监控值-1" class="headerlink" title="确认E5CC的监控值"></a>确认E5CC的监控值</h1><p>(1)显示PLC存储器画面。选择“Online”－“Monitor”－“Device&#x2F;Buffer Memory Batch Monitor”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/303e2cb6d2ca6c8270594352d8d536bbd4f1684a2055a97031b81d8d69a48f40.jpg"></p>
+<p>(2)监控PLC存储器画面。在“Device Name”中输入“DO”，按下“Start Monitoring”开始监控。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/44bb1e23a4de73dba56ff20d51b9000e669541cc29e7ac593ccd37fb1ce57416.jpg"></p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/c0dbebebe6bcb28beb03dc1917e9c3a532339e308612d3f7767de0334d5b4425.jpg"></p>
+<h1 id="3-变更为10进制数，以使值的确认更简单。"><a href="#3-变更为10进制数，以使值的确认更简单。" class="headerlink" title="(3)变更为10进制数，以使值的确认更简单。"></a>(3)变更为10进制数，以使值的确认更简单。</h1><p>选择“View”－“Display Format Detailed Setting”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/833242e5df17229f1ce86713a7b755ef6378395a9fa617420c091fda6f60cd1f.jpg"></p>
+<p>设定以下画面中的“Display Format”。勾选显示单位格式的“Word Multi- point”、位排序的“0- F”和字元件字多点形式的“10 Points”，然后点击“OK”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/03b2dadae90963fcda4bf00d0fed8309354a16eea39c19b2168af14540858e9b.jpg"></p>
+<p>变更显示格式后的画面如下所示。确认监控值的区域，称为上载区域。D0～D14为No.0(E5CC)、D30～D44为No.1、D60～D74为No.2的上载区域。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/db1d17f1fc73b51b20d9c53fc5c7250267cd316f9e818f65fb144839208b1991.jpg"></p>
+<p>默认设定时，上载区域中设有以下参数。请确认上载区域的值如下所示(“- ”处无需确认)。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值</td></tr><tr><td>D0</td><td>D30</td><td>D60</td><td>响应标志(固定)</td><td>0</td></tr><tr><td>D01</td><td>D31</td><td>D61</td><td>通信状态(固定)</td><td>0和1交替显示</td></tr><tr><td>D02</td><td>D32</td><td>D62</td><td>通信监控</td><td>-</td></tr><tr><td>D03</td><td>D33</td><td>D63</td><td>状态1(高位侧)</td><td>-</td></tr><tr><td>D04</td><td>D34</td><td>D64</td><td>状态1(低位侧)</td><td>-</td></tr><tr><td>D05</td><td>D35</td><td>D65</td><td>状态2(高位侧)</td><td>-</td></tr><tr><td>D06</td><td>D36</td><td>D66</td><td>小数点位置监控</td><td>-</td></tr><tr><td>D07</td><td>D37</td><td>D67</td><td>当前值</td><td>当前值*</td></tr><tr><td>D08</td><td>D38</td><td>D68</td><td>内部SP</td><td>-</td></tr><tr><td>D09</td><td>D39</td><td>D69</td><td>加热器电流值1监控</td><td>-</td></tr><tr><td>D10</td><td>D40</td><td>D70</td><td>MV监控(加热)</td><td>-</td></tr><tr><td>D11</td><td>D41</td><td>D71</td><td>空</td><td>-</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>D14</td><td>D44</td><td>D74</td><td>空</td><td>-</td></tr></table>
+
+<p>*出厂未连接传感器时，E5CC的PV显示为输入异常(5ERR)，上载区域的当前值为“1320(528HEX)”。</p>
+<h1 id="变更E5CC的设定值-3"><a href="#变更E5CC的设定值-3" class="headerlink" title="变更E5CC的设定值"></a>变更E5CC的设定值</h1><ul>
+<li>(1) 确认变更E5CC设定值的区域。变更设定值的区域，称为下载区域。D15～D29为No.0(E5CC)、D45～D59为No.1、D75～D89为No.2的下载区域。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/b8005bb17f53c2f762b32d249f65647bcf07904c2e8689fb3d8a2e9f4d1fcdbe.jpg"></p>
+<p>默认设定时，下载区域中设有以下参数。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值(E5CC的出厂值)</td></tr><tr><td>D15</td><td>D45</td><td>D75</td><td>请求标志(固定)</td><td>1(0001 HEX)</td></tr><tr><td>D16</td><td>D46</td><td>D76</td><td>动作指令代码(固定)</td><td>0(0000 HEX)</td></tr><tr><td>D17</td><td>D47</td><td>D77</td><td>SP</td><td>0(0000 HEX)</td></tr><tr><td>D18</td><td>D48</td><td>D78</td><td>比例带</td><td>80(0050 HEX)</td></tr><tr><td>D19</td><td>D49</td><td>D79</td><td>积分时间</td><td>233(00E9 HEX)</td></tr><tr><td>D20</td><td>D50</td><td>D80</td><td>微分时间</td><td>40(0028 HEX)</td></tr><tr><td>D21</td><td>D51</td><td>D81</td><td>报警值1</td><td>0(0000 HEX)</td></tr><tr><td>D22</td><td>D52</td><td>D82</td><td>报警上限1</td><td>0(0000 HEX)</td></tr><tr><td>D23</td><td>D53</td><td>D83</td><td>报警下限1</td><td>0(0000 HEX)</td></tr><tr><td>D24</td><td>D54</td><td>D84</td><td>报警值2</td><td>0(0000 HEX)</td></tr><tr><td>D25</td><td>D55</td><td>D85</td><td>报警上限2</td><td>0(0000 HEX)</td></tr><tr><td>D26</td><td>D56</td><td>D86</td><td>报警下限2</td><td>0(0000 HEX)</td></tr><tr><td>D27</td><td>D57</td><td>D87</td><td>加热器断线检测1</td><td>0(0000 HEX)</td></tr><tr><td>D28</td><td>D58</td><td>D88</td><td>PV输入偏移量</td><td>0(0000 HEX)</td></tr><tr><td>D29</td><td>D59</td><td>D89</td><td>SP斜坡设定值</td><td>0(0000 HEX)</td></tr></table>
+
+<ul>
+<li>(2)将下载区域初始化为E5CC的设定值。</li>
+</ul>
+<p>下载区域值未被初始化，因此初始化为E5CC的设定值。</p>
+<p>在元件存储器画面双击D15(请求标志)，将显示“Are you sure you want to register to watch window?”信息，点击“Yes”。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/fea3ad4013ab94bf11df68d7e911c8f389847c0163c8867d5652b8a1d097bfdc.jpg"></p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/d5be4040e0b01c3d1b0304de6fd0742bad59e5b788fad2b1327f5756a2afbbed.jpg"></p>
+<p>请选择“Online”－“Watch”－“Start Watching”</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/2e599b94bacfd47ee7db96870c549bb14346ceadbfeafbc57494a0a616ea7cbc.jpg"></p>
+<p>在“D15”的当前值中输入“2(下载区域初始化)”，即可变更。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/4d696bf4447279e3baa9a3f116c74cfe6c32b22f3bc68eaa1483b8b73b032cbb.jpg"></p>
+<ul>
+<li>(3)确认下载区域初始化。</li>
+</ul>
+<p>初始化完成后，D0(响应标志)变为“1(正常结束)”、D15(请求标志)自动变为“1(允许写入)”。请确认下载区域已变为(1)表中的默认值。请对No.1、2进行同样的确认。</p>
+<ul>
+<li>(4)变更No.0的设定点。</li>
+</ul>
+<p>按照与(2)相同的步骤，双击D17(设定点)，在监视窗口画面的“D17”当前值中输入“100(64HEX)”进行变更。请确认D0(响应标志)为“1(允许写入)”，No.0的SV显示为“100”。请对No.1、2进行同样的确认。</p>
+<ul>
+<li>将E5CC切换为停止</li>
+</ul>
+<p>(1)运行No.0。将E5CC操作菜单中的“RUN&#x2F;STOP(R- 5)”设为“RUN(PUN)”。</p>
+<ul>
+<li>(2)将No.0切换为停止。</li>
+</ul>
+<p>在元件存储器画面，D15(请求标志)为“1(允许写入)”时，双击D16(动作指令代码)。请在监视窗口中将D16的显示格式变更为16进制，并输入停止动作指令“0101(HEX)”。D16变为“0”，D0(响应标志)保持“1(允许写入)”，No.0的E5CC显示部的“STOP”亮灯。请对No.1、2进行同样的确认。关于其他动作指令代码，请参照“&gt;- [6- 3- 4动作指令代码”。</p>
+<h2 id="6-11-与-KEYENCE-KV-系列的连接"><a href="#6-11-与-KEYENCE-KV-系列的连接" class="headerlink" title="6-11 与 KEYENCE KV 系列的连接"></a>6-11 与 KEYENCE KV 系列的连接</h2><p>E5□C 版本 2.1(Ver.2.1) 以上可以使用。</p>
+<h2 id="6-11-1-构成和步骤"><a href="#6-11-1-构成和步骤" class="headerlink" title="6-11-1 构成和步骤"></a>6-11-1 构成和步骤</h2><p>以下述构成为例，介绍设定方法和无程序通信的使用方法。</p>
+<ul>
+<li>E5CC 均使用同一型号(型号不同则不能使用复制功能)。- PLC 存储器使用  $\mathrm{DM0} \sim 89$ ，分配的 E5CC 参数为默认设定。- 市售 USB 电缆请使用 USB2.0 用 A 连接器 -B 连接器。</li>
+</ul>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/93ff2fd97c774f6b91c833c8615b981b63a7fdb3c8b183c576d3c32394e92c29.jpg"></p>
+<p>(注)KV- STUDIO 的安装方法和 USB 驱动程序的安装方法请参照《KV- STUDIO 用户手册》。</p>
+<p>使用步骤如下所示。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/fcb0dfec219f5b952867b057769dc3d570fda7f33c87f119045579451d2b3d75.jpg"></p>
+<h2 id="6-11-2接线"><a href="#6-11-2接线" class="headerlink" title="6-11-2接线"></a>6-11-2接线</h2><p>打开位于KV- L21V正面的终端选择开关“TERM.”，按下图对E5CC进行接线。</p>
+<p><img src="https://cdn-mineru.openxlab.org.cn/extract/e7031d53-8743-4066-ab44-ce2ab140bab3/023695c8e121cc68f084a680fb61227dbcbe49391b2179c6b2f717660c879417.jpg"></p>
+<p>(注)1 终端电阻的合成电阻须大于  $54\Omega$  。2 最长传送距离为  $300\mathrm{m}$  。3 接线方法详情请参照《串行通信单元KV- L21V用户手册》(254GB)的“2- 6连接外部设备”。</p>
+<h2 id="6-11-3PLC的设定"><a href="#6-11-3PLC的设定" class="headerlink" title="6-11-3PLC的设定"></a>6-11-3PLC的设定</h2><p>进行KV- L21V的通信设定，便于与E5CC通信。以下为创建新项目时的步骤。使用现有项目时，先从PLC读取数据，再进行通信设定。</p>
+<p>(1)用USB电缆连接计算机与KV，启动KVSTUDIO。(2)在KVSTUDIO的“Monitor&#x2F;Simulator”菜单中选择“Communication Setup”－“Communication Settings”。通信设定画面显示后，为计算机通信端口选择“USB”，点击“OK”。</p>
+<p>(3)在“File”中选择“NewProject”，将相应机型设定为“KV- 700”后，输入任意的项目名称，点击“OK”。</p>
+<p>(4)显示单元构成确认对话框，点击“ReadUnitConfiguration”</p>
+<p>(5)显示单元编辑器画面，双击KV- L21V的图像，选择“UnitSetup(2)”标签。对端口2进行以下设定，点击“OK”。其他设定保持初始值。</p>
+<p>·动作模式 ：协议模式4·接口 ：RS- 485(2线式)·波特率 ：57600bps·数据位长 ：7位·停止位 ：2位·校验和 ：有</p>
+<p>(6)为了写入设定值，需在“Monitor&#x2F;Simulator”菜单中选择“PLCTransfer”。</p>
+<p>(7)显示程序传送对话框，点击“Execute”后，写入设定值。至此，PLC的设定完成。之后需确认动作，因此请保持KVSTUDIO的运行状态。</p>
+<h2 id="6-11-4E5C的设定"><a href="#6-11-4E5C的设定" class="headerlink" title="6-11-4E5C的设定"></a>6-11-4E5C的设定</h2><p>设定无程序通信。进行“&gt;- [6- 4- 4E5口C的设定”。</p>
+<h2 id="6-11-5动作确认"><a href="#6-11-5动作确认" class="headerlink" title="6-11-5动作确认"></a>6-11-5动作确认</h2><p>E5口C设定点、RUN&#x2F;STOP将变更，请确认不存在任何问题后再进行动作确认。</p>
+<h2 id="确认E5CC的监控值-2"><a href="#确认E5CC的监控值-2" class="headerlink" title="确认E5CC的监控值"></a>确认E5CC的监控值</h2><p>(1)将PLC设为监控模式。在KVSTUDIO的“Monitor&#x2F;Simulator”菜单中选择“Monitor Mode”。</p>
+<p>(2)显示PLC存储器的画面。在“Monitor&#x2F;Simulator”菜单中选择“Batch Monitor Mode”。</p>
+<p>(3)为了便于确认值，需变更显示格式。选择显示格式的起始项，将其变更为“Signeddecimal16bits”。</p>
+<p>(4)确认E5CC的监控值。确认监控值的区域，称为上载区域。DM0～14为No.0(E5CC)的上载区域，  $\mathrm{DM30}\sim 44$  为No.1的上载区域，  $\mathrm{DM60}\sim 74$  为No.2的上载区域。</p>
+<p>默认设定时，上载区域中设有以下参数。请确认上载区域的值如下所示(“- ”处无需确认)。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值</td></tr><tr><td>DM0</td><td>DM30</td><td>DM60</td><td>响应标志(固定)</td><td>0</td></tr><tr><td>DM1</td><td>DM31</td><td>DM61</td><td>通信状态(固定)</td><td>0和1交替显示</td></tr><tr><td>DM2</td><td>DM32</td><td>DM62</td><td>通信监控</td><td>-</td></tr><tr><td>DM3</td><td>DM33</td><td>DM63</td><td>状态(高位侧)</td><td>-</td></tr><tr><td>DM4</td><td>DM34</td><td>DM64</td><td>状态(低位侧)</td><td>-</td></tr><tr><td>DM5</td><td>DM35</td><td>DM65</td><td>状态2(高位侧)</td><td>-</td></tr><tr><td>DM6</td><td>DM36</td><td>DM66</td><td>小数点位置监控</td><td>-</td></tr><tr><td>DM7</td><td>DM37</td><td>DM67</td><td>PV</td><td>PV*</td></tr><tr><td>DM8</td><td>DM38</td><td>DM68</td><td>内部SP</td><td>-</td></tr><tr><td>DM9</td><td>DM39</td><td>DM69</td><td>加热器电流值1监控</td><td>-</td></tr><tr><td>DM10</td><td>DM40</td><td>DM70</td><td>MV监控(加热)</td><td>-</td></tr><tr><td>DM11</td><td>DM41</td><td>DM71</td><td>空</td><td>-</td></tr><tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr><tr><td>DM13</td><td>DM43</td><td>DM73</td><td>空</td><td>-</td></tr><tr><td>DM14</td><td>DM44</td><td>DM74</td><td>禁止使用(保留区)</td><td>-</td></tr></table>
+
+<p>由”未连接传感器时，E5CC的PV显示为输入异常(5.E5K)，上载区域的当前值为“1320(528HEX)”。</p>
+<h2 id="变更E5CC的设定值-4"><a href="#变更E5CC的设定值-4" class="headerlink" title="变更E5CC的设定值"></a>变更E5CC的设定值</h2><ul>
+<li>(1) 确认变更E5CC设定值的区域。变更设定值的区域，称为下载区域。DM15～29为No.0(E5CC)的下载区域，  $\mathrm{DM45}\sim 59$  为No.1的下载区域，  $\mathrm{DM75}\sim 89$  为No.2的下载区域。</li>
+</ul>
+<p>默认设定时，下载区域中设有以下参数。</p>
+<table><tr><td>No.0</td><td>No.1</td><td>No.2</td><td>参数</td><td>值(E5CC的出厂值)</td></tr><tr><td>DM15</td><td>DM45</td><td>DM75</td><td>请求标志(固定)</td><td>1 (0001 HEX)</td></tr><tr><td>DM16</td><td>DM46</td><td>DM76</td><td>动作指令代码(固定)</td><td>0 (0000 HEX)</td></tr><tr><td>DM17</td><td>DM47</td><td>DM77</td><td>SP</td><td>0 (0000 HEX)</td></tr><tr><td>DM18</td><td>DM48</td><td>DM78</td><td>比例带</td><td>80 (0050 HEX)</td></tr><tr><td>DM19</td><td>DM49</td><td>DM79</td><td>积分时间</td><td>233 (00E9 HEX)</td></tr><tr><td>DM20</td><td>DM50</td><td>DM80</td><td>微分时间</td><td>40 (0028 HEX)</td></tr><tr><td>DM21</td><td>DM51</td><td>DM81</td><td>报警值1</td><td>0 (0000 HEX)</td></tr><tr><td>DM22</td><td>DM52</td><td>DM82</td><td>报警上限值1</td><td>0 (0000 HEX)</td></tr><tr><td>DM23</td><td>DM53</td><td>DM83</td><td>报警下限值1</td><td>0 (0000 HEX)</td></tr><tr><td>DM24</td><td>DM54</td><td>DM84</td><td>报警值2</td><td>0 (0000 HEX)</td></tr><tr><td>DM25</td><td>DM55</td><td>DM85</td><td>报警上限值2</td><td>0 (0000 HEX)</td></tr><tr><td>DM26</td><td>DM56</td><td>DM86</td><td>报警下限值2</td><td>0 (0000 HEX)</td></tr><tr><td>DM27</td><td>DM57</td><td>DM87</td><td>加热器断线检测1</td><td>0 (0000 HEX)</td></tr><tr><td>DM28</td><td>DM58</td><td>DM88</td><td>PV输入偏移量</td><td>0 (0000 HEX)</td></tr><tr><td>DM29</td><td>DM59</td><td>DM89</td><td>SP斜度设定值</td><td>0 (0000 HEX)</td></tr></table>
+
+<ul>
+<li>(2)将下载区域初始化为E5CC的设定值。</li>
+</ul>
+<p>下载区域值未被初始化，因此初始化为E5CC的设定值。在统一监控画面中双击DM15(请求标志)，输入“2(下载区域初始化)”，按下Enter键。</p>
+<ul>
+<li>(3)确认下载区域初始化。</li>
+</ul>
+<p>初始化完成后，DM0(响应标志)变为“1(正常结束)”，DM15(请求标志)自动变为“1(允许写入)”。请确认下载区域已初始化为上表的值。请对No.1、2进行同样的确认。</p>
+<ul>
+<li>(4)变更No.0的设定点。</li>
+</ul>
+<p>在统一监控画面中双击DM17(目标值)，在“Value”一栏输入“100(64 HEX)”，按下Enter键。请确认DM0(响应标志)为“1(允许写入)”，No.0的SV显示为“100”。请对No.1、2进行同样的确认。</p>
+<h2 id="将E5CC切换为停止-2"><a href="#将E5CC切换为停止-2" class="headerlink" title="将E5CC切换为停止"></a>将E5CC切换为停止</h2><ul>
+<li>(1)运行No.0。</li>
+</ul>
+<p>将E5CC操作菜单中的“运行&#x2F;停止(R- 5)”设为“运行(RUN)”。带事件输入的机型，初始设定菜单中的“事件输入2分配(E&#x2F;- 2)”设为“运行&#x2F;停止(5t- 0P)”，因此不显示“运行&#x2F;停止”。变为“无(NaNE)”后，设为“运行”。</p>
+<ul>
+<li>(2)将No.0切换为停止。</li>
+</ul>
+<p>在统一监控画面中，将显示格式变更为“Hexadecimal 16 bit”。然后，请确认DM15(请求标志)为“1(允许写入)”，双击DM16(动作指令代码)，输入“0101 HEX(停止)”，按下Enter键。</p>
+<p>DM16变为“0”，DM0(响应标志)保持“1(允许写入)”，No.0的E5CC显示部的“STOP”亮灯。请对No.1、2进行同样的确认。关于其他动作指令代码，请参照“&gt;- [6- 3- 4动作指令代码”。</p>
+<h1 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h1><h2 id="3-2状态"><a href="#3-2状态" class="headerlink" title="3-2状态"></a>3-2状态</h2><p><img src="/./OMRON-%E6%B8%A9%E6%8E%A7%E5%99%A8E5DC%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%AE%AF/!%5Balt%5D(https:/)image.png" alt="alt text"></p>
+<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><table><tr><td rowspan="2">位的
+位置</td><td rowspan="2">状态</td><td colspan="2">位的内容</td><td></td></tr><tr><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
+(低位侧)</td><td>0</td><td>加热器电流值过大(CT1)</td><td>未发生</td><td>发生</td></tr><tr><td>1</td><td>加热器电流值保持(CT1)*</td><td>更新</td><td>保持</td></tr><tr><td>2</td><td>AD 变换器错误</td><td>未发生</td><td>发生</td></tr><tr><td>3</td><td>HS(SSR 故障)报警(CT1)</td><td>OFF</td><td>ON</td></tr><tr><td>4</td><td>RSP 输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>5</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>6</td><td>输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>7</td><td>电位计输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>8</td><td>控制输出(加热)/开启输出</td><td>OFF</td><td>ON</td></tr><tr><td>9</td><td>控制输出(冷却)/闭合输出</td><td>OFF</td><td>ON</td></tr><tr><td>10</td><td>HB(加热器断线)报警(CT1)</td><td>OFF</td><td>ON</td></tr><tr><td>11</td><td>HB(加热器断线)报警(CT2)</td><td>OFF</td><td>ON</td></tr><tr><td>12</td><td>报警值1</td><td>OFF</td><td>ON</td></tr><tr><td>13</td><td>报警值2</td><td>OFF</td><td>ON</td></tr><tr><td>14</td><td>报警值3</td><td>OFF</td><td>ON</td></tr><tr><td>15</td><td>程序结束输出</td><td>OFF</td><td>ON</td></tr><tr><td rowspan="16">状态
+(高位侧)</td><td>16</td><td>事件输入1</td><td>OFF</td><td>ON</td></tr><tr><td>17</td><td>事件输入2</td><td>OFF</td><td>ON</td></tr><tr><td>18</td><td>事件输入3</td><td>OFF</td><td>ON</td></tr><tr><td>19</td><td>事件输入4</td><td>OFF</td><td>ON</td></tr><tr><td>20</td><td>写入模式</td><td>备份模式</td><td>RAM写入模式</td></tr><tr><td>21</td><td>非易失性存储器</td><td>RAM=非易失性存储器</td><td>RAM≠非易失性存储器</td></tr><tr><td>22</td><td>设定区域</td><td>设定区域0</td><td>设定区域1</td></tr><tr><td>23</td><td>AT 实行/取消</td><td>AT 取消中</td><td>AT 执行中</td></tr><tr><td>24</td><td>运行/停止</td><td>运行</td><td>停止</td></tr><tr><td>25</td><td>通信写入</td><td>OFF(禁止)</td><td>ON(许可)</td></tr><tr><td>26</td><td>自动/手动</td><td>自动模式</td><td>手动模式</td></tr><tr><td>27</td><td>程序启动</td><td>复位</td><td>启动</td></tr><tr><td>28</td><td>加热器电流值过大(CT2)</td><td>未发生</td><td>发生</td></tr><tr><td>29</td><td>加热器电流值保持(CT2)</td><td>更新</td><td>保持</td></tr><tr><td>30</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>31</td><td>HS(SSR 故障)报警(CT2)</td><td>OFF</td><td>ON</td></tr></table>
+
+<p>（注）1 “空”位始终为OFF。2 在设定区域1读出后如下所示</p>
+<ul>
+<li>电流值过大 ：保持前一次值</li>
+<li>AD变换器错误 ：保持前一次值</li>
+<li>输人异常 ：保持前一次值</li>
+<li>HB输出、HS输出 ：清除</li>
+<li>程序结束输出 ：清除</li>
+<li>电流值保持 ：保持前一次值</li>
+<li>加热输出、冷却输出 ：清除</li>
+<li>报警输出 ：清除</li>
+</ul>
+<p>*控制输出的ON时间不足  $100\mathrm{ms}$  （控制周期0.1s、0.2s时为  $30\mathrm{ms}$  时，设为“1”，加热器电流值监控器保持此前的值。</p>
+<h2 id="状态2"><a href="#状态2" class="headerlink" title="状态2"></a>状态2</h2><table><tr><td rowspan="2">位的
+位置</td><td rowspan="2">状态</td><td colspan="2">位的内容</td><td></td></tr><tr><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
+(低位侧)</td><td>0</td><td>内部辅助继电器 1</td><td>OFF</td><td>ON</td></tr><tr><td>1</td><td>内部辅助继电器 2</td><td>OFF</td><td>ON</td></tr><tr><td>2</td><td>内部辅助继电器 3</td><td>OFF</td><td>ON</td></tr><tr><td>3</td><td>内部辅助继电器 4</td><td>OFF</td><td>ON</td></tr><tr><td>4</td><td>内部辅助继电器 5</td><td>OFF</td><td>ON</td></tr><tr><td>5</td><td>内部辅助继电器 6</td><td>OFF</td><td>ON</td></tr><tr><td>6</td><td>内部辅助继电器 7</td><td>OFF</td><td>ON</td></tr><tr><td>7</td><td>内部辅助继电器 8</td><td>OFF</td><td>ON</td></tr><tr><td>8</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>9</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>10</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>11</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>12</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>13</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>14</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>15</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td rowspan="16">状态
+(高位侧)</td><td>16</td><td>事件输入 5</td><td>OFF</td><td>ON</td></tr><tr><td>17</td><td>事件输入 6</td><td>OFF</td><td>ON</td></tr><tr><td>18</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>19</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>20</td><td>正向/反向运行反转</td><td>非反转</td><td>反转</td></tr><tr><td>21</td><td>SP 斜坡</td><td>OFF</td><td>斜坡中</td></tr><tr><td>22</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>23</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>24</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>25</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>26</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>27</td><td>SP 模式</td><td>本地 SP 模式</td><td>远程 SP 模式</td></tr><tr><td>28</td><td>报警值 4</td><td>OFF</td><td>ON</td></tr><tr><td>29</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>30</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>31</td><td>(空)</td><td>OFF</td><td>-</td></tr></table>
+
+<p><strong>注1</strong>  <strong>空位</strong> 始终为OFF。</p>
+<p>2在设定区域1读出后如下所示</p>
+<p>·内部辅助继电器  $1\sim 8$  ：清除·SP斜坡 ：保持前一次值</p>
+<h2 id="E5EC-无程序通信"><a href="#E5EC-无程序通信" class="headerlink" title="E5EC 无程序通信"></a>E5EC 无程序通信</h2><iframe src="./E5EC 无程序通信.pdf" width="100%" height="750" type="application/pdf"></iframe>
+
+<h2 id="E5EC-与CP1H-无协议通信"><a href="#E5EC-与CP1H-无协议通信" class="headerlink" title="E5EC 与CP1H 无协议通信"></a>E5EC 与CP1H 无协议通信</h2><iframe src="./E5EC 与CP1H 无协议通信.pdf" width="100%" height="750" type="application/pdf"></iframe>
+
+
+
+<script>
+function reloadPage(){ 
+	let i= 0;
+	if （i<1）
+	{location.reload(true);
+	i++;
+	}};
+setTimeout('reloadPage()',1000);
+</script>
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2025/07/08/hello-world/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2025/01/06/%E9%98%BB%E9%9A%94%E7%94%A8%E5%A1%91%E6%96%99EVOH/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">阻隔用塑料EVOH</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OMRON-E5%E2%96%A1C%E6%B8%A9%E6%8E%A7%E5%99%A8-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1"><span class="nav-number">1.</span> <span class="nav-text">OMRON E5□C温控器 无程序通信</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1"><span class="nav-number">1.1.</span> <span class="nav-text">6-1 无程序通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-1-%E6%A6%82%E8%A6%81"><span class="nav-number">1.2.</span> <span class="nav-text">6-1-1 概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-2-%E7%89%B9%E5%BE%81"><span class="nav-number">1.3.</span> <span class="nav-text">6-1-2 特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-3-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C"><span class="nav-number">1.4.</span> <span class="nav-text">6-1-3 无程序通信的动作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-4-%E7%94%B5%E6%BA%90%E7%9A%84ON-OFF%E6%97%B6%E9%97%B4"><span class="nav-number">1.5.</span> <span class="nav-text">6-1-4 电源的ON&#x2F;OFF时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bullet-%E7%94%B5%E6%BA%90%E7%9A%84ON%E6%97%B6%E9%97%B4"><span class="nav-number">1.6.</span> <span class="nav-text">$\bullet$  电源的ON时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bullet-%E7%94%B5%E6%BA%90%E7%9A%84OFF%E6%97%B6%E9%97%B4-%E4%BB%85%E4%BD%BF%E7%94%A8%E4%B8%89%E8%8F%B1PLC%E6%97%B6"><span class="nav-number">1.7.</span> <span class="nav-text">$\bullet$  电源的OFF时间(仅使用三菱PLC时)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bullet-%E4%BB%85%E9%87%8D%E6%96%B0%E5%90%AF%E5%8A%A8E5%E5%8F%A3C%E6%97%B6"><span class="nav-number">1.8.</span> <span class="nav-text">$\bullet$  仅重新启动E5口C时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-5-%E5%8F%AF%E8%BF%9E%E6%8E%A5%E7%9A%84PLC"><span class="nav-number">1.9.</span> <span class="nav-text">6-1-5 可连接的PLC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SYSMAC-CS-CJ-CP%E7%B3%BB%E5%88%97"><span class="nav-number">1.9.1.</span> <span class="nav-text">SYSMAC CS&#x2F;CJ&#x2F;CP系列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SYSMAC-NJ%E7%B3%BB%E5%88%97-NX1P"><span class="nav-number">1.9.2.</span> <span class="nav-text">SYSMAC NJ系列&#x2F;NX1P</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MELSEC-Q-L-FX-iQ-R%E7%B3%BB%E5%88%97"><span class="nav-number">1.9.3.</span> <span class="nav-text">MELSEC-Q&#x2F;L&#x2F;FX&#x2F;iQ-R系列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KEYENCEKV%E7%B3%BB%E5%88%97"><span class="nav-number">1.9.4.</span> <span class="nav-text">KEYENCEKV系列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-E5%E2%96%A1C%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.10.</span> <span class="nav-text">6-2 E5□C的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-1-%E5%8D%8F%E8%AE%AE%E9%80%89%E6%8B%A9"><span class="nav-number">1.11.</span> <span class="nav-text">6-2-1 协议选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-2-%E9%80%9A%E4%BF%A1%E5%8D%95%E4%BD%8D%E7%BC%96%E5%8F%B7%E4%B8%8E%E9%80%9A%E4%BF%A1%E6%B3%A2%E7%89%B9%E7%8E%87"><span class="nav-number">1.12.</span> <span class="nav-text">6-2-2 通信单位编号与通信波特率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-3-%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE%E7%AD%89%E5%BE%85%E6%97%B6%E9%97%B4"><span class="nav-number">1.13.</span> <span class="nav-text">6-2-3 发送数据等待时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-4-%E6%9C%80%E5%A4%A7%E9%80%9A%E4%BF%A1%E5%8D%95%E4%BD%8D%E7%BC%96%E5%8F%B7"><span class="nav-number">1.14.</span> <span class="nav-text">6-2-4 最大通信单位编号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-5-%E9%93%BE%E6%8E%A5%E6%95%B0%E6%8D%AE-%E5%8C%BA%E5%9F%9F%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%80%E5%A7%8B%E5%9C%B0%E5%9D%80"><span class="nav-number">1.15.</span> <span class="nav-text">6-2-5 链接数据(区域类型和开始地址)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E4%BD%BF%E7%94%A8PLC%E5%AD%98%E5%82%A8%E5%99%A8"><span class="nav-number">1.15.1.</span> <span class="nav-text">可使用PLC存储器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-6-%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE%E7%AD%89%E5%BE%85%E6%97%B6%E9%97%B4"><span class="nav-number">1.16.</span> <span class="nav-text">6-2-6 接收数据等待时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-7-%E9%80%9A%E4%BF%A1%E8%8A%82%E7%82%B9%E7%BC%96%E5%8F%B7"><span class="nav-number">1.17.</span> <span class="nav-text">6-2-7 通信节点编号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-8-%E4%B8%8A%E8%BD%BD-%E4%B8%8B%E8%BD%BD%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.18.</span> <span class="nav-text">6-2-8 上载&#x2F;下载设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bullet-%E8%AE%BE%E5%AE%9A%E5%8F%98%E6%9B%B4%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.19.</span> <span class="nav-text">$\bullet$  设定变更示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-9-%E5%A4%8D%E5%88%B6"><span class="nav-number">1.20.</span> <span class="nav-text">6-2-9 复制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E7%8A%B6%E6%80%81%E4%B8%8B%E7%9A%84%E5%A4%8D%E5%88%B6%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.20.1.</span> <span class="nav-text">初始状态下的复制步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%85%E9%9A%9C%E8%AF%8A%E6%96%AD"><span class="nav-number">1.20.2.</span> <span class="nav-text">故障诊断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E6%97%B6%E7%9A%84%E5%A4%8D%E5%88%B6%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.20.3.</span> <span class="nav-text">更换时的复制步骤</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-10%E9%80%9A%E4%BF%A1%E5%86%99%E5%85%A5"><span class="nav-number">1.21.</span> <span class="nav-text">6-2-10通信写入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-11%E9%80%9A%E4%BF%A1%E7%9B%91%E6%8E%A7"><span class="nav-number">1.22.</span> <span class="nav-text">6-2-11通信监控</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95"><span class="nav-number">1.23.</span> <span class="nav-text">6-3 无程序通信的操作方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-1-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C-%E8%AF%B7%E6%B1%82%E6%A0%87%E5%BF%97"><span class="nav-number">1.24.</span> <span class="nav-text">6-3-1 无程序通信的动作(请求标志)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%9B%91%E6%8E%A7%E5%80%BC%E7%9A%84%E6%9B%B4%E6%96%B0-%E5%86%99%E5%85%A5%E5%81%9C%E6%AD%A2"><span class="nav-number">1.24.1.</span> <span class="nav-text">1. 监控值的更新(写入停止)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%AE%BE%E5%AE%9A%E5%80%BC%E7%9A%84%E5%86%99%E5%85%A5%E4%B8%8E%E7%9B%91%E6%8E%A7%E5%80%BC%E7%9A%84%E6%9B%B4%E6%96%B0-%E5%85%81%E8%AE%B8%E5%86%99%E5%85%A5"><span class="nav-number">1.24.2.</span> <span class="nav-text">2. 设定值的写入与监控值的更新(允许写入)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%8B%E8%BD%BD%E5%8C%BA%E5%9F%9F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">1.24.3.</span> <span class="nav-text">3. 下载区域初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-2-%E5%93%8D%E5%BA%94%E6%A0%87%E5%BF%97"><span class="nav-number">1.25.</span> <span class="nav-text">6-3-2 响应标志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-3-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C%E9%A2%86%E5%9F%9F"><span class="nav-number">1.26.</span> <span class="nav-text">6-3-3 无程序通信的动作领域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-4-%E5%8A%A8%E4%BD%9C%E6%8C%87%E4%BB%A4%E4%BB%A3%E7%A0%81"><span class="nav-number">1.27.</span> <span class="nav-text">6-3-4 动作指令代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-5-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1%E7%9A%84%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.28.</span> <span class="nav-text">6-3-5 无程序通信的动作确认</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-6-%E5%86%99%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.29.</span> <span class="nav-text">6-3-6 写入模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-7-%E6%95%85%E9%9A%9C%E8%AF%8A%E6%96%AD"><span class="nav-number">1.30.</span> <span class="nav-text">6-3-7 故障诊断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-%E4%B8%8ECP%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.31.</span> <span class="nav-text">6-4 与CP系列的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.32.</span> <span class="nav-text">6-4-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF"><span class="nav-number">1.33.</span> <span class="nav-text">6-4-2 开关设定和接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-3-PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.34.</span> <span class="nav-text">6-4-3 PLC的设定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8EPLC%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.34.1.</span> <span class="nav-text">与PLC的连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E5%8F%AF%E9%80%89%E7%AB%AF%E5%8F%A3%E7%9A%84%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.34.2.</span> <span class="nav-text">串行通信可选端口的通信设定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-4-E5%E2%96%A1C%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.35.</span> <span class="nav-text">6-4-4 E5□C的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.36.</span> <span class="nav-text">6-4-5 动作确认</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bullet-%E7%A1%AE%E8%AE%A4E5CC%E7%9A%84%E7%9B%91%E6%8E%A7%E5%80%BC"><span class="nav-number">1.36.1.</span> <span class="nav-text">$\bullet$  确认E5CC的监控值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E6%9B%B4E5CC%E7%9A%84%E8%AE%BE%E5%AE%9A%E5%80%BC"><span class="nav-number">1.36.2.</span> <span class="nav-text">变更E5CC的设定值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86E5CC%E5%88%87%E6%8D%A2%E4%B8%BA%E5%81%9C%E6%AD%A2"><span class="nav-number">1.36.3.</span> <span class="nav-text">将E5CC切换为停止</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-%E4%B8%8ECJ%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.37.</span> <span class="nav-text">6-5 与CJ系列的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.38.</span> <span class="nav-text">6-5-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF"><span class="nav-number">1.39.</span> <span class="nav-text">6-5-2 开关设定和接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-3-PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.40.</span> <span class="nav-text">6-5-3 PLC的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8EPLC%E7%9A%84%E8%BF%9E%E6%8E%A5-1"><span class="nav-number">1.41.</span> <span class="nav-text">与PLC的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E5%8D%95%E5%85%83-%E4%BB%A5%E4%B8%8B%E7%A7%B0SCU-%E7%9A%84%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.42.</span> <span class="nav-text">串行通信单元(以下称SCU)的通信设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-4-E5%E2%96%A1C%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.43.</span> <span class="nav-text">6-5-4 E5□C的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.44.</span> <span class="nav-text">6-5-5 动作确认</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-%E4%B8%8E-NX1P2-%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.45.</span> <span class="nav-text">6-6 与 NX1P2 的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.46.</span> <span class="nav-text">6-6-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF"><span class="nav-number">1.47.</span> <span class="nav-text">6-6-2 开关设定和接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-3-PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.48.</span> <span class="nav-text">6-6-3 PLC的设定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bullet-%E4%B8%8EPLC%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.48.1.</span> <span class="nav-text">$\bullet$  与PLC的连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E5%8F%AF%E9%80%89%E6%9D%BF%E7%9A%84%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.48.2.</span> <span class="nav-text">串行可选板的通信设定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-4-E5-C-%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.49.</span> <span class="nav-text">6-6-4 E5 C 的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.50.</span> <span class="nav-text">6-6-5 动作确认</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AE%E8%AE%A4-E5-C-%E7%9A%84%E7%9B%91%E6%8E%A7%E5%80%BC"><span class="nav-number">1.50.1.</span> <span class="nav-text">确认 E5 C 的监控值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%B0%86-Sysmac-Studio-%E5%88%9B%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%BC%A0%E9%80%81%E8%87%B3-PLC%E3%80%82"><span class="nav-number">1.50.2.</span> <span class="nav-text">(3) 将 Sysmac Studio 创建的项目传送至 PLC。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E6%9B%B4E5CC%E7%9A%84%E8%AE%BE%E5%AE%9A%E5%80%BC-1"><span class="nav-number">1.50.3.</span> <span class="nav-text">变更E5CC的设定值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%A1%AE%E8%AE%A4%E4%B8%8B%E8%BD%BD%E5%8C%BA%E5%9F%9F%E5%88%9D%E5%A7%8B%E5%8C%96%E3%80%82"><span class="nav-number">1.50.4.</span> <span class="nav-text">(2)确认下载区域初始化。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%8F%98%E6%9B%B4%E8%AE%BE%E5%AE%9A%E7%82%B9%E3%80%82"><span class="nav-number">1.50.5.</span> <span class="nav-text">(3)变更设定点。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86E5CC%E5%88%87%E6%8D%A2%E4%B8%BA%E5%81%9C%E6%AD%A2-1"><span class="nav-number">1.50.6.</span> <span class="nav-text">将E5CC切换为停止</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-%E4%B8%8E-NJ-%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.51.</span> <span class="nav-text">6-7 与 NJ 系列的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.52.</span> <span class="nav-text">6-7-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-2-%E5%BC%80%E5%85%B3%E8%AE%BE%E5%AE%9A%E5%92%8C%E6%8E%A5%E7%BA%BF"><span class="nav-number">1.53.</span> <span class="nav-text">6-7-2 开关设定和接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-3-PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.54.</span> <span class="nav-text">6-7-3 PLC的设定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8EPLC%E7%9A%84%E8%BF%9E%E6%8E%A5-2"><span class="nav-number">1.54.1.</span> <span class="nav-text">与PLC的连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E5%8D%95%E5%85%83-%E4%BB%A5%E4%B8%8B%E7%A7%B0-SCU-%E7%9A%84%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.54.2.</span> <span class="nav-text">串行通信单元(以下称 SCU)的通信设定</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-4-E5%E2%96%A1C%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.55.</span> <span class="nav-text">6-7-4 E5□C的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.56.</span> <span class="nav-text">6-7-5 动作确认</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-%E4%B8%8EMELSEC-Q%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.57.</span> <span class="nav-text">6-8 与MELSEC-Q系列的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.58.</span> <span class="nav-text">6-8-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-2-%E6%8E%A5%E7%BA%BF"><span class="nav-number">1.59.</span> <span class="nav-text">6-8-2 接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-3-PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.60.</span> <span class="nav-text">6-8-3 PLC的设定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8EPLC%E7%9A%84%E8%BF%9E%E6%8E%A5-3"><span class="nav-number">1.60.1.</span> <span class="nav-text">与PLC的连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E5%8D%95%E5%85%83%E7%9A%84%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.60.2.</span> <span class="nav-text">串行通信单元的通信设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Switch-Setting-0000-QJ71C24N-R4"><span class="nav-number">1.60.3.</span> <span class="nav-text">Switch Setting 0000:QJ71C24N-R4</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-4-E5%E2%96%A1C%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.61.</span> <span class="nav-text">6-8-4 E5□C的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-8-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">1.62.</span> <span class="nav-text">6-8-5 动作确认</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AE%E8%AE%A4E5CC%E7%9A%84%E7%9B%91%E6%8E%A7%E5%80%BC"><span class="nav-number">1.62.1.</span> <span class="nav-text">确认E5CC的监控值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E6%9B%B4E5CC%E7%9A%84%E8%AE%BE%E5%AE%9A%E5%80%BC-2"><span class="nav-number">1.62.2.</span> <span class="nav-text">变更E5CC的设定值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86-E5CC-%E5%88%87%E6%8D%A2%E4%B8%BA%E5%81%9C%E6%AD%A2"><span class="nav-number">1.62.3.</span> <span class="nav-text">将 E5CC 切换为停止</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-%E4%B8%8EMELSEC-FX%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.63.</span> <span class="nav-text">6-9 与MELSEC-FX系列的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.64.</span> <span class="nav-text">6-9-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-2-%E6%8E%A5%E7%BA%BF"><span class="nav-number">1.65.</span> <span class="nav-text">6-9-2 接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-3-PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">1.66.</span> <span class="nav-text">6-9-3 PLC的设定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8EPLC%E7%9A%84%E8%BF%9E%E6%8E%A5-4"><span class="nav-number">2.</span> <span class="nav-text">与PLC的连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%9A%E4%BF%A1%E7%89%B9%E6%AE%8A%E9%80%82%E9%85%8D%E5%99%A8%E7%9A%84%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%AE%9A"><span class="nav-number">3.</span> <span class="nav-text">通信特殊适配器的通信设定</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-4-E5%E2%96%A1C%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">3.1.</span> <span class="nav-text">6-9-4 E5□C的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-9-5-%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">3.2.</span> <span class="nav-text">6-9-5 动作确认</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-%E4%B8%8E-MELSEC-iQ-R-%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">3.3.</span> <span class="nav-text">6-10 与 MELSEC iQ-R 系列的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.4.</span> <span class="nav-text">6-10-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-2-%E6%8E%A5%E7%BA%BF"><span class="nav-number">3.5.</span> <span class="nav-text">6-10-2 接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-3PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">3.6.</span> <span class="nav-text">6-10-3PLC的设定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8EPLC%E7%9A%84%E8%BF%9E%E6%8E%A5-5"><span class="nav-number">4.</span> <span class="nav-text">与PLC的连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E5%8D%95%E5%85%83%E7%9A%84%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%AE%9A-1"><span class="nav-number">5.</span> <span class="nav-text">串行通信单元的通信设定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%86%E7%A8%8B%E5%BA%8F%E5%86%99%E5%85%A5PLC"><span class="nav-number">6.</span> <span class="nav-text">将程序写入PLC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-4-E5-%E2%96%A1-C-%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">6.1.</span> <span class="nav-text">6-10-4 E5 □ C 的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-10-5%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">6.2.</span> <span class="nav-text">6-10-5动作确认</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%A1%AE%E8%AE%A4E5CC%E7%9A%84%E7%9B%91%E6%8E%A7%E5%80%BC-1"><span class="nav-number">7.</span> <span class="nav-text">确认E5CC的监控值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%8F%98%E6%9B%B4%E4%B8%BA10%E8%BF%9B%E5%88%B6%E6%95%B0%EF%BC%8C%E4%BB%A5%E4%BD%BF%E5%80%BC%E7%9A%84%E7%A1%AE%E8%AE%A4%E6%9B%B4%E7%AE%80%E5%8D%95%E3%80%82"><span class="nav-number">8.</span> <span class="nav-text">(3)变更为10进制数，以使值的确认更简单。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%98%E6%9B%B4E5CC%E7%9A%84%E8%AE%BE%E5%AE%9A%E5%80%BC-3"><span class="nav-number">9.</span> <span class="nav-text">变更E5CC的设定值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-%E4%B8%8E-KEYENCE-KV-%E7%B3%BB%E5%88%97%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="nav-number">9.1.</span> <span class="nav-text">6-11 与 KEYENCE KV 系列的连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-1-%E6%9E%84%E6%88%90%E5%92%8C%E6%AD%A5%E9%AA%A4"><span class="nav-number">9.2.</span> <span class="nav-text">6-11-1 构成和步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-2%E6%8E%A5%E7%BA%BF"><span class="nav-number">9.3.</span> <span class="nav-text">6-11-2接线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-3PLC%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">9.4.</span> <span class="nav-text">6-11-3PLC的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-4E5C%E7%9A%84%E8%AE%BE%E5%AE%9A"><span class="nav-number">9.5.</span> <span class="nav-text">6-11-4E5C的设定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-11-5%E5%8A%A8%E4%BD%9C%E7%A1%AE%E8%AE%A4"><span class="nav-number">9.6.</span> <span class="nav-text">6-11-5动作确认</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AE%E8%AE%A4E5CC%E7%9A%84%E7%9B%91%E6%8E%A7%E5%80%BC-2"><span class="nav-number">9.7.</span> <span class="nav-text">确认E5CC的监控值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E6%9B%B4E5CC%E7%9A%84%E8%AE%BE%E5%AE%9A%E5%80%BC-4"><span class="nav-number">9.8.</span> <span class="nav-text">变更E5CC的设定值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86E5CC%E5%88%87%E6%8D%A2%E4%B8%BA%E5%81%9C%E6%AD%A2-2"><span class="nav-number">9.9.</span> <span class="nav-text">将E5CC切换为停止</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%84%E5%BD%95%EF%BC%9A"><span class="nav-number">10.</span> <span class="nav-text">附录：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2%E7%8A%B6%E6%80%81"><span class="nav-number">10.1.</span> <span class="nav-text">3-2状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%81"><span class="nav-number">10.2.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8A%B6%E6%80%812"><span class="nav-number">10.3.</span> <span class="nav-text">状态2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E5EC-%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E4%BF%A1"><span class="nav-number">10.4.</span> <span class="nav-text">E5EC 无程序通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#E5EC-%E4%B8%8ECP1H-%E6%97%A0%E5%8D%8F%E8%AE%AE%E9%80%9A%E4%BF%A1"><span class="nav-number">10.5.</span> <span class="nav-text">E5EC 与CP1H 无协议通信</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2025
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">波波林</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
+        
+    
+</div>
+
+
+
+</body>
+</html>
