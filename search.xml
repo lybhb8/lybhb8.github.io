@@ -914,11 +914,255 @@ B000 or 动作指令代码</td></tr><tr><td>2：下载区域初始化</td><td>1<
 <p>在统一监控画面中，将显示格式变更为“Hexadecimal 16 bit”。然后，请确认DM15(请求标志)为“1(允许写入)”，双击DM16(动作指令代码)，输入“0101 HEX(停止)”，按下Enter键。</p>
 <p>DM16变为“0”，DM0(响应标志)保持“1(允许写入)”，No.0的E5CC显示部的“STOP”亮灯。请对No.1、2进行同样的确认。关于其他动作指令代码，请参照“&gt;- [6- 3- 4动作指令代码”。</p>
 <h1 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h1><h2 id="3-2状态"><a href="#3-2状态" class="headerlink" title="3-2状态"></a>3-2状态</h2><p><img src="/./OMRON-%E6%B8%A9%E6%8E%A7%E5%99%A8E5DC%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%AE%AF/!%5Balt%5D(https:/)image.png" alt="alt text"></p>
-<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><table><tr><td rowspan="2">位的
-位置</td><td rowspan="2">状态</td><td colspan="2">位的内容</td><td></td></tr><tr><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
-(低位侧)</td><td>0</td><td>加热器电流值过大(CT1)</td><td>未发生</td><td>发生</td></tr><tr><td>1</td><td>加热器电流值保持(CT1)*</td><td>更新</td><td>保持</td></tr><tr><td>2</td><td>AD 变换器错误</td><td>未发生</td><td>发生</td></tr><tr><td>3</td><td>HS(SSR 故障)报警(CT1)</td><td>OFF</td><td>ON</td></tr><tr><td>4</td><td>RSP 输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>5</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>6</td><td>输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>7</td><td>电位计输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>8</td><td>控制输出(加热)/开启输出</td><td>OFF</td><td>ON</td></tr><tr><td>9</td><td>控制输出(冷却)/闭合输出</td><td>OFF</td><td>ON</td></tr><tr><td>10</td><td>HB(加热器断线)报警(CT1)</td><td>OFF</td><td>ON</td></tr><tr><td>11</td><td>HB(加热器断线)报警(CT2)</td><td>OFF</td><td>ON</td></tr><tr><td>12</td><td>报警值1</td><td>OFF</td><td>ON</td></tr><tr><td>13</td><td>报警值2</td><td>OFF</td><td>ON</td></tr><tr><td>14</td><td>报警值3</td><td>OFF</td><td>ON</td></tr><tr><td>15</td><td>程序结束输出</td><td>OFF</td><td>ON</td></tr><tr><td rowspan="16">状态
-(高位侧)</td><td>16</td><td>事件输入1</td><td>OFF</td><td>ON</td></tr><tr><td>17</td><td>事件输入2</td><td>OFF</td><td>ON</td></tr><tr><td>18</td><td>事件输入3</td><td>OFF</td><td>ON</td></tr><tr><td>19</td><td>事件输入4</td><td>OFF</td><td>ON</td></tr><tr><td>20</td><td>写入模式</td><td>备份模式</td><td>RAM写入模式</td></tr><tr><td>21</td><td>非易失性存储器</td><td>RAM=非易失性存储器</td><td>RAM≠非易失性存储器</td></tr><tr><td>22</td><td>设定区域</td><td>设定区域0</td><td>设定区域1</td></tr><tr><td>23</td><td>AT 实行/取消</td><td>AT 取消中</td><td>AT 执行中</td></tr><tr><td>24</td><td>运行/停止</td><td>运行</td><td>停止</td></tr><tr><td>25</td><td>通信写入</td><td>OFF(禁止)</td><td>ON(许可)</td></tr><tr><td>26</td><td>自动/手动</td><td>自动模式</td><td>手动模式</td></tr><tr><td>27</td><td>程序启动</td><td>复位</td><td>启动</td></tr><tr><td>28</td><td>加热器电流值过大(CT2)</td><td>未发生</td><td>发生</td></tr><tr><td>29</td><td>加热器电流值保持(CT2)</td><td>更新</td><td>保持</td></tr><tr><td>30</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>31</td><td>HS(SSR 故障)报警(CT2)</td><td>OFF</td><td>ON</td></tr></table>
-
+<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>位的 位置</td>
+<td></td>
+<td>状态</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>位的内容</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>状态 (低位侧)</td>
+<td>0</td>
+<td>加热器电流值过大(CT1)</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>加热器电流值保持(CT1)*</td>
+<td>更新</td>
+<td>保持</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>AD 变换器错误</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>HS(SSR 故障)报警(CT1)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>RSP 输入异常</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>(空)</td>
+<td>OFF</td>
+<td>-</td>
+</tr>
+<tr>
+<td></td>
+<td>6</td>
+<td>输入异常</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>电位计输入异常</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>8</td>
+<td>控制输出(加热)&#x2F;开启输出</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td>控制输出(冷却)&#x2F;闭合输出</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>10</td>
+<td>HB(加热器断线)报警(CT1)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>11</td>
+<td>HB(加热器断线)报警(CT2)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>12</td>
+<td>报警值1</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>13</td>
+<td>报警值2</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>14</td>
+<td>报警值3</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>15</td>
+<td>程序结束输出</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td>状态 (高位侧)</td>
+<td>16</td>
+<td>事件输入1</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>17</td>
+<td>事件输入2</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>18</td>
+<td>事件输入3</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>19</td>
+<td>事件输入4</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>20</td>
+<td>写入模式</td>
+<td>备份模式</td>
+<td>RAM写入模式</td>
+</tr>
+<tr>
+<td></td>
+<td>21</td>
+<td>非易失性存储器</td>
+<td>RAM&#x3D;非易失性存储器</td>
+<td>RAM≠非易失性存储器</td>
+</tr>
+<tr>
+<td></td>
+<td>22</td>
+<td>设定区域</td>
+<td>设定区域0</td>
+<td>设定区域1</td>
+</tr>
+<tr>
+<td></td>
+<td>23</td>
+<td>AT 实行&#x2F;取消</td>
+<td>AT 取消中</td>
+<td>AT 执行中</td>
+</tr>
+<tr>
+<td></td>
+<td>24</td>
+<td>运行&#x2F;停止</td>
+<td>运行</td>
+<td>停止</td>
+</tr>
+<tr>
+<td></td>
+<td>25</td>
+<td>通信写入</td>
+<td>OFF(禁止)</td>
+<td>ON(许可)</td>
+</tr>
+<tr>
+<td></td>
+<td>26</td>
+<td>自动&#x2F;手动</td>
+<td>自动模式</td>
+<td>手动模式</td>
+</tr>
+<tr>
+<td></td>
+<td>27</td>
+<td>程序启动</td>
+<td>复位</td>
+<td>启动</td>
+</tr>
+<tr>
+<td></td>
+<td>28</td>
+<td>加热器电流值过大(CT2)</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>29</td>
+<td>加热器电流值保持(CT2)</td>
+<td>更新</td>
+<td>保持</td>
+</tr>
+<tr>
+<td></td>
+<td>30</td>
+<td>(空)</td>
+<td>OFF</td>
+<td>-</td>
+</tr>
+<tr>
+<td></td>
+<td>31</td>
+<td>HS(SSR 故障)报警(CT2)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+</tbody></table>
 <p>（注）1 “空”位始终为OFF。2 在设定区域1读出后如下所示</p>
 <ul>
 <li>电流值过大 ：保持前一次值</li>
@@ -932,7 +1176,7 @@ B000 or 动作指令代码</td></tr><tr><td>2：下载区域初始化</td><td>1<
 </ul>
 <p>*控制输出的ON时间不足  $100\mathrm{ms}$  （控制周期0.1s、0.2s时为  $30\mathrm{ms}$  时，设为“1”，加热器电流值监控器保持此前的值。</p>
 <h2 id="状态2"><a href="#状态2" class="headerlink" title="状态2"></a>状态2</h2><table><tr><td rowspan="2">位的
-位置</td><td rowspan="2">状态</td><td colspan="2">位的内容</td><td></td></tr><tr><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
+位置</td><td rowspan="2"></td><td colspan="2">状态</td><td></td></tr><tr><td>位的内容</td><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
 (低位侧)</td><td>0</td><td>内部辅助继电器 1</td><td>OFF</td><td>ON</td></tr><tr><td>1</td><td>内部辅助继电器 2</td><td>OFF</td><td>ON</td></tr><tr><td>2</td><td>内部辅助继电器 3</td><td>OFF</td><td>ON</td></tr><tr><td>3</td><td>内部辅助继电器 4</td><td>OFF</td><td>ON</td></tr><tr><td>4</td><td>内部辅助继电器 5</td><td>OFF</td><td>ON</td></tr><tr><td>5</td><td>内部辅助继电器 6</td><td>OFF</td><td>ON</td></tr><tr><td>6</td><td>内部辅助继电器 7</td><td>OFF</td><td>ON</td></tr><tr><td>7</td><td>内部辅助继电器 8</td><td>OFF</td><td>ON</td></tr><tr><td>8</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>9</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>10</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>11</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>12</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>13</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>14</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>15</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td rowspan="16">状态
 (高位侧)</td><td>16</td><td>事件输入 5</td><td>OFF</td><td>ON</td></tr><tr><td>17</td><td>事件输入 6</td><td>OFF</td><td>ON</td></tr><tr><td>18</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>19</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>20</td><td>正向/反向运行反转</td><td>非反转</td><td>反转</td></tr><tr><td>21</td><td>SP 斜坡</td><td>OFF</td><td>斜坡中</td></tr><tr><td>22</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>23</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>24</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>25</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>26</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>27</td><td>SP 模式</td><td>本地 SP 模式</td><td>远程 SP 模式</td></tr><tr><td>28</td><td>报警值 4</td><td>OFF</td><td>ON</td></tr><tr><td>29</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>30</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>31</td><td>(空)</td><td>OFF</td><td>-</td></tr></table>
 
@@ -1240,7 +1484,7 @@ setTimeout('reloadPage()',1000);
 </li>
 <li><p>二次开发完成后的作品必须附带源作品所有作者信息，包括但不限于作者名、Gitee、Github 地址等。</p>
 </li>
-<li><p>完成后的作品（仅 <strong>Smart20-BlowmoldingControlSystem</strong>部分）必须将发布时最新源代码提交一份给本作者，QQ 邮箱：<a class="link" href="mailto:&#x31;&#51;&#52;&#49;&#57;&#x37;&#x39;&#56;&#x30;&#x34;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#109;">1341979804@qq.com<i class="fas fa-external-link-alt"></i></a>。</p>
+<li><p>完成后的作品（仅 <strong>Smart20-BlowmoldingControlSystem</strong>部分）必须将发布时最新源代码提交一份给本作者，QQ 邮箱：<a class="link" href="mailto:&#49;&#51;&#x34;&#x31;&#57;&#55;&#x39;&#56;&#x30;&#x34;&#x40;&#x71;&#x71;&#46;&#x63;&#x6f;&#x6d;">1341979804@qq.com<i class="fas fa-external-link-alt"></i></a>。</p>
 </li>
 <li><p>以上内容必须全部符合，二次开发授权才成立。</p>
 </li>
@@ -3777,7 +4021,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid4165911503514642" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457225776116" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -3909,11 +4153,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid4165911503514642,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457225776116,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid4165911503514642,op);
+                var chart = Highcharts.chart(highchartsuuid61535457225776116,op);
             }
         </script>
     
@@ -4033,11 +4277,11 @@ setTimeout('reloadPage()',1000);
 </div>
 
 <h3 id="材料主要性能-Typical-Properties"><a href="#材料主要性能-Typical-Properties" class="headerlink" title="材料主要性能(Typical Properties):"></a>材料主要性能(Typical Properties):</h3><h4 id="工艺温度"><a href="#工艺温度" class="headerlink" title="工艺温度"></a>工艺温度</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart4634" style="height: 500px"></canvas>
+    <canvas id="chart794" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart4634').getContext('2d');
+    var ctx = document.getElementById('chart794').getContext('2d');
     var options =  {
     type: 'line',
     data: {
@@ -4135,11 +4379,11 @@ setTimeout('reloadPage()',1000);
 </script>
 
 <h4 id="适用制品容积"><a href="#适用制品容积" class="headerlink" title="适用制品容积"></a>适用制品容积</h4><div style="width: 90%;margin: 0 auto">
-    <canvas id="chart5868" style="height: 500px"></canvas>
+    <canvas id="chart3331" style="height: 500px"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <script type="text/javascript">
-    var ctx = document.getElementById('chart5868').getContext('2d');
+    var ctx = document.getElementById('chart3331').getContext('2d');
     var options =  {
     type: 'bar',
     data: {
@@ -4212,7 +4456,7 @@ setTimeout('reloadPage()',1000);
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid41659115076833022" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457261706573" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -4325,11 +4569,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid41659115076833022,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457261706573,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid41659115076833022,op);
+                var chart = Highcharts.chart(highchartsuuid61535457261706573,op);
             }
         </script>
     
@@ -4339,7 +4583,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid41659115071310981" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457267878463" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -4470,11 +4714,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid41659115071310981,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457267878463,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid41659115071310981,op);
+                var chart = Highcharts.chart(highchartsuuid61535457267878463,op);
             }
         </script>
     
@@ -4484,7 +4728,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid41659115086880047" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457264606223" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -4626,11 +4870,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid41659115086880047,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457264606223,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid41659115086880047,op);
+                var chart = Highcharts.chart(highchartsuuid61535457264606223,op);
             }
         </script>
     
@@ -4640,7 +4884,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid41659115084673664" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457268895583" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -4788,11 +5032,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid41659115084673664,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457268895583,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid41659115084673664,op);
+                var chart = Highcharts.chart(highchartsuuid61535457268895583,op);
             }
         </script>
     
@@ -4802,7 +5046,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid4165911508843265" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457276990071" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -4927,11 +5171,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid4165911508843265,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457276990071,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid4165911508843265,op);
+                var chart = Highcharts.chart(highchartsuuid61535457276990071,op);
             }
         </script>
     
@@ -4941,7 +5185,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid41659115086305886" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457273517491" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -5068,11 +5312,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid41659115086305886,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457273517491,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid41659115086305886,op);
+                var chart = Highcharts.chart(highchartsuuid61535457273517491,op);
             }
         </script>
     
@@ -5082,7 +5326,7 @@ series: [{
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/exporting.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/annotations.js"></script>
         <script src="https://code.highcharts.com.cn/highcharts/8.1.2/modules/oldie.js"></script>
-        <div id="highchartsuuid41659115081959293" width="90%" height="300"></div>
+        <div id="highchartsuuid61535457278014171" width="90%" height="300"></div>
         <script>
             var op = Object.assign({
     chart: {
@@ -5208,11 +5452,11 @@ series: [{
                         } else {
                             op.series = res;
                         }
-                        var chart = Highcharts.chart(highchartsuuid41659115081959293,op);
+                        var chart = Highcharts.chart(highchartsuuid61535457278014171,op);
                     }
                 })
             }else{
-                var chart = Highcharts.chart(highchartsuuid41659115081959293,op);
+                var chart = Highcharts.chart(highchartsuuid61535457278014171,op);
             }
         </script>
     
@@ -6394,11 +6638,11 @@ setTimeout('reloadPage()',1000);
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
 
 <p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts9415" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<h3 id="Test-Echarts1"><a href="#Test-Echarts1" class="headerlink" title="Test Echarts1"></a>Test Echarts1</h3><div id="echarts3842" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9415'));
+        var myChart = echarts.init(document.getElementById('echarts3842'));
         // 指定图表的配置项和数据
         var option = {
    tooltip : {
@@ -6498,11 +6742,11 @@ zr.on('mousemove', function (params) {
 </script>
 
 
-<div id="echarts1668" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts6282" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1668'));
+        var myChart = echarts.init(document.getElementById('echarts6282'));
         // 指定图表的配置项和数据
         var option = 
 

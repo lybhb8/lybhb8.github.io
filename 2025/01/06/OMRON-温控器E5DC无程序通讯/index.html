@@ -210,7 +210,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2025-07-10 15:14:26</span>
+        <span class="pc">2025-08-09 15:24:32</span>
     </span>
     
     
@@ -1129,11 +1129,255 @@ B000 or 动作指令代码</td></tr><tr><td>2：下载区域初始化</td><td>1<
 <p>在统一监控画面中，将显示格式变更为“Hexadecimal 16 bit”。然后，请确认DM15(请求标志)为“1(允许写入)”，双击DM16(动作指令代码)，输入“0101 HEX(停止)”，按下Enter键。</p>
 <p>DM16变为“0”，DM0(响应标志)保持“1(允许写入)”，No.0的E5CC显示部的“STOP”亮灯。请对No.1、2进行同样的确认。关于其他动作指令代码，请参照“&gt;- [6- 3- 4动作指令代码”。</p>
 <h1 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h1><h2 id="3-2状态"><a href="#3-2状态" class="headerlink" title="3-2状态"></a>3-2状态</h2><p><img src="/./OMRON-%E6%B8%A9%E6%8E%A7%E5%99%A8E5DC%E6%97%A0%E7%A8%8B%E5%BA%8F%E9%80%9A%E8%AE%AF/!%5Balt%5D(https:/)image.png" alt="alt text"></p>
-<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><table><tr><td rowspan="2">位的
-位置</td><td rowspan="2">状态</td><td colspan="2">位的内容</td><td></td></tr><tr><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
-(低位侧)</td><td>0</td><td>加热器电流值过大(CT1)</td><td>未发生</td><td>发生</td></tr><tr><td>1</td><td>加热器电流值保持(CT1)*</td><td>更新</td><td>保持</td></tr><tr><td>2</td><td>AD 变换器错误</td><td>未发生</td><td>发生</td></tr><tr><td>3</td><td>HS(SSR 故障)报警(CT1)</td><td>OFF</td><td>ON</td></tr><tr><td>4</td><td>RSP 输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>5</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>6</td><td>输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>7</td><td>电位计输入异常</td><td>未发生</td><td>发生</td></tr><tr><td>8</td><td>控制输出(加热)/开启输出</td><td>OFF</td><td>ON</td></tr><tr><td>9</td><td>控制输出(冷却)/闭合输出</td><td>OFF</td><td>ON</td></tr><tr><td>10</td><td>HB(加热器断线)报警(CT1)</td><td>OFF</td><td>ON</td></tr><tr><td>11</td><td>HB(加热器断线)报警(CT2)</td><td>OFF</td><td>ON</td></tr><tr><td>12</td><td>报警值1</td><td>OFF</td><td>ON</td></tr><tr><td>13</td><td>报警值2</td><td>OFF</td><td>ON</td></tr><tr><td>14</td><td>报警值3</td><td>OFF</td><td>ON</td></tr><tr><td>15</td><td>程序结束输出</td><td>OFF</td><td>ON</td></tr><tr><td rowspan="16">状态
-(高位侧)</td><td>16</td><td>事件输入1</td><td>OFF</td><td>ON</td></tr><tr><td>17</td><td>事件输入2</td><td>OFF</td><td>ON</td></tr><tr><td>18</td><td>事件输入3</td><td>OFF</td><td>ON</td></tr><tr><td>19</td><td>事件输入4</td><td>OFF</td><td>ON</td></tr><tr><td>20</td><td>写入模式</td><td>备份模式</td><td>RAM写入模式</td></tr><tr><td>21</td><td>非易失性存储器</td><td>RAM=非易失性存储器</td><td>RAM≠非易失性存储器</td></tr><tr><td>22</td><td>设定区域</td><td>设定区域0</td><td>设定区域1</td></tr><tr><td>23</td><td>AT 实行/取消</td><td>AT 取消中</td><td>AT 执行中</td></tr><tr><td>24</td><td>运行/停止</td><td>运行</td><td>停止</td></tr><tr><td>25</td><td>通信写入</td><td>OFF(禁止)</td><td>ON(许可)</td></tr><tr><td>26</td><td>自动/手动</td><td>自动模式</td><td>手动模式</td></tr><tr><td>27</td><td>程序启动</td><td>复位</td><td>启动</td></tr><tr><td>28</td><td>加热器电流值过大(CT2)</td><td>未发生</td><td>发生</td></tr><tr><td>29</td><td>加热器电流值保持(CT2)</td><td>更新</td><td>保持</td></tr><tr><td>30</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>31</td><td>HS(SSR 故障)报警(CT2)</td><td>OFF</td><td>ON</td></tr></table>
-
+<h2 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>位的 位置</td>
+<td></td>
+<td>状态</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>位的内容</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>状态 (低位侧)</td>
+<td>0</td>
+<td>加热器电流值过大(CT1)</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>加热器电流值保持(CT1)*</td>
+<td>更新</td>
+<td>保持</td>
+</tr>
+<tr>
+<td></td>
+<td>2</td>
+<td>AD 变换器错误</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>3</td>
+<td>HS(SSR 故障)报警(CT1)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>4</td>
+<td>RSP 输入异常</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>5</td>
+<td>(空)</td>
+<td>OFF</td>
+<td>-</td>
+</tr>
+<tr>
+<td></td>
+<td>6</td>
+<td>输入异常</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>电位计输入异常</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>8</td>
+<td>控制输出(加热)&#x2F;开启输出</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>9</td>
+<td>控制输出(冷却)&#x2F;闭合输出</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>10</td>
+<td>HB(加热器断线)报警(CT1)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>11</td>
+<td>HB(加热器断线)报警(CT2)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>12</td>
+<td>报警值1</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>13</td>
+<td>报警值2</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>14</td>
+<td>报警值3</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>15</td>
+<td>程序结束输出</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td>状态 (高位侧)</td>
+<td>16</td>
+<td>事件输入1</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>17</td>
+<td>事件输入2</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>18</td>
+<td>事件输入3</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>19</td>
+<td>事件输入4</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+<tr>
+<td></td>
+<td>20</td>
+<td>写入模式</td>
+<td>备份模式</td>
+<td>RAM写入模式</td>
+</tr>
+<tr>
+<td></td>
+<td>21</td>
+<td>非易失性存储器</td>
+<td>RAM&#x3D;非易失性存储器</td>
+<td>RAM≠非易失性存储器</td>
+</tr>
+<tr>
+<td></td>
+<td>22</td>
+<td>设定区域</td>
+<td>设定区域0</td>
+<td>设定区域1</td>
+</tr>
+<tr>
+<td></td>
+<td>23</td>
+<td>AT 实行&#x2F;取消</td>
+<td>AT 取消中</td>
+<td>AT 执行中</td>
+</tr>
+<tr>
+<td></td>
+<td>24</td>
+<td>运行&#x2F;停止</td>
+<td>运行</td>
+<td>停止</td>
+</tr>
+<tr>
+<td></td>
+<td>25</td>
+<td>通信写入</td>
+<td>OFF(禁止)</td>
+<td>ON(许可)</td>
+</tr>
+<tr>
+<td></td>
+<td>26</td>
+<td>自动&#x2F;手动</td>
+<td>自动模式</td>
+<td>手动模式</td>
+</tr>
+<tr>
+<td></td>
+<td>27</td>
+<td>程序启动</td>
+<td>复位</td>
+<td>启动</td>
+</tr>
+<tr>
+<td></td>
+<td>28</td>
+<td>加热器电流值过大(CT2)</td>
+<td>未发生</td>
+<td>发生</td>
+</tr>
+<tr>
+<td></td>
+<td>29</td>
+<td>加热器电流值保持(CT2)</td>
+<td>更新</td>
+<td>保持</td>
+</tr>
+<tr>
+<td></td>
+<td>30</td>
+<td>(空)</td>
+<td>OFF</td>
+<td>-</td>
+</tr>
+<tr>
+<td></td>
+<td>31</td>
+<td>HS(SSR 故障)报警(CT2)</td>
+<td>OFF</td>
+<td>ON</td>
+</tr>
+</tbody></table>
 <p>（注）1 “空”位始终为OFF。2 在设定区域1读出后如下所示</p>
 <ul>
 <li>电流值过大 ：保持前一次值</li>
@@ -1147,7 +1391,7 @@ B000 or 动作指令代码</td></tr><tr><td>2：下载区域初始化</td><td>1<
 </ul>
 <p>*控制输出的ON时间不足  $100\mathrm{ms}$  （控制周期0.1s、0.2s时为  $30\mathrm{ms}$  时，设为“1”，加热器电流值监控器保持此前的值。</p>
 <h2 id="状态2"><a href="#状态2" class="headerlink" title="状态2"></a>状态2</h2><table><tr><td rowspan="2">位的
-位置</td><td rowspan="2">状态</td><td colspan="2">位的内容</td><td></td></tr><tr><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
+位置</td><td rowspan="2"></td><td colspan="2">状态</td><td></td></tr><tr><td>位的内容</td><td>0</td><td>1</td><td></td></tr><tr><td rowspan="16">状态
 (低位侧)</td><td>0</td><td>内部辅助继电器 1</td><td>OFF</td><td>ON</td></tr><tr><td>1</td><td>内部辅助继电器 2</td><td>OFF</td><td>ON</td></tr><tr><td>2</td><td>内部辅助继电器 3</td><td>OFF</td><td>ON</td></tr><tr><td>3</td><td>内部辅助继电器 4</td><td>OFF</td><td>ON</td></tr><tr><td>4</td><td>内部辅助继电器 5</td><td>OFF</td><td>ON</td></tr><tr><td>5</td><td>内部辅助继电器 6</td><td>OFF</td><td>ON</td></tr><tr><td>6</td><td>内部辅助继电器 7</td><td>OFF</td><td>ON</td></tr><tr><td>7</td><td>内部辅助继电器 8</td><td>OFF</td><td>ON</td></tr><tr><td>8</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>9</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>10</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>11</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>12</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>13</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>14</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>15</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td rowspan="16">状态
 (高位侧)</td><td>16</td><td>事件输入 5</td><td>OFF</td><td>ON</td></tr><tr><td>17</td><td>事件输入 6</td><td>OFF</td><td>ON</td></tr><tr><td>18</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>19</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>20</td><td>正向/反向运行反转</td><td>非反转</td><td>反转</td></tr><tr><td>21</td><td>SP 斜坡</td><td>OFF</td><td>斜坡中</td></tr><tr><td>22</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>23</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>24</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>25</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>26</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>27</td><td>SP 模式</td><td>本地 SP 模式</td><td>远程 SP 模式</td></tr><tr><td>28</td><td>报警值 4</td><td>OFF</td><td>ON</td></tr><tr><td>29</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>30</td><td>(空)</td><td>OFF</td><td>-</td></tr><tr><td>31</td><td>(空)</td><td>OFF</td><td>-</td></tr></table>
 
